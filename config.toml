@@ -82,7 +82,7 @@ enableEmoji = true
         weight = 9
     [languages.zh-cn.params]
       # 网站描述
-      description = "向之礼的个人博客小站"
+      description = "不能记住过去的人，被判重复过去。"
       # 网站关键词
       keywords = ["Blog", "Hugo", "Java", "程序员"]
       # 应用图标配置
@@ -139,7 +139,7 @@ enableEmoji = true
           # 主页显示的网站标题 (支持 HTML 格式)
           title = "向之礼的个人博客"
           # 主页显示的网站副标题
-          subtitle = "一个打工人的个人博客小站"
+          subtitle = "不能记住过去的人，被判重复过去。"
           # 是否为副标题显示打字机动画
           typeit = true
           # 是否显示社交账号
@@ -369,7 +369,7 @@ enableEmoji = true
     twemoji = false
     # whether to enable lightgallery
     # 是否使用 lightgallery
-    lightgallery = false
+    lightgallery = true
     # whether to enable the ruby extended syntax
     # 是否使用 ruby 扩展语法
     ruby = true
@@ -665,9 +665,9 @@ enableEmoji = true
         #   attr = "customAttribute"
         # located in "assets/" 位于 "assets/"
         # Or 或者
-        # someCSS = "https://cdn.example.com/some.css"
+        # websiteCardEmbedCSS = "https://website-card-embed.vercel.app/website-card-embed.css"
       [params.page.library.js]
-        # someJavaScript = "some.js"
+        websiteCardEmbedJavaScript = "https://website-card-embed.vercel.app/website-card-embed-loveit.js"
         # [params.page.library.js.someOtherJavaScript]
         #   src = "someOther.js"
         #   defer = false

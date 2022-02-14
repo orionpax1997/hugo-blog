@@ -27,14 +27,14 @@
                                     <i class="far fa-folder fa-fw"></i>&nbsp;{{ .Page.Title }} <sup>{{- len $pages -}}</sup>
                                 </a>
                             </h3>
-                            {{- range first 5 $pages -}}
+                            {{- range first 15 $pages -}}
                                 <article class="archive-item">
                                     <a href="{{ .RelPermalink }}" class="archive-item-link">
                                         {{- .Title -}}
                                     </a>
                                 </article>
                             {{- end -}}
-                            {{- if gt (len $pages) 5 -}}
+                            {{- if gt (len $pages) 15 -}}
                                 <span class="more-post">
                                     <a href="{{ .RelPermalink }}" class="more-single-link">{{ T "more" }} >></a>
                                 </span>
@@ -60,14 +60,14 @@
                                     <i class="far fa-folder fa-fw"></i>&nbsp;{{ .Page.Title }} <sup>{{- len $pages -}}</sup>
                                 </a>
                             </h3>
-                            {{- range first 5 $pages -}}
+                            {{- range first 15 $pages -}}
                                 <article class="archive-item">
                                     <a href="{{ .RelPermalink }}" class="archive-item-link">
                                         {{- .Title -}}
                                     </a>
                                 </article>
                             {{- end -}}
-                            {{- if gt (len $pages) 5 -}}
+                            {{- if gt (len $pages) 15 -}}
                                 <span class="more-post">
                                     <a href="{{ .RelPermalink }}" class="more-single-link">{{ T "more" }} >></a>
                                 </span>
@@ -93,14 +93,14 @@
                                     <i class="fas fa-user-circle fa-fw"></i>&nbsp;{{ .Page.Title }} <sup>{{- len $pages -}}</sup>
                                 </a>
                             </h3>
-                            {{- range first 5 $pages -}}
+                            {{- range first 10 $pages -}}
                                 <article class="archive-item">
                                     <a href="{{ .RelPermalink }}" class="archive-item-link">
                                         {{- .Title -}}
                                     </a>
                                 </article>
                             {{- end -}}
-                            {{- if gt (len $pages) 5 -}}
+                            {{- if gt (len $pages) 10 -}}
                                 <span class="more-post">
                                     <a href="{{ .RelPermalink }}" class="more-single-link">{{ T "more" }} >></a>
                                 </span>
@@ -114,7 +114,7 @@
         {{- /* Tag Cloud Page */ -}}
         {{- else if eq $taxonomies "tags" -}}
             {{- $terms := .Data.Terms.ByCount -}}
-            <div class="tag-cloud-tags">
+            <div class="categories-card">
                 {{- range $terms -}}
                     {{- $term := .Term -}}
                     {{- $pages := .Pages -}}
