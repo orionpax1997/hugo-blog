@@ -27,6 +27,18 @@ series: ["生命不息 折腾不止"]
 
 到你的 Markdown 文章中预览看下效果。如果你的 Markdown 渲染器支持 iframe，修改 `url=` 后的文章地址来 Enjoy!
 
+{{< card "https://gohugo.io/about/what-is-hugo/" >}}
+
+## 降级
+
+值得注意的是上面的方式仅在支持渲染 iframe 标签的 Markdown 引擎中使用，像 Github README 文件是不支持的
+
+{{< card "https://github.github.com/gfm/#disallowed-raw-html-extension-" >}}
+
+Website Card Embed 提供了降级方案 `[![what-is-hugo](https://website-card-embed-demo.vercel.app/api/screenshot?url=https://gohugo.io/about/what-is-hugo/)](https://gohugo.io/about/what-is-hugo/)`，可以使用基础的 Markdown 语法渲染一张带链接的图片在 Github 中使用。
+
+[![what-is-hugo](https://website-card-embed.vercel.app/api/screenshot?url=https://gohugo.io/about/what-is-hugo/)](https://gohugo.io/about/what-is-hugo/)
+
 ## 使用 Vercel 部署你自己的服务端
 
 为了演示服务的安全和你自己使用时的稳定性考虑，你最好独自使用一个服务端，感谢 [Vercel](https://vercel.com/docs) 让这一切变得十分简单，只需简单几步操作你就可以拥有自己的解析服务了。
@@ -161,9 +173,3 @@ initSelectThemeListener();
 ```
 
 如果你使用的是其他支持夜间模式切换的主题，您也可以参考 `website-card-embed-loveit.js` 来自定义您的颜色模式判断方法。
-
-## 注意
-
-仅在支持渲染 iframe 标签的 Markdown 引擎中使用，Github README 文件不支持
-
-{{< card "https://github.github.com/gfm/#disallowed-raw-html-extension-" >}}

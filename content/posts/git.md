@@ -88,20 +88,20 @@ git pull = git fetch + git merge
 ### 初始化配置
 
 ```bash
-## 最小配置信息
+# 最小配置信息
 git config --global user.name 'your_name'
 git config --global user.email 'your_email'
 
-## config的三个作用域
-## 当前仓库有效
+# config的三个作用域
+# 当前仓库有效
 git config --local
-## 当前用户所有仓库有效
+# 当前用户所有仓库有效
 git config --global
-## 当前系统所有用户的所有仓库有效
+# 当前系统所有用户的所有仓库有效
 git config --system
 
-## 显示config配置
-git config --list [作用域]## 最小配置信息git config --global user.name 'your_name'git config --global user.email 'your_email'## config的三个作用域## 当前仓库有效git config --local## 当前用户所有仓库有效git config --global## 当前系统所有用户的所有仓库有效git config --system## 显示config配置git config --list [作用域]
+# 显示config配置
+git config --list [作用域]# 最小配置信息git config --global user.name 'your_name'git config --global user.email 'your_email'# config的三个作用域# 当前仓库有效git config --local# 当前用户所有仓库有效git config --global# 当前系统所有用户的所有仓库有效git config --system# 显示config配置git config --list [作用域]
 ```
 
 ### 修改 HTTP 传输请求数据时最大的缓存字节数
@@ -119,7 +119,7 @@ git config --global credential.helper store
 ### 配置全局 git 编码
 
 ```bash
-## 解决中文乱码情况
+# 解决中文乱码情况
 git config --global gui.encoding utf-8
 ```
 
@@ -135,79 +135,79 @@ git config --global https.proxy http://127.0.0.1:1080
 ### 本地仓库管理
 
 ```bash
-## 已有项目加入Git管理
+# 已有项目加入Git管理
 cd <项目目录>
 git init
 
-## 新增项目并使用Git管理
+# 新增项目并使用Git管理
 git init <your_project>
 
-## 检查修改内容
+# 检查修改内容
 git status
 
-## 将文件加入Git版本控制(工作目录 -> 暂存区)
+# 将文件加入Git版本控制(工作目录 -> 暂存区)
 git add [文件名] [-u : 管理全部修改]
 
-## 提交暂存区更新内容(暂存区 -> 版本库)
+# 提交暂存区更新内容(暂存区 -> 版本库)
 git commit -m '提交原因'
 ```
 
 ### 远程仓库管理
 
 ```bash
-## 密钥位置 C:\Users\ibm\.ssh\*
-## 默认公钥文件名称 id_rsa.pub (需在github添加公钥)
-## 没有使用过 ssh 的需要创建ssh-keygen(公私钥对)
+# 密钥位置 C:\Users\ibm\.ssh\*
+# 默认公钥文件名称 id_rsa.pub (需在github添加公钥)
+# 没有使用过 ssh 的需要创建ssh-keygen(公私钥对)
 ssh-keygen -C 'your_email'
 
-## 将本地仓库和远程仓库关联
+# 将本地仓库和远程仓库关联
 git remote add origin <*.git>
 
-## 克隆远程仓库
+# 克隆远程仓库
 git clone [--depth=number] <仓库地址>
 
-## 使用本地引用更新远程引用，同时发送完成给定引用所需的对象
+# 使用本地引用更新远程引用，同时发送完成给定引用所需的对象
 git push [远程主机名: 通常origin] [-u : 指定默认主机(以后origin可省)]
 
-## 将远程存储库中的更改合并到当前分支中
+# 将远程存储库中的更改合并到当前分支中
 git pull [远程主机名] [远程分支名]
 
-## 建立追踪关系(如果当前分支与远程分支存在追踪关系，git pull就可以省略远程分支名)
-## 如果当前分支只有一个追踪分支，连远程主机名都可以省略。
+# 建立追踪关系(如果当前分支与远程分支存在追踪关系，git pull就可以省略远程分支名)
+# 如果当前分支只有一个追踪分支，连远程主机名都可以省略。
 git branch --set-upstream [本地分支名] origin/[远程分支名]
 ```
 
 ### 分支管理
 
 ```bash
-## 拉去远程分支信息
+# 拉去远程分支信息
 git fetch
 
-## 创建分支
+# 创建分支
 git branch <branchName>
 
-## 创建并切换分支
+# 创建并切换分支
 git switch -c <branchName>
 
-## 使用远程分支创建本地对应分支
+# 使用远程分支创建本地对应分支
 git switch -c <branchName> origin/<originBranchName>
 
-## 切换分支
+# 切换分支
 git switch <branchName>
 
-## 查看分支
+# 查看分支
 git branch [-a: 查看远程]
 
-## 合并指定分支到当前分支
+# 合并指定分支到当前分支
 git merge <branchName>
 
-## 删除分支
+# 删除分支
 git branch -d <branchName>
 
-## 删除远程分支
+# 删除远程分支
 git push origin --delete <branchName>
 
-## 同步远程删除的分支
+# 同步远程删除的分支
 git remote prune origin
 ```
 
@@ -216,23 +216,23 @@ git remote prune origin
 ```bash
 git log [--oneline : 单行简洁] [--all : 查看所有分支] [-n<number> : 查看最近number次提交] [--graph : 分支演化]
 
-## 查看参考日志
+# 查看参考日志
 git reflog
 
-## 打开可视化 git log 查看器
+# 打开可视化 git log 查看器
 gitk
 
-## 常用git log 命令 设置别名
-## 查看自己的提交(简洁描述)
+# 常用git log 命令 设置别名
+# 查看自己的提交(简洁描述)
 git config --global alias.lm  "log --no-merges --color --date=format:'%Y-%m-%d %H:%M:%S' --author='your_name' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Cblue %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-## 查看自己的提交(展示修改的文件概览)
+# 查看自己的提交(展示修改的文件概览)
 git config --global alias.lms  "log --no-merges --color --stat --date=format:'%Y-%m-%d %H:%M:%S' --author='your_name' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Cblue %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-## 查看提交(简洁描述)
+# 查看提交(简洁描述)
 git config --global alias.ls "log --no-merges --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Cblue %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
-## 查看提交(展示修改的文件概览)
+# 查看提交(展示修改的文件概览)
 
 git config --global alias.lss "log --no-merges --color --stat --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Cblue %s %Cgreen(%cd) %C(bold blue)<%an>%Creset' --abbrev-commit"
 ```
@@ -240,28 +240,28 @@ git config --global alias.lss "log --no-merges --color --stat --graph --date=for
 ### 比较文件差异
 
 ```bash
-## 工作区和暂存区
+# 工作区和暂存区
 git diff [filename : 指定文件]
 
-## 暂存区和 GIT 仓库
+# 暂存区和 GIT 仓库
 git diff --cached [commit : 指定GIT仓库的提交版本] [filename : 指定文件]
 
-## 工作目录和 GIT 仓库
+# 工作目录和 GIT 仓库
 git diff [commit : 指定GIT仓库的提交版本] [filename : 指定文件]
 
-## Commit 和 Commit
+# Commit 和 Commit
 git diff <commit_id> <commit_id>
 
-## 以上命令可以不指定 <filename>，则对全部文件操作。commit 可以设置为HEAD指针。
+# 以上命令可以不指定 <filename>，则对全部文件操作。commit 可以设置为HEAD指针。
 ```
 
 ### 退回已提交未推送的 commit
 
 ```bash
-## 记下当前 commit 的 id
-## HEAD 指向上一次提交
+# 记下当前 commit 的 id
+# HEAD 指向上一次提交
 git reset --hard HEAD~1
-## 将相应的 commit 的内容覆盖回暂存区
+# 将相应的 commit 的内容覆盖回暂存区
 git checkout <commit> -- .
 ```
 
@@ -269,7 +269,7 @@ git checkout <commit> -- .
 
 ```bash
 git restore --staged <files>
-## or
+# or
 git reset HEAD
 ```
 
@@ -277,7 +277,7 @@ git reset HEAD
 
 ```bash
 git restore <files>
-## or
+# or
 git checkout -- .
 ```
 
@@ -285,16 +285,16 @@ git checkout -- .
 
 ```bash
 git checkout HEAD -- .
-## or
+# or
 git reset --hard HEAD
 ```
 
 ### 丢弃未提交的 commit
 
 ```bash
-## 找到要将 HEAD 指针移动到的 commit 的 Id
+# 找到要将 HEAD 指针移动到的 commit 的 Id
 git reset --hard <commit_id>
-## 将头指针指向上一次的 commit，并覆盖工作区和暂存区
+# 将头指针指向上一次的 commit，并覆盖工作区和暂存区
 git reset --hard HEAD~1
 ```
 
@@ -308,34 +308,34 @@ git commit -m <message>
 ### 恢复误操作丢弃的 commit
 
 ```bash
-## 查看参考日志找到丢弃的 commit 的 id
+# 查看参考日志找到丢弃的 commit 的 id
 git reflog
-## 将头指针指向对应 commit
+# 将头指针指向对应 commit
 git reset --hard <commit_id>
 ```
 
 ### 暂存工作区修改去干其它重要的事情
 
 ```bash
-## 该命令保存本地修改，并恢复工作目录以匹配HEAD提交
+# 该命令保存本地修改，并恢复工作目录以匹配HEAD提交
 git stash
 
-## 查看已有存储
+# 查看已有存储
 git stash list
 
-## 查看存储stash的文件变化
+# 查看存储stash的文件变化
 git stash show
 
-## 取回存储
+# 取回存储
 git stash pop [stash_name]
 ```
 
 ### 忽略已被 git 管理的文件
 
 ```bash
-## 从git管理中删除指定文件
+# 从git管理中删除指定文件
 git rm --cached <文件>
-## 更新 .gitignore 后提交
+# 更新 .gitignore 后提交
 ```
 
 ### 忽略不想要提交的本地修改
@@ -349,8 +349,31 @@ git update-index --skip-worktree /path/to/file
 ### 查看 git 对象
 
 ```bash
-//git对象查看
+git对象查看
 git cat-file [-t : 查看类型] [-p : 查看内容] <git对象hash>
+```
+
+### Git 合并多个commit，保持历史简洁
+
+```bash
+git rebase -i  [startpoint]  [endpoint]
+# 合并前三条
+git rebase -i HEAD~3
+```
+
+{{< card "https://juejin.cn/post/6844903600976576519" >}}
+
+### 修改 Commit 作者信息
+
+```bash
+git commit --amend --author="your_name <your_email>"
+```
+
+### 修改 Commit 提交时间
+
+```bash
+# 日期年月日和时分秒中间的T是固定字符
+GIT_COMMITTER_DATE="yyyy-MM-ddTHH:mm:ss" git commit --amend --date="yyyy-MM-ddTHH:mm:ss"
 ```
 
 ## 扩展
@@ -381,14 +404,14 @@ git cat-file [-t : 查看类型] [-p : 查看内容] <git对象hash>
 5. 创建配置文件 `touch ~/.ssh/config`
 
    ```bash
-   ## 默认 GitHub
+   # 默认 GitHub
    Host github.com
    HostName github.com
    PreferredAuthentications publickey
    IdentityFile ~/.ssh/id_rsa
    user YourName
 
-   ## 公司 GitLab
+   # 公司 GitLab
    Host creating
    HostName your gitlab host
    PreferredAuthentications publickey

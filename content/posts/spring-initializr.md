@@ -11,7 +11,10 @@ featuredImage: "https://cdn.jsdelivr.net/gh/Humble-Xiang/picx-images@master/Deve
 > [Spring Initializr](https://start.spring.io/) 从本质上来说就是一个 Web 应用程序，它能为你生成 Spring Boot 项目结构。虽然不能生成应用程序代码，但它能为你提供一个基本的项目结构，以及一个用于构建代码的 Maven 或 Gradle 构建说明文件。你只需要写应用程序的代码就好了。
 
 {{< card "https://start.spring.io/" >}}
+{{< card url="https://spring.io/guides" title="Spring Guides" description="Whatever you're building, these guides are designed to get you productive as quickly as possible – using the latest Spring project releases and techniques as recommended by the Spring team.">}}
+{{< card "https://spring.io/projects/spring-boot" >}}
 {{< card "https://www.springcloud.cc/spring-boot.html" >}}
+{{< card "https://github.com/Humble-Xiang/learn-spring-initializr-dependencies" >}}
 
 ## DEVELOPER TOOLS
 
@@ -109,7 +112,46 @@ Build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat 
 </dependency>
 ```
 
+{{< card "https://spring.io/guides/gs/rest-service/" >}}
+{{< card "https://spring.io/guides/gs/consuming-rest/" >}}
+
+### Spring Reactive Web
+
+Build reactive web applications with Spring WebFlux and Netty.
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-webflux</artifactId>
+</dependency>
+<dependency>
+    <groupId>io.projectreactor</groupId>
+    <artifactId>reactor-test</artifactId>
+    <scope>test</scope>
+</dependency>
+```
+
+{{< card "https://spring.io/guides/gs/reactive-rest-service/" >}}
+
 ## SQL
+
+### Spring Data R2DBC
+
+Provides Reactive Relational Database Connectivity to persist data in SQL stores using Spring Data in reactive applications.
+
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-r2dbc</artifactId>
+</dependency>
+<dependency>
+    <groupId>io.projectreactor</groupId>
+    <artifactId>reactor-test</artifactId>
+    <scope>test</scope>
+</dependency>
+```
+
+{{< card "https://spring.io/guides/gs/accessing-data-r2dbc/" >}}
 
 ### MyBatis Framework
 
@@ -156,6 +198,58 @@ spring:
     username: username
     password: password
 ```
+
+## OPS
+
+### Spring Boot Actuator
+
+Supports built in (or custom) endpoints that let you monitor and manage your application - such as application health, metrics, sessions, etc.
+
+```xml
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-actuator</artifactId>
+</dependency>
+```
+
+{{< card "https://spring.io/guides/gs/actuator-service/" >}}
+{{< card "https://docs.spring.io/spring-boot/docs/2.1.2.RELEASE/reference/html/production-ready-endpoints.html" >}}
+
+### Codecentric's Spring Boot Admin (Client)
+
+Required for your application to register with a Codecentric's Spring Boot Admin Server instance.
+
+```xml
+<dependency>
+  <groupId>de.codecentric</groupId>
+  <artifactId>spring-boot-admin-starter-client</artifactId>
+</dependency>
+```
+
+```yaml
+spring:
+  boot:
+    admin:
+      client:
+        url: admin-server-url
+```
+
+{{< card "https://codecentric.github.io/spring-boot-admin/" >}}
+{{< card "https://github.com/Humble-Xiang/learn-spring-initializr-dependencies/tree/main/spring-boot-admin-client" >}}
+
+### Codecentric's Spring Boot Admin (Server)
+
+A community project to manage and monitor your Spring Boot applications. Provides a UI on top of the Spring Boot Actuator endpoints.
+
+```xml
+<dependency>
+  <groupId>de.codecentric</groupId>
+  <artifactId>spring-boot-admin-starter-server</artifactId>
+</dependency>
+```
+
+{{< card "https://codecentric.github.io/spring-boot-admin/" >}}
+{{< card "https://github.com/Humble-Xiang/learn-spring-initializr-dependencies/tree/main/spring-boot-admin-server" >}}
 
 ## 不在 Spring Initializr 中的其它好用依赖
 
