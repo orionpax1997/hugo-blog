@@ -283,6 +283,14 @@ h3 ~ p {
 
 ## 扩展
 
+### 交互式游戏化教程
+
+{{< card "https://flukeout.github.io/" >}}
+
+### Flex 布局
+
+{{< card title="Flex 布局教程" url="https://www.ruanyifeng.com/blog/2015/07/flex-grammar.html" description="2009年，W3C 提出了一种新的方案----Flex 布局，可以简便、完整、响应式地实现各种页面布局。目前，它已经得到了所有浏览器的支持，这意味着，现在就能很安全地使用这项功能。" >}}
+
 ### 几种颜色的表示方式
 
 - 英语表示
