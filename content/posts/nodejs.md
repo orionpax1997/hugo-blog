@@ -10,282 +10,30 @@ featuredImage: "https://cdn.jsdelivr.net/gh/Humble-Xiang/picx-images@master/Deve
 
 > Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。 Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。
 
+{{< card "https://nodejs.dev/learn/introduction-to-nodejs" >}}
+
+## 安装
+
+{{< card "https://nodejs.dev/download/" >}}
+{{< card "https://nodejs.dev/download/package-manager/" >}}
+
 ## 基础
 
-### 全局对象、变量、函数
+### 您需要了解多少 JavaScript 才能使用 Node.js？
 
-- 全局对象
-  - global : 表示 Node 所在的全局环境
-  - process : 该对象表示 Node 所处的当前进程，允许开发者与该进程互动。
-  - console : 指向 Node 内置的 console 模块，提供命令行环境中的标准输入、标准输出功能。
-- 全局方法
-  - setTimeout()
-  - clearTimeout()
-  - setInterval()
-  - clearInterval()
-  - require()
-  - Buffer()
-    - 简介 : Buffer 对象是 Node 处理二进制数据的一个接口。它是 Node 原生提供的全局对象。JavaScript 比较擅长处理字符串，对于处理二进制数据，就不太擅长，比如 TCP 数据流。Buffer 对象就是为了解决这个问题而设计的。它是一个构造函数，生成的实例代表了 V8 引擎分配的一段内存，是一个类似数组的对象，成员都为 0 到 255 的整数值，即一个 8 位的字节。
-    - write() : write 方法可以向指定的 Buffer 对象写入数据。它的第一个参数是所写入的内容，第二个参数（可省略）是所写入的起始位置（默认从 0 开始），第三个参数（可省略）是编码方式，默认为 utf8。
-    - slice() : slice 方法返回一个按照指定位置、从原对象切割出来的 Buffer 实例。它的两个参数分别为切割的起始位置和终止位置。
-    - toString() : toString 方法将 Buffer 实例，按照指定编码（默认为 utf8）转为字符串。
-    - toJSON() : toJSON 方法将 Buffer 实例转为 JSON 对象。如果 JSON.stringify 方法调用 Buffer 实例，默认会先调用 toJSON 方法。
-- 全局变量
-  - \_\_filename : 指向当前运行的脚本文件名。
-  - \_\_dirname : 指向当前运行的脚本所在的目录。
+{{< card "https://nodejs.dev/learn/how-much-javascript-do-you-need-to-know-to-use-nodejs" >}}
 
-### 常用标准库
+### 从命令行运行 Node.js 脚本
 
-#### http 模块
+{{< card "https://nodejs.dev/learn/run-nodejs-scripts-from-the-command-line" >}}
 
-- 创建 Web 服务器
+### 使用 Node.js 输出到命令行
 
-  ```js
-  const http = require("http");
+{{< card "https://nodejs.dev/learn/output-to-the-command-line-using-nodejs" >}}
 
-  const hostname = "127.0.0.1";
-  const port = 3000;
+### 错误处理
 
-  //创建HTTP服务器
-  const server = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader("Content-Type", "text/plain");
-    res.end("Hello World\n");
-  });
-
-  //监听指定地址下的指定端口并设置触发事件
-  server.listen(port, hostname, () => {
-    console.log(`Server running at http://${hostname}:${port}/`);
-  });
-  ```
-
-- 模拟请求
-
-  ```js
-  const http = require("http");
-  const querystring = require("querystring");
-
-  //封装请求参数
-  const data = querystring.stringify({
-    msg: "Hello World!",
-  });
-  const options = {
-    hostname: "localhost",
-    port: 9988,
-    path: "/api/v2/product/optest",
-    method: "POST",
-    headers: {
-      "Content-Type": "application/x-www-form-urlencoded",
-      "Content-Length": Buffer.byteLength(data),
-    },
-  };
-
-  //创建请求对象并绑定相关事件处理方法
-  const req = http.request(options, (res) => {
-    console.log(`状态码: ${res.statusCode}`);
-    res.on("data", (chunk) => {
-      console.log(`响应主体: ${chunk}`);
-    });
-    res.on("end", () => {
-      console.log("响应中已无数据");
-    });
-  });
-  req.on("error", (e) => {
-    console.error(`请求遇到问题: ${e.message}`);
-  });
-
-  //写入请求数据
-  req.write(data);
-  req.end();
-  ```
-
-#### querystring 模块
-
-- 对象转 URL 参数字符串
-
-  ```js
-  querystring.stringify({ foo: "bar", baz: ["qux", "quux"], corge: "" });
-  // 返回 'foo=bar&baz=qux&baz=quux&corge='
-
-  querystring.stringify({ foo: "bar", baz: "qux" }, ";", ":");
-  // 返回 'foo:bar;baz:qux'
-  ```
-
-- URL 参数字符串转对象
-  ```js
-  querystring.parse("foo=bar&abc=xyz&abc=123");
-  // 返回 { foo: 'bar', abc: ['xyz', '123'] } 对象
-  ```
-
-#### url 模块
-
-- 解析 URL
-  ```js
-  exports.startServer = (route, handle) => {
-    http
-      .createServer((req, res) => {
-        //解析URL 获取访问接口路径
-        var pathname = url.parse(req.url).pathname;
-        route(handle, pathname, res, req);
-      })
-      .listen(8888, hostname, () => {
-        console.log(`Server running at http://${hostname}:${port}/`);
-      });
-  };
-  ```
-
-#### fs 模块
-
-- 读文件
-
-  ```js
-  //readFile方法的第一个参数是文件的路径，可以是绝对路径，也可以是相对路径。注意，如果是相对路径，是相对于当前进程所在的路径（process.cwd()），而不是相对于当前脚本所在的路径。
-  //readFile方法的第二个参数是读取完成后的回调函数。该函数的第一个参数是发生错误时的错误对象，第二个参数是代表文件内容的Buffer实例。
-  fs.readFile("./image.png", function (err, buffer) {
-    if (err) throw err;
-    process(buffer);
-  });
-
-  //readFileSync方法的第一个参数是文件路径，第二个参数可以是一个表示配置的对象，也可以是一个表示文本文件编码的字符串。默认的配置对象是{encoding: null, flag: 'r'}，即文件编码默认为null，读取模式默认为r（只读）。如果第二个参数不指定编码（encoding），readFileSync方法返回一个Buffer实例，否则返回的是一个字符串。
-  var text = fs.readFileSync(fileName, "utf8");
-  ```
-
-- 写文件
-
-  ```js
-  //writeFile方法的第一个参数是写入的文件名，第二个参数是写入的字符串，第三个参数是回调函数。回调函数前面，还可以再加一个参数，表示写入字符串的编码（默认是utf8）。
-  fs.writeFile("message.txt", "Hello Node.js", (err) => {
-    if (err) throw err;
-    console.log("It's saved!");
-  });
-
-  //writeFileSync方法用于同步写入文件。它的第一个参数是文件路径，第二个参数是写入文件的字符串，第三个参数是文件编码，默认为utf8。
-  fs.writeFileSync(fileName, str, "utf8");
-  ```
-
-- 新建目录
-  ```js
-  //mkdir接受三个参数，第一个是目录名，第二个是权限值，第三个是回调函数。
-  var fs = require("fs");
-  fs.mkdir("./helloDir", 0777, function (err) {
-    if (err) throw err;
-  });
-  ```
-- 判断文件还是目录
-
-  ```js
-  var fs = require("fs");
-
-  //stat方法的参数是一个文件或目录，它产生一个对象，该对象包含了该文件或目录的具体信息。我们往往通过该方法，判断正在处理的到底是一个文件，还是一个目录。
-  fs.readdir("/etc/", function (err, files) {
-    if (err) throw err;
-    files.forEach(function (file) {
-      fs.stat("/etc/" + file, function (err, stats) {
-        if (err) throw err;
-
-        if (stats.isFile()) {
-          console.log("%s is file", file);
-        } else if (stats.isDirectory()) {
-          console.log("%s is a directory", file);
-        }
-        console.log("stats:  %s", JSON.stringify(stats));
-      });
-    });
-  });
-  ```
-
-- 监听文件变化
-
-  ```js
-  var fs = require("fs");
-
-  //watchfile方法监听一个文件，如果该文件发生变化，就会自动触发回调函数。
-  fs.watchFile("./testFile.txt", function (curr, prev) {
-    console.log("the current mtime is: " + curr.mtime);
-    console.log("the previous mtime was: " + prev.mtime);
-  });
-
-  fs.writeFile("./testFile.txt", "changed", function (err) {
-    if (err) throw err;
-
-    console.log("file write complete");
-  });
-  ```
-
-- 使用输入输出流实现大文件 Copy
-
-  ```js
-  function fileCopy(filename1, filename2, done) {
-    var input = fs.createReadStream(filename1);
-    var output = fs.createWriteStream(filename2);
-
-    input.on("data", function (d) {
-      output.write(d);
-    });
-    input.on("error", function (err) {
-      throw err;
-    });
-    input.on("end", function () {
-      output.end();
-    });
-  }
-  ```
-
-#### events 模块
-
-- 简介 : 回调函数模式让 Node 可以处理异步操作。但是，为了适应回调函数，异步操作只能有两个状态：开始和结束。对于那些多状态的异步操作（状态 1，状态 2，状态 3，……），回调函数就会无法处理，你不得不将异步操作拆开，分成多个阶段。每个阶段结束时，调用下一个回调函数。为了解决这个问题，Node 提供 Event Emitter 接口。通过事件，解决多状态异步操作的响应问题。
-- EventEmitter 的接口部署、事件部署和触发
-
-  ```js
-  const EventEmitter = require("events");
-
-  class MyEmitter extends EventEmitter {}
-  const myEmitter = new MyEmitter();
-  //注册事件
-  myEmitter.on("event", () => {
-    console.log("触发事件");
-  });
-  //触发事件
-  myEmitter.emit("event");
-  ```
-
-- 错误事件
-  ```js
-  //如果没有为 'error' 事件注册监听器，则当 'error' 事件触发时，会抛出错误、打印堆栈跟踪、并退出 Node.js 进程。
-  //为了防止崩溃 Node.js 进程，可以使用 domain 模块。 （但请注意，不推荐使用 domain 模块。）作为最佳实践，应该始终为 'error' 事件注册监听器。
-  const myEmitter = new MyEmitter();
-  myEmitter.on("error", (err) => {
-    console.error("错误信息");
-  });
-  myEmitter.emit("error", new Error("错误信息"));
-  // 打印: 错误信息
-  ```
-
-#### Stream 接口
-
-- 简介 : 数据流（stream）是处理系统缓存的一种方式。操作系统采用数据块（chunk）的方式读取数据，每收到一次数据，就存入缓存。Node 应用程序有两种缓存的处理方式，第一种是等到所有数据接收完毕，一次性从缓存读取，这就是传统的读取文件的方式；第二种是采用“数据流”的方式，收到一块数据，就读取一块，即在数据还没有接收完成时，就开始处理它。
-- 流动态和暂停态
-  > “可读数据流”有两种状态：流动态和暂停态。处于流动态时，数据会尽快地从数据源导向用户的程序；处于暂停态时，必须显式调用 stream.read()等指令，“可读数据流”才会释放数据。刚刚新建的时候，“可读数据流”处于暂停态。三种方法可以让暂停态转为流动态。
-  >
-  > - 添加 data 事件的监听函数
-  > - 调用 resume 方法
-  > - 调用 pipe 方法将数据送往一个可写数据流
-- 可读数据流
-  - read() : read 方法从系统缓存读取并返回数据。如果读不到数据，则返回 null。
-  - setEncoding() : 调用该方法，会使得数据流返回指定编码的字符串，而不是缓存之中的二进制对象。比如，调用 setEncoding('utf8')，数据流会返回 UTF-8 字符串，调用 setEncoding('hex')，数据流会返回 16 进制的字符串。
-  - resume() : resume 方法会使得“可读数据流”继续释放 data 事件，即转为流动态。
-  - pause() : pause 方法使得流动态的数据流，停止释放 data 事件，转而进入暂停态。任何此时已经可以读到的数据，都将停留在系统缓存。
-  - pipe() : pipe 方法是自动传送数据的机制，就像管道一样。它从“可读数据流”读出所有数据，将其写出指定的目的地。整个过程是自动的。
-  - data 事件 : 对于那些没有显式暂停的数据流，添加 data 事件监听函数，会将数据流切换到流动态，尽快向外提供数据。
-  - end 事件 : 无法再读取到数据时，会触发 end 事件。也就是说，只有当前数据被完全读取完，才会触发 end 事件，比如不停地调用 read 方法。
-  - error 事件 : 当读取数据发生错误时，error 事件被触发。
-- 可写数据流
-  - write() : write 方法用于向“可写数据流”写入数据。它接受两个参数，一个是写入的内容，可以是字符串，也可以是一个 stream 对象或 buffer 对象，另一个是写入完成后的回调函数，它是可选的。
-  - setDefaultEncoding() : setDefaultEncoding 方法用于将写入的数据编码成新的格式。它返回一个布尔值，表示编码是否成功，如果返回 false 就表示编码失败。
-  - end() : end 方法用于终止“可写数据流”。该方法可以接受三个参数，全部都是可选参数。第一个参数是最后所要写入的数据，可以是字符串，也可以是 stream 对象或 buffer 对象；第二个参数是写入编码；第三个参数是一个回调函数，finish 事件发生时，会触发这个回调函数。
-  - pipe 事件 : “可写数据流”调用 pipe 方法，将数据流导向写入目的地时，触发该事件。
-
-## 扩展
+{{< card "https://nodejs.dev/learn/error-handling-in-nodejs" >}}
 
 ### Node 模块系统
 
@@ -293,6 +41,7 @@ featuredImage: "https://cdn.jsdelivr.net/gh/Humble-Xiang/picx-images@master/Deve
 
 > Node.js 采用模块化结构，按照 CommonJS 规范定义和使用模块。模块与文件是一一对应关系，即加载一个模块，实际上就是加载对应的一个模块文件。
 
+{{< card "https://nodejs.dev/learn/expose-functionality-from-a-nodejs-file-using-exports" >}}
 {{< card "https://blog.csdn.net/zhangyuan19880606/article/details/51508699" >}}
 
 #### 什么是模块化？
@@ -325,47 +74,105 @@ node 中每个 js 文件，都有一个 module 对象，其 exports 属性相当
     - `../`开头，代表上级路径,不可省。
     - 引入时`.js`后缀可省
 
-### 事件轮询
+### npm 包管理器
 
-{{< card "https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/" >}}
-{{< card "https://www.php.cn/js-tutorial-408369.html" >}}
+{{< card "https://nodejs.dev/learn/an-introduction-to-the-npm-package-manager" >}}
+{{< card "https://nodejs.dev/learn/where-does-npm-install-the-packages" >}}
+{{< card "https://nodejs.dev/learn/how-to-use-or-execute-a-package-installed-using-npm" >}}
+{{< card "https://nodejs.dev/learn/find-the-installed-version-of-an-npm-package" >}}
+{{< card "https://nodejs.dev/learn/uninstalling-npm-packages" >}}
+{{< card "https://nodejs.dev/learn/npm-global-or-local-packages" >}}
+{{< card "https://nodejs.dev/learn/npm-dependencies-and-devdependencies" >}}
 
-#### 工作流程
+### package.json 和 package-lock.json 指南
 
-![工作流程](https://img.php.cn//upload/image/810/825/257/1534314018617481.png)
+{{< card "https://nodejs.dev/learn/the-package-json-guide" >}}
+{{< card "https://nodejs.dev/learn/the-package-lock-json-file" >}}
 
-### 包管理
+### 常用标准库
 
-#### NPM
+#### fs
 
-- `npm init` 生成`package.json`文件
-  - `-y` 跳过向导
-- `npm install` 将`package.json`文件中的依赖项全部安装
-- `npm install <packageName>` 安装第三方模块到`node_modules`
-  - `—-save` 将安装第三方模块信息，添加到`package.json`文件的依赖项中。
-- `npm help` 查看帮助文档
+{{< card "https://nodejs.dev/learn/the-nodejs-fs-module" >}}
 
-{{< card "https://docs.npmjs.com/about-npm" >}}
+#### path
+
+{{< card "https://nodejs.dev/learn/the-nodejs-path-module" >}}
+
+#### os
+
+{{< card "https://nodejs.dev/learn/the-nodejs-os-module" >}}
+
+#### events
+
+{{< card "https://nodejs.dev/learn/the-nodejs-events-module" >}}
+
+#### http
+
+{{< card "https://nodejs.dev/learn/the-nodejs-http-module" >}}
+
+#### Buffers
+
+{{< card "https://nodejs.dev/learn/nodejs-buffers" >}}
+
+#### Streams
+
+{{< card "https://nodejs.dev/learn/nodejs-streams" >}}
+
+## 扩展
+
+### 其他包管理器
 
 #### Yarn
 
-- `yarn install` 将`package.json`文件中的依赖项全部安装
-- `yarn add <packageName>` 安装第三方模块到`node_modules`，并且包第三方模块信息添加到`package.json`文件中
-- `yarn global add <packageName>` 安装到全局
+{{< card "https://yarn.bootcss.com/docs/getting-started" >}}
 
-{{< card "https://yarnpkg.com" >}}
+#### pnpm
 
-#### `package.json`文件
+{{< card "https://pnpm.io/zh/installation" >}}
 
-{{< card url="https://javascript.ruanyifeng.com/nodejs/packagejson.html" title="package.json文件" description="每个项目的根目录下面，一般都有一个package.json文件，定义了这个项目所需要的各种模块，以及项目的配置信息（比如名称、版本、许可证等元数据）。npm install命令根据这个配置文件，自动下载所需的模块，也就是配置项目所需的运行和开发环境。" favicon="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABEklEQVQ4je2Tv0oDQRCHv1mPgEXiCYELSZFKECux8AlE7ESxEF/AEEHwOawEEewEaxufIgS00BcQ/yCBeNxxx8WIt2Nxohzx5Bo7f8UOOzP77RS/EYCt0ysNoxi1ljIyxrC56NFZmRdZPuxr/95CbabUYwCshZch5zte6tze+eC2cRuNwv711hQKXD6lACgQjkY8DAMcFBD59cOzjSqpVeonYb6giik/98/6B/wFoD0tDDrlTTUBeB4rFWfSFxfXr+UAb5/r4O+5VEwWAXZ74wKAAKq55OxxgAgMui4i2T0nVVBFxODMtWrcPPoESZIDyYFmpgeQr+MbEEU0680su3rUe4/jhPwcxRIRtpc89tcWnA9SwFp04cIsKAAAAABJRU5ErkJggg==">}}
+### 如何在 Node.js 中接受来自命令行的输入
 
-### 写 CLI
+{{< card "https://nodejs.dev/learn/accept-input-from-the-command-line-in-nodejs" >}}
 
-- `#!/usr/bin/env node` 指定解释器
-- npm link 创建软链放到环境变量
-- `package.json` 里添加 `bin` 属性
+### npx 包运行器
 
-## 参考
+{{< card "https://nodejs.dev/learn/the-npx-nodejs-package-runner" >}}
+
+### 事件轮询
+
+{{< card "https://nodejs.dev/learn/the-nodejs-event-loop" >}}
+{{< card "https://nodejs.dev/learn/understanding-process-nexttick" >}}
+{{< card "https://www.php.cn/js-tutorial-408369.html" >}}
+
+### 异步编程
+
+{{< card "https://nodejs.dev/learn/javascript-asynchronous-programming-and-callbacks" >}}
+{{< card "https://nodejs.dev/learn/understanding-javascript-promises" >}}
+{{< card "https://nodejs.dev/learn/modern-asynchronous-javascript-with-async-and-await" >}}
+{{< card "https://nodejs.dev/learn/the-nodejs-event-emitter" >}}
+
+### 构建 HTTP 服务器
+
+{{< card "https://nodejs.dev/learn/build-an-http-server" >}}
+{{< card "https://nodejs.dev/learn/get-http-request-body-data-using-nodejs" >}}
+
+### 发出 HTTP 请求
+
+{{< card "https://nodejs.dev/learn/making-http-requests-with-nodejs" >}}
+
+### 文件读写
+
+{{< card "https://nodejs.dev/learn/nodejs-file-stats" >}}
+{{< card "https://nodejs.dev/learn/nodejs-file-paths" >}}
+{{< card "https://nodejs.dev/learn/reading-files-with-nodejs" >}}
+{{< card "https://nodejs.dev/learn/writing-files-with-nodejs" >}}
+{{< card "https://nodejs.dev/learn/working-with-folders-in-nodejs" >}}
+
+### 如何在 Node.js 中打印对象
+
+{{< card "https://nodejs.dev/learn/how-to-log-an-object-in-nodejs" >}}
+
+### Node.js 最佳实践
 
 {{< card "https://github.com/i0natan/nodebestpractices/blob/master/README.chinese.md" >}}
-{{< card "http://wiki.commonjs.org/wiki/CommonJS" >}}
