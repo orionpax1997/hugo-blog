@@ -2,7 +2,7 @@
 title: "使用 Website Description Analysis 解析网页简介信息"
 date: 2022-03-02T13:36:55+08:00
 categories: ["Geek"]
-tags: ["Tool"]
+tags: ["Essay"]
 series: ["生命不息 折腾不止"]
 ---
 

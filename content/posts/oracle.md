@@ -2,7 +2,7 @@
 title: "Oracle 的使用"
 date: 2021-10-09T20:36:44+08:00
 categories: ["Development"]
-tags: ["Tool"]
+tags: ["Support"]
 featuredImage: "https://cdn.jsdelivr.net/gh/Humble-Xiang/picx-images@master/Development/oracle-banner.1s81s4rls7b4.webp"
 ---
 
@@ -13,6 +13,10 @@ featuredImage: "https://cdn.jsdelivr.net/gh/Humble-Xiang/picx-images@master/Deve
 > Oracle 数据库系统是目前世界上流行的关系数据库管理系统，拥有可移植性好、使用方便、功能强等优点，在各类大、中、小、微机环境中都适用。
 
 > Oracle 是一种高效率、可靠性好的、适应高吞吐量的数据库解决方案。
+
+## 入门
+
+{{< card "https://juejin.cn/post/6844903822913978381" >}}
 
 ## 安装
 
@@ -163,3 +167,7 @@ SELECT SESS.SID,SESS.SERIAL#, LO.ORACLE_USERNAME,LO.OS_USER_NAME, AO.OBJECT_NAME
 -- 杀死锁表的 SESSION
 ALTER SYSTEM KILL SESSION 'SID,SERIAL';
 ```
+
+### 如何将逗号分隔的值字符串拆分为 Oracle 数据库中的行
+
+{{< card title="How to split comma separated value strings into rows in Oracle Database" url="https://blogs.oracle.com/sql/post/split-comma-separated-values-into-rows-in-oracle-database" >}}

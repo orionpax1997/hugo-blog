@@ -2,7 +2,7 @@
 title: "Git 的使用"
 date: 2019-08-29T20:03:23+08:00
 categories: ["Development"]
-tags: ["Tool"]
+tags: ["Command-line Tool"]
 featuredImage: "https://cdn.jsdelivr.net/gh/Humble-Xiang/picx-images@master/Development/git-banner.1ubrnpzvtoio.webp"
 ---
 

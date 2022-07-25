@@ -2,7 +2,7 @@
 title: "使用 Website Card Embed 在你的 Blog 中以卡片形式进行文章引用"
 date: 2022-03-03T11:02:25+08:00
 categories: ["Geek"]
-tags: ["Tool"]
+tags: ["Essay"]
 series: ["生命不息 折腾不止"]
 ---
 

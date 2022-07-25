@@ -6,6 +6,28 @@ tags: ["Tool"]
 featuredImage: "https://cdn.jsdelivr.net/gh/Humble-Xiang/picx-images@master/Development/chrome-banner.3gw9yc1adf60.webp"
 ---
 
+## 简介
+
+Google Chrome 是一款由 Google 公司开发的网页浏览器，该浏览器基于其他开源软件撰写，包括 WebKit，目标是提升稳定性、速度和安全性，并创造出简单且有效率的使用者界面。
+
+## 插件
+
+### 开发
+
+{{< card "https://chrome.google.com/webstore/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd" >}}
+{{< card "https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi" >}}
+
+### 生产力
+
+{{< card "https://saladict.crimx.com/" >}}
+{{< card "https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa" >}}
+
+### 折腾
+
+{{< card "https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" >}}
+{{< card "https://chrome.google.com/webstore/detail/gfbliohnnapiefjpjlpjnehglfpaknnc" >}}
+{{< card "https://github.com/xifangczy/cat-catch" >}}
+
 ## 应用场景
 
 ### Chrome 您的连接不是私密连接解决办法

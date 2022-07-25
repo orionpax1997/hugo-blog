@@ -2,7 +2,7 @@
 title: "如何使用 Hugo 进行个人博客搭建？"
 date: 2019-07-08T21:19:27+08:00
 categories: ["Geek"]
-tags: ["Tool"]
+tags: ["Command-line Tool"]
 series: ["生命不息 折腾不止"]
 featuredImage: "https://cdn.jsdelivr.net/gh/Humble-Xiang/picx-images@master/Development/hugo-banner.mlfdu0pbh9c.webp"
 ---

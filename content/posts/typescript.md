@@ -8,6 +8,8 @@ featuredImage: "https://cdn.jsdelivr.net/gh/Humble-Xiang/picx-images@master/Deve
 
 ## 简介
 
+{{< card "https://ts.xcatliu.com/" >}}
+
 ### 什么是 TypeScript?
 
 > [TypeScript](http://www.typescriptlang.org) 是 JavaScript 的一个超集，主要提供了类型系统和对 ES6 的支持。

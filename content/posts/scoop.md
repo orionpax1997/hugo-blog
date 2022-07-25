@@ -2,7 +2,7 @@
 title: "Windows 下的软件包管理工具 Scoop"
 date: 2019-07-11T21:56:57+08:00
 categories: ["Geek"]
-tags: ["Tool"]
+tags: ["Command-line Tool"]
 series: ["生命不息 折腾不止"]
 ---
 

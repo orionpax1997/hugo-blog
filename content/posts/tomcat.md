@@ -2,7 +2,7 @@
 title: "Tomcat 的使用"
 date: 2019-07-23T22:41:51+08:00
 categories: ["Development"]
-tags: ["Environment"]
+tags: ["Support"]
 featuredImage: "https://cdn.jsdelivr.net/gh/Humble-Xiang/picx-images@master/Development/tomcat-banner.td82kzu3j6o.webp"
 ---
 

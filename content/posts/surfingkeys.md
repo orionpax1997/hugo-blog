@@ -2,7 +2,7 @@
 title: "使用 Surfingkeys 以 VIM 的方式操作你的浏览器"
 date: 2021-11-23T09:15:25+08:00
 categories: ["Geek"]
-tags: ["Tool"]
+tags: ["Essay"]
 series: ["生命不息 折腾不止"]
 ---
 

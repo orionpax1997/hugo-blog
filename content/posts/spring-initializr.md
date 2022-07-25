@@ -1,8 +1,8 @@
 ---
-title: "Spring Initializr 的使用"
+title: "通过 Spring Initializr 了解常用后端框架"
 date: 2021-02-14T16:45:54+08:00
 categories: ["Development"]
-tags: ["Tool"]
+tags: ["Backend Framework"]
 featuredImage: "https://cdn.jsdelivr.net/gh/Humble-Xiang/picx-images@master/Development/spring-initializr-banner.5jcrfnfqm400.webp"
 ---
 
