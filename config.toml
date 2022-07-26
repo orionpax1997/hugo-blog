@@ -489,6 +489,11 @@ enableEmoji = true
     # 文章页面的分享信息设置
     [params.page.share]
       enable = true
+      [params.page.share.ogimage]
+        enable = true
+        serverURL = "https://og-image-humble-xiang.vercel.app/"
+        # 文章标题上面的默认图片，文章存在 featuredImage 时优先使用 featuredImage
+        defaultImage = "https://humble-blog.vercel.app/images/avatar.jpg"
       Twitter = true
       Facebook = true
       Linkedin = false
@@ -676,6 +681,10 @@ enableEmoji = true
         # located in "assets/" 位于 "assets/"
         # Or 或者
         # someJavascript = "https://cdn.example.com/some.js"
+      # 卡片引用配置
+      # see https://github.com/Humble-Xiang/website-card-embed
+      [params.page.library.card]
+        serverURL = 'https://website-card-embed-demo.vercel.app/'
     # Page SEO config
     # 页面 SEO 配置
     [params.page.seo]
