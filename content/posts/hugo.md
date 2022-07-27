@@ -17,6 +17,8 @@ featuredImage: "https://cdn.jsdelivr.net/gh/Humble-Xiang/picx-images@master/Deve
 
 ## 安装
 
+{{< card "https://gohugo.io/getting-started/quick-start/" >}}
+
 ```bash
 # windows 下使用 scoop 安装
 scoop install hugo
@@ -24,36 +26,45 @@ scoop install hugo
 brew install hugo
 ```
 
-## 使用
-
-### 本地搭建流程
+安装完就来验证一下吧
 
 ```bash
 # 创建site
-hugo new site <siteName>
+hugo new site quickstart
 # 进入site目录
-cd .\siteName\
-# 创建helloWorld
-hugo new post/hello-world.md
+cd quickstart
+# 初始化
+git init
+# 选择一个主题
+git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+# 配置文件设置主题
+echo theme = \"ananke\" >> config.toml
+# 创建文章并修改内容
+hugo new posts/my-first-post.md
 # 运行本地服务查看效果
-hugo server
+hugo server -D
 ```
 
-## 配置
+## 主题选择
 
-### 主题配置
-
-```bash
-# 挑选一个好看的主题这里使用的是 LoveIt
-# 将主题clone到themes目录, 并且把主题仓库作为你的网站目录的子模块
-git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
-# 阅读你选择的主题的README, 并修改config.toml文件(主题有特殊配置的根据给出的Demo配置)。
-theme = 'themeName'
-```
+挑选一个好看的主题吧
 
 {{< card "https://themes.gohugo.io/" >}}
 
-### GitHub Page 配置
+## 扩展
+
+### Vercel 配置
+
+[Vercel](https://vercel.com/) 可以依托 `Git`仓库 ，在线自动构建和发布`Web`静态项目，支持自定义域名，可以自动签发`SSL`证书，开启`HTTPS`，还有一个特点，拥有全球`CDN`，国内速度不错。支持多套框架和模版，如：Hugo、Jekyll、Hexo、Next、Vue…
+
+点击 [Deploy](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FHumble-Xiang%2FDoIt-vercel-hugo-template&env=HUGO_VERSION&envDescription=HUGO_VERSION%20%E9%9C%80%E8%A6%81%E8%AE%BE%E7%BD%AE%E4%B8%BA%200.92.1) 部署同款。
+
+{{< card "https://github.com/Humble-Xiang/DoIt-vercel-hugo-template" >}}
+{{< card "https://segmentfault.com/a/1190000040063325" >}}
+
+### ~~GitHub Page 配置~~
+
+建议使用更简单的 Hugo + Vercel 的方式来完成 CI。
 
 ```bash
 # hugo命令会将site内容生成静态文件放在public目录下, 注意所有 draft: true 的文章不会被build
@@ -71,22 +82,14 @@ git push -u origin master
 ```
 
 {{< card "https://pages.github.com/" >}}
-{{< card "https://www.jianshu.com/p/8ac6c7c037c5" >}}
-
-### Vercel 配置
-
-{{< card "https://segmentfault.com/a/1190000040063325" >}}
-{{< card "https://vercel.com/docs" >}}
-{{< card "https://vercel.com/guides/deploying-hugo-with-vercel" >}}
-
-值得注意的是，如果你使用的主题，需要依赖的 HUGO 版本超过，Vercel HUGO 模版的默认版本，需要在 `Settings - Environment Variables` 添加 `HUGO_VERSION` 配置环境变量手动指定使用的 HUGO 版本。
+{{< card title="创建Github Page并设置自定义域名" url="https://www.jianshu.com/p/8ac6c7c037c5" >}}
 
 ### ~~Wercker 配置~~
 
 #### ~~Wercker 简介~~
 
 ~~CI 使用的 [Wercker](https://app.wercker.com/), 简单直接使用 GitHub 账号注册登录，不需要麻烦的过程。CI 的简单理解就是向一个仓库提交代码后会自动执行的脚本。~~
-请使用更简单的 Hugo + [Vercel](https://vercel.com/docs) 的方式来完成 CI。
+建议使用更简单的 Hugo + [Vercel](https://vercel.com/docs) 的方式来完成 CI。
 
 #### ~~Hugo + Wercker~~
 
@@ -154,3 +157,108 @@ deploy:
         branch: master
         basedir: public
 ```
+
+## 同款 Blog 搭建保姆级全流程
+
+1. (可选，已有 GitHub 账号的跳过这一步) 注册并登录 GitHub
+
+{{< card "https://www.msy.plus/2021/10/04/github-singup/" >}}
+
+2. 点击 [clone](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FHumble-Xiang%2FDoIt-vercel-hugo-template&env=HUGO_VERSION&envDescription=HUGO_VERSION%20%E9%9C%80%E8%A6%81%E8%AE%BE%E7%BD%AE%E4%B8%BA%200.92.1) 通过 [Vercel 模版](https://github.com/Humble-Xiang/DoIt-vercel-hugo-template) 构建项目，输入项目名称创建项目，填写环境变量并点击 Deploy，耐心等待一段时间，Congratulations! 点击 Go to Dashboard - Visit 你已经看到你的博客网站了。使用 Vercel 创建的项目是已经配置了 CI 的，当你向 GitHub 的仓库提交代码时，Vercel 会自动重新打包并发布项目，因此你做的所有提交都会使网站重新构建。
+
+![Create Git Repository](https://cdn.jsdelivr.net/gh/Humble-Xiang/picx-images@master/geek/image.2km7cyjvqhg0.webp "Create Git Repository")
+![Configure Project](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.6zgp55b2u0g0.webp "Configure Project")
+
+3. Vercel 自动生成的域名可能不是你想要的，`Vercel -> Project -> Settings -> Domains` 中可以进行修改，没有自己域名的话可以使用 Vercel 提供的二级域名并修改前缀。有自己的域名可以直接添加已有的域名，然后到域名商管理系统配置域名记录，等待生效，生效后会自动签发 SSL 证书，开启 HTTPS。
+
+4. 然后我们根据需要修改下博客的配置文件 `config.toml`。以下是正常情况下需要个性化修改的初始化配置：
+
+```yaml
+# 博客主页地址
+baseURL = ""
+# ......
+# 网站标题
+title = "网站标题"
+# ......
+[languages]
+  [languages.zh-cn]
+    [languages.zh-cn.menu]
+      [[languages.zh-cn.menu.main]]
+        identifier = "github"
+        pre = "<i class='fab fa-github fa-fw'></i>"
+        post = ""
+        name = ""
+        # GitHub主页地址
+        url = ""
+    # ......
+    [languages.zh-cn.params]
+      # 网站描述
+      description = "网站描述"
+      # 网站关键词
+      keywords = ["Theme", "Hugo"]
+      #......
+      [languages.zh-cn.params.home]
+        [languages.zh-cn.params.home.profile]
+          # 主页显示头像的 URL
+          avatarURL = "/images/avatar.webp"
+          # 主页显示的网站标题 (支持 HTML 格式)
+          title = "主页标题"
+          # 主页显示的网站副标题
+          subtitle = "主页副标题"
+      # 主页的社交信息设置
+      [languages.zh-cn.params.social]
+      # 社交配置根据需要配置就不一一列出来了
+      # ......
+[params]
+  # 网站标题
+  title = "网站标题"
+  # ......
+  [params.header]
+    [params.header.title]
+      # 标题名称
+      name = "头部标题"
+    # ......
+    [params.page.share]
+      [params.page.share.ogimage]
+        # og-image 服务地址
+        serverURL = "https://og-image-demo.vercel.app/"
+        # 文章分享时的默认图片，文章存在 featuredImage 时优先使用 featuredImage
+        defaultImage = "https://assets.vercel.com/image/upload/front/assets/design/vercel-triangle-black.svg"
+      # ......
+      # Waline 评论系统设置 (https://waline.js.org)
+      [params.page.comment.waline]
+        enable = false
+        serverURL = ""
+    # ......
+    [params.page.library]
+      # 卡片引用配置
+      [params.page.library.js]
+        # 额外引入第三方 JS 地址
+        websiteCardEmbedJavaScript = "https://website-card-embed-demo.vercel.app/website-card-embed-loveit.js"
+      # see https://github.com/Humble-Xiang/website-card-embed
+      [params.page.library.card]
+        # website-card-embed 服务地址
+        serverURL = 'https://website-card-embed-demo.vercel.app/'
+# ......
+# 作者配置
+[author]
+  name = ""
+  email = ""
+  link = ""
+  avatar = "/images/avatar.webp"
+  gravatarEmail = ""
+```
+
+5. (可选，如果你需要卡片引入) [Deploy](https://vercel.com/import/project?template=https://github.com/Humble-Xiang/website-card-embed) 你自己的 Website Card Embed 服务端，并修改配置文件中的 `params.page.libaray.card.serverURL` 和 `websiteCardEmbedJavaScript` 为你自己的服务地址。
+
+{{< card "https://humble-blog.vercel.app/website-card-embed" >}}
+
+6. (可选，如果你需要带文章标题的分享图) [Deploy](https://vercel.com/import/project?template=https://github.com/Humble-Xiang/og-image) 你自己的 og-image 服务端，并修改 `params.page.share.ogimage` 中的配置。
+
+{{< card "https://github.com/Humble-Xiang/og-image" >}}
+
+7. (可选，如果你需要评论系统) 部署你自己的 Waline 服务端，并修改 `params.page.comment.waline` 中的配置。
+
+{{< card "https://waline.js.org/guide/get-started.html" >}}
+
+8. 开写！
