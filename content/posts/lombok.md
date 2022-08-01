@@ -11,8 +11,6 @@ tags: ["Backend Framework"]
 
 > Java 注释库，有助于减少样板代码。
 
-{{< card "https://github.com/Humble-Xiang/learn-spring-initializr-dependencies/tree/main/lombok" >}}
-
 ## 引入依赖
 
 ```xml
