@@ -221,7 +221,7 @@ title = "网站标题"
     [params.page.share]
       [params.page.share.ogimage]
         # og-image 服务地址
-        serverURL = "https://og-image-demo.vercel.app/"
+        serverURL = "https://og-image-demo.humblex.top/"
         # 文章分享时的默认图片，文章存在 featuredImage 时优先使用 featuredImage
         defaultImage = "https://assets.vercel.com/image/upload/front/assets/design/vercel-triangle-black.svg"
       # ......
@@ -234,11 +234,11 @@ title = "网站标题"
       # 卡片引用配置
       [params.page.library.js]
         # 额外引入第三方 JS 地址
-        websiteCardEmbedJavaScript = "https://website-card-embed-demo.vercel.app/website-card-embed-loveit.js"
+        websiteCardEmbedJavaScript = "https://website-card-embed-demo.humblex.top/website-card-embed-loveit.js"
       # see https://github.com/Humble-Xiang/website-card-embed
       [params.page.library.card]
         # website-card-embed 服务地址
-        serverURL = 'https://website-card-embed-demo.vercel.app/'
+        serverURL = 'https://website-card-embed-demo.humblex.top/'
 # ......
 # 作者配置
 [author]
@@ -251,7 +251,7 @@ title = "网站标题"
 
 5. (可选，如果你需要卡片引入) [Deploy](https://vercel.com/import/project?template=https://github.com/Humble-Xiang/website-card-embed) 你自己的 Website Card Embed 服务端，并修改配置文件中的 `params.page.libaray.card.serverURL` 和 `websiteCardEmbedJavaScript` 为你自己的服务地址。
 
-{{< card "https://humble-blog.vercel.app/website-card-embed" >}}
+{{< card "https://blog.humblex.top/website-card-embed" >}}
 
 6. (可选，如果你需要带文章标题的分享图) [Deploy](https://vercel.com/import/project?template=https://github.com/Humble-Xiang/og-image) 你自己的 og-image 服务端，并修改 `params.page.share.ogimage` 中的配置。
 

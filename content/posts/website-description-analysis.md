@@ -60,4 +60,4 @@ import AnalysisFactory from "@humble.xiang/website-description-analysis";
 
 ## Documentation
 
-{{< card "https://website-description-analysis-docs.vercel.app/" >}}
+{{< card "https://website-description-analysis-docs.humblex.top/" >}}

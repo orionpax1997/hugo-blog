@@ -612,13 +612,13 @@ React 通过一种比传统的双向绑定略微繁琐的方法来实现反向�
 [Redux](https://redux.js.org) 是 React 全家桶的一员，Redux 是 JavaScript 状态容器，提供可预测化的状态管理。
 
 {{< card "https://redux.js.org/usage/index" >}}
-{{< card "https://humble-blog.vercel.app/redux/" >}}
+{{< card "https://blog.humblex.top/redux/" >}}
 
 #### React Router
 
 React Router 是完整的 React 路由解决方案。React Router 保持 UI 与 URL 同步。它拥有简单的 API 与强大的功能例如代码缓冲加载、动态路由匹配、以及建立正确的位置过渡处理。
 
-{{< card "https://humble-blog.vercel.app/react-router/" >}}
+{{< card "https://blog.humblex.top/react-router/" >}}
 
 #### webpack
 
