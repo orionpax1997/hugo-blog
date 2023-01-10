@@ -159,6 +159,24 @@ imp user/pwd@sid fromuser=user touser=user file=file.dmp log=imp.log feedback=10
 {{< card "https://www.codenong.com/cs106541457/" >}}
 {{< card "https://www.cnblogs.com/yichong/p/9234265.html" >}}
 
+### DBLink 的创建和使用
+
+```
+-- 查询现有 DBLink
+SELECT * FROM DBA_DB_LINKS;
+
+-- 创建公共 DBLink
+CREATE PUBLIC DATABASE LINK <DBLink 名称>
+    CONNECT TO <用户名> IDENTIFIED BY <密码>
+    USING '(description=(address=(protocol=TCP)(host=127.0.0.1)(port=1521))(connect_data=(SERVICE_NAME=orcl)))';
+
+-- 删除公共 DBLink
+DROP PUBLIC DATABASE LINK <DBLink 名称>;
+
+-- 使用DBLink 查询
+SELECT * FROM <表名>@<DBLink 名称>;
+```
+
 ### 锁表问题处理
 
 ```sql
