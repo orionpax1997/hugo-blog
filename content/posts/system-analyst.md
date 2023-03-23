@@ -517,8 +517,6 @@ BC 范式（BCNF）是 Boyce-Codd 范式的缩写，其定义是：在关系模�
 
 ![Raid](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.5hbp9y5cv8s0.webp "Raid")
 
-####
-
 ## 案例分析
 
 多练历年试题，从简单问题入手。对于技术主题，要有意识的组织语言进行总结。给出倾向的问题，要懂得“顺势而为”的解决问题。
