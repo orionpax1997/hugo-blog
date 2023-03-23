@@ -30,7 +30,16 @@ draft: true
 - 校验码 ⭐
 - 嵌入式系统 ⭐
 
-#### 浮点数
+#### 编码及浮点数预算
+
+##### 码制
+
+- 原码：正数是其二进制本身；负数是符号位为 1,数值部分取 X 绝对值的二进制。
+- 反码：正数的反码和原码相同；负数是符号位为 1,其它位是原码取反。
+- 补码：正数的补码和原码，反码相同；负数是符号位为 1，其它位是原码取反，未位加 1。（或者说负数的补码是其绝对值反码未位加 1）
+- 移码：将符号位取反的补码（不区分正负）
+
+##### 浮点数
 
 浮点数的表示：N = 尾数 \* 基数<sup>指数</sup>
 
@@ -183,13 +192,6 @@ Flynn 于 1972 年提出了计算平台的 Flynn 分类法，主要根据指令�
 
 ![按权展开法R进制转十进制](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.464ibd74u9k0.webp "按权展开法R进制转十进制")
 ![除基取余倒记法十进制转R进制](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.27o6a4u1oqf4.webp "除基取余倒记法十进制转R进制")
-
-##### 码制
-
-- 原码：正数是其二进制本身；负数是符号位为 1,数值部分取 X 绝对值的二进制。
-- 反码：正数的反码和原码相同；负数是符号位为 1,其它位是原码取反。
-- 补码：正数的补码和原码，反码相同；负数是符号位为 1，其它位是原码取反，未位加 1。（或者说负数的补码是其绝对值反码未位加 1）
-- 移码：将符号位取反的补码（不区分正负）
 
 ### 操作系统
 
@@ -472,6 +474,50 @@ BC 范式（BCNF）是 Boyce-Codd 范式的缩写，其定义是：在关系模�
 ![数据备份2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.2bpepyn4p8g0.webp "数据备份2")
 
 ![故障与恢复](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.2fhdyh253xa8.webp "故障与恢复")
+
+### 计算机网络
+
+#### 计算机网络概述
+
+![计算机网络概述](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.v1oj5pddjts.webp "计算机网络概述")
+
+#### TCP
+
+##### TCP/IP 协议组
+
+![TCP/IP 协议族1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.227u54oljb34.webp "TCP/IP 协议族1")
+![TCP/IP 协议族2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.1a98mr0xyw2o.webp "TCP/IP 协议族2")
+![TCP 与 UDP](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.5dlhewguex4.webp "TCP 与 UDP")
+
+##### 开放互联参考模型
+
+![OSI/RM 七层模型](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.7i66xd0p2g40.webp "OSI/RM 七层模型")
+
+##### DNS 服务应用
+
+![DNS](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.60guns9rzoc0.webp "DNS")
+
+##### DHCP 服务应用
+
+![DHCP](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.6h795s9nb6w0.webp "DHCP")
+
+#### 网络规划与设计
+
+![网络规划与设计](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.3zxah0czvz60.webp "网络规划与设计")
+
+![逻辑网络设计](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.7a504pa8irk0.webp "逻辑网络设计")
+
+![物理网络设计](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.3jzxnrnm3vs0.webp "物理网络设计")
+
+![层次化网络设计](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.5z4enzh338o0.webp "层次化网络设计")
+
+#### 网络存储技术
+
+![网络存储技术分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.45tdrjr5wt40.webp "网络存储技术分类")
+
+![Raid](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.5hbp9y5cv8s0.webp "Raid")
+
+####
 
 ## 案例分析
 
