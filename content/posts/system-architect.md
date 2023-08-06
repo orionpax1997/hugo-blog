@@ -9,57 +9,57 @@ draft: true
 #### 相关概念
 ##### 计算机硬件组成
 
-![计算机硬件组成](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.50u9cjryeck0.png "计算机硬件组成")
+![计算机硬件组成](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.50u9cjryeck0.png "计算机硬件组成")
 
 ##### 处理器
 
-![CPU 的功能](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5nujeeacm3o0.webp "CPU 的功能")
+![CPU 的功能](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5nujeeacm3o0.webp "CPU 的功能")
 
-![CPU 的组成](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.fmceksfw06w.webp "CPU 的组成")
+![CPU 的组成](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.fmceksfw06w.webp "CPU 的组成")
 
 ##### 存储器
 
-![分级存储体系与局部性原理](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.33dkhwgef0o0.webp "分级存储体系与局部性原理")
+![分级存储体系与局部性原理](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.33dkhwgef0o0.webp "分级存储体系与局部性原理")
 
-![Cache 概念](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5hxgdiahn3g.webp "Cache 概念")
+![Cache 概念](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5hxgdiahn3g.webp "Cache 概念")
 
-![Cache 映像方式1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5ep6d4fesqk0.webp "Cache 映像方式1")
-![Cache 映像方式2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.17iz0rps4rxc.webp "Cache 映像方式2")
+![Cache 映像方式1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5ep6d4fesqk0.webp "Cache 映像方式1")
+![Cache 映像方式2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.17iz0rps4rxc.webp "Cache 映像方式2")
 
-![Cache 替换算法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2ow3qsbt8vm0.webp "Cache 替换算法")
+![Cache 替换算法](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2ow3qsbt8vm0.webp "Cache 替换算法")
 
-![Cache 命中率及平均时间](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.29nk73n2unb4.webp "Cache 命中率及平均时间")
+![Cache 命中率及平均时间](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.29nk73n2unb4.webp "Cache 命中率及平均时间")
 
-![磁盘结构和参数](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1oeoxoad1p4w.webp "磁盘结构和参数")
+![磁盘结构和参数](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1oeoxoad1p4w.webp "磁盘结构和参数")
 
-![磁盘调度算法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.15ryesazcin4.webp "磁盘调度算法")
+![磁盘调度算法](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.15ryesazcin4.webp "磁盘调度算法")
 
-![内存与接口地址的编址方法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.b1pnqtuf1ug.webp "内存与接口地址的编址方法")
+![内存与接口地址的编址方法](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.b1pnqtuf1ug.webp "内存与接口地址的编址方法")
 
 ##### 总线
 
-![总线的分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5kdhmitxwic0.webp "总线的分类")
+![总线的分类](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5kdhmitxwic0.webp "总线的分类")
 
 ##### 外部设备
 
-![计算机和外设间的数据交互方式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5zlfwjwdgg40.webp "计算机和外设间的数据交互方式")
+![计算机和外设间的数据交互方式](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5zlfwjwdgg40.webp "计算机和外设间的数据交互方式")
 
 ##### 指令
 
-![计算机指令的组成和执行过程](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6qdek30lpc80.webp "计算机指令的组成和执行过程")
+![计算机指令的组成和执行过程](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6qdek30lpc80.webp "计算机指令的组成和执行过程")
 
-![计算机指令的寻址方式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.ou2ih4m6j5s.webp "计算机指令的寻址方式")
+![计算机指令的寻址方式](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.ou2ih4m6j5s.webp "计算机指令的寻址方式")
 
-![计算机指令的分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.733cz61t52g0.webp "计算机指令的分类")
+![计算机指令的分类](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.733cz61t52g0.webp "计算机指令的分类")
 
-![指令流水线](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5t6g10ok4v40.webp "指令流水线")
+![指令流水线](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5t6g10ok4v40.webp "指令流水线")
 
 ##### 校验码
 
-![奇偶校验码](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1pgi3nxmcx4w.webp "奇偶校验码")
+![奇偶校验码](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1pgi3nxmcx4w.webp "奇偶校验码")
 
-![CRC 循环冗余校验码1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.24v5f4oszysg.webp "CRC 循环冗余校验码1")
-![CRC 循环冗余校验码2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1elsprl1sue8.webp "CRC 循环冗余校验码2")
+![CRC 循环冗余校验码1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.24v5f4oszysg.webp "CRC 循环冗余校验码1")
+![CRC 循环冗余校验码2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1elsprl1sue8.webp "CRC 循环冗余校验码2")
 
 #### 相关公式
 
