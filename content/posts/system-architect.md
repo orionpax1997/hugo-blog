@@ -7,6 +7,7 @@ draft: true
 ## 基础部分
 ### 计算机硬件
 #### 相关概念
+##### 计算机组成
 
 ![计算机硬件组成](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.50u9cjryeck0.png "计算机硬件组成")
 
@@ -14,10 +15,14 @@ draft: true
 
 ![CPU 的组成](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.fmceksfw06w.webp "CPU 的组成")
 
+##### 校验码
+
 ![奇偶校验码](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1pgi3nxmcx4w.webp "奇偶校验码")
 
 ![CRC 循环冗余校验码1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.24v5f4oszysg.webp "CRC 循环冗余校验码1")
 ![CRC 循环冗余校验码2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1elsprl1sue8.webp "CRC 循环冗余校验码2")
+
+##### 计算机指令
 
 ![计算机指令的组成和执行过程](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6qdek30lpc80.webp "计算机指令的组成和执行过程")
 
@@ -26,6 +31,8 @@ draft: true
 ![计算机指令的分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.733cz61t52g0.webp "计算机指令的分类")
 
 ![指令流水线](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5t6g10ok4v40.webp "指令流水线")
+
+##### 存储系统
 
 ![分级存储体系与局部性原理](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.33dkhwgef0o0.webp "分级存储体系与局部性原理")
 
@@ -43,6 +50,8 @@ draft: true
 ![磁盘调度算法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.15ryesazcin4.webp "磁盘调度算法")
 
 ![内存与接口地址的编址方法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.b1pnqtuf1ug.webp "内存与接口地址的编址方法")
+
+##### 输入输出技术
 
 ![计算机和外设间的数据交互方式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5zlfwjwdgg40.webp "计算机和外设间的数据交互方式")
 
