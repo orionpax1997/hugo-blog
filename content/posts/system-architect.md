@@ -82,3 +82,78 @@ draft: true
 - 求流水线相关问题: 如果是让求吞吐率或加速比，通常情况下需要先求出执行时间，也就是说需要套两个公式;如果碰到和缓冲区结合考察的问题，**注意但单双缓冲区的差异，单缓冲区读入和写出不能同时进行，因此读入和写出的时间需要加在一起算做一段**。而双缓冲区的读入和写出可以同时进行，因此可以算做两段。
 - 求流水线最大加速比: 加上最大两个字，就是求极限值了，通常不会给出总指令条数，而需要设为 n 来计算，求极限时忽略常数，带入公式即可。
 - 求 CRC 循环冗余校验码: 通常给出原始信息串和生成多项式，让求校验码，套公式即可。
+
+### 计算机软件
+#### 操作系统
+##### 相关概念
+###### 操作系统
+
+![操作系统的定义](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4ta08p68eug0.webp "操作系统的定义")
+
+![操作系统的功能](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4ozf20qqg6g0.webp "操作系统的功能")
+
+![操作系统的分类](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1hfphfzgmusg.webp "操作系统的分类")
+
+###### 进程管理
+
+![进程的组成和状态](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1qa522vuo20w.webp "进程的组成和状态")
+
+![前趋图](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4cxaged0yjq0.webp "前趋图")
+
+![进程资源图](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.39n1vb9hou20.webp "进程资源图")
+
+![进程同步与互斥](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.u47c4pdg4uo.webp "进程同步与互斥")
+
+![PV 操作](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6i8o5hlsafk0.webp "PV 操作")
+
+![生产者消费者问题](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5hiw1kyeeug0.webp "生产者消费者问题")
+
+![进程调度方式](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6c2qe0jxwls0.webp "进程调度方式")
+
+![进程调度算法](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2ty2cv623b60.webp "进程调度算法")
+
+![死锁](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2wqhyeh9wvq0.webp "死锁")
+
+![线程](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6lmden7uo1g0.webp "线程")
+
+###### 存储管理
+
+![分区存储方式](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.qmuxffsi1n4.webp "分区存储方式")
+
+![分区适应法](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.32xww0kvkcy0.webp "分区适应法")
+
+![分页存储](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2scnsm54dvc0.webp "分页存储")
+
+![页面置换算法](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.727k1ckq7ms0.webp "页面置换算法")
+
+![快表](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3iiym37nnks0.webp "快表")
+
+![分段存储](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.18syec51w934.webp "分段存储")
+
+![段页式存储](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4tqudwbw0om0.webp "段页式存储")
+
+###### 设备管理
+
+![设备管理概述](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1g5x73h6fyqo.webp "设备管理概述")
+
+![I/O 设备](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.34mylt9dmqw0.webp "I/O 设备")
+
+![设备管理技术](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1maz233knxk0.webp "设备管理技术")
+
+#### 文件系统
+##### 相关概念
+
+![文件管理概述](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.7gs2ocqkw480.webp "文件管理概述")
+
+![文件结构分类](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3xwfe8q9sgu0.webp "文件结构分类")
+
+![索引文件结构](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6hs13ibogkg0.webp "索引文件结构")
+
+![文件目录](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.24huvvajhps0.webp "文件目录")
+
+![文件存储空间管理1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5pr9lq294js0.webp "文件存储空间管理1")
+![文件存储空间管理2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.67e5ut4ovnc0.webp "文件存储空间管理2")
+
+#### 嵌入式系统及软件
+
+![嵌入式操作系统的特点](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.7089o6hoe840.webp "嵌入式操作系统的特点")
