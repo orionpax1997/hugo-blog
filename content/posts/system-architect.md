@@ -5,8 +5,11 @@ draft: true
 ---
 
 ## 计算机系统基础知识
+
 ### 计算机硬件
+
 #### 相关概念
+
 ##### 计算机硬件组成
 
 ![计算机硬件组成](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.50u9cjryeck0.png "计算机硬件组成")
@@ -66,13 +69,13 @@ draft: true
 - 磁道记录的最大等待时间: 就是旋转一周的时间
 - 磁道记录的最小等待时间: 就是 0
 - 磁道按顺序排列的记录等待时间: 旋转一周的时间 - 处理时间
-- 磁道记录的总处理时间: (旋转一块的时间 + 处理时间) * 总块数 + 等待时间 * (总块数 - 1) 
+- 磁道记录的总处理时间: (旋转一块的时间 + 处理时间) _ 总块数 + 等待时间 _ (总块数 - 1)
 - 流水线周期: 指令分成不同执行段，其中执行时间最长的段为流水线周期
-- 流水线执行时间1: 1 条指令的总执行时间 + (总指令条数 - 1) * 流水线周期
-- 流水线执行时间2: (1 条指令的总执行时间 - 流水线周期) + 总指令条数 * 流水线周期
+- 流水线执行时间1: 1 条指令的总执行时间 + (总指令条数 - 1) \* 流水线周期
+- 流水线执行时间2: (1 条指令的总执行时间 - 流水线周期) + 总指令条数 \* 流水线周期
 - 流水线的吞吐率: 吞吐率即为单位时间内执行的指令条数 = 指令条数 / 流水线执行时间
 - 流水线的加速比: 不使用流水线的执行时间 / 使用流水线的执行时间
-- 流水线的最大加速比: 1 条指令不使用流水线的执行时间 / 流水线周期 
+- 流水线的最大加速比: 1 条指令不使用流水线的执行时间 / 流水线周期
 - CRC 编码: 1. 在原始信息串后面补多项式的阶个零; 2. 求除数，多项式中幂指数存在的为 1，不存在为 0; 3. 求校验码，进行模 2 除(异或运算)，**余数如果不足多项式的阶的位数则在左边补 0**
 
 #### 相关题型解题思路
@@ -84,8 +87,11 @@ draft: true
 - 求 CRC 循环冗余校验码: 通常给出原始信息串和生成多项式，让求校验码，套公式即可。
 
 ### 计算机软件
+
 #### 操作系统
+
 ##### 相关概念
+
 ###### 操作系统
 
 ![操作系统的定义](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4ta08p68eug0.webp "操作系统的定义")
@@ -141,6 +147,7 @@ draft: true
 ![设备管理技术](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1maz233knxk0.webp "设备管理技术")
 
 #### 文件系统
+
 ##### 相关概念
 
 ![文件管理概述](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.7gs2ocqkw480.webp "文件管理概述")
@@ -157,3 +164,85 @@ draft: true
 #### 嵌入式系统及软件
 
 ![嵌入式操作系统的特点](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.7089o6hoe840.webp "嵌入式操作系统的特点")
+
+## 数据库设计基础知识
+
+### 相关概念
+
+#### 数据库基本概念
+
+![数据库的基本特征](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.191f8qq6f1kw.webp "数据库的基本特征")
+
+![数据库系统与数据库管理系统](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.37h9jxeop740.webp "数据库系统与数据库管理系统")
+
+![三级模式两级映像](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4xrvqgybsj80.webp "三级模式两级映像")
+
+![数据模型](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1t4qn0udkou8.webp "数据模型")
+
+![E-R 模型](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3zjeo8s5jem0.webp "E-R 模型")
+
+![关系模型](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5c5pc1fefds0.webp "关系模型")
+
+![关系模型优缺点](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1pvv2q4g0xk0.webp "关系模型优缺点")
+
+![E-R 模型转关系模型](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3ht5wfvcgt20.webp "E-R 模型转关系模型")
+
+![数据库安全1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3cv1j4ljnny0.webp "数据库安全1")
+
+![数据库安全2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3tqyj91k41o0.webp "数据库安全2")
+
+![分布式数据库](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5fjzuunsuas0.webp "分布式数据库")
+
+![数据仓库技术1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5a5firz8ynw0.webp "数据仓库技术1")
+
+![数据仓库技术2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.7kpdbrrtbn40.webp "数据仓库技术2")
+
+![数据仓库技术3](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2cadqwnfv30g.webp "数据仓库技术3")
+
+![大数据](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.7b421s6py9c0.webp "大数据")
+
+#### 关系数据库
+
+![关系代数并、交、差](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.r05gox34s1c.webp "关系代数并、交、差")
+
+![关系代数笛卡尔积、投影、选择](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.53od7g3d1cg0.webp "关系代数笛卡尔积、投影、选择")
+
+![关系代数自然连接](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2p08mdqw7u20.webp "关系代数自然连接")
+
+![函数依赖规则](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6ekmpcoz8380.webp "函数依赖规则")
+
+![函数依赖的公理系统](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.76imy2qc0wc0.webp "函数依赖的公理系统")
+
+![并发控制1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2i75upllyj40.webp "并发控制1")
+
+![并发控制2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6g3ytt1vz1g0.webp "并发控制2")
+
+![封锁协议1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.55ujp9qldz00.webp "封锁协议1")
+
+![封锁协议2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3bsu6p7e8wo0.webp "封锁协议2")
+
+![封锁协议3](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.yy6tuoni09c.webp "封锁协议3")
+
+#### 数据库设计
+
+![数据库设计](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5dzoaaxpfaw0.webp "数据库设计")
+
+![键与约束](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.64h6x2fudc4.webp "键与约束")
+
+![第一范式1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5qei5j4x6tw0.webp "第一范式1")
+
+![第一范式2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2m933rm0do80.webp "第一范式2")
+
+![第二范式](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2sw5n9mldvo0.webp "第二范式")
+
+![第三范式](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6twirr83ghc0.webp "第三范式")
+
+![BC范式](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3yni6tbwn540.webp "BC范式")
+
+![模式分解1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.7j4ghkffvi40.webp "模式分解1")
+
+![模式分解2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.682z4d6u4gg0.webp "模式分解2")
+
+![模式分解3](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.omahc7zk2uo.webp "模式分解3")
+
+![反规范化技术](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5kt1osw7mwg0.webp "反规范化技术")
