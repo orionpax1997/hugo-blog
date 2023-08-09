@@ -210,9 +210,7 @@ draft: true
 
 ## 数据库设计基础知识
 
-### 相关概念
-
-#### 数据库基本概念
+### 数据库基本概念
 
 ![数据库的基本特征](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.191f8qq6f1kw.webp "数据库的基本特征")
 
@@ -244,17 +242,15 @@ draft: true
 
 ![大数据](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.7b421s6py9c0.webp "大数据")
 
-#### 关系数据库
+### 关系数据库
+
+#### 相关概念
 
 ![关系代数并、交、差](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.r05gox34s1c.webp "关系代数并、交、差")
 
 ![关系代数笛卡尔积、投影、选择](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.53od7g3d1cg0.webp "关系代数笛卡尔积、投影、选择")
 
 ![关系代数自然连接](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2p08mdqw7u20.webp "关系代数自然连接")
-
-![函数依赖规则](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6ekmpcoz8380.webp "函数依赖规则")
-
-![函数依赖的公理系统](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.76imy2qc0wc0.webp "函数依赖的公理系统")
 
 ![并发控制1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2i75upllyj40.webp "并发控制1")
 
@@ -266,9 +262,19 @@ draft: true
 
 ![封锁协议3](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.yy6tuoni09c.webp "封锁协议3")
 
-#### 数据库设计
+#### 相关题型解题思路
+
+- 求等价的关系代数表达式：常见的就是给个自然连接的表达式，等价的是一个笛卡尔积的表达式，笛卡尔积转自然连接需要经过投影和选择。**还有能用数字代替列名，从1开始，注意不要加引号**。
+
+### 数据库设计
+
+#### 相关概念
 
 ![数据库设计](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5dzoaaxpfaw0.webp "数据库设计")
+
+![函数依赖规则](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6ekmpcoz8380.webp "函数依赖规则")
+
+![函数依赖的公理系统](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.76imy2qc0wc0.webp "函数依赖的公理系统")
 
 ![键与约束](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.64h6x2fudc4.webp "键与约束")
 
@@ -289,3 +295,8 @@ draft: true
 ![模式分解3](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.omahc7zk2uo.webp "模式分解3")
 
 ![反规范化技术](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5kt1osw7mwg0.webp "反规范化技术")
+
+#### 相关题型解题思路
+
+- 求候选键: 根据依赖集找出从未在右边出现过的属性，其必然是候选键之一，然后以其为基础看看能不能遍历所有属性，将无法遍历的加入候选键中。
+- 求关系模式达到了第几范式: 理解各种范式的限定条件。
