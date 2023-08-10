@@ -12,57 +12,57 @@ draft: true
 
 ##### 计算机硬件组成
 
-![计算机硬件组成](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.50u9cjryeck0.png "计算机硬件组成")
+![计算机硬件组成](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.50u9cjryeck0.png "计算机硬件组成")
 
 ##### 处理器
 
-![CPU 的功能](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5nujeeacm3o0.webp "CPU 的功能")
+![CPU 的功能](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5nujeeacm3o0.webp "CPU 的功能")
 
-![CPU 的组成](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.fmceksfw06w.webp "CPU 的组成")
+![CPU 的组成](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.fmceksfw06w.webp "CPU 的组成")
 
 ##### 存储器
 
-![分级存储体系与局部性原理](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.33dkhwgef0o0.webp "分级存储体系与局部性原理")
+![分级存储体系与局部性原理](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.33dkhwgef0o0.webp "分级存储体系与局部性原理")
 
-![Cache 概念](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5hxgdiahn3g.webp "Cache 概念")
+![Cache 概念](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5hxgdiahn3g.webp "Cache 概念")
 
-![Cache 映像方式1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5ep6d4fesqk0.webp "Cache 映像方式1")
-![Cache 映像方式2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.17iz0rps4rxc.webp "Cache 映像方式2")
+![Cache 映像方式1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5ep6d4fesqk0.webp "Cache 映像方式1")
+![Cache 映像方式2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.17iz0rps4rxc.webp "Cache 映像方式2")
 
-![Cache 替换算法](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2ow3qsbt8vm0.webp "Cache 替换算法")
+![Cache 替换算法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2ow3qsbt8vm0.webp "Cache 替换算法")
 
-![Cache 命中率及平均时间](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.29nk73n2unb4.webp "Cache 命中率及平均时间")
+![Cache 命中率及平均时间](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.29nk73n2unb4.webp "Cache 命中率及平均时间")
 
-![磁盘结构和参数](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1oeoxoad1p4w.webp "磁盘结构和参数")
+![磁盘结构和参数](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1oeoxoad1p4w.webp "磁盘结构和参数")
 
-![磁盘调度算法](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.15ryesazcin4.webp "磁盘调度算法")
+![磁盘调度算法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.15ryesazcin4.webp "磁盘调度算法")
 
-![内存与接口地址的编址方法](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.b1pnqtuf1ug.webp "内存与接口地址的编址方法")
+![内存与接口地址的编址方法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.b1pnqtuf1ug.webp "内存与接口地址的编址方法")
 
 ##### 总线
 
-![总线的分类](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5kdhmitxwic0.webp "总线的分类")
+![总线的分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5kdhmitxwic0.webp "总线的分类")
 
 ##### 外部设备
 
-![计算机和外设间的数据交互方式](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5zlfwjwdgg40.webp "计算机和外设间的数据交互方式")
+![计算机和外设间的数据交互方式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5zlfwjwdgg40.webp "计算机和外设间的数据交互方式")
 
 ##### 指令
 
-![计算机指令的组成和执行过程](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6qdek30lpc80.webp "计算机指令的组成和执行过程")
+![计算机指令的组成和执行过程](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6qdek30lpc80.webp "计算机指令的组成和执行过程")
 
-![计算机指令的寻址方式](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.ou2ih4m6j5s.webp "计算机指令的寻址方式")
+![计算机指令的寻址方式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.ou2ih4m6j5s.webp "计算机指令的寻址方式")
 
-![计算机指令的分类](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.733cz61t52g0.webp "计算机指令的分类")
+![计算机指令的分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.733cz61t52g0.webp "计算机指令的分类")
 
-![指令流水线](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5t6g10ok4v40.webp "指令流水线")
+![指令流水线](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5t6g10ok4v40.webp "指令流水线")
 
 ##### 校验码
 
-![奇偶校验码](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1pgi3nxmcx4w.webp "奇偶校验码")
+![奇偶校验码](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1pgi3nxmcx4w.webp "奇偶校验码")
 
-![CRC 循环冗余校验码1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.24v5f4oszysg.webp "CRC 循环冗余校验码1")
-![CRC 循环冗余校验码2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1elsprl1sue8.webp "CRC 循环冗余校验码2")
+![CRC 循环冗余校验码1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.24v5f4oszysg.webp "CRC 循环冗余校验码1")
+![CRC 循环冗余校验码2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1elsprl1sue8.webp "CRC 循环冗余校验码2")
 
 #### 相关公式
 
@@ -92,33 +92,33 @@ draft: true
 
 ##### 操作系统
 
-![操作系统的定义](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4ta08p68eug0.webp "操作系统的定义")
+![操作系统的定义](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4ta08p68eug0.webp "操作系统的定义")
 
-![操作系统的功能](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4ozf20qqg6g0.webp "操作系统的功能")
+![操作系统的功能](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4ozf20qqg6g0.webp "操作系统的功能")
 
-![操作系统的分类](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1hfphfzgmusg.webp "操作系统的分类")
+![操作系统的分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1hfphfzgmusg.webp "操作系统的分类")
 
 ##### 进程管理
 
-![进程的组成和状态](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1qa522vuo20w.webp "进程的组成和状态")
+![进程的组成和状态](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1qa522vuo20w.webp "进程的组成和状态")
 
-![前趋图](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4cxaged0yjq0.webp "前趋图")
+![前趋图](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4cxaged0yjq0.webp "前趋图")
 
-![进程资源图](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.39n1vb9hou20.webp "进程资源图")
+![进程资源图](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.39n1vb9hou20.webp "进程资源图")
 
-![进程同步与互斥](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.u47c4pdg4uo.webp "进程同步与互斥")
+![进程同步与互斥](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.u47c4pdg4uo.webp "进程同步与互斥")
 
-![PV 操作](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6i8o5hlsafk0.webp "PV 操作")
+![PV 操作](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6i8o5hlsafk0.webp "PV 操作")
 
-![生产者消费者问题](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5hiw1kyeeug0.webp "生产者消费者问题")
+![生产者消费者问题](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5hiw1kyeeug0.webp "生产者消费者问题")
 
-![进程调度方式](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6c2qe0jxwls0.webp "进程调度方式")
+![进程调度方式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6c2qe0jxwls0.webp "进程调度方式")
 
-![进程调度算法](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2ty2cv623b60.webp "进程调度算法")
+![进程调度算法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2ty2cv623b60.webp "进程调度算法")
 
-![死锁](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2wqhyeh9wvq0.webp "死锁")
+![死锁](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2wqhyeh9wvq0.webp "死锁")
 
-![线程](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6lmden7uo1g0.webp "线程")
+![线程](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6lmden7uo1g0.webp "线程")
 
 ###### 相关公式
 
@@ -139,19 +139,19 @@ draft: true
 
 ##### 存储管理
 
-![分区存储方式](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.qmuxffsi1n4.webp "分区存储方式")
+![分区存储方式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.qmuxffsi1n4.webp "分区存储方式")
 
-![分区适应法](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.32xww0kvkcy0.webp "分区适应法")
+![分区适应法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.32xww0kvkcy0.webp "分区适应法")
 
-![分页存储](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2scnsm54dvc0.webp "分页存储")
+![分页存储](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2scnsm54dvc0.webp "分页存储")
 
-![页面置换算法](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.727k1ckq7ms0.webp "页面置换算法")
+![页面置换算法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.727k1ckq7ms0.webp "页面置换算法")
 
-![快表](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3iiym37nnks0.webp "快表")
+![快表](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3iiym37nnks0.webp "快表")
 
-![分段存储](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.18syec51w934.webp "分段存储")
+![分段存储](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.18syec51w934.webp "分段存储")
 
-![段页式存储](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4tqudwbw0om0.webp "段页式存储")
+![段页式存储](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4tqudwbw0om0.webp "段页式存储")
 
 ###### 相关公式
 
@@ -168,26 +168,26 @@ draft: true
 
 ##### 设备管理
 
-![设备管理概述](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1g5x73h6fyqo.webp "设备管理概述")
+![设备管理概述](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1g5x73h6fyqo.webp "设备管理概述")
 
-![I/O 设备](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.34mylt9dmqw0.webp "I/O 设备")
+![I/O 设备](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.34mylt9dmqw0.webp "I/O 设备")
 
-![设备管理技术](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1maz233knxk0.webp "设备管理技术")
+![设备管理技术](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1maz233knxk0.webp "设备管理技术")
 
 #### 文件系统
 
 ##### 相关概念
 
-![文件管理概述](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.7gs2ocqkw480.webp "文件管理概述")
+![文件管理概述](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7gs2ocqkw480.webp "文件管理概述")
 
-![文件结构分类](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3xwfe8q9sgu0.webp "文件结构分类")
+![文件结构分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3xwfe8q9sgu0.webp "文件结构分类")
 
-![索引文件结构](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6hs13ibogkg0.webp "索引文件结构")
+![索引文件结构](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6hs13ibogkg0.webp "索引文件结构")
 
-![文件目录](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.24huvvajhps0.webp "文件目录")
+![文件目录](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.24huvvajhps0.webp "文件目录")
 
-![文件存储空间管理1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5pr9lq294js0.webp "文件存储空间管理1")
-![文件存储空间管理2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.67e5ut4ovnc0.webp "文件存储空间管理2")
+![文件存储空间管理1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5pr9lq294js0.webp "文件存储空间管理1")
+![文件存储空间管理2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.67e5ut4ovnc0.webp "文件存储空间管理2")
 
 ##### 相关公式
 
@@ -206,61 +206,61 @@ draft: true
 
 #### 嵌入式系统及软件
 
-![嵌入式操作系统的特点](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.7089o6hoe840.webp "嵌入式操作系统的特点")
+![嵌入式操作系统的特点](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7089o6hoe840.webp "嵌入式操作系统的特点")
 
 ## 数据库设计基础知识
 
 ### 数据库基本概念
 
-![数据库的基本特征](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.191f8qq6f1kw.webp "数据库的基本特征")
+![数据库的基本特征](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.191f8qq6f1kw.webp "数据库的基本特征")
 
-![数据库系统与数据库管理系统](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.37h9jxeop740.webp "数据库系统与数据库管理系统")
+![数据库系统与数据库管理系统](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.37h9jxeop740.webp "数据库系统与数据库管理系统")
 
-![三级模式两级映像](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4xrvqgybsj80.webp "三级模式两级映像")
+![三级模式两级映像](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4xrvqgybsj80.webp "三级模式两级映像")
 
-![数据模型](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1t4qn0udkou8.webp "数据模型")
+![数据模型](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1t4qn0udkou8.webp "数据模型")
 
-![E-R 模型](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3zjeo8s5jem0.webp "E-R 模型")
+![E-R 模型](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3zjeo8s5jem0.webp "E-R 模型")
 
-![关系模型](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5c5pc1fefds0.webp "关系模型")
+![关系模型](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5c5pc1fefds0.webp "关系模型")
 
-![关系模型优缺点](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1pvv2q4g0xk0.webp "关系模型优缺点")
+![关系模型优缺点](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1pvv2q4g0xk0.webp "关系模型优缺点")
 
-![E-R 模型转关系模型](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3ht5wfvcgt20.webp "E-R 模型转关系模型")
+![E-R 模型转关系模型](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3ht5wfvcgt20.webp "E-R 模型转关系模型")
 
-![数据库安全1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3cv1j4ljnny0.webp "数据库安全1")
+![数据库安全1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3cv1j4ljnny0.webp "数据库安全1")
 
-![数据库安全2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3tqyj91k41o0.webp "数据库安全2")
+![数据库安全2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3tqyj91k41o0.webp "数据库安全2")
 
-![分布式数据库](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5fjzuunsuas0.webp "分布式数据库")
+![分布式数据库](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5fjzuunsuas0.webp "分布式数据库")
 
-![数据仓库技术1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5a5firz8ynw0.webp "数据仓库技术1")
+![数据仓库技术1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5a5firz8ynw0.webp "数据仓库技术1")
 
-![数据仓库技术2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.7kpdbrrtbn40.webp "数据仓库技术2")
+![数据仓库技术2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7kpdbrrtbn40.webp "数据仓库技术2")
 
-![数据仓库技术3](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2cadqwnfv30g.webp "数据仓库技术3")
+![数据仓库技术3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2cadqwnfv30g.webp "数据仓库技术3")
 
-![大数据](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.7b421s6py9c0.webp "大数据")
+![大数据](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7b421s6py9c0.webp "大数据")
 
 ### 关系数据库
 
 #### 相关概念
 
-![关系代数并、交、差](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.r05gox34s1c.webp "关系代数并、交、差")
+![关系代数并、交、差](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.r05gox34s1c.webp "关系代数并、交、差")
 
-![关系代数笛卡尔积、投影、选择](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.53od7g3d1cg0.webp "关系代数笛卡尔积、投影、选择")
+![关系代数笛卡尔积、投影、选择](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.53od7g3d1cg0.webp "关系代数笛卡尔积、投影、选择")
 
-![关系代数自然连接](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2p08mdqw7u20.webp "关系代数自然连接")
+![关系代数自然连接](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2p08mdqw7u20.webp "关系代数自然连接")
 
-![并发控制1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2i75upllyj40.webp "并发控制1")
+![并发控制1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2i75upllyj40.webp "并发控制1")
 
-![并发控制2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6g3ytt1vz1g0.webp "并发控制2")
+![并发控制2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6g3ytt1vz1g0.webp "并发控制2")
 
-![封锁协议1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.55ujp9qldz00.webp "封锁协议1")
+![封锁协议1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.55ujp9qldz00.webp "封锁协议1")
 
-![封锁协议2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3bsu6p7e8wo0.webp "封锁协议2")
+![封锁协议2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3bsu6p7e8wo0.webp "封锁协议2")
 
-![封锁协议3](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.yy6tuoni09c.webp "封锁协议3")
+![封锁协议3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.yy6tuoni09c.webp "封锁协议3")
 
 #### 相关题型解题思路
 
@@ -270,33 +270,34 @@ draft: true
 
 #### 相关概念
 
-![数据库设计](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5dzoaaxpfaw0.webp "数据库设计")
+![数据库设计](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5dzoaaxpfaw0.webp "数据库设计")
 
-![函数依赖规则](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6ekmpcoz8380.webp "函数依赖规则")
+![函数依赖规则](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6ekmpcoz8380.webp "函数依赖规则")
 
-![函数依赖的公理系统](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.76imy2qc0wc0.webp "函数依赖的公理系统")
+![函数依赖的公理系统](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.76imy2qc0wc0.webp "函数依赖的公理系统")
 
-![键与约束](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.64h6x2fudc4.webp "键与约束")
+![键与约束](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.64h6x2fudc4.webp "键与约束")
 
-![第一范式1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5qei5j4x6tw0.webp "第一范式1")
+![第一范式1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5qei5j4x6tw0.webp "第一范式1")
 
-![第一范式2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2m933rm0do80.webp "第一范式2")
+![第一范式2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2m933rm0do80.webp "第一范式2")
 
-![第二范式](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2sw5n9mldvo0.webp "第二范式")
+![第二范式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2sw5n9mldvo0.webp "第二范式")
 
-![第三范式](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6twirr83ghc0.webp "第三范式")
+![第三范式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6twirr83ghc0.webp "第三范式")
 
-![BC范式](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3yni6tbwn540.webp "BC范式")
+![BC范式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3yni6tbwn540.webp "BC范式")
 
-![模式分解1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.7j4ghkffvi40.webp "模式分解1")
+![模式分解1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7j4ghkffvi40.webp "模式分解1")
 
-![模式分解2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.682z4d6u4gg0.webp "模式分解2")
+![模式分解2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.682z4d6u4gg0.webp "模式分解2")
 
-![模式分解3](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.omahc7zk2uo.webp "模式分解3")
+![模式分解3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.omahc7zk2uo.webp "模式分解3")
 
-![反规范化技术](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5kt1osw7mwg0.webp "反规范化技术")
+![反规范化技术](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5kt1osw7mwg0.webp "反规范化技术")
 
 #### 相关题型解题思路
 
 - 求候选键: 根据依赖集找出从未在右边出现过的属性，其必然是候选键之一，然后以其为基础看看能不能遍历所有属性，将无法遍历的加入候选键中。
 - 求关系模式达到了第几范式: 理解各种范式的限定条件。
+- 求模式分解后是否保持函数依赖: 先求分解后的模式分别的函数依赖，如果拆分后的属性，包含了原来的依赖关系中的所有属性，那么就能继承相应的依赖关系。然后如果剩余全部未被包含的依赖能通过函数依赖的公理系统得到，那么就能说保持了函数依赖。
