@@ -204,9 +204,169 @@ draft: true
 - 求需要表示的物理块在位示图中的第几个字描述: 通常需要表示的物理块号，和字长。**注意如果有余数，则向上取整，还有没有明确说明的情况下是从零开始编号的**
 - 求位示图需要几个字来表示: 通常给出全部条件带入公式计算即可。
 
-#### 嵌入式系统及软件
+### 嵌入式系统及软件
 
 ![嵌入式操作系统的特点](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7089o6hoe840.webp "嵌入式操作系统的特点")
+
+![冯诺依曼结构](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.14ex5c4elzcw.webp "冯诺依曼结构")
+
+![哈佛结构](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6c5e3h1a0eo0.webp "哈佛结构")
+
+![微处理器分类1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4mgtxfa7vn60.webp "微处理器分类1")
+![微处理器分类2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3oyxxpzllck0.webp "微处理器分类2")
+
+![多核微处理器](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6tn60veft380.webp "多核微处理器")
+
+![嵌入式软件分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4d1pytpan9y0.webp "嵌入式软件分类")
+
+![板级支持包 BSP](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1cfioc8l9cm8.webp "板级支持包 BSP")
+
+![BootLoader](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4bj678u5b3y0.webp "BootLoader")
+
+![设备驱动程序](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.21y37ylcwwow.webp "设备驱动程序")
+
+![嵌入式系统的组成](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3awqm214wv80.webp "嵌入式系统的组成")
+
+![嵌入式系统的特性](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6ilkibhoz1o0.webp "嵌入式系统的特性")
+
+![嵌入式系统的分层](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.67iw02a1tos0.webp "嵌入式系统的分层")
+
+![嵌入式数据库使用环境特点](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1m3oqzzhakw0.webp "嵌入式数据库使用环境特点")
+
+![嵌入式数据库组成](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4pj3zw951a00.webp "嵌入式数据库组成")
+
+![嵌入式操作系统](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.9kfz3dgkumo.webp "嵌入式操作系统")
+
+![嵌入式实时操作系统的](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7grvl523q1g0.webp "嵌入式实时操作系统的")
+
+![嵌入式实时操作系统的特征](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5359j8jrm400.webp "嵌入式实时操作系统的特征")
+
+![交叉平台开发环境](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4bg0rqv7u3k0.webp "交叉平台开发环境")
+
+![交叉编译与交叉调试](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.llahskv7sj4.webp "交叉编译与交叉调试")
+
+![软件开发工具](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.790tw8sh1vo0.webp "软件开发工具")
+
+### 计算机网络
+
+#### 相关概念
+
+![计算机网络功能和分类1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5a13jyx69e00.webp "计算机网络功能和分类1")
+![计算机网络功能和分类2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.pchdfi5sulc.webp "计算机网络功能和分类2")
+
+![通信技术](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6oz6rblhgp80.webp "通信技术")
+
+![OSI 七层协议](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.gdf75l2zhbk.webp "OSI 七层协议")
+
+![局域网和广域网协议](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.mmie4lvb0yo.webp "局域网和广域网协议")
+
+![TCP/IP 协议](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.sqyzglyo3kw.webp "TCP/IP 协议")
+
+![网络层协议](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.53373fvqn1s0.webp "网络层协议")
+
+![传输层协议](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1emz9325c274.webp "传输层协议")
+
+![应用层协议](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.688vsxjc7l40.webp "应用层协议")
+
+![协议端口对照表](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.gh9fx41mf34.webp "协议端口对照表")
+
+![交换机的功能](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2xuh3sxgs5i0.webp "交换机的功能")
+
+![路由器的功能](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5y4rhk2fj8c0.webp "路由器的功能")
+
+![绞线](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7ijadk7wygs0.webp "绞线")
+
+![网线安装标准](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1ut73626351c.webp "网线安装标准")
+
+![光纤](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6pbshbhd3r40.webp "光纤")
+
+![无线信道](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4su1zzn9wy60.webp "无线信道")
+
+![通信方向](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5mkk0u56qf40.webp "通信方向")
+
+![通信方式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3m3y6cbwnsw0.webp "通信方式")
+
+![交换方式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.156hnydapam8.webp "交换方式")
+
+![IP 地址的表示](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5d9he7ynk9g0.webp "IP 地址的表示")
+
+![IP 地址的分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6b6twlatpok0.webp "IP 地址的分类")
+
+![特殊 IP 地址](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1vg8jr7xi9k0.webp "特殊 IP 地址")
+
+![子网划分](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1wk0lxljtm80.webp "子网划分")
+
+![IPV6](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5v04cgmdqys0.webp "IPV6")
+
+![网络规划三层模型](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3ttf5hm4niq0.webp "网络规划三层模型")
+
+![建筑物综合布线系统](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3vwco7coc5s0.webp "建筑物综合布线系统")
+
+![磁盘冗余阵列技术1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3t761ry4bgk0.webp "磁盘冗余阵列技术1")
+![磁盘冗余阵列技术2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.60ydmembgxg0.webp "磁盘冗余阵列技术2")
+![磁盘冗余阵列技术3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1cnolw5yuxr.webp "磁盘冗余阵列技术3")
+
+![网络存储技术1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5mtt846n0pw0.webp "网络存储技术1")
+![网络存储技术2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2y6ond2fhi20.webp "网络存储技术2")
+
+![其他考点1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4b66at7qjso0.webp "其他考点1")
+
+![其他考点2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3f1pr02zp7a0.webp "其他考点2")
+
+#### 相关公式
+
+- 子网个数: 用划分了子网号后的网络号位数 - 原来的网络号位数，作为的 2 的幂，求 2 的幂次方
+- 可使用的主机个数: 32 - 网络号位数，作为 2 的幂，求 2 的幂次方在减 2
+
+#### 相关题型解题思路
+
+- 考察OSI 七层协议: 主要考察各层的协议、功能、设备。
+- 考察TCI/IP 协议: 主要考察功能
+- 求子网个数: 通常给出两个 IP 地址，可以根据后面的网络号的位数减一下，代入公式计算。
+- 求可用主机数: 只要算出来网络号的位数后，代入公式很容易计算。
+- 求不属于网络的子网地址: 判断方式是看网络号是否相同，而网络号在左边，然后从 2 进制的角度来讲，数字越大越考左，所以大概率是最大的那个数。
+
+### 计算机语言
+
+![计算机语言概述](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2lbetdgjyyc0.webp "计算机语言概述")
+
+![计算机语言的分类1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1xqngs521vnk.webp "计算机语言的分类1")
+![计算机语言的分类2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1lgjqsw9t2bk.webp "计算机语言的分类2")
+
+### 多媒体
+
+![媒体的分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.54wobnpoys00.webp "媒体的分类")
+
+![多媒体的重要特征](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3qgpcfdagu00.webp "多媒体的重要特征")
+
+![多媒体系统的基本组成](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7cg0bjgjhzk0.webp "多媒体系统的基本组成")
+
+![多媒体系统的关键技术1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2o6lnyzumhe0.webp "多媒体系统的关键技术1")
+![多媒体系统的关键技术2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3hlabp3qidw0.webp "多媒体系统的关键技术2")
+![多媒体系统的关键技术3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.61lm67njx5k0.webp "多媒体系统的关键技术3")
+
+### 系统工程
+
+![系统工程方法1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1hspdvtdkskg.webp "系统工程方法1")
+![系统工程方法2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.134qojvgz1i8.webp "系统工程方法2")
+![系统工程方法3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3bmjbpf860s0.webp "系统工程方法3")
+![系统工程方法4](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4j1y4yfu2lg0.webp "系统工程方法4")
+
+![系统工程的生命周期1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1f5vu2w0w2f4.webp "系统工程的生命周期1")
+![系统工程的生命周期2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.226r5l0ppwu8.webp "系统工程的生命周期2")
+
+![基于模型的系统工程](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4bw9naeriys0.webp "基于模型的系统工程")
+
+### 系统性能
+
+![性能指标1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.llhl0gkjkts.webp "性能指标1")
+![性能指标2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2p55uuqhp000.webp "性能指标2")
+![性能指标3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.og35ydk5ckg.webp "性能指标3")
+
+![性能评测方法1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.78mcto4d1zk0.webp "性能评测方法1")
+![性能评测方法2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6hwd2bqgbx00.webp "性能评测方法2")
+
+![阿姆达尔解决方法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.67ps4puigzk0.webp "阿姆达尔解决方法")
 
 ## 数据库设计基础知识
 
@@ -229,15 +389,12 @@ draft: true
 ![E-R 模型转关系模型](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3ht5wfvcgt20.webp "E-R 模型转关系模型")
 
 ![数据库安全1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3cv1j4ljnny0.webp "数据库安全1")
-
 ![数据库安全2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3tqyj91k41o0.webp "数据库安全2")
 
 ![分布式数据库](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5fjzuunsuas0.webp "分布式数据库")
 
 ![数据仓库技术1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5a5firz8ynw0.webp "数据仓库技术1")
-
 ![数据仓库技术2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7kpdbrrtbn40.webp "数据仓库技术2")
-
 ![数据仓库技术3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2cadqwnfv30g.webp "数据仓库技术3")
 
 ![大数据](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7b421s6py9c0.webp "大数据")
@@ -253,20 +410,18 @@ draft: true
 ![关系代数自然连接](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2p08mdqw7u20.webp "关系代数自然连接")
 
 ![并发控制1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2i75upllyj40.webp "并发控制1")
-
 ![并发控制2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6g3ytt1vz1g0.webp "并发控制2")
 
 ![封锁协议1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.55ujp9qldz00.webp "封锁协议1")
-
 ![封锁协议2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3bsu6p7e8wo0.webp "封锁协议2")
-
 ![封锁协议3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.yy6tuoni09c.webp "封锁协议3")
 
 #### 相关题型解题思路
 
+- 求元组个数和属性列数: 属性列很简单，自然连接求交集，笛卡尔积求并集，元组个数是，通过属性列相同且值相同连接后剩余的行数。
 - 求等价的关系代数表达式：常见的就是给个自然连接的表达式，等价的是一个笛卡尔积的表达式，笛卡尔积转自然连接需要经过投影和选择。**还有能用数字代替列名，从1开始，注意不要加引号**。
-- 求事务能否加锁成功: 很简单，排它(写)锁就是一个事务加了，其他事务什么锁也加不了。共享(读)锁就是一个事务加了，其他事务只能加共享(读)锁，不能加排它(写)锁。
 - 求关系代数等价的SQL: 通常就是考察投影和选择，主要是行的问题，把属性列写一下很容易就能答出来。
+- 求事务能否加锁成功: 很简单，排它(写)锁就是一个事务加了，其他事务什么锁也加不了。共享(读)锁就是一个事务加了，其他事务只能加共享(读)锁，不能加排它(写)锁。
 
 ### 数据库设计
 
@@ -281,7 +436,6 @@ draft: true
 ![键与约束](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.64h6x2fudc4.webp "键与约束")
 
 ![第一范式1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5qei5j4x6tw0.webp "第一范式1")
-
 ![第一范式2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2m933rm0do80.webp "第一范式2")
 
 ![第二范式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2sw5n9mldvo0.webp "第二范式")
@@ -291,15 +445,14 @@ draft: true
 ![BC范式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3yni6tbwn540.webp "BC范式")
 
 ![模式分解1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7j4ghkffvi40.webp "模式分解1")
-
 ![模式分解2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.682z4d6u4gg0.webp "模式分解2")
-
 ![模式分解3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.omahc7zk2uo.webp "模式分解3")
 
 ![反规范化技术](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5kt1osw7mwg0.webp "反规范化技术")
 
 #### 相关题型解题思路
 
+- 求属于概念结构设计的什么冲突: 理解概念结构的冲突。
 - 求候选键: 根据依赖集找出从未在右边出现过的属性，其必然是候选键之一，然后以其为基础看看能不能遍历所有属性，将无法遍历的加入候选键中。
 - 求关系模式达到了第几范式: 理解各种范式的限定条件。
 - 求模式分解后是否保持函数依赖: 先求分解后的模式分别的函数依赖，如果拆分后的属性，包含了原来的依赖关系中的所有属性，那么就能继承相应的依赖关系。然后如果剩余全部未被包含的依赖能通过函数依赖的公理系统得到，那么就能说保持了函数依赖。
