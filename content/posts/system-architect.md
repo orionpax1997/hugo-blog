@@ -6,7 +6,7 @@ draft: true
 
 ## 计算机系统基础知识
 
-### 计算机硬件
+### 计算机硬件 ✰
 
 #### 相关概念
 
@@ -88,7 +88,7 @@ draft: true
 
 ### 计算机软件
 
-#### 操作系统
+#### 操作系统 ✰✰✰✰✰
 
 ##### 操作系统
 
@@ -153,6 +153,13 @@ draft: true
 
 ![段页式存储](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4tqudwbw0om0.webp "段页式存储")
 
+![磁盘冗余阵列技术1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3t761ry4bgk0.webp "磁盘冗余阵列技术1")
+![磁盘冗余阵列技术2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.60ydmembgxg0.webp "磁盘冗余阵列技术2")
+![磁盘冗余阵列技术3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1cnolw5yuxr.webp "磁盘冗余阵列技术3")
+
+![网络存储技术1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5mtt846n0pw0.webp "网络存储技术1")
+![网络存储技术2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2y6ond2fhi20.webp "网络存储技术2")
+
 ###### 相关公式
 
 - 页内地址的位数: 每页大小以 2 的 n 次方表示时的 n
@@ -204,7 +211,9 @@ draft: true
 - 求需要表示的物理块在位示图中的第几个字描述: 通常需要表示的物理块号，和字长。**注意如果有余数，则向上取整，还有没有明确说明的情况下是从零开始编号的**
 - 求位示图需要几个字来表示: 通常给出全部条件带入公式计算即可。
 
-### 嵌入式系统及软件
+### 嵌入式系统及软件 ✰✰
+
+#### 嵌入式系统的组成和特点
 
 ![嵌入式操作系统的特点](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7089o6hoe840.webp "嵌入式操作系统的特点")
 
@@ -212,10 +221,30 @@ draft: true
 
 ![哈佛结构](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6c5e3h1a0eo0.webp "哈佛结构")
 
+![嵌入式系统的组成](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3awqm214wv80.webp "嵌入式系统的组成")
+
+![嵌入式系统的特性](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6ilkibhoz1o0.webp "嵌入式系统的特性")
+
+![嵌入式系统的分层](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.67iw02a1tos0.webp "嵌入式系统的分层")
+
+#### 嵌入式系统的分类
+
 ![微处理器分类1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4mgtxfa7vn60.webp "微处理器分类1")
 ![微处理器分类2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3oyxxpzllck0.webp "微处理器分类2")
 
 ![多核微处理器](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6tn60veft380.webp "多核微处理器")
+
+![嵌入式操作系统](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.9kfz3dgkumo.webp "嵌入式操作系统")
+
+![嵌入式实时操作系统的](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7grvl523q1g0.webp "嵌入式实时操作系统的")
+
+![嵌入式实时操作系统的特征](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5359j8jrm400.webp "嵌入式实时操作系统的特征")
+
+![嵌入式数据库使用环境特点](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1m3oqzzhakw0.webp "嵌入式数据库使用环境特点")
+
+![嵌入式数据库组成](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4pj3zw951a00.webp "嵌入式数据库组成")
+
+#### 嵌入式软件的组成和特点
 
 ![嵌入式软件分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4d1pytpan9y0.webp "嵌入式软件分类")
 
@@ -225,54 +254,22 @@ draft: true
 
 ![设备驱动程序](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.21y37ylcwwow.webp "设备驱动程序")
 
-![嵌入式系统的组成](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3awqm214wv80.webp "嵌入式系统的组成")
-
-![嵌入式系统的特性](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6ilkibhoz1o0.webp "嵌入式系统的特性")
-
-![嵌入式系统的分层](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.67iw02a1tos0.webp "嵌入式系统的分层")
-
-![嵌入式数据库使用环境特点](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1m3oqzzhakw0.webp "嵌入式数据库使用环境特点")
-
-![嵌入式数据库组成](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4pj3zw951a00.webp "嵌入式数据库组成")
-
-![嵌入式操作系统](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.9kfz3dgkumo.webp "嵌入式操作系统")
-
-![嵌入式实时操作系统的](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7grvl523q1g0.webp "嵌入式实时操作系统的")
-
-![嵌入式实时操作系统的特征](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5359j8jrm400.webp "嵌入式实时操作系统的特征")
-
 ![交叉平台开发环境](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4bg0rqv7u3k0.webp "交叉平台开发环境")
 
 ![交叉编译与交叉调试](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.llahskv7sj4.webp "交叉编译与交叉调试")
 
 ![软件开发工具](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.790tw8sh1vo0.webp "软件开发工具")
 
-### 计算机网络
+### 计算机网络 ✰✰✰✰✰
 
-#### 相关概念
+#### 网络的基本概念
 
 ![计算机网络功能和分类1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5a13jyx69e00.webp "计算机网络功能和分类1")
 ![计算机网络功能和分类2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.pchdfi5sulc.webp "计算机网络功能和分类2")
 
+#### 通信技术
+
 ![通信技术](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6oz6rblhgp80.webp "通信技术")
-
-![OSI 七层协议](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.gdf75l2zhbk.webp "OSI 七层协议")
-
-![局域网和广域网协议](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.mmie4lvb0yo.webp "局域网和广域网协议")
-
-![TCP/IP 协议](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.sqyzglyo3kw.webp "TCP/IP 协议")
-
-![网络层协议](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.53373fvqn1s0.webp "网络层协议")
-
-![传输层协议](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1emz9325c274.webp "传输层协议")
-
-![应用层协议](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.688vsxjc7l40.webp "应用层协议")
-
-![协议端口对照表](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.gh9fx41mf34.webp "协议端口对照表")
-
-![交换机的功能](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2xuh3sxgs5i0.webp "交换机的功能")
-
-![路由器的功能](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5y4rhk2fj8c0.webp "路由器的功能")
 
 ![绞线](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7ijadk7wygs0.webp "绞线")
 
@@ -288,6 +285,32 @@ draft: true
 
 ![交换方式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.156hnydapam8.webp "交换方式")
 
+#### 网络技术
+
+![局域网和广域网协议](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.mmie4lvb0yo.webp "局域网和广域网协议")
+
+![其他考点1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4b66at7qjso0.webp "其他考点1")
+
+![其他考点2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3f1pr02zp7a0.webp "其他考点2")
+
+#### 组网技术
+
+![OSI 七层协议](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.gdf75l2zhbk.webp "OSI 七层协议")
+
+![TCP/IP 协议](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.sqyzglyo3kw.webp "TCP/IP 协议")
+
+![网络层协议](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.53373fvqn1s0.webp "网络层协议")
+
+![传输层协议](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1emz9325c274.webp "传输层协议")
+
+![应用层协议](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.688vsxjc7l40.webp "应用层协议")
+
+![协议端口对照表](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.gh9fx41mf34.webp "协议端口对照表")
+
+![交换机的功能](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2xuh3sxgs5i0.webp "交换机的功能")
+
+![路由器的功能](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5y4rhk2fj8c0.webp "路由器的功能")
+
 ![IP 地址的表示](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5d9he7ynk9g0.webp "IP 地址的表示")
 
 ![IP 地址的分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6b6twlatpok0.webp "IP 地址的分类")
@@ -302,23 +325,12 @@ draft: true
 
 ![建筑物综合布线系统](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3vwco7coc5s0.webp "建筑物综合布线系统")
 
-![磁盘冗余阵列技术1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3t761ry4bgk0.webp "磁盘冗余阵列技术1")
-![磁盘冗余阵列技术2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.60ydmembgxg0.webp "磁盘冗余阵列技术2")
-![磁盘冗余阵列技术3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1cnolw5yuxr.webp "磁盘冗余阵列技术3")
-
-![网络存储技术1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5mtt846n0pw0.webp "网络存储技术1")
-![网络存储技术2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2y6ond2fhi20.webp "网络存储技术2")
-
-![其他考点1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4b66at7qjso0.webp "其他考点1")
-
-![其他考点2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3f1pr02zp7a0.webp "其他考点2")
-
-#### 相关公式
+##### 相关公式
 
 - 子网个数: 用划分了子网号后的网络号位数 - 原来的网络号位数，作为的 2 的幂，求 2 的幂次方
 - 可使用的主机个数: 32 - 网络号位数，作为 2 的幂，求 2 的幂次方在减 2
 
-#### 相关题型解题思路
+##### 相关题型解题思路
 
 - 考察OSI 七层协议: 主要考察各层的协议、功能、设备。
 - 考察TCI/IP 协议: 主要考察功能
@@ -345,7 +357,7 @@ draft: true
 ![多媒体系统的关键技术2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3hlabp3qidw0.webp "多媒体系统的关键技术2")
 ![多媒体系统的关键技术3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.61lm67njx5k0.webp "多媒体系统的关键技术3")
 
-### 系统工程
+### 系统工程 ✰
 
 ![系统工程方法1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1hspdvtdkskg.webp "系统工程方法1")
 ![系统工程方法2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.134qojvgz1i8.webp "系统工程方法2")
@@ -357,7 +369,7 @@ draft: true
 
 ![基于模型的系统工程](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4bw9naeriys0.webp "基于模型的系统工程")
 
-### 系统性能
+### 系统性能 ✰✰
 
 ![性能指标1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.llhl0gkjkts.webp "性能指标1")
 ![性能指标2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2p55uuqhp000.webp "性能指标2")
@@ -368,7 +380,7 @@ draft: true
 
 ![阿姆达尔解决方法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.67ps4puigzk0.webp "阿姆达尔解决方法")
 
-## 数据库设计基础知识
+## 数据库设计基础知识 ✰✰✰✰✰
 
 ### 数据库基本概念
 
