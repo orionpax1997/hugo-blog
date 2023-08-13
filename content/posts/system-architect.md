@@ -472,6 +472,79 @@ draft: true
 ![企业应用集成5](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3mes3ddu48o0.webp "企业应用集成5")
 ![企业应用集成6](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.18k3di2prd5s.webp "企业应用集成6")
 
+## 信息安全技术基础知识 ✰✰✰✰
+
+### 信息安全基础知识
+
+![信息安全的基本要素](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1cvo09vimpog.webp "信息安全的基本要素")
+
+![信息安全的范围](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.8vj5xgfxzv4.webp "信息安全的范围")
+
+![信息的存储安全](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3lzlxjg8fvg.webp "信息的存储安全")
+
+![网络安全](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3t5e8t4d0uk0.webp "网络安全")
+
+![防火墙](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4j8qq03flau0.webp "防火墙")
+
+![入侵检测系统 IDS](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2rppvn5hax60.webp "入侵检测系统 IDS")
+
+![入侵防御系统 IPS](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1490gryt6xts.webp "入侵防御系统 IPS")
+
+![网络攻击和威胁](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6nlgolnu2ig0.webp "网络攻击和威胁")
+
+![网络安全协议1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3lbougkf18m0.webp "网络安全协议1")
+![网络安全协议2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1jyvvphpugo0.webp "网络安全协议2")
+![网络安全协议3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1xwk5cd7ug2o.webp "网络安全协议3")
+
+### 信息安全系统的组成框架
+
+![技术体系](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.35945x7zm560.webp "技术体系")
+
+### 信息加解密技术
+
+![加密技术](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1zbnulg8w08w.webp "加密技术")
+
+![对称加密技术](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.417o165qlzo0.webp "对称加密技术")
+
+![非对称加密技术](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3hsyt86rj680.webp "非对称加密技术")
+
+![数字信封](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3e4xd38fjiw0.webp "数字信封")
+
+![信息摘要](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1ugzjlyiaz7k.webp "信息摘要")
+
+### 密钥管理技术
+
+![公钥基础设施](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4wphatvlzv20.webp "公钥基础设施")
+
+### 访问控制及数字签名技术
+
+![访问控制](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5f7oros0mbk0.webp "访问控制")
+
+![数字签名](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.vqzix2q6w2o.webp "数字签名")
+
+### 信息安全的抗攻击技术
+
+![拒绝服务攻击](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4syz8gicum80.webp "拒绝服务攻击")
+
+![拒绝服务攻击的抵御](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.53mzkx66ufc0.webp "拒绝服务攻击的抵御")
+
+![ARP 欺骗原理](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.47qeluysgic0.webp "ARP 欺骗原理")
+![ARP 欺骗的防范](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7sp00fg2xdg0.webp "ARP 欺骗的防范")
+
+![DNS 欺骗](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4qm78t44iz20.webp "DNS 欺骗")
+
+![IP 欺骗](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3sfzplhfqzo0.webp "IP 欺骗")
+
+![端口扫描](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1lct1nc5qjfk.webp "端口扫描")
+
+### 信息安全的保障体系与评估方法
+
+![计算机系统安全保护能力的等级](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.321blbsz1180.webp "计算机系统安全保护能力的等级")
+
+![风险评估](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1z74skdaezwg.webp "风险评估")
+
+## 软件工程基础知识 ✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰
+
 ## 数据库设计基础知识 ✰✰✰✰✰
 
 ### 数据库基本概念
