@@ -211,7 +211,7 @@ draft: true
 - 求需要表示的物理块在位示图中的第几个字描述: 通常需要表示的物理块号，和字长。**注意如果有余数，则向上取整，还有没有明确说明的情况下是从零开始编号的**
 - 求位示图需要几个字来表示: 通常给出全部条件带入公式计算即可。
 
-### 嵌入式系统及软件 ✰✰
+### 嵌入式系统及软件 ✰✰✰
 
 #### 嵌入式系统的组成和特点
 
@@ -236,7 +236,7 @@ draft: true
 
 ![嵌入式操作系统](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.9kfz3dgkumo.webp "嵌入式操作系统")
 
-![嵌入式实时操作系统的](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7grvl523q1g0.webp "嵌入式实时操作系统的")
+![嵌入式实时操作系统的特点](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7grvl523q1g0.webp "嵌入式实时操作系统的特点")
 
 ![嵌入式实时操作系统的特征](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5359j8jrm400.webp "嵌入式实时操作系统的特征")
 
@@ -369,7 +369,7 @@ draft: true
 
 ![基于模型的系统工程](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4bw9naeriys0.webp "基于模型的系统工程")
 
-### 系统性能 ✰✰
+### 系统性能 ✰
 
 ![性能指标1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.llhl0gkjkts.webp "性能指标1")
 ![性能指标2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2p55uuqhp000.webp "性能指标2")
@@ -379,6 +379,98 @@ draft: true
 ![性能评测方法2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6hwd2bqgbx00.webp "性能评测方法2")
 
 ![阿姆达尔解决方法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.67ps4puigzk0.webp "阿姆达尔解决方法")
+
+## 信息系统基础知识 ✰✰✰
+
+### 信息系统概述
+
+![信息系统的定义](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4kklg59med20.webp "信息系统的定义")
+
+![信息系统的发展](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7dbm654l25s0.webp "信息系统的发展")
+
+![信息系统的分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3s4kiwu2v9s0.webp "信息系统的分类")
+
+![信息系统的应用](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6s1gtsljsc40.webp "信息系统的应用")
+
+![信息系统的生命周期1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1g48xqs4xluo.webp "信息系统的生命周期1")
+![信息系统的生命周期2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1mo2i4w2a22o.webp "信息系统的生命周期2")
+
+![信息系统结构化开发方法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3qdujr8fkiy0.webp "信息系统结构化开发方法")
+![信息系统原型化开发方法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6gmyyezvus00.webp "信息系统原型化开发方法")
+![信息系统面向对象开发方法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6c0dbeaxc280.webp "信息系统面向对象开发方法")
+![信息系统面向服务开发方法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1zein9luuwrk.webp "信息系统面向服务开发方法")
+
+### 业务处理系统 TPS
+
+![业务处理系统1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5sipr68g35k0.webp "业务处理系统1")
+![业务处理系统2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.42wpqyu0y060.webp "业务处理系统2")
+
+### 管理信息系统 MIS
+
+![管理信息系统1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.naxh8wtm3bk.webp "管理信息系统1")
+![管理信息系统2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6jjmz5kxjzs0.webp "管理信息系统2")
+
+### 决策支持系统 DSS
+
+![决策支持系统1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6mswpw1qj3k0.webp "决策支持系统1")
+![决策支持系统2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.68dt1eeclyo0.webp "决策支持系统2")
+![决策支持系统3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.po76xzn5aio.webp "决策支持系统3")
+
+### 专家系统 ES
+
+![专家系统1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.75v7b20dxqo0.webp "专家系统1")
+![专家系统2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.ei2mczwr1kg.webp "专家系统2")
+
+### 办公自动化系统 OAS
+
+![办公自动化系统](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.xhlygqhii74.webp "办公自动化系统")
+
+### 企业资源规划 ERP
+
+![企业资源规划1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4vfsk3asuk60.webp "企业资源规划1")
+![企业资源规划2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4ldn4wk4bcw0.webp "企业资源规划2")
+![企业资源规划3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4irzuf0qkvu.webp "企业资源规划3")
+![企业资源规划4](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.483zry7jf040.webp "企业资源规划4")
+
+### 典型信息系统架构模型
+
+![政府信息化和电子政务](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.lj81zy0fmxs.webp "政府信息化和电子政务")
+
+![企业信息化和电子商务](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1c75djnv969s.webp "企业信息化和电子商务")
+
+![企业信息化方法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5ozp341opm40.webp "企业信息化方法")
+
+![电子商务](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3nbv442pjes0.webp "电子商务")
+
+### 信息化战略体系
+
+![信息化战略体系1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7hvk3pj7r700.webp "信息化战略体系1")
+![信息化战略体系2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.24ixvktlaie8.webp "信息化战略体系2")
+
+### 信息系统战略规划
+
+![信息系统战略规划1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1dtmxhzp8qo0.webp "信息系统战略规划1")
+![信息系统战略规划2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2ofrbn4h21i0.webp "信息系统战略规划2")
+
+### 客户关系管理 CRM
+
+![客户关系管理1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5r5s1br6fow0.webp "客户关系管理1")
+![客户关系管理2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5emtai7vegk0.webp "客户关系管理2")
+![客户关系管理3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.19m3mplfc5mo.webp "客户关系管理3")
+
+### 供应链管理 SCM
+
+![供应链管理1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6fko2do1l740.webp "供应链管理1")
+![供应链管理2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6qj45flv1w80.webp "供应链管理2")
+
+### 企业应用集成 EAI
+
+![企业应用集成1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4uc0hwx74360.webp "企业应用集成1")
+![企业应用集成2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4wkgir3vz020.webp "企业应用集成2")
+![企业应用集成3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.15ddslyjryqk.webp "企业应用集成3")
+![企业应用集成4](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6xcon5frfwk0.webp "企业应用集成4")
+![企业应用集成5](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3mes3ddu48o0.webp "企业应用集成5")
+![企业应用集成6](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.18k3di2prd5s.webp "企业应用集成6")
 
 ## 数据库设计基础知识 ✰✰✰✰✰
 
@@ -400,17 +492,6 @@ draft: true
 
 ![E-R 模型转关系模型](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3ht5wfvcgt20.webp "E-R 模型转关系模型")
 
-![数据库安全1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3cv1j4ljnny0.webp "数据库安全1")
-![数据库安全2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3tqyj91k41o0.webp "数据库安全2")
-
-![分布式数据库](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5fjzuunsuas0.webp "分布式数据库")
-
-![数据仓库技术1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5a5firz8ynw0.webp "数据仓库技术1")
-![数据仓库技术2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7kpdbrrtbn40.webp "数据仓库技术2")
-![数据仓库技术3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2cadqwnfv30g.webp "数据仓库技术3")
-
-![大数据](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7b421s6py9c0.webp "大数据")
-
 ### 关系数据库
 
 #### 相关概念
@@ -421,31 +502,30 @@ draft: true
 
 ![关系代数自然连接](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2p08mdqw7u20.webp "关系代数自然连接")
 
-![并发控制1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2i75upllyj40.webp "并发控制1")
-![并发控制2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6g3ytt1vz1g0.webp "并发控制2")
+![函数依赖规则](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6ekmpcoz8380.webp "函数依赖规则")
 
-![封锁协议1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.55ujp9qldz00.webp "封锁协议1")
-![封锁协议2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3bsu6p7e8wo0.webp "封锁协议2")
-![封锁协议3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.yy6tuoni09c.webp "封锁协议3")
+![函数依赖的公理系统](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.76imy2qc0wc0.webp "函数依赖的公理系统")
+
+![键与约束](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.64h6x2fudc4.webp "键与约束")
+
+![模式分解1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7j4ghkffvi40.webp "模式分解1")
+![模式分解2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.682z4d6u4gg0.webp "模式分解2")
+![模式分解3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.omahc7zk2uo.webp "模式分解3")
 
 #### 相关题型解题思路
 
 - 求元组个数和属性列数: 属性列很简单，自然连接求交集，笛卡尔积求并集，元组个数是，通过属性列相同且值相同连接后剩余的行数。
 - 求等价的关系代数表达式：常见的就是给个自然连接的表达式，等价的是一个笛卡尔积的表达式，笛卡尔积转自然连接需要经过投影和选择。**还有能用数字代替列名，从1开始，注意不要加引号**。
 - 求关系代数等价的SQL: 通常就是考察投影和选择，主要是行的问题，把属性列写一下很容易就能答出来。
-- 求事务能否加锁成功: 很简单，排它(写)锁就是一个事务加了，其他事务什么锁也加不了。共享(读)锁就是一个事务加了，其他事务只能加共享(读)锁，不能加排它(写)锁。
+- 求候选键: 根据依赖集找出从未在右边出现过的属性，其必然是候选键之一，然后以其为基础看看能不能遍历所有属性，将无法遍历的加入候选键中。
+- 求模式分解后是否保持函数依赖: 先求分解后的模式分别的函数依赖，如果拆分后的属性，包含了原来的依赖关系中的所有属性，那么就能继承相应的依赖关系。然后如果剩余全部未被包含的依赖能通过函数依赖的公理系统得到，那么就能说保持了函数依赖。
+- 求模式分解后是否无损连接: 分解后的模式先求交集，然后看交集的属性能不能推出，任意一个差集里的属性，如果可以那就算无损连接。
 
 ### 数据库设计
 
 #### 相关概念
 
 ![数据库设计](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5dzoaaxpfaw0.webp "数据库设计")
-
-![函数依赖规则](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6ekmpcoz8380.webp "函数依赖规则")
-
-![函数依赖的公理系统](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.76imy2qc0wc0.webp "函数依赖的公理系统")
-
-![键与约束](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.64h6x2fudc4.webp "键与约束")
 
 ![第一范式1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5qei5j4x6tw0.webp "第一范式1")
 ![第一范式2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2m933rm0do80.webp "第一范式2")
@@ -456,16 +536,35 @@ draft: true
 
 ![BC范式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3yni6tbwn540.webp "BC范式")
 
-![模式分解1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7j4ghkffvi40.webp "模式分解1")
-![模式分解2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.682z4d6u4gg0.webp "模式分解2")
-![模式分解3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.omahc7zk2uo.webp "模式分解3")
-
 ![反规范化技术](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5kt1osw7mwg0.webp "反规范化技术")
 
 #### 相关题型解题思路
 
 - 求属于概念结构设计的什么冲突: 理解概念结构的冲突。
-- 求候选键: 根据依赖集找出从未在右边出现过的属性，其必然是候选键之一，然后以其为基础看看能不能遍历所有属性，将无法遍历的加入候选键中。
 - 求关系模式达到了第几范式: 理解各种范式的限定条件。
-- 求模式分解后是否保持函数依赖: 先求分解后的模式分别的函数依赖，如果拆分后的属性，包含了原来的依赖关系中的所有属性，那么就能继承相应的依赖关系。然后如果剩余全部未被包含的依赖能通过函数依赖的公理系统得到，那么就能说保持了函数依赖。
-- 求模式分解后是否无损连接: 分解后的模式先求交集，然后看交集的属性能不能推出，任意一个差集里的属性，如果可以那就算无损连接。
+
+### 规范发和并发
+
+![并发控制1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2i75upllyj40.webp "并发控制1")
+![并发控制2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6g3ytt1vz1g0.webp "并发控制2")
+
+![封锁协议1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.55ujp9qldz00.webp "封锁协议1")
+![封锁协议2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3bsu6p7e8wo0.webp "封锁协议2")
+![封锁协议3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.yy6tuoni09c.webp "封锁协议3")
+
+#### 相关题型解题思路
+
+- 求事务能否加锁成功: 很简单，排它(写)锁就是一个事务加了，其他事务什么锁也加不了。共享(读)锁就是一个事务加了，其他事务只能加共享(读)锁，不能加排它(写)锁。
+
+### 数据库新技术
+
+![数据库安全1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3cv1j4ljnny0.webp "数据库安全1")
+![数据库安全2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3tqyj91k41o0.webp "数据库安全2")
+
+![分布式数据库](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5fjzuunsuas0.webp "分布式数据库")
+
+![数据仓库技术1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5a5firz8ynw0.webp "数据仓库技术1")
+![数据仓库技术2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7kpdbrrtbn40.webp "数据仓库技术2")
+![数据仓库技术3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2cadqwnfv30g.webp "数据仓库技术3")
+
+![大数据](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7b421s6py9c0.webp "大数据")
