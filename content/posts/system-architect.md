@@ -545,6 +545,41 @@ draft: true
 
 ## 软件工程基础知识 ✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰
 
+### 软件工程
+
+#### 软件工程定义
+
+![软件工程概述](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3pn9h8ep2420.webp "软件工程概述")
+
+![能力成熟度模型 CMM](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.tjfekd51vpc.webp "能力成熟度模型 CMM")
+
+![能力成熟度模型集成 CMMI 1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.77vknxg4k6s0.webp "能力成熟度模型集成 CMMI 1")
+![能力成熟度模型集成 CMMI 2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4vnh1mejsqo0.webp "能力成熟度模型集成 CMMI 2")
+
+#### 软件过程模型
+
+![瀑布模型](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4dadwg7fevs0.webp "瀑布模型")
+
+![原型模型](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.23rgwkkevbxc.webp "原型模型")
+
+![螺旋模型](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5nweqzehg6c0.webp "螺旋模型")
+
+![V 模型](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.15s1yek6z0qo.webp "V 模型")
+
+![增量模型](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2o4xem5ga7q0.webp "增量模型")
+
+![其他模型](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.u4avqx51640.webp "其他模型")
+
+![敏捷模型](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.j0u0m7rhmg8.webp "敏捷模型")
+![敏捷模型方法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.43k8xlq80ew0.webp "敏捷模型方法")
+
+![统一过程模型1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1t6t2tqz3yjk.webp "统一过程模型1")
+![统一过程模型2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5q2vvmuuvdc0.webp "统一过程模型2")
+![统一过程模型3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.xey90hzodpc.webp "统一过程模型3")
+
+![逆向工程1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5fpszt5m0e80.webp "逆向工程1")
+![逆向工程2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4thzd2beh8g0.webp "逆向工程2")
+
 ## 数据库设计基础知识 ✰✰✰✰✰
 
 ### 数据库基本概念
