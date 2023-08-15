@@ -580,6 +580,33 @@ draft: true
 ![逆向工程1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5fpszt5m0e80.webp "逆向工程1")
 ![逆向工程2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4thzd2beh8g0.webp "逆向工程2")
 
+### 需求工程
+
+![软件需求1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4e3c1lln8h00.webp "软件需求1")
+![软件需求2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2x1bvftmfrk0.webp "软件需求2")
+
+![需求获取](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.30jr9ue3tn80.webp "需求获取")
+
+![需求分析](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.709udxsog0c0.webp "需求分析")
+
+![结构化的需求分析](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6gvjcfkkmco0.webp "结构化的需求分析")
+
+![数据流图1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.46ln3lb4pke0.webp "数据流图1")
+![数据流图2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6euvcqdir5k0.webp "数据流图2")
+![分层数据流图](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1yhtsyr6dj34.webp "分层数据流图")
+
+![数据字典](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.76z66jq6b2w.webp "数据字典")
+
+![需求定义](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.18mjzqkxsq3k.webp "需求定义")
+
+![需求验证](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5lmza1w3v2g0.webp "需求验证")
+
+![需求管理](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.446ehphzjjc0.webp "需求管理")
+
+![需求变更和风险](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3hgycw0gfuu0.webp "需求变更和风险")
+
+![需求跟踪](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2l3qbuiwq720.webp "需求跟踪")
+
 ## 数据库设计基础知识 ✰✰✰✰✰
 
 ### 数据库基本概念
