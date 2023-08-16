@@ -607,6 +607,28 @@ draft: true
 
 ![需求跟踪](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2l3qbuiwq720.webp "需求跟踪")
 
+### 系统分析与设计
+
+![系统设计](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.39bc1t61x6w0.webp "系统设计")
+
+![系统设计原理和原则](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5kw3kp8qd9k0.webp "系统设计原理和原则")
+
+![内聚分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7fp6io58keo0.webp "内聚分类")
+
+![耦合分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.16wx0abix7gg.webp "耦合分类")
+
+![人机界面设计原则](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7g0wc6lk4nw0.webp "人机界面设计原则")
+
+### 软件测试
+
+### 处理流程设计
+
+![流程表示工具](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4xdb4ank63c0.webp "流程表示工具")
+
+![业务流程重组](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.664dkgz52f40.webp "业务流程重组")
+
+![业务流程管理](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.41qo5s1kozq0.webp "业务流程管理")
+
 ## 数据库设计基础知识 ✰✰✰✰✰
 
 ### 数据库基本概念
