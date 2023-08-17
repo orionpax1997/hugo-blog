@@ -621,6 +621,25 @@ draft: true
 
 ### 软件测试
 
+![测试原则](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.67j33abek980.webp "测试原则")
+
+![静态测试和动态测试](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2h3hc5h2q400.webp "静态测试和动态测试")
+
+![测试阶段1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.h8559yneqvc.webp "测试阶段1")
+![测试阶段2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6qmd4jn8cpc0.webp "测试阶段2")
+
+![测试策略](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5ut87t7xkck0.webp "测试策略")
+
+![黑盒测试](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6e0qo9tku8w0.webp "黑盒测试")
+
+![白盒测试1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.698iziqra6k0.webp "白盒测试1")
+![白盒测试2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.21tr95jrc2hs.webp "白盒测试2")
+![白盒测试3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6ygd5q0dus80.webp "白盒测试3")
+
+![调试](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5ndsstia3cg0.webp "调试")
+
+![软件度量](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6osscpx6tx80.webp "软件度量")
+
 ### 处理流程设计
 
 ![流程表示工具](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4xdb4ank63c0.webp "流程表示工具")
