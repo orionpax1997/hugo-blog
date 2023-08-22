@@ -640,6 +640,16 @@ draft: true
 
 ![软件度量](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6osscpx6tx80.webp "软件度量")
 
+### 净室软件工程
+
+![净室软件工程](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2j9kadf30yw0.webp "净室软件工程")
+
+### 基于构件的软件工程
+
+![基于构件的软件工程的特征](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.dzk7tadoiiw.webp "基于构件的软件工程的特征")
+![基于构件的软件工程1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4sp4rj7qhes0.webp "基于构件的软件工程1")
+![基于构件的软件工程2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.9l8bz9n84so.webp "基于构件的软件工程2")
+
 ### 处理流程设计
 
 ![流程表示工具](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4xdb4ank63c0.webp "流程表示工具")
@@ -647,6 +657,14 @@ draft: true
 ![业务流程重组](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.664dkgz52f40.webp "业务流程重组")
 
 ![业务流程管理](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.41qo5s1kozq0.webp "业务流程管理")
+
+### 系统转换和维护
+
+![遗留系统](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6khpg007qy80.webp "遗留系统")
+
+![系统转换方式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.m2md1tgyddc.webp "系统转换方式")
+
+![系统维护](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1monrsvm7v0g.webp "系统维护")
 
 ## 数据库设计基础知识 ✰✰✰✰✰
 
@@ -744,3 +762,60 @@ draft: true
 ![数据仓库技术3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2cadqwnfv30g.webp "数据仓库技术3")
 
 ![大数据](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7b421s6py9c0.webp "大数据")
+
+## _面向对象技术_ ✰✰✰✰✰
+
+### 面向对象开发
+
+![面向对象的基本概念1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5x2glj4vs6c0.webp "面向对象的基本概念1")
+![面向对象的基本概念2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7202n1zp3vw0.webp "面向对象的基本概念2")
+![面向对象的基本概念3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3nzldz5pt5k0.webp "面向对象的基本概念3")
+
+![面向对象的分析建模](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4d8f09sina60.webp "面向对象的分析建模")
+
+![面向对象的设计](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3xic8hftvcc.webp "面向对象的设计")
+
+![面向对象的设计原则](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.21cx3ymp9r0g.webp "面向对象的设计原则")
+
+![面向对象软件的测试层次](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6n5bcofc2js0.webp "面向对象软件的测试层次")
+
+### 统一建模语言 UML
+
+![UML 的结构](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5ayoarp30a00.webp "UML 的结构")
+
+![UML 的事物](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.204bcxcyslhc.webp "UML 的事物")
+
+![UML 的关系](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.76k7nu9r7i80.webp "UML 的关系")
+
+![UML 的分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1sqgnoleeav4.webp "UML 的分类")
+
+![类图](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.vfkc8sogi9c.webp "类图")
+
+![对象图](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.38b756olc5u0.webp "对象图")
+
+![用例图](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3tqgt7wwpso0.webp "用例图")
+
+![序列图](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.152nf78oo5eo.webp "序列图")
+
+![通信图](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5se35jl1zsg0.webp "通信图")
+
+![状态图](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3gbzreo7h500.webp "状态图")
+
+![活动图](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1nihtfnw1zy8.webp "活动图")
+
+![构件图](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2ky7tqcqnjm0.webp "构件图")
+
+![部署图](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.13qp5g4kncow.webp "部署图")
+
+![UML 视图](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6yrscew3tgw0.webp "UML 视图")
+
+### 设计模式
+
+![设计模式的概述](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6xusva4yddc0.webp "设计模式的概述")
+
+![创建型设计模式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5jssyxvg9ak.webp "创建型设计模式")
+
+![结构型设计模式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4oa42fn1amu0.webp "结构型设计模式")
+
+![行为型设计模式1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4aj4u8ga8zq0.webp "行为型设计模式1")
+![行为型设计模式2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.669ecjzd4uk0.webp "行为型设计模式2")
