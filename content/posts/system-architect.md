@@ -650,6 +650,40 @@ draft: true
 ![基于构件的软件工程1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4sp4rj7qhes0.webp "基于构件的软件工程1")
 ![基于构件的软件工程2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.9l8bz9n84so.webp "基于构件的软件工程2")
 
+### 软件项目管理
+
+#### 相关概念
+
+![进度管理的过程](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.113s21atlkb4.webp "进度管理的过程")
+
+![进程安排的常用图形描述方法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3d71zhga0de0.webp "进程安排的常用图形描述方法")
+
+![关键路径法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1llrm3yu71kw.webp "关键路径法")
+![7 格图](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7gqli8bm3t40.webp "7 格图")
+![浮动时间](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4qs7gznb7b40.webp "浮动时间")
+
+![配置管理概述](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2qbsppph4ns0.webp "配置管理概述")
+![配置项](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3783w9wctqa0.webp "配置项")
+![配置项的状态](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6inmy4llqpk0.webp "配置项的状态")
+![配置项版本](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.60dp8gdf15s0.webp "配置项版本")
+
+![质量管理](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3sl3rozcp2m.webp "质量管理")
+
+![风险管理1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.40emcf9qpzm0.webp "风险管理1")
+![风险管理2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5im9nqm7ks0.webp "风险管理2")
+
+#### 相关公式
+
+- 总浮动时间1: 关键路径 - 活动路径
+- 总浮动时间2: 最迟开始LS - 最早开始ES
+- 总浮动时间3: 最迟完成LF - 最早完成EF
+- 自由浮动时间: 紧后活动最早开始LS中的最小的 - 本活动的最早完成EF
+
+#### 相关题型解题思路
+
+- 求项目最短工期: 通常给出项目计划评审(PERT)图，或者给个表格让你自己画下图，肉眼观察下找到最长的路径就是最短工期
+- 求某活动的浮动时间: 先找最长路径，用最长路径 - 活动所在路径就是浮动时间
+
 ### 处理流程设计
 
 ![流程表示工具](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4xdb4ank63c0.webp "流程表示工具")
