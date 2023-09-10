@@ -211,6 +211,20 @@ draft: true
 - 求需要表示的物理块在位示图中的第几个字描述: 通常需要表示的物理块号，和字长。**注意如果有余数，则向上取整，还有没有明确说明的情况下是从零开始编号的**
 - 求位示图需要几个字来表示: 通常给出全部条件带入公式计算即可。
 
+#### 中间件
+
+![中间件的概念](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5dm6nuxci8k0.webp "中间件的概念")
+
+![中间件的分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6exx8nfljkk0.webp "中间件的分类")
+
+#### 软件构件
+
+![J2EE](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4xi19klhywo0.webp "J2EE")
+
+![重量级与轻量级框架](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5i2z5xd0n8k0.webp "重量级与轻量级框架")
+
+![.NET](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1shw9oux6co0.webp ".NET")
+
 ### 嵌入式系统及软件 ✰✰✰
 
 #### 嵌入式系统的组成和特点
@@ -815,6 +829,14 @@ draft: true
 
 ![构件技术](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.31kkzrl1amq0.webp "构件技术")
 
+### 基于架构的软件开发方法
+
+![ABSD方法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7c90nb3oyuo0.webp "ABSD方法")
+
+![基于架构的软件开发过程1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2nmijp2nsfu0.webp "基于架构的软件开发过程1")
+![基于架构的软件开发过程2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5irvz3bbtio0.webp "基于架构的软件开发过程2")
+![基于架构的软件开发过程3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4fzrm4jp9wy0.webp "基于架构的软件开发过程3")
+
 ### 软件架构风格
 
 ![软件架构风格概述](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.65ygvxr8g2c0.webp "软件架构风格概述")
@@ -837,6 +859,22 @@ draft: true
 
 ![架构风格简介](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5ruao32fwks0.webp "架构风格简介")
 
+### 软件架构复用
+
+![软甲架构复用](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4do65se1qjc0.webp "软甲架构复用")
+
+### 特定领域软件体系结构
+
+![DSSA的概念](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5lno3cgwhsg0.webp "DSSA的概念")
+
+![DSSA的三个基本活动](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1a3bydlyrahs.webp "DSSA的三个基本活动")
+
+![DSSA的四种角色人员](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.xbstjlaiyww.webp "DSSA的四种角色人员")
+
+![建立DSSA的过程](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1ef04rcct0hs.webp "建立DSSA的过程")
+
+![三层次模型](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2r7sqrswz1k0.webp "三层次模型")
+
 ### _层次架构风格_
 
 ![两层C/S架构风格](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5hvzhnuqjh00.webp "两层C/S架构风格")
@@ -854,6 +892,112 @@ draft: true
 ![MVVM架构风格](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6gqwqtkdr240.webp "MVVM架构风格")
 
 ## 系统质量属性与架构评估 ✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰
+
+### 软件系统质量属性 ✰✰✰✰✰✰✰✰✰✰
+
+![软件系统质量属性](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2s4vrihswus0.webp "软件系统质量属性")
+
+![面向架构评估的质量属性1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6fm58jtwnxw0.webp "面向架构评估的质量属性1")
+![面向架构评估的质量属性2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5w8fgp83oxc0.webp "面向架构评估的质量属性2")
+
+![质量属性的场景](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3wn1adb2xm80.webp "质量属性的场景")
+
+### 系统架构评估
+
+![软件架构评估的概念](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.47qlp3y6js40.webp "软件架构评估的概念")
+
+![三种常用的评估方式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3w5ibwlheio0.webp "三种常用的评估方式")
+
+![基于场景的架构分析方法SAAM](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4o2fkxbye5y0.webp "基于场景的架构分析方法SAAM")
+
+![架构权衡分析法ATAM](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.pfc64ta4eww.webp "架构权衡分析法ATAM")
+
+![成本效益分析法CBAM](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.p256hb858xc.webp "成本效益分析法CBAM")
+
+![其他评估方法1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7ii3ua4j7d00.webp "其他评估方法1")
+![其他评估方法2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.58s3mj1wez80.webp "其他评估方法2")
+
+## 软件可靠性基础知识 ✰✰
+
+### 软件可靠性基本概念
+
+![软件可靠性的基本概念](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.mpuwvlrz8j4.webp "软件可靠性的基本概念")
+
+![串联系统与并联系统的可靠性](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.678jt43ccgw0.webp "串联系统与并联系统的可靠性")
+
+![软件可靠性的测试](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.68ys280et5s0.webp "软件可靠性的测试")
+
+### 软件可靠性建模
+
+![软件可靠性建模1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6fatlh4pd8c0.webp "软件可靠性建模1")
+![软件可靠性建模2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6qanb26k5740.webp "软件可靠性建模2")
+
+### 软件可靠性管理
+
+![软件可靠性管理](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1x4zmr8nkqps.webp "软件可靠性管理")
+
+### 软件可靠性设计
+
+![软件可靠性设计原则](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4onelptveei0.webp "软件可靠性设计原则")
+
+![软件容错技术](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2sxfq83y00s0.webp "软件容错技术")
+
+![N 版本程序设计](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3vn3gygnipg0.webp "N 版本程序设计")
+![恢复块设计](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.52gg9pooihc0.webp "恢复块设计")
+![二者比较](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5g0jd9b92ag0.webp "二者比较")
+
+![防卫式程序设计](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.36gcaghwx5k0.webp "防卫式程序设计")
+
+![双机容错技术](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4yj5de38u0o.webp "双机容错技术")
+
+![集群技术](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4sxp5kg861w0.webp "集群技术")
+
+![负载均衡](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6jfp6t8mto00.webp "负载均衡")
+
+### 软件可靠性测试
+
+![软件可靠性测试](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1wcmr9i7908w.webp "软件可靠性测试")
+
+### 软件可靠性评价
+
+![软件可靠性评价](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.8x7fbhuma48.webp "软件可靠性评价")
+
+## 软件架构的演化和维护 ✰✰
+
+### 软件架构演化和定义的的关系
+
+![软件架构演化和定义](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6ono1266iqk0.webp "软件架构演化和定义")
+
+### 面向对象软件架构演化过程
+
+![对象演化和消息演化](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7281rflwi8w0.webp "对象演化和消息演化")
+
+![复合片段演化和约束演化](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.74621oils8c0.webp "复合片段演化和约束演化")
+
+### 软件架构演化方式的分类
+
+![软件架构演化方式的分类1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3li6sphxjhk0.webp "软件架构演化方式的分类1")
+![软件架构演化方式的分类2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.56zsxmh0m240.webp "软件架构演化方式的分类2")
+![软件架构演化方式的分类3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5hcoq8au8gk0.webp "软件架构演化方式的分类3")
+![软件架构演化方式的分类4](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5dxlujkqpac0.webp "软件架构演化方式的分类4")
+
+### 软件架构演化原则
+
+![软件架构演化原则](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2ati8q0iw4e8.webp "软件架构演化原则")
+
+### 软件架构演化评估方法
+
+![软件架构演化评估方法1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.23hfcg3usyqo.webp "软件架构演化评估方法1")
+![软件架构演化评估方法2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5zlu311am6c0.webp "软件架构演化评估方法2")
+
+### 大型网站系统架构演化实例
+
+![大型网站架构演化1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5c4isrhvyjk0.webp "大型网站架构演化1")
+![大型网站架构演化2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.62lr2vizusw0.webp "大型网站架构演化2")
+
+### 软件架构维护
+
+![软件架构维护](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.185wxsbvi03g.webp "软件架构维护")
 
 ## _面向对象技术_ ✰✰✰✰✰
 
