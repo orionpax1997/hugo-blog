@@ -71,8 +71,8 @@ draft: true
 - 磁道按顺序排列的记录等待时间: 旋转一周的时间 - 处理时间
 - 磁道记录的总处理时间: (旋转一块的时间 + 处理时间) _ 总块数 + 等待时间 _ (总块数 - 1)
 - 流水线周期: 指令分成不同执行段，其中执行时间最长的段为流水线周期
-- 流水线执行时间1: 1 条指令的总执行时间 + (总指令条数 - 1) \* 流水线周期
-- 流水线执行时间2: (1 条指令的总执行时间 - 流水线周期) + 总指令条数 \* 流水线周期
+- 流水线执行时间 1: 1 条指令的总执行时间 + (总指令条数 - 1) \* 流水线周期
+- 流水线执行时间 2: (1 条指令的总执行时间 - 流水线周期) + 总指令条数 \* 流水线周期
 - 流水线的吞吐率: 吞吐率即为单位时间内执行的指令条数 = 指令条数 / 流水线执行时间
 - 流水线的加速比: 不使用流水线的执行时间 / 使用流水线的执行时间
 - 流水线的最大加速比: 1 条指令不使用流水线的执行时间 / 流水线周期
@@ -122,7 +122,7 @@ draft: true
 
 ###### 相关公式
 
-- 每个进程需要资源数不同时发生死锁的最大资源数: (进程1需要的资源数 - 1) + (进程2需要的资源数 - 1) + ... + (进程n需要的资源数 - 1)
+- 每个进程需要资源数不同时发生死锁的最大资源数: (进程 1 需要的资源数 - 1) + (进程 2 需要的资源数 - 1) + ... + (进程 n 需要的资源数 - 1)
 - 每个进程需要资源数相同时发生死锁的最大资源数: 系统中的进程数 \* (单个进程需要的资源数 - 1)
 - 不发生死锁的最小资源数: 发生死锁的最大资源数 + 1
 - 信号量的最大值: 资源数量
@@ -133,8 +133,8 @@ draft: true
 - 考察进程三态图之间的转换: 给定服务调度算法、给定几个进程的当前状态，某进程发生某事件后，求所有进程的后续状态。以三态图的转变带入后解题。
 - 考察进程资源图，求阻塞节点：某进程所请求的资源已经全部分配完毕，该进程为阻塞节点。
 - 考察进程资源图，求化简顺序：先找非阻塞节点，然后释放其占用资源(划掉连线)后，找后续的非阻塞节点，直到所有节点都不被阻塞。
-- **综合考察PV操作**: 给定前趋图，进程，和需要设置的信号量，然后给出进程部分执行过程中的PV操作，求空余的部分的PV操作。结合前趋图来看，从最开始无依赖的进程开始填空，进程执行完进行V操作，有几个后继则进行几次不同信号量的V操作。然后后面等待执行的进行的前驱如果都执行完了，则开始执行，有几个前驱进行几次不同信号量的P操作。
-- 求信号量的取值范围: 给定进程数和资源数，求使用PV操作时需要设定的信号量的范围，带入公式计算，信号量为负几，则有几个等待进程。
+- **综合考察 PV 操作**: 给定前趋图，进程，和需要设置的信号量，然后给出进程部分执行过程中的 PV 操作，求空余的部分的 PV 操作。结合前趋图来看，从最开始无依赖的进程开始填空，进程执行完进行 V 操作，有几个后继则进行几次不同信号量的 V 操作。然后后面等待执行的进行的前驱如果都执行完了，则开始执行，有几个前驱进行几次不同信号量的 P 操作。
+- 求信号量的取值范围: 给定进程数和资源数，求使用 PV 操作时需要设定的信号量的范围，带入公式计算，信号量为负几，则有几个等待进程。
 - 考察银行家算法，求当前可用的资源数和安全的执行序列: 给定资源及其可用资源总数，给定几个进程及其最大需求量和已分配资源数图示。首先用资源的最大总数-当前所有进程分配的数量求出其当前可用的资源数。然后找到所有执行序列中资源最大需求量都能满足的进程，作为可执行的进程，执行完后把这个进程上已分配的资源数加回，可用资源数，再找下一个可执行进程。
 
 ##### 存储管理
@@ -163,8 +163,8 @@ draft: true
 ###### 相关公式
 
 - 页内地址的位数: 每页大小以 2 的 n 次方表示时的 n
-- 页号的2进制位数1: 内存大小 / 每页大小，然后求其以 2 的 n 次方表示时的 n
-- 页号的2进制位数2: 逻辑地址或物理地址的位数 - 页内地址的位数
+- 页号的 2 进制位数 1: 内存大小 / 每页大小，然后求其以 2 的 n 次方表示时的 n
+- 页号的 2 进制位数 2: 逻辑地址或物理地址的位数 - 页内地址的位数
 - 分页式存储物理地址: 高位通过页号在页表中查到物理块号 拼接 低位页内地址(偏移地址)，**逻辑地址和物理地址中低位的偏移地址不变，区别只是将高位的逻辑页号替换为了物理快号**
 
 ###### 相关题型解题思路
@@ -206,7 +206,7 @@ draft: true
 
 ##### 相关题型解题思路
 
-- 求采用什么索引和可表示的单个文件的最大长度: 通常给出一共几个地址项，以及其中几个直接索引，几个一级间接索引，几个二级间接索引，和每个地址项的大小，以及磁盘索引块和磁盘数据块的大小，然后问访问的逻辑块号应采用的是什么索引。题目中没明确说明时，逻辑块从0开始编号。首先将直接索引进行编号，然后带公式求一级间接索引的表示范围，以上就是二级间接索引的范围，这样就能判断采用的是什么索引。最后只要算出中的表示范围(可表示的总的逻辑块数) 乘以磁盘数据块大小，就能算出可表示的单个文件最大的长度。
+- 求采用什么索引和可表示的单个文件的最大长度: 通常给出一共几个地址项，以及其中几个直接索引，几个一级间接索引，几个二级间接索引，和每个地址项的大小，以及磁盘索引块和磁盘数据块的大小，然后问访问的逻辑块号应采用的是什么索引。题目中没明确说明时，逻辑块从 0 开始编号。首先将直接索引进行编号，然后带公式求一级间接索引的表示范围，以上就是二级间接索引的范围，这样就能判断采用的是什么索引。最后只要算出中的表示范围(可表示的总的逻辑块数) 乘以磁盘数据块大小，就能算出可表示的单个文件最大的长度。
 - 求相对路径和绝对路径: 通常给出目录结构图，当前工作目录和需要访问的文件名，求相对路径和绝对路径，很简单。注意一点，路径最后的杠可以省略。
 - 求需要表示的物理块在位示图中的第几个字描述: 通常需要表示的物理块号，和字长。**注意如果有余数，则向上取整，还有没有明确说明的情况下是从零开始编号的**
 - 求位示图需要几个字来表示: 通常给出全部条件带入公式计算即可。
@@ -332,8 +332,8 @@ draft: true
 
 ##### 相关题型解题思路
 
-- 考察OSI 七层协议: 主要考察各层的协议、功能、设备。
-- 考察TCI/IP 协议: 主要考察功能
+- 考察 OSI 七层协议: 主要考察各层的协议、功能、设备。
+- 考察 TCI/IP 协议: 主要考察功能
 - 求子网个数: 通常给出两个 IP 地址，可以根据后面的网络号的位数减一下，代入公式计算。
 - 求可用主机数: 只要算出来网络号的位数后，代入公式很容易计算。
 - 求不属于网络的子网地址: 判断方式是看网络号是否相同，而网络号在左边，然后从 2 进制的角度来讲，数字越大越考左，所以大概率是最大的那个数。
@@ -674,10 +674,10 @@ draft: true
 
 #### 相关公式
 
-- 总浮动时间1: 关键路径 - 活动路径
-- 总浮动时间2: 最迟开始LS - 最早开始ES
-- 总浮动时间3: 最迟完成LF - 最早完成EF
-- 自由浮动时间: 紧后活动最早开始LS中的最小的 - 本活动的最早完成EF
+- 总浮动时间 1: 关键路径 - 活动路径
+- 总浮动时间 2: 最迟开始 LS - 最早开始 ES
+- 总浮动时间 3: 最迟完成 LF - 最早完成 EF
+- 自由浮动时间: 紧后活动最早开始 LS 中的最小的 - 本活动的最早完成 EF
 
 #### 相关题型解题思路
 
@@ -743,8 +743,8 @@ draft: true
 #### 相关题型解题思路
 
 - 求元组个数和属性列数: 属性列很简单，自然连接求交集，笛卡尔积求并集，元组个数是，通过属性列相同且值相同连接后剩余的行数。
-- 求等价的关系代数表达式：常见的就是给个自然连接的表达式，等价的是一个笛卡尔积的表达式，笛卡尔积转自然连接需要经过投影和选择。**还有能用数字代替列名，从1开始，注意不要加引号**。
-- 求关系代数等价的SQL: 通常就是考察投影和选择，主要是行的问题，把属性列写一下很容易就能答出来。
+- 求等价的关系代数表达式：常见的就是给个自然连接的表达式，等价的是一个笛卡尔积的表达式，笛卡尔积转自然连接需要经过投影和选择。**还有能用数字代替列名，从 1 开始，注意不要加引号**。
+- 求关系代数等价的 SQL: 通常就是考察投影和选择，主要是行的问题，把属性列写一下很容易就能答出来。
 - 求候选键: 根据依赖集找出从未在右边出现过的属性，其必然是候选键之一，然后以其为基础看看能不能遍历所有属性，将无法遍历的加入候选键中。
 - 求模式分解后是否保持函数依赖: 先求分解后的模式分别的函数依赖，如果拆分后的属性，包含了原来的依赖关系中的所有属性，那么就能继承相应的依赖关系。然后如果剩余全部未被包含的依赖能通过函数依赖的公理系统得到，那么就能说保持了函数依赖。
 - 求模式分解后是否无损连接: 分解后的模式先求交集，然后看交集的属性能不能推出，任意一个差集里的属性，如果可以那就算无损连接。
@@ -796,6 +796,64 @@ draft: true
 ![数据仓库技术3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2cadqwnfv30g.webp "数据仓库技术3")
 
 ![大数据](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7b421s6py9c0.webp "大数据")
+
+## 系统架构设计的基础知识 ✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰
+
+### 软件架构概念
+
+![软件架构概述1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.33ejy13bq8u0.webp "软件架构概述1")
+![软件架构概述2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.45cn657azgs0.webp "软件架构概述2")
+
+![软件架构设计与生命周期1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6brsxetodww0.webp "软件架构设计与生命周期1")
+![软件架构设计与生命周期2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3p8ov2qwe060.webp "软件架构设计与生命周期2")
+
+![构件的基本概念](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1qmjow4ipc1s.webp "构件的基本概念")
+
+![构件与对象的特性](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1fc6p3uyjugw.webp "构件与对象的特性")
+
+![构件接口与面向构件编程](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.47w478ab28e0.webp "构件接口与面向构件编程")
+
+![构件技术](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.31kkzrl1amq0.webp "构件技术")
+
+### 软件架构风格
+
+![软件架构风格概述](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.65ygvxr8g2c0.webp "软件架构风格概述")
+
+![软件架构风格的分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4k839sfcmmq0.webp "软件架构风格的分类")
+
+![数据流风格](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1r4kdemcihkw.webp "数据流风格")
+
+![调用返回风格](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3xcc9yzy0j40.webp "调用返回风格")
+
+![独立构件风格](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7ecmzadwv380.webp "独立构件风格")
+
+![虚拟机风格](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3ok68cn1v9i0.webp "虚拟机风格")
+
+![仓库（数据共享）风格](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3cpj11ftdmg0.webp "仓库（数据共享）风格")
+
+![闭环控制风格](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.45e7vwag3ay0.webp "闭环控制风格")
+
+![C2架构风格](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.dkoytlnsxyo.webp "C2架构风格")
+
+![架构风格简介](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5ruao32fwks0.webp "架构风格简介")
+
+### _层次架构风格_
+
+![两层C/S架构风格](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5hvzhnuqjh00.webp "两层C/S架构风格")
+
+![三层C/S架构风格](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3pd4dhzuari0.webp "三层C/S架构风格")
+
+![三层B/S架构风格](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6fx9senl5m00.webp "三层B/S架构风格")
+
+![富互联网应用RIA](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6wv98brnmi80.webp "富互联网应用RIA")
+
+![MVC架构风格](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3fi5psmi0fy0.webp "MVC架构风格")
+
+![MVP架构风格](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.42m6gsq4rzq0.webp "MVP架构风格")
+
+![MVVM架构风格](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6gqwqtkdr240.webp "MVVM架构风格")
+
+## 系统质量属性与架构评估 ✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰
 
 ## _面向对象技术_ ✰✰✰✰✰
 
@@ -853,3 +911,13 @@ draft: true
 
 ![行为型设计模式1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4aj4u8ga8zq0.webp "行为型设计模式1")
 ![行为型设计模式2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.669ecjzd4uk0.webp "行为型设计模式2")
+
+## 面向服务的架构设计与理论实践
+
+![SOA的概念1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5ginldmlou40.webp "SOA的概念1")
+![SOA的概念2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1slxcr3tvb1.webp "SOA的概念2")
+
+![SOA的关键技术](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1uyzz8b9fy2.webp "SOA的关键技术")
+
+![SOA的实现方式1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.522v3mf7en00.webp "SOA的实现方式1")
+![SOA的实现方式2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6zio1sbc48g0.webp "SOA的实现方式2")
