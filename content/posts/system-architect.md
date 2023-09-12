@@ -999,6 +999,46 @@ draft: true
 
 ![软件架构维护](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.185wxsbvi03g.webp "软件架构维护")
 
+## 未来信息综合技术
+
+### 信息物理系统技术概述
+
+![CPS 体系架构](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6gq4dy62wno0.webp "CPS 体系架构")
+
+![CPS 技术体系](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2n980fq0kxy0.webp "CPS 技术体系")
+
+![CPS 应用场景](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2126qkdjimg0.webp "CPS 应用场景")
+
+### 人工智能技术概述
+
+![人工智能1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.152nf82n2psw.webp "人工智能1")
+![人工智能2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.37hyd8cn3pw0.webp "人工智能2")
+![人工智能3](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.vra5s2ya14g.webp "人工智能3")
+
+### 机器人技术概述
+
+![机器人核心技术](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.219rohhquuao.webp "机器人核心技术")
+
+![机器人分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1ykdyu7r48ps.webp "机器人分类")
+
+### 边缘计算概述
+
+![边缘计算概念](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2zlhptkkz4q0.webp "边缘计算概念")
+![边缘计算特点](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.ma7azror3k0.webp "边缘计算特点")
+![边缘计算协同](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.18i80yhbya8w.webp "边缘计算协同")
+
+### 数字孪生体技术概述
+
+![数字孪生体](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1etkqy1lvlnk.webp "数字孪生体")
+
+### 云计算和大数据技术概述
+
+![云计算的服务方式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5k35fkykokw0.webp "云计算的服务方式")
+
+![云计算的部署模式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4t4otu10hp20.webp "云计算的部署模式")
+
+![大数据](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.um80oj0uee8.webp "大数据")
+
 ## _面向对象技术_ ✰✰✰✰✰
 
 ### 面向对象开发
