@@ -4,9 +4,11 @@ date: 2023-08-06T18:21:01+08:00
 draft: true
 ---
 
+# 上篇
+
 ## 计算机系统基础知识
 
-### 计算机硬件 ✰
+### 计算机硬件 0-1
 
 #### 相关概念
 
@@ -88,7 +90,7 @@ draft: true
 
 ### 计算机软件
 
-#### 操作系统 ✰✰✰✰✰
+#### 操作系统 3-5
 
 ##### 操作系统
 
@@ -181,7 +183,7 @@ draft: true
 
 ![设备管理技术](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1maz233knxk0.webp "设备管理技术")
 
-#### 文件系统
+#### 文件系统 0-1
 
 ##### 相关概念
 
@@ -225,7 +227,7 @@ draft: true
 
 ![.NET](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1shw9oux6co0.webp ".NET")
 
-### 嵌入式系统及软件 ✰✰✰
+### 嵌入式系统及软件 3-5 _超纲_
 
 #### 嵌入式系统的组成和特点
 
@@ -274,7 +276,7 @@ draft: true
 
 ![软件开发工具](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.790tw8sh1vo0.webp "软件开发工具")
 
-### 计算机网络 ✰✰✰✰✰
+### 计算机网络 3-5 _超纲_
 
 #### 网络的基本概念
 
@@ -383,7 +385,7 @@ draft: true
 
 ![基于模型的系统工程](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4bw9naeriys0.webp "基于模型的系统工程")
 
-### 系统性能 ✰
+### 系统性能 1-2
 
 ![性能指标1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.llhl0gkjkts.webp "性能指标1")
 ![性能指标2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2p55uuqhp000.webp "性能指标2")
@@ -394,7 +396,7 @@ draft: true
 
 ![阿姆达尔解决方法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.67ps4puigzk0.webp "阿姆达尔解决方法")
 
-## 信息系统基础知识 ✰✰✰
+## 信息系统基础知识 3 _超纲_
 
 ### 信息系统概述
 
@@ -486,7 +488,7 @@ draft: true
 ![企业应用集成5](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.3mes3ddu48o0.webp "企业应用集成5")
 ![企业应用集成6](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.18k3di2prd5s.webp "企业应用集成6")
 
-## 信息安全技术基础知识 ✰✰✰✰
+## 信息安全技术基础知识 2-4
 
 ### 信息安全基础知识
 
@@ -557,7 +559,7 @@ draft: true
 
 ![风险评估](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1z74skdaezwg.webp "风险评估")
 
-## 软件工程基础知识 ✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰
+## **软件工程基础知识 12-15**
 
 ### 软件工程
 
@@ -714,7 +716,7 @@ draft: true
 
 ![系统维护](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1monrsvm7v0g.webp "系统维护")
 
-## 数据库设计基础知识 ✰✰✰✰✰
+## 数据库设计基础知识 3-5
 
 ### 数据库基本概念
 
@@ -811,7 +813,7 @@ draft: true
 
 ![大数据](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7b421s6py9c0.webp "大数据")
 
-## 系统架构设计的基础知识 ✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰
+## **系统架构设计的基础知识 15**
 
 ### 软件架构概念
 
@@ -891,9 +893,9 @@ draft: true
 
 ![MVVM架构风格](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6gqwqtkdr240.webp "MVVM架构风格")
 
-## 系统质量属性与架构评估 ✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰
+## **系统质量属性与架构评估 15**
 
-### 软件系统质量属性 ✰✰✰✰✰✰✰✰✰✰
+### 软件系统质量属性
 
 ![软件系统质量属性](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.2s4vrihswus0.webp "软件系统质量属性")
 
@@ -917,7 +919,7 @@ draft: true
 ![其他评估方法1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.7ii3ua4j7d00.webp "其他评估方法1")
 ![其他评估方法2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.58s3mj1wez80.webp "其他评估方法2")
 
-## 软件可靠性基础知识 ✰✰
+## 软件可靠性基础知识 2
 
 ### 软件可靠性基本概念
 
@@ -962,7 +964,7 @@ draft: true
 
 ![软件可靠性评价](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.8x7fbhuma48.webp "软件可靠性评价")
 
-## 软件架构的演化和维护 ✰✰
+## 软件架构的演化和维护 2
 
 ### 软件架构演化和定义的的关系
 
@@ -999,7 +1001,7 @@ draft: true
 
 ![软件架构维护](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.185wxsbvi03g.webp "软件架构维护")
 
-## 未来信息综合技术
+## 未来信息综合技术 2-3
 
 ### 信息物理系统技术概述
 
@@ -1039,7 +1041,21 @@ draft: true
 
 ![大数据](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.um80oj0uee8.webp "大数据")
 
-## _面向对象技术_ ✰✰✰✰✰
+# 下篇
+
+## 面向服务的架构设计与理论实践
+
+![SOA的概念1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5ginldmlou40.webp "SOA的概念1")
+![SOA的概念2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1slxcr3tvb1.webp "SOA的概念2")
+
+![SOA的关键技术](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1uyzz8b9fy2.webp "SOA的关键技术")
+
+![SOA的实现方式1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.522v3mf7en00.webp "SOA的实现方式1")
+![SOA的实现方式2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6zio1sbc48g0.webp "SOA的实现方式2")
+
+# 拓展
+
+## _面向对象技术_ 3-5
 
 ### 面向对象开发
 
@@ -1095,13 +1111,3 @@ draft: true
 
 ![行为型设计模式1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.4aj4u8ga8zq0.webp "行为型设计模式1")
 ![行为型设计模式2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.669ecjzd4uk0.webp "行为型设计模式2")
-
-## 面向服务的架构设计与理论实践
-
-![SOA的概念1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.5ginldmlou40.webp "SOA的概念1")
-![SOA的概念2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1slxcr3tvb1.webp "SOA的概念2")
-
-![SOA的关键技术](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.1uyzz8b9fy2.webp "SOA的关键技术")
-
-![SOA的实现方式1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.522v3mf7en00.webp "SOA的实现方式1")
-![SOA的实现方式2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/Development/image.6zio1sbc48g0.webp "SOA的实现方式2")
