@@ -1259,7 +1259,7 @@ draft: true
 
 ![构件组装：三种方式、三种不兼容问题](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.9l8bz9n84so.webp "构件组装：三种方式、三种不兼容问题")
 
-### 5.7 软件项目管理
+### 5.7 软件项目管理 _近几年不考了_
 
 #### 软件进度管理
 
@@ -1690,7 +1690,7 @@ draft: true
 
 ![软件可靠性的基本概念：定义、与硬件可靠性的区别、定量描述](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.mpuwvlrz8j4.webp "软件可靠性的基本概念：定义、与硬件可靠性的区别、定量描述")
 
-#### 软件可靠性的基本概念：定义、与硬件可靠性的区别、定量描述
+#### 串联系统与并联系统的可靠性
 
 ![串联系统与并联系统的可靠性](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.678jt43ccgw0.webp "串联系统与并联系统的可靠性")
 
