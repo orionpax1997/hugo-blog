@@ -66,7 +66,7 @@ draft: true
 - 磁道按顺序排列的记录等待时间: 旋转一周的时间 - 处理时间
 - 磁道记录的总处理时间: (旋转一块的时间 + 处理时间) \* 总块数 + 等待时间 \* (总块数 - 1)
 
-##### 相关题型解题思路
+##### 选择题相关题型及解题思路
 
 - 求磁盘调度的响应序列: 按照采用的调度算法，来求序列，多个相同柱面号的情况下，扇区号由小到大排列，磁头号是无效信息。
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3o2jqasm51a0.webp)
@@ -113,7 +113,7 @@ draft: true
 - 流水线的加速比: 不使用流水线的执行时间 / 使用流水线的执行时间
 - 流水线的最大加速比: 1 条指令不使用流水线的执行时间 / 流水线周期
 
-##### 相关题型解题思路
+##### 选择题相关题型及解题思路
 
 - 求流水线相关问题: 如果是让求吞吐率或加速比，通常情况下需要先求出执行时间，也就是说需要套两个公式;如果碰到和缓冲区结合考察的问题，**注意但单双缓冲区的差异，单缓冲区读入和写出不能同时进行，因此读入和写出的时间需要加在一起算做一段**。而双缓冲区的读入和写出可以同时进行，因此可以算做两段。
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1cg0efv1irr4.webp)
@@ -135,7 +135,7 @@ draft: true
 
 - CRC 编码: 1. 在原始信息串后面补多项式的阶个零; 2. 求除数，多项式中幂指数存在的为 1，不存在为 0; 3. 求校验码，进行模 2 除(异或运算)，**余数如果不足多项式的阶的位数则在左边补 0**
 
-##### 相关题型解题思路
+##### 选择题相关题型及解题思路
 
 - 求 CRC 循环冗余校验码: 通常给出原始信息串和生成多项式，让求校验码，套公式即可。
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.7hpcsdfp6is0.webp)
@@ -209,7 +209,7 @@ draft: true
 - 同步信号量的最大值: 资源数量
 - 同步信号量的最小值: - (进程数量 - 资源数量)
 
-###### 相关题型解题思路
+###### 选择题相关题型及解题思路
 
 - 考察进程三态图之间的转换: 给定服务调度算法、给定几个进程的当前状态，某进程发生某事件后，求所有进程的后续状态。以三态图的转变带入后解题。
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.15zmwdj8sv6k.webp)
@@ -261,7 +261,7 @@ draft: true
 - 页号的 2 进制位数 2: 逻辑地址或物理地址的位数 - 页内地址的位数
 - 分页式存储物理地址: 高位通过页号在页表中查到物理块号 拼接 低位页内地址(偏移地址)，**逻辑地址和物理地址中低位的偏移地址不变，区别只是将高位的逻辑页号替换为了物理快号**
 
-###### 相关题型解题思路
+###### 选择题相关题型及解题思路
 
 - 求分页式存储的物理地址: 通常给出页面大小和逻辑地址，以及页号和物理块号的对应表，让求物理地址。首先通过页面大小算出页内地址的位数(**也可以直接看答案中，多数答案与逻辑地址后面几位重复，且前面剩余的在页表里能查到，则其为偏移地址位数，页面大小通常为 4k，则二进制表示为 4 位，16 进制表示为 1 位**)，剩余高位为页号，通过页号找到对应的物理块号，然后将逻辑地址高位替换为物理快号就是物理地址。
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.76lanl42ik00.webp)
@@ -315,7 +315,7 @@ draft: true
 - 可表示的单个文件的最大长度: 可表示的总的逻辑块数 \* 磁盘数据块大小
 - 表示位示图需要的字的个数: 磁盘容量 / 磁盘物理块大小 / 系统字长位数
 
-##### 相关题型解题思路
+##### 选择题相关题型及解题思路
 
 - 求逻辑快应采用什么索引: 通常给出一共几个地址项，以及其中几个直接索引，几个一级间接索引，几个二级间接索引，和每个地址项的大小，以及磁盘索引块和磁盘数据块的大小，然后问访问的逻辑块号应采用的是什么索引。题目中没明确说明时，**逻辑块从 0 开始编号**。首先将直接索引进行编号，然后带公式求一级间接索引的表示范围，以上就是二级间接索引的范围，这样就能判断采用的是什么索引。
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4u0lba6pkj60.webp)
@@ -527,7 +527,7 @@ draft: true
 - 子网个数: 用划分了子网号后的网络号位数 - 原来的网络号位数，作为的 2 的幂，求 2 的幂次方
 - 可使用的主机个数: 32 - 网络号位数，作为 2 的幂，求 2 的幂次方在减 2
 
-##### 相关题型解题思路
+##### 选择题相关题型及解题思路
 
 - 考察常用端口号与协议的对应关系
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2r9nva54kkk.webp)
@@ -669,7 +669,7 @@ draft: true
 
 ![基于模型的系统工程](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4bw9naeriys0.webp "基于模型的系统工程")
 
-#### 相关题型解题思路
+#### 选择题相关题型及解题思路
 
 - 考察系统工程方法: 背一下
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3r1a6u4adh20.webp)
@@ -691,7 +691,7 @@ draft: true
 
 ![阿姆达尔解决方法](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.67ps4puigzk0.webp "阿姆达尔解决方法")
 
-#### 相关题型解题思路
+#### 选择题相关题型及解题思路
 
 - 考察性能指标: 背一下
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6isgn12br4w0.webp)
@@ -821,6 +821,10 @@ draft: true
 ![企业应用集成5](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3mes3ddu48o0.webp "企业应用集成5")
 ![企业应用集成6](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.18k3di2prd5s.webp "企业应用集成6")
 
+### 相关题型及解题思路
+
+- 考到的话超纲内容比较多，定义理解记忆下即可
+
 ## **第 4 章 信息安全技术基础知识 2-4**
 
 ### 4.1 信息安全基础知识
@@ -947,7 +951,7 @@ draft: true
 
 ![风险评估](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1z74skdaezwg.webp "风险评估")
 
-### 相关题型及解题思路
+### 选择题相关题型及解题思路
 
 - 考察信息安全的基本要素: 背一下
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1naip4g829wg.png)
@@ -1039,7 +1043,7 @@ draft: true
 
 ![重构、设计恢复、再工程、正向工程](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4thzd2beh8g0.webp "重构、设计恢复、再工程、正向工程")
 
-#### 相关题型及解题思路
+#### 选择题相关题型及解题思路
 
 - **考察软件过程模型的定义**
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6j5r6albd1g0.webp)
@@ -1134,7 +1138,7 @@ draft: true
 
 ![需求验证](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5lmza1w3v2g0.webp "需求验证")
 
-#### 相关题型及解题思路
+#### 选择题相关题型及解题思路
 
 - 考察需求工程的两大过程(需求开发、需求管理)的主要活动
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.7k65w0v62u8.webp)
@@ -1161,7 +1165,7 @@ draft: true
 
 ![人机界面设计三大原则](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.7g0wc6lk4nw0.webp "人机界面设计三大原则")
 
-#### 相关题型及解题思路
+#### 选择题相关题型及解题思路
 
 - 考察内聚程度分类、耦合程度分类
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2k2494q577c0.webp)
@@ -1213,7 +1217,7 @@ draft: true
 - 环形复杂度 1: 流图中边的条数 - 节点数 + 2
 - 环形复杂度 2: 判定节点数 + 1
 
-#### 相关题型及解题思路
+#### 选择题相关题型及解题思路
 
 - **考察各个测试阶段的测试对象、测试依据、测试目的**
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.18h1ho3us3vk.webp)
@@ -1348,7 +1352,7 @@ draft: true
 
 ![可维护性评价指标、软件维护类型](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1monrsvm7v0g.webp "可维护性评价指标、软件维护类型")
 
-#### 相关题型及解题思路
+#### 选择题相关题型及解题思路
 
 - 考察遗留系统的演化策略
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5cbbdu2bv700.webp)
@@ -1421,7 +1425,7 @@ draft: true
 ![模式分解2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.682z4d6u4gg0.webp "模式分解2")
 ![模式分解3](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.omahc7zk2uo.webp "模式分解3")
 
-#### 相关题型解题思路
+#### 选择题相关题型及解题思路
 
 - 考察函数依赖的公理系统: 背下并理解四率两规则及其对应的数学代数表示。
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3elkf4e09ho0.webp)
@@ -1463,7 +1467,7 @@ draft: true
 
 ![反规范化技术](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5kt1osw7mwg0.webp "反规范化技术")
 
-#### 相关题型解题思路
+#### 选择题相关题型及解题思路
 
 - 求属于概念结构设计的什么冲突: 理解概念结构的冲突。**如果连着解决冲突的方式一起考，也可以根据解决方式倒推冲突类型**
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1335yuslpl0g.webp)
@@ -1483,7 +1487,7 @@ draft: true
 ![封锁协议2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3bsu6p7e8wo0.webp "封锁协议2")
 ![封锁协议3](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.yy6tuoni09c.webp "封锁协议3")
 
-#### 相关题型解题思路
+#### 选择题相关题型及解题思路
 
 - 求事务能否加锁成功: 很简单，排它(写)锁就是一个事务加了，其他事务什么锁也加不了。共享(读)锁就是一个事务加了，其他事务只能加共享(读)锁，不能加排它(写)锁。
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.7b4qv3t1rr00.webp)
@@ -1521,10 +1525,10 @@ draft: true
 ![软件架构定义](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.33ejy13bq8u0.webp "软件架构定义")
 ![软件架构定义](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.45cn657azgs0.webp "软件架构定义")
 
-#### 软件架构设计与生命周期
+#### 软件架构设计的生命周期
 
-![软件架构设计与生命周期1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6brsxetodww0.webp "软件架构设计与生命周期1")
-![软件架构设计与生命周期2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3p8ov2qwe060.webp "软件架构设计与生命周期2")
+![软件架构设计的生命周期1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6brsxetodww0.webp "软件架构设计的生命周期1")
+![软件架构设计的生命周期2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3p8ov2qwe060.webp "软件架构设计的生命周期2")
 
 ### 7.2 基于架构的软件开发方法
 
@@ -1538,7 +1542,7 @@ draft: true
 ![基于架构的软件开发过程2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5irvz3bbtio0.webp "基于架构的软件开发过程2")
 ![基于架构的软件开发过程3](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4fzrm4jp9wy0.webp "基于架构的软件开发过程3")
 
-### 7.3 软件架构风格
+### 7.3 **软件架构风格**
 
 #### 软件架构风格定义
 
@@ -1546,8 +1550,15 @@ draft: true
 
 #### 软件架构风格的分类
 
-![软件架构风格的分类1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4k839sfcmmq0.webp "软件架构风格的分类1")
-![软件架构风格的分类2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5ruao32fwks0.webp "软件架构风格的分类2")
+![软件架构风格的分类](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4k839sfcmmq0.webp "软件架构风格的分类")
+
+#### 软件架构风格：常考关键字及实例、简介
+
+![软件架构风格：常考关键字及实例、简介](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5ruao32fwks0.webp "软件架构风格：常考关键字及实例、简介")
+
+#### 软件架构风格：主要特点、优缺点、适合领域对比
+
+![软件架构风格：主要特点、优缺点、适合领域对比](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4lzein1n1j40.webp "软件架构风格：主要特点、优缺点、适合领域对比")
 
 #### 数据流风格
 
@@ -1579,9 +1590,9 @@ draft: true
 
 ### 7.4 软件架构复用
 
-#### 软甲架构复用：定义、类型、可复用的资产包括、过程
+#### 软件架构复用：定义、类型、可复用的资产包括、过程
 
-![软甲架构复用：定义、类型、可复用的资产包括、过程](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4do65se1qjc0.webp "软甲架构复用：定义、类型、可复用的资产包括、过程")
+![软件架构复用：定义、类型、可复用的资产包括、过程](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4do65se1qjc0.webp "软件架构复用：定义、类型、可复用的资产包括、过程")
 
 ### 7.5 特定领域软件体系结构
 
@@ -1635,9 +1646,30 @@ draft: true
 
 ![MVVM架构风格](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6gqwqtkdr240.webp "MVVM架构风格")
 
+### 选择题相关题型及解题思路
+
+- 给定系统需求问应采用什么架构风格: 架构风格分类理解记忆
+  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.9q5ki5kspfc.webp "alt")
+- 考察软件架构复用类型的定义
+  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6114vjanjhg0.webp "alt")
+- 考察软件架构复的阶段
+  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.sz8qpqmjehs.webp "alt")
+- 考察 DSSA 的定义
+  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4lrq13wysgo0.webp "alt")
+- 考察 DSSA 三个基本活动：目的与活动的对应关系
+  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6grp3qdkwgg0.webp "alt")
+- 考察分层架构风格: 理解记忆
+  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1syxi574bxuo.webp "alt")
+
+### 案例题相关题型及解题思路
+
+- 给定两种架构风格和需要对比的方面，问为何采用其中一个。给定系统的核心需求，问应该采用什么风格：理解记忆各个软件架构风格和其对比情况。
+  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2ea5u73tha1w.webp "alt")
+  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5cax7er7h5o0.webp "alt")
+
 ## **第 8 章 系统质量属性与架构评估 10**
 
-### 8.1 软件系统质量属性
+### **8.1 软件系统质量属性**
 
 #### 软件系统质量属性：开发时期、运行时期
 
@@ -1681,6 +1713,27 @@ draft: true
 
 ![其他评估方法1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.7ii3ua4j7d00.webp "其他评估方法1")
 ![其他评估方法2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.58s3mj1wez80.webp "其他评估方法2")
+
+### 必背概念
+
+#### 软件架构风格、架构风险、风险点与非风险点、敏感点、权衡点
+
+![软件架构风格、架构风险、风险点与非风险点、敏感点、权衡点](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.681zocif0p40.webp "软件架构风格、架构风险、风险点与非风险点、敏感点、权衡点")
+
+### 选择题相关题型及解题思路
+
+- 给定描述问是哪个质量属性: 理解记忆
+  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1u1q487j2ncw.webp "alt")
+- 考察质量属性场景的六个部分
+  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3ywd7q8ejfs0.webp "alt")
+- 考察敏感点、权衡点、风险点的判断
+  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.400qjk8cu300.webp "alt")
+
+### 案例题相关题型及解题思路
+
+- 给定关键质量属性场景和专家评估意见，让补充质量效用树，判断风险点、敏感点、权衡点：送分题，排除法做。
+  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5lkf49y9pvo0.webp "alt")
+  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.202n3mkmhckg.webp "alt")
 
 ## 第 9 章 软件可靠性基础知识 2
 
@@ -1883,7 +1936,7 @@ draft: true
 
 ### 15.1 SOA 的相关概念
 
-#### SOA：定义、优点
+#### **SOA：定义、优点**
 
 ![SOA：定义、优点](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5ginldmlou40.webp "SOA：定义、优点")
 
@@ -1903,9 +1956,14 @@ draft: true
 
 ![服务注册表模式](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.522v3mf7en00.webp "服务注册表模式")
 
-#### 企业服务总线模式
+#### **企业服务总线模式 EJB**
 
-![企业服务总线模式](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6zio1sbc48g0.webp "企业服务总线模式")
+![企业服务总线模式1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6zio1sbc48g0.webp "企业服务总线模式1")
+![企业服务总线模式2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4jcoig20une0.webp "企业服务总线模式2")
+
+### 选择题相关题型及解题思路
+
+- 考察 SOA 主要协议和规范：背一下
 
 # 拓展
 
@@ -1918,6 +1976,29 @@ draft: true
 ### 案例分析解题技巧
 
 ![案例分析解题技巧](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.67gmh3mvlg00.png "案例分析解题技巧")
+
+## Java 语言相关
+
+### J2EE
+
+#### J2EE 四层结构
+
+![J2EE 四层结构1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.7cbdpyyw8qo0.webp "J2EE 四层结构1")
+![J2EE 四层结构2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.93ltyr6jcqg.webp "J2EE 四层结构2")
+
+#### J2EE 与 MVC 的对应
+
+![J2EE 与 MVC 的对应](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.35w22yxz48q0.webp "J2EE 与 MVC 的对应")
+
+### EJB
+
+#### EJB 定义
+
+![EJB 定义](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4j3thlri1i80.webp "EJB 定义")
+
+#### EJB 的三种 Bean
+
+![EJB 的三种 Bean](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1fchbz63msps.webp "EJB 的三种 Bean")
 
 ## **面向对象技术 3-5** 老版教材
 
@@ -2009,7 +2090,7 @@ draft: true
 
 ![UML 视图](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6yrscew3tgw0.webp "UML 视图")
 
-### 设计模式
+### **设计模式**
 
 #### 设计模式分类、架构模式、设计模式、惯用法
 
@@ -2028,15 +2109,41 @@ draft: true
 ![行为型设计模式1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4aj4u8ga8zq0.webp "行为型设计模式1")
 ![行为型设计模式2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.669ecjzd4uk0.webp "行为型设计模式2")
 
-### 相关题型及解题思路
+### 选择题相关题型及解题思路
 
 - 考察 UML 各种图的定义
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2efyz4xql04k.webp)
 - 问是什么图：给出一个图示
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.74xq3xnerc00.webp)
-- **考察设计模式的定义**
+- **考察设计模式的定义**，问是什么模式，英文名称需要记
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.31opvdzs4po0.webp)
 - 考察面向对象的分析模型的定义
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.g9vl9z7rmmg.webp)
 - 考察面向对象的设计原则
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5ilhkiee1lg0.webp)
+
+## 知识产权与标准化 2-3
+
+### 知识产权概述
+
+![知识产权概述](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5ey1e1llxg00.webp "知识产权概述")
+
+### 知识产权保护期限
+
+![知识产权保护期限](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6q5q2mudneo0.webp "知识产权保护期限")
+
+### 职务作品知识产权人的确定
+
+![职务作品知识产权人的确定](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.274kw54d058g.webp "职务作品知识产权人的确定")
+
+### 委托作品知识产权人的确定
+
+![委托作品知识产权人的确定](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4xn21oux0fk0.webp "委托作品知识产权人的确定")
+
+### 侵权判定
+
+![侵权判定](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1c5rr35utx5s.webp "侵权判定")
+
+### 标准划分：国际标准、国家标准、行业标准、区域/地方标准、企业标准
+
+![标准划分：国际标准、国家标准、行业标准、区域/地方标准、企业标准](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.211sk61ghpuo.webp "标准划分：国际标准、国家标准、行业标准、区域/地方标准、企业标准")
