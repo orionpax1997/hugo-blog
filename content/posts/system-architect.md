@@ -68,7 +68,7 @@ draft: true
 
 ##### 选择题相关题型及解题思路
 
-- 求磁盘调度的响应序列: 按照采用的调度算法，来求序列，多个相同柱面号的情况下，扇区号由小到大排列，磁头号是无效信息。
+- **2022 求磁盘调度的响应序列**: 按照采用的调度算法，来求序列，多个相同柱面号的情况下，扇区号由小到大排列，磁头号是无效信息。
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3o2jqasm51a0.webp)
 - 求磁道记录的最长处理时间和最少处理时间: 通常给出逻辑记录的安排顺序表，磁盘的每周旋转速度，每个记录的处理时间，需要**注意还有个隐含的条件是磁盘的每块的旋转时间，且当前快数据旋转读取完后才能开始处理**，求出隐含条件后带入公式计算。
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.21dt0hljwn28.webp)
@@ -529,12 +529,12 @@ draft: true
 
 ##### 选择题相关题型及解题思路
 
-- 考察常用端口号与协议的对应关系
+- **2022 考察常用端口号与协议的对应关系**
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2r9nva54kkk.webp)
+- **2022 考察 TCI/IP 协议: 主要考察功能**
+  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.stflr0l4fs0.webp)
 - 考察 OSI 七层协议: 主要考察各层的协议、功能、设备
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.496ao1hxl9k0.webp)
-- 考察 TCI/IP 协议: 主要考察功能
-  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.stflr0l4fs0.webp)
 - 求子网个数及每个子网中可用主机数: 求子网个数，通常给出两个 IP 地址，可以根据后面的网络号的位数减一下，代入公式计算。求可用主机数，一样带公式计算即可。
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.27ukozq4c6ck.webp)
 - 求不属于网络的子网地址: 判断方式是看网络号是否相同，而网络号在左边，然后从 2 进制的角度来讲，数字越大越考左，所以**大概率是最大的那个数**。
@@ -1045,7 +1045,7 @@ draft: true
 
 #### 选择题相关题型及解题思路
 
-- **考察软件过程模型的定义**
+- **2022 考察软件过程模型的定义**
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6j5r6albd1g0.webp)
 - 考察软件过程模型的差异
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.uvh7zfiraw0.webp)
@@ -1143,6 +1143,10 @@ draft: true
 - 考察需求工程的两大过程(需求开发、需求管理)的主要活动
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.7k65w0v62u8.webp)
 
+#### 案例题相关题型及解题思路
+
+- 给定系统的主要功能，看图填空补充数据流图：送分题，排除法做。
+
 ### 5.3 系统分析与设计
 
 #### 系统设计：目的、方法、内容、基本任务
@@ -1219,7 +1223,7 @@ draft: true
 
 #### 选择题相关题型及解题思路
 
-- **考察各个测试阶段的测试对象、测试依据、测试目的**
+- **2022 考察各个测试阶段的测试对象、测试依据、测试目的**
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.18h1ho3us3vk.webp)
 - 考察白盒测试覆盖级别
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.14hhb8kn3xy8.webp)
@@ -1263,7 +1267,11 @@ draft: true
 
 ![构件组装：三种方式、三种不兼容问题](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.9l8bz9n84so.webp "构件组装：三种方式、三种不兼容问题")
 
-### 5.7 软件项目管理 _近几年不考了_
+#### 选择题相关题型及解题思路
+
+- **2022 考察构件的定义**
+
+### 5.7 软件项目管理
 
 #### 软件进度管理
 
@@ -1324,6 +1332,10 @@ draft: true
 - 总浮动时间 3: 最迟完成 LF - 最早完成 EF
 - 自由浮动时间: 紧后活动最早开始 LS 中的最小的 - 本活动的最早完成 EF
 
+#### 选择题相关题型及解题思路
+
+- **2022 求最低成本完成项目需要多少天：注意间接费用，可能赶工成本更低**
+
 ### _处理流程设计_
 
 #### 流程表示工具：程序流程图 PFD、IPO 图、N-S 图、问题分析图 PAD
@@ -1354,7 +1366,7 @@ draft: true
 
 #### 选择题相关题型及解题思路
 
-- 考察遗留系统的演化策略
+- **2022 考察遗留系统的演化策略**
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5cbbdu2bv700.webp)
 
 ## **第 6 章 数据库设计基础知识 3-5**
@@ -1427,18 +1439,22 @@ draft: true
 
 #### 选择题相关题型及解题思路
 
-- 考察函数依赖的公理系统: 背下并理解四率两规则及其对应的数学代数表示。
+- **2022 考察函数依赖的公理系统**: 背下并理解四率两规则及其对应的数学代数表示。
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3elkf4e09ho0.webp)
-- 求元组个数和属性列数: 属性列很简单，自然连接求交集，笛卡尔积求并集，元组个数是，通过属性列相同且值相同连接后剩余的行数。
-  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1svhfsvafz5s.webp)
-- 求等价的关系代数表达式：常见的就是给个自然连接的表达式，等价的是一个笛卡尔积的表达式，笛卡尔积转自然连接需要经过投影和选择。**还有能用数字代替列名，从 1 开始，如果表达式中看到带引号的数字可以直接排除**。
+- **2022 求等价的关系代数表达式**：常见的就是给个自然连接的表达式，等价的是一个笛卡尔积的表达式，笛卡尔积转自然连接需要经过投影和选择。**还有能用数字代替列名，从 1 开始，如果表达式中看到带引号的数字可以直接排除**。
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3ux3o3ymu920.webp)
 - 求关系代数等价的 SQL: 通常就是考察投影和选择，主要是行的问题，把属性列写一下很容易就能答出来。
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6vbmh2dgmgo0.webp)
+- 求元组个数和属性列数: 属性列很简单，自然连接求交集，笛卡尔积求并集，元组个数是，通过属性列相同且值相同连接后剩余的行数。
+  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1svhfsvafz5s.webp)
 - 求候选键/属性闭包等式成立的代数表达式: 根据依赖集找出从未在右边出现过的属性，其必然是候选键之一，然后以其为基础看看能不能遍历所有属性，将无法遍历的加入候选键中。属性闭包表达式括号里所有属性，能求出依赖的所有属性就是闭包等式成立，通常就是全部候选键。
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4pcplcadb140.webp)
 - 求模式分解后是否保持函数依赖、是否无损连接: 是否保持函数依赖先求分解后的模式分别的函数依赖，如果拆分后的属性，包含了原来的依赖关系中的所有属性，那么就能继承相应的依赖关系。然后如果剩余全部未被包含的依赖能通过函数依赖的公理系统得到，那么就能说保持了函数依赖。是否保持无损连接分解后的模式先求交集，然后看交集的属性能不能推出，任意一个差集里的属性，如果可以那就算无损连接。
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6g9hbzkcenw0.webp)
+
+#### 案例题相关题型及解题思路
+
+- 给定系统主要功能描述，看图填空补充 E-R 图：送分题，排除法做。
 
 ### 6.3 数据库设计
 
@@ -1473,6 +1489,10 @@ draft: true
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1335yuslpl0g.webp)
 - 求关系模式达到了第几范式: 理解各种范式的限定条件。
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4mdz4t1ajta0.webp)
+
+#### 案例题相关题型及解题思路
+
+- 考察反规范化技术定义和选用
 
 ### _规范发和并发_
 
@@ -1648,9 +1668,9 @@ draft: true
 
 ### 选择题相关题型及解题思路
 
-- 给定系统需求问应采用什么架构风格: 架构风格分类理解记忆
+- **2022 给定系统需求问应采用什么架构风格: 架构风格分类理解记忆**
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.9q5ki5kspfc.webp "alt")
-- 考察软件架构复用类型的定义
+- **2022 考察软件架构复用类型的定义**
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6114vjanjhg0.webp "alt")
 - 考察软件架构复的阶段
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.sz8qpqmjehs.webp "alt")
@@ -1722,18 +1742,18 @@ draft: true
 
 ### 选择题相关题型及解题思路
 
-- 给定描述问是哪个质量属性: 理解记忆
+- **2022 考察软件系统的质量属性**
+- **2022 给定描述问是哪个面向架构的质量属性: 理解记忆**
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.1u1q487j2ncw.webp "alt")
+- **2022 考察敏感点、权衡点、风险点的判断**
+  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.400qjk8cu300.webp "alt")
 - 考察质量属性场景的六个部分
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3ywd7q8ejfs0.webp "alt")
-- 考察敏感点、权衡点、风险点的判断
-  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.400qjk8cu300.webp "alt")
 
 ### 案例题相关题型及解题思路
 
-- 给定关键质量属性场景和专家评估意见，让补充质量效用树，判断风险点、敏感点、权衡点：送分题，排除法做。
-  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5lkf49y9pvo0.webp "alt")
-  ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.202n3mkmhckg.webp "alt")
+- 给定关键质量属性场景，看图填空补充质量效用树：送分题，排除法做。
+- 给定专家评估意见，让判断风险点、敏感点、权衡点：送分题，排除法做。
 
 ## 第 9 章 软件可靠性基础知识 2
 
@@ -1956,7 +1976,7 @@ draft: true
 
 ![服务注册表模式](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.522v3mf7en00.webp "服务注册表模式")
 
-#### **企业服务总线模式 EJB**
+#### **企业服务总线模式 ESB**
 
 ![企业服务总线模式1](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.6zio1sbc48g0.webp "企业服务总线模式1")
 ![企业服务总线模式2](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.4jcoig20une0.webp "企业服务总线模式2")
@@ -1976,6 +1996,30 @@ draft: true
 ### 案例分析解题技巧
 
 ![案例分析解题技巧](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.67gmh3mvlg00.png "案例分析解题技巧")
+
+## 论文
+
+### 摘要
+
+- 时间
+- 客户
+- 项目
+- 角色
+- 负责
+- 功能
+- 效果
+- 金额
+- 历时
+- 表扬
+- 论述
+- 包括
+
+### 正文
+
+- 背景
+- 简介 部分复制摘要 + 技术介绍
+
+
 
 ## Java 语言相关
 
@@ -2062,11 +2106,11 @@ draft: true
 
 ![用例图](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.3tqgt7wwpso0.webp "用例图")
 
-##### 序列图
+##### 序列图/顺序图
 
 ![序列图](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.152nf78oo5eo.webp "序列图")
 
-##### 通信图
+##### 通信图/协作图
 
 ![通信图](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5se35jl1zsg0.webp "通信图")
 
@@ -2111,7 +2155,7 @@ draft: true
 
 ### 选择题相关题型及解题思路
 
-- 考察 UML 各种图的定义
+- **2022 考察 UML 各种图的定义**
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.2efyz4xql04k.webp)
 - 问是什么图：给出一个图示
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.74xq3xnerc00.webp)
@@ -2121,6 +2165,11 @@ draft: true
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.g9vl9z7rmmg.webp)
 - 考察面向对象的设计原则
   ![alt](https://jsd.cdn.zzko.cn/gh/Humble-Xiang/picx-images@master/Development/image.5ilhkiee1lg0.webp)
+
+### 案例题相关题型及解题思路
+
+- 给定主要功能描述，看图填空补充用例图：送分题，排除法。
+- 考察 UML 各个图的定义：红色部分定义背一下。
 
 ## 知识产权与标准化 2-3
 
