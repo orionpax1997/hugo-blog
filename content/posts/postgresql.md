@@ -3,7 +3,6 @@ title: "PostgreSQL 的使用"
 date: 2022-08-31T14:56:46+08:00
 categories: ["Development"]
 tags: ["Support"]
-draft: true
 ---
 
 ## 简介
@@ -17,4 +16,14 @@ draft: true
 ```shell
 docker pull postgres
 docker run --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=yoursecretpassword -d postgres
+```
+
+## 应用场景
+
+### 创建数据库、用户并且赋权
+
+```shell
+CREATE USER foo WITH PASSWORD 'foo';
+CREATE DATABASE foo OWNER foo;
+GRANT ALL PRIVILEGES ON DATABASE foo TO foo;
 ```
