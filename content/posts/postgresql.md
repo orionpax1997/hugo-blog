@@ -27,3 +27,18 @@ CREATE USER foo WITH PASSWORD 'foo';
 CREATE DATABASE foo OWNER foo;
 GRANT ALL PRIVILEGES ON DATABASE foo TO foo;
 ```
+
+### [28000] FATAL: no pg_hba.conf entry for host
+
+PG 数据库为了安全不会监听除了本地以外的所有请求，如果想要其他 ip 的机器访问的话需要修改 data/pg_hba.conf 文件
+
+```conf
+# IPv4 local connections:
+host    all             all             127.0.0.1/32            scram-sha-256
+# 添加下面这一行允许任何机器登录
+host    all             all             all            scram-sha-256
+# 添加下面这一行允许 192.168.1.0 到 192.168.1.255 网段登录
+host    all             all             192.168.1.0/24            scram-sha-256
+# 添加下面这一行允许 192.168.1.123 登录
+host    all             all             192.168.1.123/32            scram-sha-256
+```

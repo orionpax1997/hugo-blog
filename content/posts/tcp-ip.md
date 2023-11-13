@@ -36,7 +36,7 @@ DNS（Domain Name System）服务是和 HTTP 协议一样位于应用层的协�
 
 ### HTTP 协议
 
-{{< card "https://blog.humblex.top/http/" >}}
+{{< card "https://blog.dramacat.top/http/" >}}
 
 ## 协议之间的关系
 

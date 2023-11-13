@@ -1,4 +1,4 @@
-baseURL = "https://blog.humblex.top/"
+baseURL = "https://blog.dramacat.top/"
 # [en, zh-cn, fr, pl, ...] determines default content language
 # [en, zh-cn, fr, pl, ...] 设置默认的语言
 defaultContentLanguage = "zh-cn"
@@ -491,9 +491,9 @@ enableEmoji = true
       enable = true
       [params.page.share.ogimage]
         enable = true
-        serverURL = "https://og-image.humblex.top/"
+        serverURL = "https://og-image.dramacat.top/"
         # 文章标题上面的默认图片，文章存在 featuredImage 时优先使用 featuredImage
-        defaultImage = "https://blog.humblex.top/images/avatar.jpg"
+        defaultImage = "https://blog.dramacat.top/images/avatar.jpg"
       Twitter = true
       Facebook = true
       Linkedin = false
@@ -572,7 +572,7 @@ enableEmoji = true
       # Waline 评论系统设置 (https://waline.js.org)
       [params.page.comment.waline]
         enable = true
-        serverURL = "https://blog-waline.humblex.top"
+        serverURL = "https://blog-waline.dramacat.top"
         visitor = false
         emoji = ['https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo']
         meta = ['nick', 'mail', 'link']
@@ -670,9 +670,9 @@ enableEmoji = true
         #   attr = "customAttribute"
         # located in "assets/" 位于 "assets/"
         # Or 或者
-        # websiteCardEmbedCSS = "https://website-card-embed.humblex.top/website-card-embed.css"
+        # websiteCardEmbedCSS = "https://website-card-embed.dramacat.top/website-card-embed.css"
       [params.page.library.js]
-        websiteCardEmbedJavaScript = "https://website-card-embed.humblex.top/website-card-embed-loveit.js"
+        websiteCardEmbedJavaScript = "https://website-card-embed.dramacat.top/website-card-embed-loveit.js"
         # [params.page.library.js.someOtherJavaScript]
         #   src = "someOther.js"
         #   defer = false
@@ -684,7 +684,7 @@ enableEmoji = true
       # 卡片引用配置
       # see https://github.com/Humble-Xiang/website-card-embed
       [params.page.library.card]
-        serverURL = 'https://website-card-embed.humblex.top/'
+        serverURL = 'https://website-card-embed.dramacat.top/'
     # Page SEO config
     # 页面 SEO 配置
     [params.page.seo]
