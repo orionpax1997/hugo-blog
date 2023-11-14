@@ -22,10 +22,17 @@ docker run --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=yoursecretpassword 
 
 ### 创建数据库、用户并且赋权
 
-```shell
+```sql
 CREATE USER foo WITH PASSWORD 'foo';
 CREATE DATABASE foo OWNER foo;
 GRANT ALL PRIVILEGES ON DATABASE foo TO foo;
+```
+
+### 提示无权限
+
+```sql
+GRANT ALL PRIVILEGES ON ALL TABLES IN SCHEMA public TO foo;
+GRANT ALL PRIVILEGES ON ALL SEQUENCES IN SCHEMA public TO foo;
 ```
 
 ### [28000] FATAL: no pg_hba.conf entry for host
