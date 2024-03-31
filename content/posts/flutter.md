@@ -3,7 +3,7 @@ title: "Flutter 的使用"
 date: 2020-03-21T21:04:37+08:00
 categories: ["Development"]
 tags: ["Frontend Framework"]
-featuredImage: "https://cdn.jsdelivr.net/gh/Humble-Xiang/picx-images@master/Development/flutter-banner.w78dvdkz54w.webp"
+featuredImage: "https://cdn.statically.io/gh/orionpax1997/picx-images-hosting@master/Development/flutter-banner.w78dvdkz54w.webp"
 ---
 
 ## 基础

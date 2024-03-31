@@ -25,7 +25,7 @@ HTTP 协议是超文本传输协议的缩写，英文是 Hyper Text Transfer Pro
 - 请求头 (Request Header)
 - 请求正文
 
-![http1](https://cdn.jsdelivr.net/gh/Humble-Xiang/picx-images@master/Development/http1.3r0zjd3gxek0.webp)
+![http1](https://cdn.statically.io/gh/orionpax1997/picx-images-hosting@master/Development/http1.3r0zjd3gxek0.webp)
 
 ### 响应报文
 
@@ -33,7 +33,7 @@ HTTP 协议是超文本传输协议的缩写，英文是 Hyper Text Transfer Pro
 - 响应头
 - 响应正文
 
-![http2](https://cdn.jsdelivr.net/gh/Humble-Xiang/picx-images@master/Development/http2.rhz1ee2xn9s.webp)
+![http2](https://cdn.statically.io/gh/orionpax1997/picx-images-hosting@master/Development/http2.rhz1ee2xn9s.webp)
 
 ## 常见的请求方法
 

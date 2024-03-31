@@ -2,7 +2,7 @@
 date: 2021-02-14T16:45:54+08:00
 categories: ["Development"]
 tags: ["Backend Framework"]
-featuredImage: "https://cdn.jsdelivr.net/gh/Humble-Xiang/picx-images@master/Development/spring-initializr-banner.5jcrfnfqm400.webp"
+featuredImage: "https://cdn.statically.io/gh/orionpax1997/picx-images-hosting@master/Development/spring-initializr-banner.5jcrfnfqm400.webp"
 ---
 
 ## 简介

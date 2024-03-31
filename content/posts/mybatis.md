@@ -3,7 +3,7 @@ title: "Mybatis 的使用"
 date: 2020-04-04T11:29:00+08:00
 categories: ["Development"]
 tags: ["Backend FrameWork"]
-featuredImage: "https://cdn.jsdelivr.net/gh/Humble-Xiang/picx-images@master/Development/mybatis-banner.1d2d148o1y1s.webp"
+featuredImage: "https://cdn.statically.io/gh/orionpax1997/picx-images-hosting@master/Development/mybatis-banner.1d2d148o1y1s.webp"
 ---
 
 ## 简介
@@ -3664,7 +3664,7 @@ public class MybatisApplication {
 
 一对多的数据分页是非常常见的需求，但是很多人会在这里遇到分页的误区，得到不正确的结果。今天就来分析并解决这个问题。
 
-![数据库关系图](https://cdn.jsdelivr.net/gh/Humble-Xiang/picx-images@master/Development/数据库关系图.2ib2rgt17vs.webp "数据库关系图")
+![数据库关系图](https://cdn.statically.io/gh/orionpax1997/picx-images-hosting@master/Development/数据库关系图.2ib2rgt17vs.webp "数据库关系图")
 
 - 错误的写法，使用各种框架的分页拦截器会碰到类似问题。
 
