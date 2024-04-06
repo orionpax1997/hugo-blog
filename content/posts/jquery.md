@@ -3,7 +3,7 @@ title: "Jquery 的使用"
 date: 2019-07-23T22:16:07+08:00
 categories: ["Development"]
 tags: ["Frontend Framework"]
-featuredImage: "https://cdn.statically.io/gh/orionpax1997/picx-images-hosting@master/Development/jquery-banner.2zvc64pkoq80.webp"
+featuredImage: "https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/jquery-banner.2zvc64pkoq80.webp"
 ---
 
 ## 简介

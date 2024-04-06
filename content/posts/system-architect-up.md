@@ -1,10 +1,11 @@
 ---
-title: "软考-系统架构师"
-date: 2023-08-06T18:21:01+08:00
+title: "软考-系统架构师-上篇"
+date: 2024-04-06T10:28:04+08:00
 draft: true
+markmap:
+  colorFreezeLevel: 2
+  initialExpandLevel: 3
 ---
-
-# 上篇
 
 ## 第 2 章 计算机系统基础知识
 
@@ -59,20 +60,6 @@ draft: true
 
 ![内存与接口地址的编址方法](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.b1pnqtuf1ug.webp "内存与接口地址的编址方法")
 
-##### 相关公式
-
-- 磁道记录的最大等待时间: 就是旋转一周的时间
-- 磁道记录的最小等待时间: 就是 0
-- 磁道按顺序排列的记录等待时间: 旋转一周的时间 - 处理时间
-- 磁道记录的总处理时间: (旋转一块的时间 + 处理时间) \* 总块数 + 等待时间 \* (总块数 - 1)
-
-##### 选择题相关题型及解题思路
-
-- **2022 求磁盘调度的响应序列**: 按照采用的调度算法，来求序列，多个相同柱面号的情况下，扇区号由小到大排列，磁头号是无效信息。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3o2jqasm51a0.webp)
-- 求磁道记录的最长处理时间和最少处理时间: 通常给出逻辑记录的安排顺序表，磁盘的每周旋转速度，每个记录的处理时间，需要**注意还有个隐含的条件是磁盘的每块的旋转时间，且当前快数据旋转读取完后才能开始处理**，求出隐含条件后带入公式计算。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.21dt0hljwn28.webp)
-
 #### 总线
 
 ##### 总线的分类
@@ -103,23 +90,6 @@ draft: true
 
 ![指令流水线](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5t6g10ok4v40.webp "指令流水线")
 
-##### 相关公式
-
-- 流水线周期: 指令分成不同执行段，其中执行时间最长的段为流水线周期
-- 流水线执行时间 1: 1 条指令的总执行时间 + (总指令条数 - 1) \* 流水线周期
-- 流水线执行时间 2: (1 条指令的总执行时间 - 流水线周期) + 总指令条数 \* 流水线周期
-- 流水线的吞吐率: 吞吐率即为单位时间内执行的指令条数 = 指令条数 / 流水线执行时间
-- 流水线的最大吞吐率: 1 / 流水线周期
-- 流水线的加速比: 不使用流水线的执行时间 / 使用流水线的执行时间
-- 流水线的最大加速比: 1 条指令不使用流水线的执行时间 / 流水线周期
-
-##### 选择题相关题型及解题思路
-
-- 求流水线相关问题: 如果是让求吞吐率或加速比，通常情况下需要先求出执行时间，也就是说需要套两个公式;如果碰到和缓冲区结合考察的问题，**注意但单双缓冲区的差异，单缓冲区读入和写出不能同时进行，因此读入和写出的时间需要加在一起算做一段**。而双缓冲区的读入和写出可以同时进行，因此可以算做两段。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1cg0efv1irr4.webp)
-- 求流水线最大加速比: 加上最大两个字，就是求极限值了，通常不会给出总指令条数，而需要设为 n 来计算，求极限时忽略常数，带入公式即可。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4piiqakpphk0.webp)
-
 #### 校验码
 
 ##### 奇偶校验码
@@ -130,15 +100,6 @@ draft: true
 
 ![CRC 循环冗余校验码1](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.24v5f4oszysg.webp "CRC 循环冗余校验码1")
 ![CRC 循环冗余校验码2](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1elsprl1sue8.webp "CRC 循环冗余校验码2")
-
-##### 相关公式
-
-- CRC 编码: 1. 在原始信息串后面补多项式的阶个零; 2. 求除数，多项式中幂指数存在的为 1，不存在为 0; 3. 求校验码，进行模 2 除(异或运算)，**余数如果不足多项式的阶的位数则在左边补 0**
-
-##### 选择题相关题型及解题思路
-
-- 求 CRC 循环冗余校验码: 通常给出原始信息串和生成多项式，让求校验码，套公式即可。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7hpcsdfp6is0.webp)
 
 ### 2.3 计算机软件
 
@@ -200,30 +161,6 @@ draft: true
 
 ![线程](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6lmden7uo1g0.webp "线程")
 
-###### 相关公式
-
-- 每个进程需要资源数不同时发生死锁的最大资源数: (进程 1 需要的资源数 - 1) + (进程 2 需要的资源数 - 1) + ... + (进程 n 需要的资源数 - 1)
-- 每个进程需要资源数相同时发生死锁的最大资源数: 系统中的进程数 \* (单个进程需要的资源数 - 1)
-- 不发生死锁的最小资源数: 发生死锁的最大资源数 + 1
-- 互斥信号量初始值: 1
-- 同步信号量的最大值: 资源数量
-- 同步信号量的最小值: - (进程数量 - 资源数量)
-
-###### 选择题相关题型及解题思路
-
-- 考察进程三态图之间的转换: 给定服务调度算法、给定几个进程的当前状态，某进程发生某事件后，求所有进程的后续状态。以三态图的转变带入后解题。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.15zmwdj8sv6k.webp)
-- 考察前趋图，给定前趋图，求可标记为。从开始节点开始读，排除错误答案即可，很简单。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.527am2dbsxk0.webp)
-- 考察进程资源图，求阻塞节点和化简顺序：求阻塞节点，某进程所请求的资源已经全部分配完毕，该进程为阻塞节点。求化简顺序，先找非阻塞节点，然后释放其占用资源(划掉连线)后，找后续的非阻塞节点，直到所有节点都不被阻塞。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3mg5pyejxi80.webp)
-- **综合考察 PV 操作**: 给定前趋图，进程，和需要设置的信号量，然后给出进程部分执行过程中的 PV 操作，求空余的部分的 PV 操作。结合前趋图来看，从最开始无依赖的进程开始填空，进程执行完进行 V 操作，有几个后继则进行几次不同信号量的 V 操作。然后后面等待执行的进行的前驱如果都执行完了，则开始执行，有几个前驱进行几次不同信号量的 P 操作。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3cpj128qreq0.webp)
-- 求信号量的取值范围: 给定进程数和资源数，求使用 PV 操作时需要设定的信号量的范围，带入公式计算，信号量为负几，则有几个等待进程。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4lw5jijli5y0.webp)
-- 考察银行家算法，求当前可用的资源数和安全的执行序列: 给定资源及其可用资源总数，给定几个进程及其最大需求量和已分配资源数图示。**首先用资源的最大总数-当前所有进程分配的数量求出其当前可用的资源数**。然后找到所有执行序列中资源最大需求量都能满足的进程，作为可执行的进程，执行完后把这个进程上已分配的资源数加回，可用资源数，再找下一个可执行进程。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4qmw24kncpe0.webp)
-
 ##### 存储管理
 
 ###### 分区存储方式
@@ -253,22 +190,6 @@ draft: true
 ###### 段页式存储
 
 ![段页式存储](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4tqudwbw0om0.webp "段页式存储")
-
-###### 相关公式
-
-- 页内地址的位数: 每页大小以 2 的 n 次方表示时的 n
-- 页号的 2 进制位数 1: 内存大小 / 每页大小，然后求其以 2 的 n 次方表示时的 n
-- 页号的 2 进制位数 2: 逻辑地址或物理地址的位数 - 页内地址的位数
-- 分页式存储物理地址: 高位通过页号在页表中查到物理块号 拼接 低位页内地址(偏移地址)，**逻辑地址和物理地址中低位的偏移地址不变，区别只是将高位的逻辑页号替换为了物理快号**
-
-###### 选择题相关题型及解题思路
-
-- 求分页式存储的物理地址: 通常给出页面大小和逻辑地址，以及页号和物理块号的对应表，让求物理地址。首先通过页面大小算出页内地址的位数(**也可以直接看答案中，多数答案与逻辑地址后面几位重复，且前面剩余的在页表里能查到，则其为偏移地址位数，页面大小通常为 4k，则二进制表示为 4 位，16 进制表示为 1 位**)，剩余高位为页号，通过页号找到对应的物理块号，然后将逻辑地址高位替换为物理快号就是物理地址。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.76lanl42ik00.webp)
-- 求淘汰那个页面代价最小: 通常给出一个表格，标识每个页面的状态位、修改位、访问位，根据局部性原理，**优先淘汰最近未被访问过的，而后淘汰最近未被修改过的**。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.ehvj7162biw.webp)
-- 求段式存储中逻辑地址能否转换为物理地址(不违法)，给定几个(段号，段内偏移)，然后表格中给出段号和段长列，**根据段号找到段长，段内偏移大于段长就违法**。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.76ijeivzch40.webp)
 
 ##### 设备管理
 
@@ -306,27 +227,6 @@ draft: true
 
 ![文件存储空间管理1](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5pr9lq294js0.webp "文件存储空间管理1")
 ![文件存储空间管理2](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.67e5ut4ovnc0.webp "文件存储空间管理2")
-
-##### 相关公式
-
-- 一级间接索引逻辑块的个数: 磁盘索引块大小 / 每个地址项的大小
-- 二级间接索引逻辑块的个数: (磁盘索引块大小 / 每个地址项的大小) \* (磁盘索引块大小 / 每个地址项的大小)
-- 一级间接索引物理块号的表示范围: 直接索引的最大编号 + 1 到 直接索引的最大编号 + 一级间接索引逻辑块的总个数
-- 可表示的单个文件的最大长度: 可表示的总的逻辑块数 \* 磁盘数据块大小
-- 表示位示图需要的字的个数: 磁盘容量 / 磁盘物理块大小 / 系统字长位数
-
-##### 选择题相关题型及解题思路
-
-- 求逻辑快应采用什么索引: 通常给出一共几个地址项，以及其中几个直接索引，几个一级间接索引，几个二级间接索引，和每个地址项的大小，以及磁盘索引块和磁盘数据块的大小，然后问访问的逻辑块号应采用的是什么索引。题目中没明确说明时，**逻辑块从 0 开始编号**。首先将直接索引进行编号，然后带公式求一级间接索引的表示范围，以上就是二级间接索引的范围，这样就能判断采用的是什么索引。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4u0lba6pkj60.webp)
-- 求采用什么索引和可表示的单个文件的最大长度: 算出总的表示范围(可表示的总的逻辑块数)(**如果答案没有相近的长度，只用算二级索引就行了**) 乘以磁盘数据块大小，代公式计算，就能算出可表示的单个文件最大的长度。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1v3qdf7n6hxc.webp)
-- 求相对路径和绝对路径: 通常给出目录结构图，当前工作目录和需要访问的文件名，求相对路径和绝对路径，很简单。注意一点，路径最后的杠可以省略。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1ghcdu97icsg.webp)
-- 求需要表示的物理块在位示图中的第几个字描述: 通常需要表示的物理块号，和字长。**注意如果有余数，则向上取整，还有没有明确说明的情况下是从零开始编号的**
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.27y0rbge5ha8.webp)
-- 求位示图需要几个字来表示: 通常给出全部条件带入公式计算即可。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.73t259o9n6w0.webp)
 
 #### 中间件
 
@@ -522,24 +422,6 @@ draft: true
 
 ![IPV6](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5v04cgmdqys0.webp "IPV6")
 
-##### 相关公式
-
-- 子网个数: 用划分了子网号后的网络号位数 - 原来的网络号位数，作为的 2 的幂，求 2 的幂次方
-- 可使用的主机个数: 32 - 网络号位数，作为 2 的幂，求 2 的幂次方在减 2
-
-##### 选择题相关题型及解题思路
-
-- **2022 考察常用端口号与协议的对应关系**
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2r9nva54kkk.webp)
-- **2022 考察 TCI/IP 协议: 主要考察功能**
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.stflr0l4fs0.webp)
-- 考察 OSI 七层协议: 主要考察各层的协议、功能、设备
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.496ao1hxl9k0.webp)
-- 求子网个数及每个子网中可用主机数: 求子网个数，通常给出两个 IP 地址，可以根据后面的网络号的位数减一下，代入公式计算。求可用主机数，一样带公式计算即可。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.27ukozq4c6ck.webp)
-- 求不属于网络的子网地址: 判断方式是看网络号是否相同，而网络号在左边，然后从 2 进制的角度来讲，数字越大越考左，所以**大概率是最大的那个数**。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5ek5l3w1dbo0.webp)
-
 #### 网路工程
 
 ##### 网络规划三层模型
@@ -669,11 +551,6 @@ draft: true
 
 ![基于模型的系统工程](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4bw9naeriys0.webp "基于模型的系统工程")
 
-#### 选择题相关题型及解题思路
-
-- 考察系统工程方法: 背一下
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3r1a6u4adh20.webp)
-
 ### 2.9 系统性能 1-2
 
 #### 性能指标
@@ -690,11 +567,6 @@ draft: true
 #### 阿姆达尔解决方法
 
 ![阿姆达尔解决方法](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.67ps4puigzk0.webp "阿姆达尔解决方法")
-
-#### 选择题相关题型及解题思路
-
-- 考察性能指标: 背一下
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6isgn12br4w0.webp)
 
 ## 第 3 章 信息系统基础知识 3 _超纲_
 
@@ -820,10 +692,6 @@ draft: true
 ![企业应用集成4](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6xcon5frfwk0.webp "企业应用集成4")
 ![企业应用集成5](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3mes3ddu48o0.webp "企业应用集成5")
 ![企业应用集成6](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.18k3di2prd5s.webp "企业应用集成6")
-
-### 相关题型及解题思路
-
-- 考到的话超纲内容比较多，定义理解记忆下即可
 
 ## **第 4 章 信息安全技术基础知识 2-4**
 
@@ -951,17 +819,6 @@ draft: true
 
 ![风险评估](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1z74skdaezwg.webp "风险评估")
 
-### 选择题相关题型及解题思路
-
-- 考察信息安全的基本要素: 背一下
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1naip4g829wg.png)
-- 考察各种攻击的原理与抵御: 理解记忆
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6tl3l4sb0000.webp)
-- 考察网络安全协议: 大概记一下协议的应用场景。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3doz4fiuj1c0.webp)
-- 考察信息的加解密技术: 大概记一下涉及到的技术及其作用。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7ezz2q9rzkc0.webp)
-
 ## **第 5 章 软件工程基础知识 12-15**
 
 ### 5.1 软件工程
@@ -1043,33 +900,6 @@ draft: true
 
 ![重构、设计恢复、再工程、正向工程](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4thzd2beh8g0.webp "重构、设计恢复、再工程、正向工程")
 
-#### 选择题相关题型及解题思路
-
-- **2022 考察软件过程模型的定义**
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6j5r6albd1g0.webp)
-- 考察软件过程模型的差异
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.uvh7zfiraw0.webp)
-- 考察到了 CMMI 的哪一级的成熟度
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6awosvxf4x00.webp)
-- 考察软件的生命周期
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.58lsrk295840.webp)
-- 考察敏捷方法的特点
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.61gzkmq9c0o0.webp)
-- 考察敏捷方法核心思想
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6bgktz48pk40.webp)
-- 考察 RUP 九个核心工作流
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4focfgutqws0.webp)
-- 考察 RUP 的特点
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.536xsnkniho0.webp)
-- 考察软件系统用户文档、系统文档的定义
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.558l8g4tlqg0.webp)
-- 考察软件工程过程的定义
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4uyyey7ntaq0.webp)
-- 考察软件设计四个活动的定义
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2s6y7c46spk0.webp)
-- 考察逆向工程的四个级别的定义
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5acwx5euoug0.webp)
-
 ### 5.2 需求工程
 
 #### 需求工程定义
@@ -1138,15 +968,6 @@ draft: true
 
 ![需求验证](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5lmza1w3v2g0.webp "需求验证")
 
-#### 选择题相关题型及解题思路
-
-- 考察需求工程的两大过程(需求开发、需求管理)的主要活动
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7k65w0v62u8.webp)
-
-#### 案例题相关题型及解题思路
-
-- 给定系统的主要功能，看图填空补充数据流图：送分题，排除法做。
-
 ### 5.3 系统分析与设计
 
 #### 系统设计：目的、方法、内容、基本任务
@@ -1168,11 +989,6 @@ draft: true
 #### 人机界面设计三大原则
 
 ![人机界面设计三大原则](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7g0wc6lk4nw0.webp "人机界面设计三大原则")
-
-#### 选择题相关题型及解题思路
-
-- 考察内聚程度分类、耦合程度分类
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2k2494q577c0.webp)
 
 ### 5.4 软件测试
 
@@ -1216,21 +1032,6 @@ draft: true
 
 ![软件度量：两种属性、McCabe 度量法](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6osscpx6tx80.webp "软件度量：两种属性、McCabe 度量法")
 
-#### 相关公式
-
-- 环形复杂度 1: 流图中边的条数 - 节点数 + 2
-- 环形复杂度 2: 判定节点数 + 1
-
-#### 选择题相关题型及解题思路
-
-- **2022 考察各个测试阶段的测试对象、测试依据、测试目的**
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.18h1ho3us3vk.webp)
-- 考察白盒测试覆盖级别
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.14hhb8kn3xy8.webp)
-- 求环形复杂度：看图带公式即可
-- 考察静态测试、动态测试的定义
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6p4st42yn000.webp)
-
 ### 5.5 净室软件工程
 
 #### 净室软件工程：定义、理论基础、应用技术手段、缺点
@@ -1266,10 +1067,6 @@ draft: true
 #### 构件组装：三种方式、三种不兼容问题
 
 ![构件组装：三种方式、三种不兼容问题](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.9l8bz9n84so.webp "构件组装：三种方式、三种不兼容问题")
-
-#### 选择题相关题型及解题思路
-
-- **2022 考察构件的定义**
 
 ### 5.7 软件项目管理
 
@@ -1325,17 +1122,6 @@ draft: true
 
 ![风险管理：项目风险、技术风险、商业风险](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5im9nqm7ks0.webp "风险管理：项目风险、技术风险、商业风险")
 
-#### 相关公式
-
-- 总浮动时间 1: 关键路径 - 活动路径
-- 总浮动时间 2: 最迟开始 LS - 最早开始 ES
-- 总浮动时间 3: 最迟完成 LF - 最早完成 EF
-- 自由浮动时间: 紧后活动最早开始 LS 中的最小的 - 本活动的最早完成 EF
-
-#### 选择题相关题型及解题思路
-
-- **2022 求最低成本完成项目需要多少天：注意间接费用，可能赶工成本更低**
-
 ### _处理流程设计_
 
 #### 流程表示工具：程序流程图 PFD、IPO 图、N-S 图、问题分析图 PAD
@@ -1363,11 +1149,6 @@ draft: true
 #### 可维护性评价指标、软件维护类型
 
 ![可维护性评价指标、软件维护类型](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1monrsvm7v0g.webp "可维护性评价指标、软件维护类型")
-
-#### 选择题相关题型及解题思路
-
-- **2022 考察遗留系统的演化策略**
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5cbbdu2bv700.webp)
 
 ## **第 6 章 数据库设计基础知识 3-5**
 
@@ -1437,25 +1218,6 @@ draft: true
 ![模式分解2](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.682z4d6u4gg0.webp "模式分解2")
 ![模式分解3](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.omahc7zk2uo.webp "模式分解3")
 
-#### 选择题相关题型及解题思路
-
-- **2022 考察函数依赖的公理系统**: 背下并理解四率两规则及其对应的数学代数表示。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3elkf4e09ho0.webp)
-- **2022 求等价的关系代数表达式**：常见的就是给个自然连接的表达式，等价的是一个笛卡尔积的表达式，笛卡尔积转自然连接需要经过投影和选择。**还有能用数字代替列名，从 1 开始，如果表达式中看到带引号的数字可以直接排除**。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3ux3o3ymu920.webp)
-- 求关系代数等价的 SQL: 通常就是考察投影和选择，主要是行的问题，把属性列写一下很容易就能答出来。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6vbmh2dgmgo0.webp)
-- 求元组个数和属性列数: 属性列很简单，自然连接求交集，笛卡尔积求并集，元组个数是，通过属性列相同且值相同连接后剩余的行数。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1svhfsvafz5s.webp)
-- 求候选键/属性闭包等式成立的代数表达式: 根据依赖集找出从未在右边出现过的属性，其必然是候选键之一，然后以其为基础看看能不能遍历所有属性，将无法遍历的加入候选键中。属性闭包表达式括号里所有属性，能求出依赖的所有属性就是闭包等式成立，通常就是全部候选键。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4pcplcadb140.webp)
-- 求模式分解后是否保持函数依赖、是否无损连接: 是否保持函数依赖先求分解后的模式分别的函数依赖，如果拆分后的属性，包含了原来的依赖关系中的所有属性，那么就能继承相应的依赖关系。然后如果剩余全部未被包含的依赖能通过函数依赖的公理系统得到，那么就能说保持了函数依赖。是否保持无损连接分解后的模式先求交集，然后看交集的属性能不能推出，任意一个差集里的属性，如果可以那就算无损连接。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6g9hbzkcenw0.webp)
-
-#### 案例题相关题型及解题思路
-
-- 给定系统主要功能描述，看图填空补充 E-R 图：送分题，排除法做。
-
 ### 6.3 数据库设计
 
 #### 数据库设计
@@ -1483,17 +1245,6 @@ draft: true
 
 ![反规范化技术](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5kt1osw7mwg0.webp "反规范化技术")
 
-#### 选择题相关题型及解题思路
-
-- 求属于概念结构设计的什么冲突: 理解概念结构的冲突。**如果连着解决冲突的方式一起考，也可以根据解决方式倒推冲突类型**
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1335yuslpl0g.webp)
-- 求关系模式达到了第几范式: 理解各种范式的限定条件。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4mdz4t1ajta0.webp)
-
-#### 案例题相关题型及解题思路
-
-- 考察反规范化技术定义和选用
-
 ### _规范发和并发_
 
 #### 并发控制
@@ -1506,11 +1257,6 @@ draft: true
 ![封锁协议1](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.55ujp9qldz00.webp "封锁协议1")
 ![封锁协议2](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3bsu6p7e8wo0.webp "封锁协议2")
 ![封锁协议3](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.yy6tuoni09c.webp "封锁协议3")
-
-#### 选择题相关题型及解题思路
-
-- 求事务能否加锁成功: 很简单，排它(写)锁就是一个事务加了，其他事务什么锁也加不了。共享(读)锁就是一个事务加了，其他事务只能加共享(读)锁，不能加排它(写)锁。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7b4qv3t1rr00.webp)
 
 ### _数据库新技术_
 
@@ -1666,27 +1412,6 @@ draft: true
 
 ![MVVM架构风格](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6gqwqtkdr240.webp "MVVM架构风格")
 
-### 选择题相关题型及解题思路
-
-- **2022 给定系统需求问应采用什么架构风格: 架构风格分类理解记忆**
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.9q5ki5kspfc.webp "alt")
-- **2022 考察软件架构复用类型的定义**
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6114vjanjhg0.webp "alt")
-- 考察软件架构复的阶段
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.sz8qpqmjehs.webp "alt")
-- 考察 DSSA 的定义
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4lrq13wysgo0.webp "alt")
-- 考察 DSSA 三个基本活动：目的与活动的对应关系
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6grp3qdkwgg0.webp "alt")
-- 考察分层架构风格: 理解记忆
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1syxi574bxuo.webp "alt")
-
-### 案例题相关题型及解题思路
-
-- 给定两种架构风格和需要对比的方面，问为何采用其中一个。给定系统的核心需求，问应该采用什么风格：理解记忆各个软件架构风格和其对比情况。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2ea5u73tha1w.webp "alt")
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5cax7er7h5o0.webp "alt")
-
 ## **第 8 章 系统质量属性与架构评估 10**
 
 ### **8.1 软件系统质量属性**
@@ -1739,21 +1464,6 @@ draft: true
 #### 软件架构风格、架构风险、风险点与非风险点、敏感点、权衡点
 
 ![软件架构风格、架构风险、风险点与非风险点、敏感点、权衡点](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.681zocif0p40.webp "软件架构风格、架构风险、风险点与非风险点、敏感点、权衡点")
-
-### 选择题相关题型及解题思路
-
-- **2022 考察软件系统的质量属性**
-- **2022 给定描述问是哪个面向架构的质量属性: 理解记忆**
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1u1q487j2ncw.webp "alt")
-- **2022 考察敏感点、权衡点、风险点的判断**
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.400qjk8cu300.webp "alt")
-- 考察质量属性场景的六个部分
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3ywd7q8ejfs0.webp "alt")
-
-### 案例题相关题型及解题思路
-
-- 给定关键质量属性场景，看图填空补充质量效用树：送分题，排除法做。
-- 给定专家评估意见，让判断风险点、敏感点、权衡点：送分题，排除法做。
 
 ## 第 9 章 软件可靠性基础知识 2
 
@@ -1949,248 +1659,3 @@ draft: true
 #### 大数据：定义、特点、分析步骤、应用领域
 
 ![大数据：定义、特点、分析步骤、应用领域](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.um80oj0uee8.webp "大数据：定义、特点、分析步骤、应用领域")
-
-# 下篇
-
-## 第 15 章 面向服务的架构设计与理论实践
-
-### 15.1 SOA 的相关概念
-
-#### **SOA：定义、优点**
-
-![SOA：定义、优点](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5ginldmlou40.webp "SOA：定义、优点")
-
-#### SOA：关键目标、特征、基于服务的构件与传统构件的区别
-
-![SOA：关键目标、特征、基于服务的构件与传统构件的区别](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1slxcr3tvb1.webp "SOA：关键目标、特征、基于服务的构件与传统构件的区别")
-
-### 15.4 SOA 主要协议和规范
-
-#### UDDI、WSDL、SOAP、XML、REST 等
-
-![UDDI、WSDL、SOAP、XML、REST 等](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1uyzz8b9fy2.webp "UDDI、WSDL、SOAP、XML、REST 等")
-
-### 15.8 SOA 的设计模式
-
-#### 服务注册表模式
-
-![服务注册表模式](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.522v3mf7en00.webp "服务注册表模式")
-
-#### **企业服务总线模式 ESB**
-
-![企业服务总线模式1](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6zio1sbc48g0.webp "企业服务总线模式1")
-![企业服务总线模式2](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4jcoig20une0.webp "企业服务总线模式2")
-
-### 选择题相关题型及解题思路
-
-- 考察 SOA 主要协议和规范：背一下
-
-# 拓展
-
-## 案例分析
-
-### 案例分析历年考点分析
-
-![案例分析历年考点分析](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2h10pysjksu0.png "案例分析历年考点分析")
-
-### 案例分析解题技巧
-
-![案例分析解题技巧](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.67gmh3mvlg00.png "案例分析解题技巧")
-
-## 论文
-
-### 摘要
-
-- 时间
-- 客户
-- 项目
-- 角色
-- 负责
-- 功能
-- 效果
-- 金额
-- 历时
-- 表扬
-- 论述
-- 包括
-
-### 正文
-
-- 背景
-- 简介 部分复制摘要 + 技术介绍
-
-## Java 语言相关
-
-### J2EE
-
-#### J2EE 四层结构
-
-![J2EE 四层结构1](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7cbdpyyw8qo0.webp "J2EE 四层结构1")
-![J2EE 四层结构2](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.93ltyr6jcqg.webp "J2EE 四层结构2")
-
-#### J2EE 与 MVC 的对应
-
-![J2EE 与 MVC 的对应](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.35w22yxz48q0.webp "J2EE 与 MVC 的对应")
-
-### EJB
-
-#### EJB 定义
-
-![EJB 定义](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4j3thlri1i80.webp "EJB 定义")
-
-#### EJB 的三种 Bean
-
-![EJB 的三种 Bean](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1fchbz63msps.webp "EJB 的三种 Bean")
-
-## **面向对象技术 3-5** 老版教材
-
-### 面向对象开发
-
-#### 面向对象定义：对象、类、抽象
-
-![面向对象定义：对象、类、抽象](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5x2glj4vs6c0.webp "面向对象定义：对象、类、抽象")
-
-#### 面向对象定义：封装、继承、多态
-
-![面向对象定义：封装、继承、多态](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7202n1zp3vw0.webp "面向对象定义：封装、继承、多态")
-
-#### 面向对象定义：接口、消息、覆盖、重载、绑定
-
-![面向对象定义：接口、消息、覆盖、重载、绑定](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3nzldz5pt5k0.webp "面向对象定义：接口、消息、覆盖、重载、绑定")
-
-#### 面向对象：分析、需求建模
-
-![面向对象：分析、需求建模](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4d8f09sina60.webp "面向对象：分析、需求建模")
-
-#### 面向对象：设计、分析模型
-
-![面向对象：设计、分析模型](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3xic8hftvcc.webp "面向对象：设计、分析模型")
-
-#### 面向对象的设计原则
-
-![面向对象的设计原则](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.21cx3ymp9r0g.webp "面向对象的设计原则")
-
-#### 面向对象软件的测试的四个层次
-
-![面向对象软件的测试的四个层次](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6n5bcofc2js0.webp "面向对象软件的测试的四个层次")
-
-### 统一建模语言 UML
-
-#### UML：定义、结构
-
-![UML：定义、结构](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5ayoarp30a00.webp "UML：定义、结构")
-
-#### UML 事物：结构、行为、分组、注释
-
-![UML 事物：结构、行为、分组、注释](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.204bcxcyslhc.webp "UML 事物：结构、行为、分组、注释")
-
-#### UML 关系：依赖、关联、泛化、实现
-
-![UML 关系：依赖、关联、泛化、实现](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.76k7nu9r7i80.webp "UML 关系：依赖、关联、泛化、实现")
-
-#### UML 的分类
-
-![UML 的分类](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1sqgnoleeav4.webp "UML 的分类")
-
-##### 类图
-
-![类图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.vfkc8sogi9c.webp "类图")
-
-##### 对象图
-
-![对象图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.38b756olc5u0.webp "对象图")
-
-##### 用例图
-
-![用例图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3tqgt7wwpso0.webp "用例图")
-
-##### 序列图/顺序图
-
-![序列图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.152nf78oo5eo.webp "序列图")
-
-##### 通信图/协作图
-
-![通信图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5se35jl1zsg0.webp "通信图")
-
-##### 状态图
-
-![状态图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3gbzreo7h500.webp "状态图")
-
-##### 活动图
-
-![活动图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1nihtfnw1zy8.webp "活动图")
-
-##### 构件图
-
-![构件图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2ky7tqcqnjm0.webp "构件图")
-
-##### 部署图
-
-![部署图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.13qp5g4kncow.webp "部署图")
-
-##### UML 视图
-
-![UML 视图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6yrscew3tgw0.webp "UML 视图")
-
-### **设计模式**
-
-#### 设计模式分类、架构模式、设计模式、惯用法
-
-![设计模式分类、架构模式、设计模式、惯用法](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6xusva4yddc0.webp "设计模式分类、架构模式、设计模式、惯用法")
-
-#### 创建型设计模式
-
-![创建型设计模式](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5jssyxvg9ak.webp "创建型设计模式")
-
-#### 结构型设计模式
-
-![结构型设计模式](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4oa42fn1amu0.webp "结构型设计模式")
-
-#### 行为型设计模式
-
-![行为型设计模式1](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4aj4u8ga8zq0.webp "行为型设计模式1")
-![行为型设计模式2](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.669ecjzd4uk0.webp "行为型设计模式2")
-
-### 选择题相关题型及解题思路
-
-- **2022 考察 UML 各种图的定义**
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2efyz4xql04k.webp)
-- 问是什么图：给出一个图示
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.74xq3xnerc00.webp)
-- **考察设计模式的定义**，问是什么模式，英文名称需要记
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.31opvdzs4po0.webp)
-- 考察面向对象的分析模型的定义
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.g9vl9z7rmmg.webp)
-- 考察面向对象的设计原则
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5ilhkiee1lg0.webp)
-
-### 案例题相关题型及解题思路
-
-- 给定主要功能描述，看图填空补充用例图：送分题，排除法。
-- 考察 UML 各个图的定义：红色部分定义背一下。
-
-## 知识产权与标准化 2-3
-
-### 知识产权概述
-
-![知识产权概述](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5ey1e1llxg00.webp "知识产权概述")
-
-### 知识产权保护期限
-
-![知识产权保护期限](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6q5q2mudneo0.webp "知识产权保护期限")
-
-### 职务作品知识产权人的确定
-
-![职务作品知识产权人的确定](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.274kw54d058g.webp "职务作品知识产权人的确定")
-
-### 委托作品知识产权人的确定
-
-![委托作品知识产权人的确定](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4xn21oux0fk0.webp "委托作品知识产权人的确定")
-
-### 侵权判定
-
-![侵权判定](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1c5rr35utx5s.webp "侵权判定")
-
-### 标准划分：国际标准、国家标准、行业标准、区域/地方标准、企业标准
-
-![标准划分：国际标准、国家标准、行业标准、区域/地方标准、企业标准](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.211sk61ghpuo.webp "标准划分：国际标准、国家标准、行业标准、区域/地方标准、企业标准")

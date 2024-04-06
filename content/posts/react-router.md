@@ -3,7 +3,7 @@ title: "React Router 的使用"
 date: 2019-07-23T22:16:45+08:00
 categories: ["Development"]
 tags: ["Frontend Framework"]
-featuredImage: "https://cdn.statically.io/gh/orionpax1997/picx-images-hosting@master/Development/react-router-banner.p571qwyx0ds.webp"
+featuredImage: "https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/react-router-banner.p571qwyx0ds.webp"
 ---
 
 ## 简介

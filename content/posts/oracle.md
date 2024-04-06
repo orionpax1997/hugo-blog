@@ -3,7 +3,7 @@ title: "Oracle 的使用"
 date: 2021-10-09T20:36:44+08:00
 categories: ["Development"]
 tags: ["Support"]
-featuredImage: "https://cdn.statically.io/gh/orionpax1997/picx-images-hosting@master/Development/oracle-banner.1s81s4rls7b4.webp"
+featuredImage: "https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/oracle-banner.1s81s4rls7b4.webp"
 ---
 
 ## 简介
@@ -28,7 +28,7 @@ featuredImage: "https://cdn.statically.io/gh/orionpax1997/picx-images-hosting@ma
 
 ### Oracle number 对应 Java 数据类型
 
-![Oracle-number-对应-Java-数据类型](https://cdn.statically.io/gh/orionpax1997/picx-images-hosting@master/Development/Oracle-number-对应-Java-数据类型.16a2mb8efgww.webp "Oracle-number-对应-Java-数据类型")
+![Oracle-number-对应-Java-数据类型](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/Oracle-number-对应-Java-数据类型.16a2mb8efgww.webp "Oracle-number-对应-Java-数据类型")
 
 ## 应用场景
 

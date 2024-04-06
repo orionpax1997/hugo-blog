@@ -3,7 +3,7 @@ title: "MySQL 的使用"
 date: 2020-03-15T11:50:21+08:00
 categories: ["Development"]
 tags: ["Support"]
-featuredImage: "https://cdn.statically.io/gh/orionpax1997/picx-images-hosting@master/Development/mysql-banner.4b94mi3v2ty0.webp"
+featuredImage: "https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/mysql-banner.4b94mi3v2ty0.webp"
 ---
 
 ## 简介

@@ -16,7 +16,7 @@ draft: true
 
 范围广，把时间用于重要的知识点，各个击破，混合练习。
 
-![52781650886538_](https://cdn.statically.io/gh/orionpax1997/picx-images-hosting@master/geek/52781650886538_.7jbclpbzfjk0.webp "综合知识知识点分布")
+![52781650886538_](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/geek/52781650886538_.7jbclpbzfjk0.webp "综合知识知识点分布")
 
 ### 计算机组成与体系结构
 

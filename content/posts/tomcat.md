@@ -3,7 +3,7 @@ title: "Tomcat 的使用"
 date: 2019-07-23T22:41:51+08:00
 categories: ["Development"]
 tags: ["Support"]
-featuredImage: "https://cdn.statically.io/gh/orionpax1997/picx-images-hosting@master/Development/tomcat-banner.td82kzu3j6o.webp"
+featuredImage: "https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/tomcat-banner.td82kzu3j6o.webp"
 ---
 
 ## 简介
