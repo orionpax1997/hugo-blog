@@ -1,0 +1,1604 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" /><title>通过 Spring Initializr 了解常用后端框架 - 向之礼的个人博客</title><meta name="Description" content="不能记住过去的人，被判重复过去。"><meta property="og:title" content="通过 Spring Initializr 了解常用后端框架" />
+<meta property="og:description" content="简介 Spring Initializr 从本质上来说就是一个 Web 应用程序，它能为你生成 Spring Boot 项目结构。虽然不能生成应用程序代码，但它能为你提供一个基本的项目结构，以及一个用于构" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/spring-initializr/" /><meta property="og:image" content="https://og-image.dramacat.top/通过 Spring Initializr 了解常用后端框架?images=https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/spring-initializr-banner.5jcrfnfqm400.webp" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-02-14T16:45:54+08:00" />
+<meta property="article:modified_time" content="2024-04-06T15:20:04+08:00" /><meta property="og:site_name" content="向之礼的个人博客" />
+
+<meta name="twitter:title" content="通过 Spring Initializr 了解常用后端框架"/>
+<meta name="twitter:card" content="summary_large_image"/><meta property="twitter:image" content="https://og-image.dramacat.top/通过 Spring Initializr 了解常用后端框架?images=https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/spring-initializr-banner.5jcrfnfqm400.webp" /><meta name="twitter:description" content="简介 Spring Initializr 从本质上来说就是一个 Web 应用程序，它能为你生成 Spring Boot 项目结构。虽然不能生成应用程序代码，但它能为你提供一个基本的项目结构，以及一个用于构"/>
+<meta name="application-name" content="Humble.X">
+<meta name="apple-mobile-web-app-title" content="Humble.X">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><meta name="referrer" content="never"></meta>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest">
+
+<link rel="canonical" href="http://localhost:1313/spring-initializr/" /><link rel="prev" href="http://localhost:1313/mybatis/" /><link rel="next" href="http://localhost:1313/lombok/" />
+<link rel="stylesheet" href="/css/main.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">{"@context": "https://schema.org","@type": "BlogPosting",
+        "headline": "通过 Spring Initializr 了解常用后端框架",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http://localhost:1313/spring-initializr/"
+        },"image": ["https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/spring-initializr-banner.5jcrfnfqm400.webp"],"genre": "posts","keywords":["Backend Framework"],"wordcount":  5173 ,
+        "url": "http://localhost:1313/spring-initializr/","datePublished": "2021-02-14T16:45:54+08:00","dateModified": "2024-04-06T15:20:04+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Humble.Xiang","logo": "http://localhost:1313/images/avatar.jpg"},"author": {
+                "@type": "Person",
+                "name": "Humble.Xiang",
+                "url": "https://github.com/Humble-Xiang"
+            },"description": ""
+    }</script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {
+          document.body.setAttribute('theme', theme); 
+          document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');
+          if (theme === 'light') {
+            document.documentElement.classList.remove('tw-dark')
+          } else {
+            document.documentElement.classList.add('tw-dark')
+          }
+          window.theme = theme;   
+          window.isDark = window.theme !== 'light' 
+        }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop print:!tw-hidden" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="向之礼的个人博客"><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item"
+                    href="/posts/" > 所有文章 </a><a class="menu-item"
+                    href="/tags/" > 标签 </a><a class="menu-item"
+                    href="/categories/" > 分类 </a><a class="menu-item"
+                    href="/series/" > 系列 </a><a class="menu-item"
+                    href="https://github.com/Humble-Xiang"  title="GitHub" 
+                    rel="noopener noreferrer" target="_blank" ><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d='M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z'/></svg>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-desktop">
+                    <button class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+                    </button>
+                    <button class="search-button search-clear" id="search-clear-desktop" title="清空">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+                    </button>
+                    <span class="search-button search-loading tw-animate-spin" id="search-loading-desktop">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"/></svg>
+                    </span>
+                </span><button class="menu-item theme-select" aria-label="切换主题">
+                    <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg>
+                    <select class="color-theme-select" id="theme-select-desktop" aria-label="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </button></div>
+        </div>
+    </div>
+</header><header class="mobile print:!tw-hidden" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="向之礼的个人博客"><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                <div class="search mobile" id="search-mobile">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-mobile">
+                    <button class="search-button search-toggle tw-h-10" id="search-toggle-mobile" title="搜索">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+                    </button>
+                    <button class="search-button search-clear" id="search-clear-mobile" title="清空">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+                    </button>
+                    <span class="search-button search-loading tw-animate-spin" id="search-loading-mobile">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"/></svg>
+                    </span>
+                </div>
+                <button class="search-cancel" id="search-cancel-mobile">
+                    取消
+                </button>
+            </div><a class="menu-item" href="/posts/" title="" >所有文章</a><a class="menu-item" href="/tags/" title="" >标签</a><a class="menu-item" href="/categories/" title="" >分类</a><a class="menu-item" href="/series/" title="" >系列</a><a class="menu-item" href="https://github.com/Humble-Xiang" title="GitHub" 
+                rel="noopener noreferrer" target="_blank" ><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d='M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z'/></svg></a><button class="menu-item theme-select tw-w-full" aria-label="切换主题">
+                <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg>
+                <select class="color-theme-select" id="theme-select-mobile" aria-label="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </button></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div><main class="main">
+            <div class="container"><div class="toc print:!tw-hidden" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#简介">简介</a></li>
+    <li><a href="#developer-tools">Developer Tools</a>
+      <ul>
+        <li><a href="#spring-native">Spring Native</a></li>
+        <li><a href="#spring-boot-devtools">Spring Boot DevTools</a></li>
+        <li><a href="#lombok">Lombok</a></li>
+        <li><a href="#spring-configuration-processor">Spring Configuration Processor</a></li>
+      </ul>
+    </li>
+    <li><a href="#web">Web</a>
+      <ul>
+        <li><a href="#spring-web">Spring Web</a></li>
+        <li><a href="#spring-reactive-web">Spring Reactive Web</a></li>
+        <li><a href="#spring-for-graphql">Spring for GraphQL</a></li>
+        <li><a href="#rest-repositories">Rest Repositories</a></li>
+        <li><a href="#spring-session">Spring Session</a></li>
+        <li><a href="#rest-repositories-hal-explorer">Rest Repositories HAL Explorer</a></li>
+        <li><a href="#spring-hateoas">Spring HATEOAS</a></li>
+        <li><a href="#spring-web-services">Spring Web Services</a></li>
+        <li><a href="#jersey">Jersey</a></li>
+        <li><a href="#vaadin">Vaadin</a></li>
+      </ul>
+    </li>
+    <li><a href="#template-engines">Template Engines</a>
+      <ul>
+        <li><a href="#thymeleaf">Thymeleaf</a></li>
+        <li><a href="#apache-freemarker">Apache Freemarker</a></li>
+        <li><a href="#mustache">Mustache</a></li>
+        <li><a href="#groovy-templates">Groovy Templates</a></li>
+      </ul>
+    </li>
+    <li><a href="#security">Security</a>
+      <ul>
+        <li><a href="#spring-security">Spring Security</a></li>
+        <li><a href="#oauth2-client">OAuth2 Client</a></li>
+        <li><a href="#oauth2-resource-server">OAuth2 Resource Server</a></li>
+        <li><a href="#spring-ldap">Spring LDAP</a></li>
+        <li><a href="#okta">Okta</a></li>
+      </ul>
+    </li>
+    <li><a href="#sql">SQL</a>
+      <ul>
+        <li><a href="#jdbc-api">JDBC API</a></li>
+        <li><a href="#spring-data-jdbc">Spring Data JDBC</a></li>
+        <li><a href="#spring-data-jpa">Spring Data JPA</a></li>
+        <li><a href="#spring-data-r2dbc">Spring Data R2DBC</a></li>
+        <li><a href="#mybatis-framework">MyBatis Framework</a></li>
+        <li><a href="#liquibase-migration">Liquibase Migration</a></li>
+        <li><a href="#flyway-migration">Flyway Migration</a></li>
+        <li><a href="#jooq-access-layer">JOOQ Access Layer</a></li>
+        <li><a href="#ibm-db2-driver">IBM DB2 Driver</a></li>
+        <li><a href="#apache-derby-database">Apache Derby Database</a></li>
+        <li><a href="#h2-database">H2 Database</a></li>
+        <li><a href="#hypersql-database">HyperSQL Database</a></li>
+        <li><a href="#mariadb-driver">MariaDB Driver</a></li>
+        <li><a href="#ms-sql-server-driver">MS SQL Server Driver</a></li>
+        <li><a href="#mysql-driver">MySQL Driver</a></li>
+        <li><a href="#oracle-driver">Oracle Driver</a></li>
+        <li><a href="#postgresql-driver">PostgreSQL Driver</a></li>
+      </ul>
+    </li>
+    <li><a href="#nosql">NoSQL</a>
+      <ul>
+        <li><a href="#spring-data-redis-accessdriver">Spring Data Redis (Access+Driver)</a></li>
+        <li><a href="#spring-data-reactive-redis">Spring Data Reactive Redis</a></li>
+        <li><a href="#spring-data-mongodb">Spring Data MongoDB</a></li>
+        <li><a href="#spring-data-reactive-mongodb">Spring Data Reactive MongoDB</a></li>
+        <li><a href="#spring-data-elasticsearch-accessdriver">Spring Data Elasticsearch (Access+Driver)</a></li>
+        <li><a href="#spring-data-for-apache-cassandra">Spring Data for Apache Cassandra</a></li>
+        <li><a href="#spring-data-reactive-for-apache-cassandra">Spring Data Reactive for Apache Cassandra</a></li>
+        <li><a href="#spring-for-apache-geode">Spring for Apache Geode</a></li>
+        <li><a href="#spring-data-couchbase">Spring Data Couchbase</a></li>
+        <li><a href="#spring-data-reactive-couchbase">Spring Data Reactive Couchbase</a></li>
+        <li><a href="#spring-data-neo4j">Spring Data Neo4j</a></li>
+      </ul>
+    </li>
+    <li><a href="#messaging">Messaging</a>
+      <ul>
+        <li><a href="#spring-integration">Spring Integration</a></li>
+        <li><a href="#spring-for-rabbitmq">Spring for RabbitMQ</a></li>
+        <li><a href="#spring-for-apache-kafka">Spring for Apache Kafka</a></li>
+        <li><a href="#spring-for-apache-kafka-streams">Spring for Apache Kafka Streams</a></li>
+        <li><a href="#spring-for-apache-activemq-5">Spring for Apache ActiveMQ 5</a></li>
+        <li><a href="#spring-for-apache-activemq-artemis">Spring for Apache ActiveMQ Artemis</a></li>
+        <li><a href="#websocket">WebSocket</a></li>
+        <li><a href="#rsocket">RSocket</a></li>
+        <li><a href="#apache-camel">Apache Camel</a></li>
+        <li><a href="#solace-pubsub">Solace PubSub+</a></li>
+      </ul>
+    </li>
+    <li><a href="#io">I/O</a>
+      <ul>
+        <li><a href="#spring-batch">Spring Batch</a></li>
+        <li><a href="#validation">Validation</a></li>
+        <li><a href="#java-mail-sender">Java Mail Sender</a></li>
+        <li><a href="#quartz-scheduler">Quartz Scheduler</a></li>
+        <li><a href="#spring-cache-abstraction">Spring cache abstraction</a></li>
+        <li><a href="#picocli">Picocli</a></li>
+        <li><a href="#spring-shell">Spring Shell</a></li>
+      </ul>
+    </li>
+    <li><a href="#ops">Ops</a>
+      <ul>
+        <li><a href="#spring-boot-actuator">Spring Boot Actuator</a></li>
+        <li><a href="#codecentrics-spring-boot-admin-client">Codecentric&rsquo;s Spring Boot Admin (Client)</a></li>
+        <li><a href="#codecentrics-spring-boot-admin-server">Codecentric&rsquo;s Spring Boot Admin (Server)</a></li>
+      </ul>
+    </li>
+    <li><a href="#observability">Observability</a>
+      <ul>
+        <li><a href="#datadog">Datadog</a></li>
+        <li><a href="#influx">Influx</a></li>
+        <li><a href="#graphite">Graphite</a></li>
+        <li><a href="#new-relic">New Relic</a></li>
+        <li><a href="#prometheus">Prometheus</a></li>
+        <li><a href="#sleuth">Sleuth</a></li>
+        <li><a href="#wavefront">Wavefront</a></li>
+        <li><a href="#zipkin-client">Zipkin Client</a></li>
+      </ul>
+    </li>
+    <li><a href="#testing">Testing</a>
+      <ul>
+        <li><a href="#spring-rest-docs">Spring REST Docs</a></li>
+        <li><a href="#testcontainers">Testcontainers</a></li>
+        <li><a href="#contract-verifier">Contract Verifier</a></li>
+        <li><a href="#contract-stub-runner">Contract Stub Runner</a></li>
+        <li><a href="#embedded-ldap-server">Embedded LDAP Server</a></li>
+        <li><a href="#embedded-mongodb-database">Embedded MongoDB Database</a></li>
+      </ul>
+    </li>
+    <li><a href="#spring-cloud">Spring Cloud</a>
+      <ul>
+        <li><a href="#cloud-bootstrap">Cloud Bootstrap</a></li>
+        <li><a href="#function">Function</a></li>
+        <li><a href="#task">Task</a></li>
+      </ul>
+    </li>
+    <li><a href="#spring-cloud-tools">Spring Cloud Tools</a>
+      <ul>
+        <li><a href="#open-service-broker">Open Service Broker</a></li>
+      </ul>
+    </li>
+    <li><a href="#spring-cloud-config">Spring Cloud Config</a>
+      <ul>
+        <li><a href="#config-client">Config Client</a></li>
+        <li><a href="#config-server">Config Server</a></li>
+        <li><a href="#vault-configuration">Vault Configuration</a></li>
+        <li><a href="#apache-zookeeper-configuration">Apache Zookeeper Configuration</a></li>
+        <li><a href="#consul-configuration">Consul Configuration</a></li>
+      </ul>
+    </li>
+    <li><a href="#spring-cloud-discovery">Spring Cloud Discovery</a>
+      <ul>
+        <li><a href="#eureka-discovery-client">Eureka Discovery Client</a></li>
+        <li><a href="#eureka-server">Eureka Server</a></li>
+        <li><a href="#apache-zookeeper-discovery">Apache Zookeeper Discovery</a></li>
+        <li><a href="#cloud-foundry-discovery">Cloud Foundry Discovery</a></li>
+        <li><a href="#consul-discovery">Consul Discovery</a></li>
+      </ul>
+    </li>
+    <li><a href="#spring-cloud-routing">Spring Cloud Routing</a>
+      <ul>
+        <li><a href="#gateway">Gateway</a></li>
+        <li><a href="#openfeign">OpenFeign</a></li>
+        <li><a href="#cloud-loadbalancer">Cloud LoadBalancer</a></li>
+      </ul>
+    </li>
+    <li><a href="#spring-cloud-circuit-breaker">Spring Cloud Circuit Breaker</a>
+      <ul>
+        <li><a href="#resilience4j">Resilience4J</a></li>
+      </ul>
+    </li>
+    <li><a href="#spring-cloud-messaging">Spring Cloud Messaging</a>
+      <ul>
+        <li><a href="#cloud-bus">Cloud Bus</a></li>
+        <li><a href="#cloud-stream">Cloud Stream</a></li>
+      </ul>
+    </li>
+    <li><a href="#vmware-tanzu-application-service">VMware Tanzu Application Service</a>
+      <ul>
+        <li><a href="#config-client-tas">Config Client (TAS)</a></li>
+        <li><a href="#service-registry-tas">Service Registry (TAS)</a></li>
+      </ul>
+    </li>
+    <li><a href="#microsoft-azure">Microsoft Azure</a>
+      <ul>
+        <li><a href="#azure-support">Azure Support</a></li>
+        <li><a href="#azure-active-directory">Azure Active Directory</a></li>
+        <li><a href="#azure-cosmos-db">Azure Cosmos DB</a></li>
+        <li><a href="#azure-key-vault">Azure Key Vault</a></li>
+        <li><a href="#azure-storage">Azure Storage</a></li>
+      </ul>
+    </li>
+    <li><a href="#google-cloud-platform">Google Cloud Platform</a>
+      <ul>
+        <li><a href="#gcp-support">GCP Support</a></li>
+        <li><a href="#gcp-messaging">GCP Messaging</a></li>
+        <li><a href="#gcp-storage">GCP Storage</a></li>
+      </ul>
+    </li>
+    <li><a href="#不在-spring-initializr-中的其它好用依赖">不在 Spring Initializr 中的其它好用依赖</a>
+      <ul>
+        <li><a href="#hutool">Hutool</a></li>
+        <li><a href="#mybatis-plus">MyBatis-Plus</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single print:!tw-w-full print:!tw-max-w-none print:!tw-m-0 print:!tw-p-0"><h1 class="single-title animate__animated animate__flipInX">通过 Spring Initializr 了解常用后端框架</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><img src="http://localhost:1313/images/avatar.jpg" alt="Humble.Xiang avatar" class="tw-inline-block tw-max-h-4 tw-rounded-full tw-translate-y-[-2px] tw-mr-1"><a href="https://github.com/Humble-Xiang" title="Author" target="_blank" rel="noopener noreferrer author" class="author">Humble.Xiang</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/development/"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>Development</a></span></div>
+            <div class="post-meta-line"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;<time datetime="2021-02-14">2021-02-14</time>&nbsp;<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg>&nbsp;<time datetime="2024-04-06">2024-04-06</time>&nbsp;<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;约 5173 字&nbsp;<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;预计阅读 11 分钟&nbsp;</div>
+        </div><div class="featured-image"><img
+        
+        loading="eager"
+        src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/spring-initializr-banner.5jcrfnfqm400.webp"
+        srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/spring-initializr-banner.5jcrfnfqm400.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/spring-initializr-banner.5jcrfnfqm400.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/spring-initializr-banner.5jcrfnfqm400.webp 2x"
+        title="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/spring-initializr-banner.5jcrfnfqm400.webp" ></div><div class="details toc print:!tw-block" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#简介">简介</a></li>
+    <li><a href="#developer-tools">Developer Tools</a>
+      <ul>
+        <li><a href="#spring-native">Spring Native</a></li>
+        <li><a href="#spring-boot-devtools">Spring Boot DevTools</a></li>
+        <li><a href="#lombok">Lombok</a></li>
+        <li><a href="#spring-configuration-processor">Spring Configuration Processor</a></li>
+      </ul>
+    </li>
+    <li><a href="#web">Web</a>
+      <ul>
+        <li><a href="#spring-web">Spring Web</a></li>
+        <li><a href="#spring-reactive-web">Spring Reactive Web</a></li>
+        <li><a href="#spring-for-graphql">Spring for GraphQL</a></li>
+        <li><a href="#rest-repositories">Rest Repositories</a></li>
+        <li><a href="#spring-session">Spring Session</a></li>
+        <li><a href="#rest-repositories-hal-explorer">Rest Repositories HAL Explorer</a></li>
+        <li><a href="#spring-hateoas">Spring HATEOAS</a></li>
+        <li><a href="#spring-web-services">Spring Web Services</a></li>
+        <li><a href="#jersey">Jersey</a></li>
+        <li><a href="#vaadin">Vaadin</a></li>
+      </ul>
+    </li>
+    <li><a href="#template-engines">Template Engines</a>
+      <ul>
+        <li><a href="#thymeleaf">Thymeleaf</a></li>
+        <li><a href="#apache-freemarker">Apache Freemarker</a></li>
+        <li><a href="#mustache">Mustache</a></li>
+        <li><a href="#groovy-templates">Groovy Templates</a></li>
+      </ul>
+    </li>
+    <li><a href="#security">Security</a>
+      <ul>
+        <li><a href="#spring-security">Spring Security</a></li>
+        <li><a href="#oauth2-client">OAuth2 Client</a></li>
+        <li><a href="#oauth2-resource-server">OAuth2 Resource Server</a></li>
+        <li><a href="#spring-ldap">Spring LDAP</a></li>
+        <li><a href="#okta">Okta</a></li>
+      </ul>
+    </li>
+    <li><a href="#sql">SQL</a>
+      <ul>
+        <li><a href="#jdbc-api">JDBC API</a></li>
+        <li><a href="#spring-data-jdbc">Spring Data JDBC</a></li>
+        <li><a href="#spring-data-jpa">Spring Data JPA</a></li>
+        <li><a href="#spring-data-r2dbc">Spring Data R2DBC</a></li>
+        <li><a href="#mybatis-framework">MyBatis Framework</a></li>
+        <li><a href="#liquibase-migration">Liquibase Migration</a></li>
+        <li><a href="#flyway-migration">Flyway Migration</a></li>
+        <li><a href="#jooq-access-layer">JOOQ Access Layer</a></li>
+        <li><a href="#ibm-db2-driver">IBM DB2 Driver</a></li>
+        <li><a href="#apache-derby-database">Apache Derby Database</a></li>
+        <li><a href="#h2-database">H2 Database</a></li>
+        <li><a href="#hypersql-database">HyperSQL Database</a></li>
+        <li><a href="#mariadb-driver">MariaDB Driver</a></li>
+        <li><a href="#ms-sql-server-driver">MS SQL Server Driver</a></li>
+        <li><a href="#mysql-driver">MySQL Driver</a></li>
+        <li><a href="#oracle-driver">Oracle Driver</a></li>
+        <li><a href="#postgresql-driver">PostgreSQL Driver</a></li>
+      </ul>
+    </li>
+    <li><a href="#nosql">NoSQL</a>
+      <ul>
+        <li><a href="#spring-data-redis-accessdriver">Spring Data Redis (Access+Driver)</a></li>
+        <li><a href="#spring-data-reactive-redis">Spring Data Reactive Redis</a></li>
+        <li><a href="#spring-data-mongodb">Spring Data MongoDB</a></li>
+        <li><a href="#spring-data-reactive-mongodb">Spring Data Reactive MongoDB</a></li>
+        <li><a href="#spring-data-elasticsearch-accessdriver">Spring Data Elasticsearch (Access+Driver)</a></li>
+        <li><a href="#spring-data-for-apache-cassandra">Spring Data for Apache Cassandra</a></li>
+        <li><a href="#spring-data-reactive-for-apache-cassandra">Spring Data Reactive for Apache Cassandra</a></li>
+        <li><a href="#spring-for-apache-geode">Spring for Apache Geode</a></li>
+        <li><a href="#spring-data-couchbase">Spring Data Couchbase</a></li>
+        <li><a href="#spring-data-reactive-couchbase">Spring Data Reactive Couchbase</a></li>
+        <li><a href="#spring-data-neo4j">Spring Data Neo4j</a></li>
+      </ul>
+    </li>
+    <li><a href="#messaging">Messaging</a>
+      <ul>
+        <li><a href="#spring-integration">Spring Integration</a></li>
+        <li><a href="#spring-for-rabbitmq">Spring for RabbitMQ</a></li>
+        <li><a href="#spring-for-apache-kafka">Spring for Apache Kafka</a></li>
+        <li><a href="#spring-for-apache-kafka-streams">Spring for Apache Kafka Streams</a></li>
+        <li><a href="#spring-for-apache-activemq-5">Spring for Apache ActiveMQ 5</a></li>
+        <li><a href="#spring-for-apache-activemq-artemis">Spring for Apache ActiveMQ Artemis</a></li>
+        <li><a href="#websocket">WebSocket</a></li>
+        <li><a href="#rsocket">RSocket</a></li>
+        <li><a href="#apache-camel">Apache Camel</a></li>
+        <li><a href="#solace-pubsub">Solace PubSub+</a></li>
+      </ul>
+    </li>
+    <li><a href="#io">I/O</a>
+      <ul>
+        <li><a href="#spring-batch">Spring Batch</a></li>
+        <li><a href="#validation">Validation</a></li>
+        <li><a href="#java-mail-sender">Java Mail Sender</a></li>
+        <li><a href="#quartz-scheduler">Quartz Scheduler</a></li>
+        <li><a href="#spring-cache-abstraction">Spring cache abstraction</a></li>
+        <li><a href="#picocli">Picocli</a></li>
+        <li><a href="#spring-shell">Spring Shell</a></li>
+      </ul>
+    </li>
+    <li><a href="#ops">Ops</a>
+      <ul>
+        <li><a href="#spring-boot-actuator">Spring Boot Actuator</a></li>
+        <li><a href="#codecentrics-spring-boot-admin-client">Codecentric&rsquo;s Spring Boot Admin (Client)</a></li>
+        <li><a href="#codecentrics-spring-boot-admin-server">Codecentric&rsquo;s Spring Boot Admin (Server)</a></li>
+      </ul>
+    </li>
+    <li><a href="#observability">Observability</a>
+      <ul>
+        <li><a href="#datadog">Datadog</a></li>
+        <li><a href="#influx">Influx</a></li>
+        <li><a href="#graphite">Graphite</a></li>
+        <li><a href="#new-relic">New Relic</a></li>
+        <li><a href="#prometheus">Prometheus</a></li>
+        <li><a href="#sleuth">Sleuth</a></li>
+        <li><a href="#wavefront">Wavefront</a></li>
+        <li><a href="#zipkin-client">Zipkin Client</a></li>
+      </ul>
+    </li>
+    <li><a href="#testing">Testing</a>
+      <ul>
+        <li><a href="#spring-rest-docs">Spring REST Docs</a></li>
+        <li><a href="#testcontainers">Testcontainers</a></li>
+        <li><a href="#contract-verifier">Contract Verifier</a></li>
+        <li><a href="#contract-stub-runner">Contract Stub Runner</a></li>
+        <li><a href="#embedded-ldap-server">Embedded LDAP Server</a></li>
+        <li><a href="#embedded-mongodb-database">Embedded MongoDB Database</a></li>
+      </ul>
+    </li>
+    <li><a href="#spring-cloud">Spring Cloud</a>
+      <ul>
+        <li><a href="#cloud-bootstrap">Cloud Bootstrap</a></li>
+        <li><a href="#function">Function</a></li>
+        <li><a href="#task">Task</a></li>
+      </ul>
+    </li>
+    <li><a href="#spring-cloud-tools">Spring Cloud Tools</a>
+      <ul>
+        <li><a href="#open-service-broker">Open Service Broker</a></li>
+      </ul>
+    </li>
+    <li><a href="#spring-cloud-config">Spring Cloud Config</a>
+      <ul>
+        <li><a href="#config-client">Config Client</a></li>
+        <li><a href="#config-server">Config Server</a></li>
+        <li><a href="#vault-configuration">Vault Configuration</a></li>
+        <li><a href="#apache-zookeeper-configuration">Apache Zookeeper Configuration</a></li>
+        <li><a href="#consul-configuration">Consul Configuration</a></li>
+      </ul>
+    </li>
+    <li><a href="#spring-cloud-discovery">Spring Cloud Discovery</a>
+      <ul>
+        <li><a href="#eureka-discovery-client">Eureka Discovery Client</a></li>
+        <li><a href="#eureka-server">Eureka Server</a></li>
+        <li><a href="#apache-zookeeper-discovery">Apache Zookeeper Discovery</a></li>
+        <li><a href="#cloud-foundry-discovery">Cloud Foundry Discovery</a></li>
+        <li><a href="#consul-discovery">Consul Discovery</a></li>
+      </ul>
+    </li>
+    <li><a href="#spring-cloud-routing">Spring Cloud Routing</a>
+      <ul>
+        <li><a href="#gateway">Gateway</a></li>
+        <li><a href="#openfeign">OpenFeign</a></li>
+        <li><a href="#cloud-loadbalancer">Cloud LoadBalancer</a></li>
+      </ul>
+    </li>
+    <li><a href="#spring-cloud-circuit-breaker">Spring Cloud Circuit Breaker</a>
+      <ul>
+        <li><a href="#resilience4j">Resilience4J</a></li>
+      </ul>
+    </li>
+    <li><a href="#spring-cloud-messaging">Spring Cloud Messaging</a>
+      <ul>
+        <li><a href="#cloud-bus">Cloud Bus</a></li>
+        <li><a href="#cloud-stream">Cloud Stream</a></li>
+      </ul>
+    </li>
+    <li><a href="#vmware-tanzu-application-service">VMware Tanzu Application Service</a>
+      <ul>
+        <li><a href="#config-client-tas">Config Client (TAS)</a></li>
+        <li><a href="#service-registry-tas">Service Registry (TAS)</a></li>
+      </ul>
+    </li>
+    <li><a href="#microsoft-azure">Microsoft Azure</a>
+      <ul>
+        <li><a href="#azure-support">Azure Support</a></li>
+        <li><a href="#azure-active-directory">Azure Active Directory</a></li>
+        <li><a href="#azure-cosmos-db">Azure Cosmos DB</a></li>
+        <li><a href="#azure-key-vault">Azure Key Vault</a></li>
+        <li><a href="#azure-storage">Azure Storage</a></li>
+      </ul>
+    </li>
+    <li><a href="#google-cloud-platform">Google Cloud Platform</a>
+      <ul>
+        <li><a href="#gcp-support">GCP Support</a></li>
+        <li><a href="#gcp-messaging">GCP Messaging</a></li>
+        <li><a href="#gcp-storage">GCP Storage</a></li>
+      </ul>
+    </li>
+    <li><a href="#不在-spring-initializr-中的其它好用依赖">不在 Spring Initializr 中的其它好用依赖</a>
+      <ul>
+        <li><a href="#hutool">Hutool</a></li>
+        <li><a href="#mybatis-plus">MyBatis-Plus</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="简介" class="headerLink">
+    <a href="#%e7%ae%80%e4%bb%8b" class="header-mark"></a>简介</h2><blockquote>
+<p><a href="https://start.spring.io/" target="_blank" rel="noopener noreferrer">Spring Initializr</a> 从本质上来说就是一个 Web 应用程序，它能为你生成 Spring Boot 项目结构。虽然不能生成应用程序代码，但它能为你提供一个基本的项目结构，以及一个用于构建代码的 Maven 或 Gradle 构建说明文件。你只需要写应用程序的代码就好了。</p>
+</blockquote>
+<p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fstart.spring.io%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides&title=Spring%20Guides&description=Whatever%20you%27re%20building%2c%20these%20guides%20are%20designed%20to%20get%20you%20productive%20as%20quickly%20as%20possible%20%e2%80%93%20using%20the%20latest%20Spring%20project%20releases%20and%20techniques%20as%20recommended%20by%20the%20Spring%20team.&image=&favicon="
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fprojects%2fspring-boot"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.springcloud.cc%2fspring-boot.html"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h2 id="developer-tools" class="headerLink">
+    <a href="#developer-tools" class="header-mark"></a>Developer Tools</h2><h3 id="spring-native" class="headerLink">
+    <a href="#spring-native" class="header-mark"></a>Spring Native</h3><p>Incubating support for compiling Spring applications to native executables using the GraalVM native-image compiler.<br>
+孵化支持使用 GraalVM 原生映像编译器将 Spring 应用程序编译为本机可执行文件。</p>
+<p><em>还是实验期，目前不建议使用</em></p>
+<h3 id="spring-boot-devtools" class="headerLink">
+    <a href="#spring-boot-devtools" class="header-mark"></a>Spring Boot DevTools</h3><p>Provides fast application restarts, LiveReload, and configurations for enhanced development experience.<br>
+提供快速的应用程序重启、LiveReload 和配置以增强开发体验。</p>
+<p><em>使用 IDEA 自带的热部署或者去使用 JRebel，总是你更好的选择</em></p>
+<h3 id="lombok" class="headerLink">
+    <a href="#lombok" class="header-mark"></a>Lombok</h3><p>Java annotation library which helps to reduce boilerplate code.<br>
+Java 注释库，有助于减少样板代码。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fblog.dramacat.top%2flombok%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="spring-configuration-processor" class="headerLink">
+    <a href="#spring-configuration-processor" class="header-mark"></a>Spring Configuration Processor</h3><p>Generate metadata for developers to offer contextual help and &ldquo;code completion&rdquo; when working with custom configuration keys (ex.application.properties/.yml files).<br>
+给自定义的配置类生成元数据信息，可以在你编写配置文件时，对自定义的配置提供提示。</p>
+<p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fdocs.spring.io%2fspring-boot%2fdocs%2fcurrent%2freference%2fhtml%2fconfiguration-metadata.html%23configuration-metadata.annotation-processor"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fmatthung0807.blogspot.com%2f2020%2f09%2fspring-boot-configuration-processor.html"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.freesion.com%2farticle%2f8342995481%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h2 id="web" class="headerLink">
+    <a href="#web" class="header-mark"></a>Web</h2><h3 id="spring-web" class="headerLink">
+    <a href="#spring-web" class="header-mark"></a>Spring Web</h3><p>Build web, including RESTful, applications using Spring MVC. Uses Apache Tomcat as the default embedded container.<br>
+使用 Spring MVC 构建 Web（包括 RESTful）应用程序。 使用 Apache Tomcat 作为默认的嵌入式容器。</p>
+<p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides%2fgs%2frest-service%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides%2fgs%2fconsuming-rest%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h3 id="spring-reactive-web" class="headerLink">
+    <a href="#spring-reactive-web" class="header-mark"></a>Spring Reactive Web</h3><p>Build reactive web applications with Spring WebFlux and Netty.<br>
+使用 Spring WebFlux 和 Netty 构建响应式 Web 应用程序。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides%2fgs%2freactive-rest-service%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="spring-for-graphql" class="headerLink">
+    <a href="#spring-for-graphql" class="header-mark"></a>Spring for GraphQL</h3><p>Build GraphQL applications with Spring for GraphQL and GraphQL Java.<br>
+使用 Spring for GraphQL 和 GraphQL Java 构建 GraphQL 应用程序。</p>
+<p><em>目前没看到什么，完整的最佳实践，让子弹再飞一会吧</em></p>
+<p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fgraphql.cn"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fdocs.spring.io%2fspring-graphql%2fdocs%2fcurrent-SNAPSHOT%2freference%2fhtml%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h3 id="rest-repositories" class="headerLink">
+    <a href="#rest-repositories" class="header-mark"></a>Rest Repositories</h3><p>Exposing Spring Data repositories over REST via Spring Data REST.<br>
+通过 Spring Data REST 在 REST 上公开 Spring Data 存储库。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides%2fgs%2faccessing-data-rest%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="spring-session" class="headerLink">
+    <a href="#spring-session" class="header-mark"></a>Spring Session</h3><p>Provides an API and implementations for managing user session information.<br>
+提供用于管理用户会话信息的 API 和实现。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fgithub.com%2fxkcoding%2fspring-boot-demo%2ftree%2fmaster%2fdemo-session"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="rest-repositories-hal-explorer" class="headerLink">
+    <a href="#rest-repositories-hal-explorer" class="header-mark"></a>Rest Repositories HAL Explorer</h3><p>Browsing Spring Data REST repositories in your browser.<br>
+在浏览器中浏览 Spring Data REST 存储库。</p>
+<p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.baeldung.com%2fspring-rest-hal&title=Spring%20REST%20and%20HAL%20Browser&description=In%20this%20tutorial%2c%20we%27ll%20be%20discussing%20what%20HAL%20is%20and%20why%20it%27s%20useful%2c%20before%20introducing%20the%20HAL%20browser.&image=&favicon="
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2frwcbook.github.io%2fhal-forms%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h3 id="spring-hateoas" class="headerLink">
+    <a href="#spring-hateoas" class="header-mark"></a>Spring HATEOAS</h3><p>Eases the creation of RESTful APIs that follow the HATEOAS principle when working with Spring / Spring MVC.<br>
+在使用 Spring / Spring MVC 时，简化遵循 HATEOAS 原则的 RESTful API 的创建。</p>
+<p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides%2fgs%2frest-hateoas%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2frestfulapi.net%2fhateoas%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h3 id="spring-web-services" class="headerLink">
+    <a href="#spring-web-services" class="header-mark"></a>Spring Web Services</h3><p>Facilitates contract-first SOAP development. Allows for the creation of flexible web services using one of the many ways to manipulate XML payloads.<br>
+促进契约优先的 SOAP 开发。允许使用多种操作 XML 有效负载的方法之一创建灵活的 Web 服务。</p>
+<p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides%2fgs%2fproducing-web-service%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides%2fgs%2fconsuming-web-service%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.runoob.com%2fwebservices%2fwebservices-tutorial.html&title=Web%20Services%20%e6%95%99%e7%a8%8b&description=%e9%80%9a%e8%bf%87%e4%bd%bf%e7%94%a8%20Web%20Services%ef%bc%8c%e6%82%a8%e7%9a%84%e5%ba%94%e7%94%a8%e7%a8%8b%e5%ba%8f%e5%8f%af%e4%bb%a5%e5%90%91%e5%85%a8%e4%b8%96%e7%95%8c%e5%8f%91%e5%b8%83%e4%bf%a1%e6%81%af%ef%bc%8c%e6%88%96%e6%8f%90%e4%be%9b%e6%9f%90%e9%a1%b9%e5%8a%9f%e8%83%bd%e3%80%82&image=&favicon="
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h3 id="jersey" class="headerLink">
+    <a href="#jersey" class="header-mark"></a>Jersey</h3><p>Framework for developing RESTful Web Services in Java that provides support for JAX-RS APIs.<br>
+用于在 Java 中开发 RESTful Web 服务的框架，提供对 JAX-RS API 的支持。</p>
+<p><em>你总是会选择使用 Spring Web</em></p>
+<h3 id="vaadin" class="headerLink">
+    <a href="#vaadin" class="header-mark"></a>Vaadin</h3><p>A web framework that allows you to write UI in pure Java without getting bogged down in JS, HTML, and CSS.<br>
+一个 Web 框架，允许您使用纯 Java 编写 UI，而不会陷入 JS、HTML 和 CSS 的困境。</p>
+<p><em>从一个困境到另一个困境？</em></p>
+<h2 id="template-engines" class="headerLink">
+    <a href="#template-engines" class="header-mark"></a>Template Engines</h2><p><em>模版引擎就是模版引擎，绝对不要把它们当成前端框架</em></p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspringhow.com%2fspring-boot-template-engines-comparison%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="thymeleaf" class="headerLink">
+    <a href="#thymeleaf" class="header-mark"></a>Thymeleaf</h3><p>A modern server-side Java template engine for both web and standalone environments. Allows HTML to be correctly displayed in browsers and as static prototypes.<br>
+适用于 Web 和独立环境的现代服务器端 Java 模板引擎。允许 HTML 在浏览器中正确显示并作为静态原型。</p>
+<p><em>可能的话，前后端分离总是你更好的选择</em></p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides%2fgs%2fserving-web-content%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="apache-freemarker" class="headerLink">
+    <a href="#apache-freemarker" class="header-mark"></a>Apache Freemarker</h3><p>Java library to generate text output (HTML web pages, e-mails, configuration files, source code, etc.) based on templates and changing data.<br>
+Java 库，用于根据模板和变化的数据生成文本输出（HTML 网页、电子邮件、配置文件、源代码等）。</p>
+<p><em>如果一定要用的话，使用 Thymeleaf 作为的你的模版引擎</em></p>
+<h3 id="mustache" class="headerLink">
+    <a href="#mustache" class="header-mark"></a>Mustache</h3><p>Logic-less Templates. There are no if statements, else clauses, or for loops. Instead there are only tags.<br>
+无逻辑模板。没有 if 语句、else 子句或 for 循环。相反，只有标签。</p>
+<p><em>如果一定要用的话，使用 Thymeleaf 作为的你的模版引擎</em></p>
+<h3 id="groovy-templates" class="headerLink">
+    <a href="#groovy-templates" class="header-mark"></a>Groovy Templates</h3><p>Groovy templating engine.<br>
+Groovy 模板引擎。</p>
+<p><em>如果一定要用的话，使用 Thymeleaf 作为的你的模版引擎</em></p>
+<h2 id="security" class="headerLink">
+    <a href="#security" class="header-mark"></a>Security</h2><h3 id="spring-security" class="headerLink">
+    <a href="#spring-security" class="header-mark"></a>Spring Security</h3><p>Highly customizable authentication and access-control framework for Spring applications.<br>
+用于 Spring 应用程序的高度可定制的身份验证和访问控制框架。</p>
+<p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fdocs.spring.io%2fspring-security%2freference%2findex.html"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.baeldung.com%2fsecurity-spring&title=Security%20with%20Spring&description=The%20Security%20with%20Spring%20tutorials%20focus%2c%20as%20you%27d%20expect%2c%20on%20Spring%20Security.&image=&favicon="
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h3 id="oauth2-client" class="headerLink">
+    <a href="#oauth2-client" class="header-mark"></a>OAuth2 Client</h3><p>Spring Boot integration for Spring Security&rsquo;s OAuth2/OpenID Connect client features.<br>
+Spring Security 的 OAuth2/OpenID Connect 客户端功能的 Spring Boot 集成。</p>
+<p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides%2ftutorials%2fspring-boot-oauth2%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.ruanyifeng.com%2fblog%2f2019%2f04%2foauth_design.html&title=OAuth%202.0%20%e7%9a%84%e4%b8%80%e4%b8%aa%e7%ae%80%e5%8d%95%e8%a7%a3%e9%87%8a&description=OAuth%202.0%20%e6%98%af%e7%9b%ae%e5%89%8d%e6%9c%80%e6%b5%81%e8%a1%8c%e7%9a%84%e6%8e%88%e6%9d%83%e6%9c%ba%e5%88%b6%ef%bc%8c%e7%94%a8%e6%9d%a5%e6%8e%88%e6%9d%83%e7%ac%ac%e4%b8%89%e6%96%b9%e5%ba%94%e7%94%a8%ef%bc%8c%e8%8e%b7%e5%8f%96%e7%94%a8%e6%88%b7%e6%95%b0%e6%8d%ae%e3%80%82&image=&favicon="
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h3 id="oauth2-resource-server" class="headerLink">
+    <a href="#oauth2-resource-server" class="header-mark"></a>OAuth2 Resource Server</h3><p>Spring Boot integration for Spring Security&rsquo;s OAuth2 resource server features.<br>
+Spring Security 的 OAuth2 资源服务器功能的 Spring Boot 集成。</p>
+<p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.baeldung.com%2fspring-security-oauth-resource-server&title=OAuth%202.0%20Resource%20Server%20With%20Spring%20Security%205&description=&image=&favicon="
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.ruanyifeng.com%2fblog%2f2018%2f07%2fjson_web_token-tutorial.html&title=JSON%20Web%20Token%20%e5%85%a5%e9%97%a8%e6%95%99%e7%a8%8b&description=JSON%20Web%20Token%ef%bc%88%e7%bc%a9%e5%86%99%20JWT%ef%bc%89%e6%98%af%e7%9b%ae%e5%89%8d%e6%9c%80%e6%b5%81%e8%a1%8c%e7%9a%84%e8%b7%a8%e5%9f%9f%e8%ae%a4%e8%af%81%e8%a7%a3%e5%86%b3%e6%96%b9%e6%a1%88%ef%bc%8c%e6%9c%ac%e6%96%87%e4%bb%8b%e7%bb%8d%e5%ae%83%e7%9a%84%e5%8e%9f%e7%90%86%e5%92%8c%e7%94%a8%e6%b3%95%e3%80%82&image=&favicon="
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h3 id="spring-ldap" class="headerLink">
+    <a href="#spring-ldap" class="header-mark"></a>Spring LDAP</h3><p>Makes it easier to build Spring based applications that use the Lightweight Directory Access Protocol.<br>
+使构建使用轻量级目录访问协议的基于 Spring 的应用程序变得更加容易。</p>
+<p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides%2fgs%2fauthenticating-ldap%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fldap.com%2flearn-about-ldap%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h3 id="okta" class="headerLink">
+    <a href="#okta" class="header-mark"></a>Okta</h3><p>Okta specific configuration for Spring Security/Spring Boot OAuth2 features. Enable your Spring Boot application to work with Okta via OAuth 2.0/OIDC.<br>
+用于 Spring Security/Spring Boot OAuth2 功能的 Okta 特定配置。使您的 Spring Boot 应用程序能够通过 OAuth 2.0/OIDC 与 Okta 一起使用。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.baeldung.com%2fspring-security-okta&title=Spring%20Security%20With%20Okta&description=Okta%20provides%20features%20like%20authentication%2c%20authorization%2c%20and%20social%20login%20for%20web%2c%20mobile%2c%20or%20API%20services.%20Additionally%2c%20it%20has%20robust%20support%20for%20the%20Spring%20Framework%20to%20make%20integrations%20quite%20straightforward.&image=&favicon="
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h2 id="sql" class="headerLink">
+    <a href="#sql" class="header-mark"></a>SQL</h2><h3 id="jdbc-api" class="headerLink">
+    <a href="#jdbc-api" class="header-mark"></a>JDBC API</h3><p>Database Connectivity API that defines how a client may connect and query a database.<br>
+定义客户端如何连接和查询数据库的数据库连接 API。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides%2fgs%2frelational-data-access%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="spring-data-jdbc" class="headerLink">
+    <a href="#spring-data-jdbc" class="header-mark"></a>Spring Data JDBC</h3><p>Persist data in SQL stores with plain JDBC using Spring Data.<br>
+使用 Spring Data 使用纯 JDBC 将数据持久存储在 SQL 存储中。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fdocs.spring.io%2fspring-data%2fjdbc%2fdocs%2fcurrent%2freference%2fhtml%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="spring-data-jpa" class="headerLink">
+    <a href="#spring-data-jpa" class="header-mark"></a>Spring Data JPA</h3><p>Persist data in SQL stores with Java Persistence API using Spring Data and Hibernate.<br>
+使用 Spring Data 和 Hibernate 使用 Java Persistence API 在 SQL 存储中持久化数据。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides%2fgs%2faccessing-data-jpa%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="spring-data-r2dbc" class="headerLink">
+    <a href="#spring-data-r2dbc" class="header-mark"></a>Spring Data R2DBC</h3><p>Provides Reactive Relational Database Connectivity to persist data in SQL stores using Spring Data in reactive applications.<br>
+提供反应式关系数据库连接，以便在反应式应用程序中使用 Spring Data 将数据持久保存在 SQL 存储中。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides%2fgs%2faccessing-data-r2dbc%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="mybatis-framework" class="headerLink">
+    <a href="#mybatis-framework" class="header-mark"></a>MyBatis Framework</h3><p>Persistence framework with support for custom SQL, stored procedures and advanced mappings. MyBatis couples objects with stored procedures or SQL statements using a XML descriptor or annotations.<br>
+使用 MyBatis 的持久化支持。</p>
+<p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fmybatis.org%2fmybatis-3%2fzh%2findex.html"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fblog.dramacat.top%2fmybatis%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h3 id="liquibase-migration" class="headerLink">
+    <a href="#liquibase-migration" class="header-mark"></a>Liquibase Migration</h3><p>Liquibase database migration and source control library.<br>
+Liquibase 数据库迁移和源代码控制库。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fdocs.liquibase.com%2finstall%2fhome.html"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="flyway-migration" class="headerLink">
+    <a href="#flyway-migration" class="header-mark"></a>Flyway Migration</h3><p>Version control for your database so you can migrate from any version (incl. an empty database) to the latest version of the schema.<br>
+数据库的版本控制，以便您可以从任何版本（包括空数据库）迁移到架构的最新版本。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fflywaydb.org%2fdocumentation%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="jooq-access-layer" class="headerLink">
+    <a href="#jooq-access-layer" class="header-mark"></a>JOOQ Access Layer</h3><p>Generate Java code from your database and build type safe SQL queries through a fluent API.<br>
+从您的数据库生成 Java 代码并通过流畅的 API 构建类型安全的 SQL 查询。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.jooq.org%2fdoc%2f3.17%2fmanual-single-page%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="ibm-db2-driver" class="headerLink">
+    <a href="#ibm-db2-driver" class="header-mark"></a>IBM DB2 Driver</h3><p>A JDBC driver that provides access to IBM DB2.<br>
+提供对 IBM DB2 的访问的 JDBC 驱动程序。</p>
+<h3 id="apache-derby-database" class="headerLink">
+    <a href="#apache-derby-database" class="header-mark"></a>Apache Derby Database</h3><p>An open source relational database implemented entirely in Java.<br>
+一个完全用 Java 实现的开源关系数据库。</p>
+<p><em>我选 H2</em></p>
+<h3 id="h2-database" class="headerLink">
+    <a href="#h2-database" class="header-mark"></a>H2 Database</h3><p>Provides a fast in-memory database that supports JDBC API and R2DBC access, with a small (2mb) footprint. Supports embedded and server modes as well as a browser based console application.<br>
+提供支持 JDBC API 和 R2DBC 访问的快速内存数据库，占用空间小 (2mb)。支持嵌入式和服务器模式以及基于浏览器的控制台应用程序。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.baeldung.com%2fspring-boot-h2-database&title=Spring%20Boot%20With%20H2%20Database&description=In%20this%20tutorial%2c%20we%27ll%20explore%20using%20H2%20with%20Spring%20Boot.%20Just%20like%20other%20databases%2c%20there%27s%20full%20intrinsic%20support%20for%20it%20in%20the%20Spring%20Boot%20ecosystem.&image=&favicon="
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="hypersql-database" class="headerLink">
+    <a href="#hypersql-database" class="header-mark"></a>HyperSQL Database</h3><p>Lightweight 100% Java SQL Database Engine.<br>
+轻量级 100% Java SQL 数据库引擎。</p>
+<p><em>我选 PostgreSQL</em></p>
+<h3 id="mariadb-driver" class="headerLink">
+    <a href="#mariadb-driver" class="header-mark"></a>MariaDB Driver</h3><p>MariaDB JDBC and R2DBC driver.<br>
+Mariadb JDBC 和 R2DBC 驱动程序。</p>
+<p><em>我选 PostgreSQL</em></p>
+<h3 id="ms-sql-server-driver" class="headerLink">
+    <a href="#ms-sql-server-driver" class="header-mark"></a>MS SQL Server Driver</h3><p>A JDBC and R2DBC driver that provides access to Microsoft SQL Server and Azure SQL Database from any Java application.<br>
+一个 JDBC 和 R2DBC 驱动程序，提供从任何 Java 应用程序访问 Microsoft SQL Server 和 Azure SQL 数据库的权限。</p>
+<p><em>我选 PostgreSQL</em></p>
+<h3 id="mysql-driver" class="headerLink">
+    <a href="#mysql-driver" class="header-mark"></a>MySQL Driver</h3><p>MySQL JDBC and R2DBC driver.<br>
+MySQL JDBC 和 R2DBC 驱动程序</p>
+<p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fdev.mysql.com%2fdoc%2fmysql-getting-started%2fen%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fblog.dramacat.top%2fmysql%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h3 id="oracle-driver" class="headerLink">
+    <a href="#oracle-driver" class="header-mark"></a>Oracle Driver</h3><p>A JDBC driver that provides access to Oracle.<br>
+提供对 Oracle 的访问的 JDBC 驱动程序。</p>
+<p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fjuejin.cn%2fpost%2f6844903822913978381"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fblog.dramacat.top%2foracle%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h3 id="postgresql-driver" class="headerLink">
+    <a href="#postgresql-driver" class="header-mark"></a>PostgreSQL Driver</h3><p>A JDBC and R2DBC driver that allows Java programs to connect to a PostgreSQL database using standard, database independent Java code.<br>
+一个 JDBC 和 R2DBC 驱动程序，它允许 Java 程序使用标准的、独立于数据库的 Java 代码连接到 PostgreSQL 数据库。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.postgresql.org%2fdocs%2fcurrent%2fpreface.html"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h2 id="nosql" class="headerLink">
+    <a href="#nosql" class="header-mark"></a>NoSQL</h2><h3 id="spring-data-redis-accessdriver" class="headerLink">
+    <a href="#spring-data-redis-accessdriver" class="header-mark"></a>Spring Data Redis (Access+Driver)</h3><p>Advanced and thread-safe Java Redis client for synchronous, asynchronous, and reactive usage. Supports Cluster, Sentinel, Pipelining, Auto-Reconnect, Codecs and much more.<br>
+用于同步、异步和反应式使用的高级且线程安全的 Java Redis 客户端。支持集群、哨兵、流水线、自动重新连接、编解码器等等。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fredis.io%2fdocs%2fgetting-started%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="spring-data-reactive-redis" class="headerLink">
+    <a href="#spring-data-reactive-redis" class="header-mark"></a>Spring Data Reactive Redis</h3><p>Access Redis key-value data stores in a reactive fashion with Spring Data Redis.<br>
+使用 Spring Data Redis 以反应方式访问 Redis 键值数据存储。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides%2fgs%2fspring-data-reactive-redis%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="spring-data-mongodb" class="headerLink">
+    <a href="#spring-data-mongodb" class="header-mark"></a>Spring Data MongoDB</h3><p>Store data in flexible, JSON-like documents, meaning fields can vary from document to document and data structure can be changed over time.<br>
+将数据存储在灵活的、类似 JSON 的文档中，这意味着字段可以因文档而异，并且数据结构可以随着时间而改变。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.mongodb.com%2fdocs%2fmanual%2ftutorial%2fgetting-started%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="spring-data-reactive-mongodb" class="headerLink">
+    <a href="#spring-data-reactive-mongodb" class="header-mark"></a>Spring Data Reactive MongoDB</h3><p>Provides asynchronous stream processing with non-blocking back pressure for MongoDB.<br>
+为 MongoDB 提供非阻塞背压的异步流处理。</p>
+<h3 id="spring-data-elasticsearch-accessdriver" class="headerLink">
+    <a href="#spring-data-elasticsearch-accessdriver" class="header-mark"></a>Spring Data Elasticsearch (Access+Driver)</h3><p>A distributed, RESTful search and analytics engine with Spring Data Elasticsearch.<br>
+具有弹簧数据弹性搜索的分布式、宁静的搜索和分析引擎。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.elastic.co%2fguide%2fcn%2felasticsearch%2fguide%2fcurrent%2fforeword_id.html"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="spring-data-for-apache-cassandra" class="headerLink">
+    <a href="#spring-data-for-apache-cassandra" class="header-mark"></a>Spring Data for Apache Cassandra</h3><p>A free and open-source, distributed, NoSQL database management system that offers high-scalability and high-performance.<br>
+一个免费且开源的分布式 nosql 数据库管理系统，可提供高可扩展性和高性能。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fcassandra.apache.org%2f_%2fquickstart.html"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="spring-data-reactive-for-apache-cassandra" class="headerLink">
+    <a href="#spring-data-reactive-for-apache-cassandra" class="header-mark"></a>Spring Data Reactive for Apache Cassandra</h3><p>Access Cassandra NoSQL Database in a reactive fashion.<br>
+以反应方式访问 Cassandra NoSQL 数据库。</p>
+<h3 id="spring-for-apache-geode" class="headerLink">
+    <a href="#spring-for-apache-geode" class="header-mark"></a>Spring for Apache Geode</h3><p>Apache Geode is a data management platform that helps users build real-time, highly concurrent, highly performant and reliable Spring Boot applications at scale that is compatible with Pivotal Cloud Cache.<br>
+Apache Geode 是一个数据管理平台，可帮助用户大规模构建实时、高并发、高性能和可靠的 Spring Boot 应用程序，并与关键的云缓存兼容。</p>
+<p><em>我选 Redis</em></p>
+<h3 id="spring-data-couchbase" class="headerLink">
+    <a href="#spring-data-couchbase" class="header-mark"></a>Spring Data Couchbase</h3><p>NoSQL document-oriented database that offers in memory-first architecture, geo-distributed deployments, and workload isolation.<br>
+NoSQL 面向文档的数据库，提供内存优先架构、地理分布式部署和工作负载隔离。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fdocs.couchbase.com%2fserver%2fcurrent%2fintroduction%2fwhy-couchbase.html"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="spring-data-reactive-couchbase" class="headerLink">
+    <a href="#spring-data-reactive-couchbase" class="header-mark"></a>Spring Data Reactive Couchbase</h3><p>Access Couchbase NoSQL database in a reactive fashion with Spring Data Couchbase.<br>
+使用 Spring Data Couchbase 以反应方式访问 Couchbase NoSQL 数据库。</p>
+<h3 id="spring-data-neo4j" class="headerLink">
+    <a href="#spring-data-neo4j" class="header-mark"></a>Spring Data Neo4j</h3><p>An open source NoSQL database that stores data structured as graphs consisting of nodes, connected by relationships.<br>
+一个开源的 NoSQL 数据库，将数据存储为由节点组成的图形，并通过关系连接。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fneo4j.com%2fdeveloper%2fget-started%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h2 id="messaging" class="headerLink">
+    <a href="#messaging" class="header-mark"></a>Messaging</h2><h3 id="spring-integration" class="headerLink">
+    <a href="#spring-integration" class="header-mark"></a>Spring Integration</h3><p>Adds support for Enterprise Integration Patterns. Enables lightweight messaging and supports integration with external systems via declarative adapters.<br>
+添加对企业集成模式的支持。支持轻量级消息传递并支持通过声明性适配器与外部系统集成。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fdocs.spring.io%2fspring-integration%2fdocs%2fcurrent%2freference%2fhtml%2findex-single.html"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<p><em>Apache Camel 或许是你更好的选择</em></p>
+<h3 id="spring-for-rabbitmq" class="headerLink">
+    <a href="#spring-for-rabbitmq" class="header-mark"></a>Spring for RabbitMQ</h3><p>Gives your applications a common platform to send and receive messages, and your messages a safe place to live until received.<br>
+为您的应用程序提供一个发送和接收消息的通用平台，并为您的消息提供一个安全的地方，直到收到为止。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.rabbitmq.com%2ftutorials%2ftutorial-one-java.html"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="spring-for-apache-kafka" class="headerLink">
+    <a href="#spring-for-apache-kafka" class="header-mark"></a>Spring for Apache Kafka</h3><p>Publish, subscribe, store, and process streams of records.<br>
+发布、订阅、存储和处理记录流。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fkafka.apache.org%2fquickstart"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="spring-for-apache-kafka-streams" class="headerLink">
+    <a href="#spring-for-apache-kafka-streams" class="header-mark"></a>Spring for Apache Kafka Streams</h3><p>Building stream processing applications with Apache Kafka Streams.<br>
+使用 Apache Kafka 流构建流处理应用程序。</p>
+<h3 id="spring-for-apache-activemq-5" class="headerLink">
+    <a href="#spring-for-apache-activemq-5" class="header-mark"></a>Spring for Apache ActiveMQ 5</h3><p>Spring JMS support with Apache ActiveMQ &lsquo;Classic&rsquo;.<br>
+Spring JMS 支持 Apache ActiveMQ &lsquo;Classic&rsquo;。</p>
+<p><em>目前没什么优势了</em></p>
+<h3 id="spring-for-apache-activemq-artemis" class="headerLink">
+    <a href="#spring-for-apache-activemq-artemis" class="header-mark"></a>Spring for Apache ActiveMQ Artemis</h3><p>Spring JMS support with Apache ActiveMQ Artemis.<br>
+Spring JMS 支持 Apache ActiveMQ Artemis。</p>
+<h3 id="websocket" class="headerLink">
+    <a href="#websocket" class="header-mark"></a>WebSocket</h3><p>Build WebSocket applications with SockJS and STOMP.<br>
+使用 SockJS 和 STOMP 构建 Web 套接字应用程序。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides%2fgs%2fmessaging-stomp-websocket%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="rsocket" class="headerLink">
+    <a href="#rsocket" class="header-mark"></a>RSocket</h3><p>RSocket.io applications with Spring Messaging and Netty.<br>
+带有 Spring 消息传递和 Netty 的 RSocket.io 应用程序。</p>
+<p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2frsocket.io%2fabout%2ffaq"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fblog%2f2020%2f03%2f02%2fgetting-started-with-rsocket-spring-boot-server"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h3 id="apache-camel" class="headerLink">
+    <a href="#apache-camel" class="header-mark"></a>Apache Camel</h3><p>Apache Camel is an open source integration framework that empowers you to quickly and easily integrate various systems consuming or producing data.<br>
+Apache Camel 是一个开源集成框架，使您能够快速轻松地集成各种消费或生产数据的系统。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fcamel.apache.org%2fmanual%2fgetting-started.html"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="solace-pubsub" class="headerLink">
+    <a href="#solace-pubsub" class="header-mark"></a>Solace PubSub+</h3><p>Connect to a Solace PubSub+ Advanced Event Broker to publish, subscribe, request/reply and store/replay messages<br>
+连接到 Solace Pub Sub+ 高级事件代理以发布、订阅、请求/回复和存储/重播消息</p>
+<p><em>目前没有什么案例</em></p>
+<h2 id="io" class="headerLink">
+    <a href="#io" class="header-mark"></a>I/O</h2><h3 id="spring-batch" class="headerLink">
+    <a href="#spring-batch" class="header-mark"></a>Spring Batch</h3><p>Batch applications with transactions, retry/skip and chunk based processing.<br>
+具有事务、重试/跳过和基于块的处理的批处理应用程序。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides%2fgs%2fbatch-processing%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="validation" class="headerLink">
+    <a href="#validation" class="header-mark"></a>Validation</h3><p>Bean Validation with Hibernate validator.<br>
+使用休眠验证器进行 Bean 验证。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides%2fgs%2fvalidating-form-input%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="java-mail-sender" class="headerLink">
+    <a href="#java-mail-sender" class="header-mark"></a>Java Mail Sender</h3><p>Send email using Java Mail and Spring Framework&rsquo;s JavaMailSender.<br>
+使用 Java Mail 和 Spring 框架的 Java Mail Sender 发送电子邮件。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.baeldung.com%2fspring-email&title=Guide%20to%20Spring%20Email&description=In%20this%20tutorial%2c%20we%27ll%20walk%20through%20the%20steps%20needed%20to%20send%20emails%20from%20both%20a%20plain%20vanilla%20Spring%20application%20as%20well%20as%20a%20Spring%20Boot%20application.%20For%20the%20former%2c%20we%27ll%20use%20the%20JavaMail%20library%2c%20and%20the%20latter%20will%20use%20the%20spring-boot-starter-mail%20dependency.&image=&favicon="
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="quartz-scheduler" class="headerLink">
+    <a href="#quartz-scheduler" class="header-mark"></a>Quartz Scheduler</h3><p>Schedule jobs using Quartz.<br>
+使用石英安排作业。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=http%3a%2f%2fwww.quartz-scheduler.org%2fdocumentation%2f2.4.0-SNAPSHOT%2fquick-start-guide.html"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="spring-cache-abstraction" class="headerLink">
+    <a href="#spring-cache-abstraction" class="header-mark"></a>Spring cache abstraction</h3><p>Provides cache-related operations, such as the ability to update the content of the cache, but does not provide the actual data store.<br>
+提供缓存相关的操作，例如更新缓存内容的能力，但不提供实际的数据存储。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides%2fgs%2fcaching%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="picocli" class="headerLink">
+    <a href="#picocli" class="header-mark"></a>Picocli</h3><p>Build command line applications with picocli.<br>
+使用 Picocli 构建命令行应用程序。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fpicocli.info%2fquick-guide.html"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="spring-shell" class="headerLink">
+    <a href="#spring-shell" class="header-mark"></a>Spring Shell</h3><p>Build command line applications with spring.<br>
+使用 Spring 构建命令行应用程序。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fdocs.spring.io%2fspring-shell%2fdocs%2f2.1.1%2fsite%2freference%2fhtmlsingle%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h2 id="ops" class="headerLink">
+    <a href="#ops" class="header-mark"></a>Ops</h2><h3 id="spring-boot-actuator" class="headerLink">
+    <a href="#spring-boot-actuator" class="header-mark"></a>Spring Boot Actuator</h3><p>Supports built in (or custom) endpoints that let you monitor and manage your application - such as application health, metrics, sessions, etc.<br>
+支持内置（或自定义）端点，可让您监控和管理应用程序 - 例如应用程序运行状况、指标、会话等。</p>
+<p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides%2fgs%2factuator-service%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fdocs.spring.io%2fspring-boot%2fdocs%2f2.1.2.RELEASE%2freference%2fhtml%2fproduction-ready-endpoints.html"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h3 id="codecentrics-spring-boot-admin-client" class="headerLink">
+    <a href="#codecentrics-spring-boot-admin-client" class="header-mark"></a>Codecentric&rsquo;s Spring Boot Admin (Client)</h3><p>Required for your application to register with a Codecentric&rsquo;s Spring Boot Admin Server instance.<br>
+您的应用程序需要向 Codecentric 的 Spring Boot Admin Server 实例注册。</p>
+<p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fcodecentric.github.io%2fspring-boot-admin%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.baeldung.com%2fspring-boot-admin&title=A%20Guide%20to%20Spring%20Boot%20Admin&description=&image=&favicon="
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fgithub.com%2fspring-projects%2fspring-boot%2fissues%2f15039"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h3 id="codecentrics-spring-boot-admin-server" class="headerLink">
+    <a href="#codecentrics-spring-boot-admin-server" class="header-mark"></a>Codecentric&rsquo;s Spring Boot Admin (Server)</h3><p>A community project to manage and monitor your Spring Boot applications. Provides a UI on top of the Spring Boot Actuator endpoints.<br>
+一个社区项目，用于管理和监控您的 Spring Boot 应用程序。在 Spring Boot Actuator 端点之上提供 UI。</p>
+<p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fcodecentric.github.io%2fspring-boot-admin%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.baeldung.com%2fspring-boot-admin&title=A%20Guide%20to%20Spring%20Boot%20Admin&description=&image=&favicon="
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h2 id="observability" class="headerLink">
+    <a href="#observability" class="header-mark"></a>Observability</h2><h3 id="datadog" class="headerLink">
+    <a href="#datadog" class="header-mark"></a>Datadog</h3><p>Publish Micrometer metrics to Datadog, a dimensional time-series SaaS with built-in dashboarding and alerting.<br>
+将微米指标发布到 Datadog，这是一种具有内置仪表板和警报的维度时间序列 SaaS。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fdocs.datadoghq.com%2fgetting_started%2fapplication%2f&title=Getting%20Started%20in%20Datadog&description=The%20Datadog%20site%20navigation%20varies%20based%20on%20the%20width%20of%20your%20browser.%20You%20can%20have%20up%20to%20three%20types%20of%20navigation.&image=&favicon="
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="influx" class="headerLink">
+    <a href="#influx" class="header-mark"></a>Influx</h3><p>Publish Micrometer metrics to InfluxDB, a dimensional time-series server that support real-time stream processing of data.<br>
+将微米指标发布到 InfluxDB，这是一个支持数据实时流处理的维度时间序列服务器。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fdocs.influxdata.com%2finfluxdb%2fv2.4%2fget-started%2f&title=Get%20started%20with%20InfluxDB&description=&image=&favicon="
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="graphite" class="headerLink">
+    <a href="#graphite" class="header-mark"></a>Graphite</h3><p>Publish Micrometer metrics to Graphite, a hierarchical metrics system backed by a fixed-size database.<br>
+将微米度量发布到石墨，这是一个由固定大小数据库支持的分层度量系统。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fdocs.graphite.dev%2fgetting-started%2fgetting-started-with-graphite"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="new-relic" class="headerLink">
+    <a href="#new-relic" class="header-mark"></a>New Relic</h3><p>Publish Micrometer metrics to New Relic, a SaaS offering with a full UI and a query language called NRQL.<br>
+将千分尺度量发布到 New Relic，这是一种具有完整 UI 和称为 NRQL 的查询语言的 SaaS 产品。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnewrelic.com%2fresources%2fwhite-papers%2fgetting-started-with-new-relic-apm"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="prometheus" class="headerLink">
+    <a href="#prometheus" class="header-mark"></a>Prometheus</h3><p>Expose Micrometer metrics in Prometheus format, an in-memory dimensional time series database with a simple built-in UI, a custom query language, and math operations.<br>
+以 Prometheus 格式公开千分尺度量，这是一个内存维度时间序列数据库，具有简单的内置 UI、自定义查询语言和数学运算。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fprometheus.io%2fdocs%2fprometheus%2flatest%2fgetting_started%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="sleuth" class="headerLink">
+    <a href="#sleuth" class="header-mark"></a>Sleuth</h3><p>Distributed tracing via logs with Spring Cloud Sleuth.<br>
+使用 Spring Cloud Sleuth 通过日志进行分布式跟踪。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.baeldung.com%2fspring-cloud-sleuth-single-application&title=Spring%20Cloud%20Sleuth%20in%20a%20Monolith%20Application&description=In%20this%20article%2c%20we%27re%20introducing%20Spring%20Cloud%20Sleuth%20%e2%80%93%20a%20powerful%20tool%20for%20enhancing%20logs%20in%20any%20application%2c%20but%20especially%20in%20a%20system%20built%20up%20of%20multiple%20services.&image=&favicon="
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="wavefront" class="headerLink">
+    <a href="#wavefront" class="header-mark"></a>Wavefront</h3><p>Publish Micrometer metrics to Tanzu Observability by Wavefront, a SaaS-based metrics monitoring and analytics platform that lets you visualize, query, and alert over data from across your entire stack.<br>
+通过 Wavefront 将微米指标发布到 Tanzu Observability，这是一个基于 SaaS 的指标监控和分析平台，可让您对整个堆栈中的数据进行可视化、查询和警报。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fbakingclouds.com%2fgetting-started-with-wavefront%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="zipkin-client" class="headerLink">
+    <a href="#zipkin-client" class="header-mark"></a>Zipkin Client</h3><p>Distributed tracing with an existing Zipkin installation and Spring Cloud Sleuth Zipkin.<br>
+使用现有的 Zipkin 安装和 Spring Cloud Sleuth Zipkin 进行分布式跟踪。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fzipkin.io%2fpages%2fquickstart.html"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h2 id="testing" class="headerLink">
+    <a href="#testing" class="header-mark"></a>Testing</h2><h3 id="spring-rest-docs" class="headerLink">
+    <a href="#spring-rest-docs" class="header-mark"></a>Spring REST Docs</h3><p>Document RESTful services by combining hand-written with Asciidoctor and auto-generated snippets produced with Spring MVC Test.<br>
+通过将手写与 Asciidoctor 和使用 Spring MVC 测试生成的自动生成的片段相结合来记录宁静的服务。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspring.io%2fguides%2fgs%2ftesting-restdocs%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="testcontainers" class="headerLink">
+    <a href="#testcontainers" class="header-mark"></a>Testcontainers</h3><p>Provide lightweight, throwaway instances of common databases, Selenium web browsers, or anything else that can run in a Docker container.<br>
+提供通用数据库、Selenium WEB 浏览器或任何其他可以在 Docker 容器中运行的轻量级、一次性实例。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.testcontainers.org%2fquickstart%2fjunit_5_quickstart%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="contract-verifier" class="headerLink">
+    <a href="#contract-verifier" class="header-mark"></a>Contract Verifier</h3><p>Moves TDD to the level of software architecture by enabling Consumer Driven Contract (CDC) development.<br>
+通过支持消费者驱动的合同 (CDC) 开发，将 TDD 移动到软件架构级别。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fcloud.spring.io%2fspring-cloud-contract%2f2.0.x%2fmulti%2fmulti__spring_cloud_contract_verifier_introduction.html"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="contract-stub-runner" class="headerLink">
+    <a href="#contract-stub-runner" class="header-mark"></a>Contract Stub Runner</h3><p>Stub Runner for HTTP/Messaging based communication. Allows creating WireMock stubs from RestDocs tests.<br>
+Stub Runner，用于基于 HTTP/Messaging 的通信。允许从其余文档测试中创建线模拟存根。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fcloud.spring.io%2fspring-cloud-contract%2f1.2.x%2fmulti%2fmulti__spring_cloud_contract_stub_runner.html"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="embedded-ldap-server" class="headerLink">
+    <a href="#embedded-ldap-server" class="header-mark"></a>Embedded LDAP Server</h3><p>Provides a platform neutral way for running a LDAP server in unit tests.<br>
+为在单元测试中运行 LDAP 服务器提供了一种平台中立的方式。</p>
+<h3 id="embedded-mongodb-database" class="headerLink">
+    <a href="#embedded-mongodb-database" class="header-mark"></a>Embedded MongoDB Database</h3><p>Provides a platform neutral way for running MongoDB in unit tests.<br>
+为在单元测试中运行 MongoDB 提供了一种平台中立的方式。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.baeldung.com%2fspring-boot-embedded-mongodb&title=Spring%20Boot%20Integration%20Testing%20with%20Embedded%20MongoDB&description=In%20this%20tutorial%2c%20we%27ll%20learn%20how%20to%20use%20Flapdoodle%27s%20embedded%20MongoDB%20solution%20together%20with%20Spring%20Boot%20to%20run%20MongoDB%20integration%20tests%20smoothly.&image=&favicon="
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h2 id="spring-cloud" class="headerLink">
+    <a href="#spring-cloud" class="header-mark"></a>Spring Cloud</h2><h3 id="cloud-bootstrap" class="headerLink">
+    <a href="#cloud-bootstrap" class="header-mark"></a>Cloud Bootstrap</h3><p>Non-specific Spring Cloud features, unrelated to external libraries or integrations (e.g. Bootstrap context and @RefreshScope).</p>
+<h3 id="function" class="headerLink">
+    <a href="#function" class="header-mark"></a>Function</h3><p>Promotes the implementation of business logic via functions and supports a uniform programming model across serverless providers, as well as the ability to run standalone (locally or in a PaaS).</p>
+<h3 id="task" class="headerLink">
+    <a href="#task" class="header-mark"></a>Task</h3><p>Allows a user to develop and run short lived microservices using Spring Cloud. Run them locally, in the cloud, and on Spring Cloud Data Flow.</p>
+<h2 id="spring-cloud-tools" class="headerLink">
+    <a href="#spring-cloud-tools" class="header-mark"></a>Spring Cloud Tools</h2><h3 id="open-service-broker" class="headerLink">
+    <a href="#open-service-broker" class="header-mark"></a>Open Service Broker</h3><p>Framework for building Spring Boot apps that implement the Open Service Broker API, which can deliver services to applications running within cloud native platforms such as Cloud Foundry, Kubernetes and OpenShift.</p>
+<h2 id="spring-cloud-config" class="headerLink">
+    <a href="#spring-cloud-config" class="header-mark"></a>Spring Cloud Config</h2><h3 id="config-client" class="headerLink">
+    <a href="#config-client" class="header-mark"></a>Config Client</h3><p>Client that connects to a Spring Cloud Config Server to fetch the application&rsquo;s configuration.</p>
+<h3 id="config-server" class="headerLink">
+    <a href="#config-server" class="header-mark"></a>Config Server</h3><p>Central management for configuration via Git, SVN, or HashiCorp Vault.</p>
+<h3 id="vault-configuration" class="headerLink">
+    <a href="#vault-configuration" class="header-mark"></a>Vault Configuration</h3><p>Provides client-side support for externalized configuration in a distributed system. Using HashiCorp&rsquo;s Vault you have a central place to manage external secret properties for applications across all environments.</p>
+<h3 id="apache-zookeeper-configuration" class="headerLink">
+    <a href="#apache-zookeeper-configuration" class="header-mark"></a>Apache Zookeeper Configuration</h3><p>Enable and configure common patterns inside your application and build large distributed systems with Apache Zookeeper based components. The provided patterns include Service Discovery and Configuration.</p>
+<h3 id="consul-configuration" class="headerLink">
+    <a href="#consul-configuration" class="header-mark"></a>Consul Configuration</h3><p>Enable and configure the common patterns inside your application and build large distributed systems with Hashicorp’s Consul. The patterns provided include Service Discovery, Distributed Configuration and Control Bus.</p>
+<h2 id="spring-cloud-discovery" class="headerLink">
+    <a href="#spring-cloud-discovery" class="header-mark"></a>Spring Cloud Discovery</h2><h3 id="eureka-discovery-client" class="headerLink">
+    <a href="#eureka-discovery-client" class="header-mark"></a>Eureka Discovery Client</h3><p>A REST based service for locating services for the purpose of load balancing and failover of middle-tier servers.</p>
+<h3 id="eureka-server" class="headerLink">
+    <a href="#eureka-server" class="header-mark"></a>Eureka Server</h3><p>spring-cloud-netflix Eureka Server.</p>
+<h3 id="apache-zookeeper-discovery" class="headerLink">
+    <a href="#apache-zookeeper-discovery" class="header-mark"></a>Apache Zookeeper Discovery</h3><p>Service discovery with Apache Zookeeper.</p>
+<h3 id="cloud-foundry-discovery" class="headerLink">
+    <a href="#cloud-foundry-discovery" class="header-mark"></a>Cloud Foundry Discovery</h3><p>Service discovery with Cloud Foundry.</p>
+<h3 id="consul-discovery" class="headerLink">
+    <a href="#consul-discovery" class="header-mark"></a>Consul Discovery</h3><p>Service discovery with Hashicorp Consul.</p>
+<h2 id="spring-cloud-routing" class="headerLink">
+    <a href="#spring-cloud-routing" class="header-mark"></a>Spring Cloud Routing</h2><h3 id="gateway" class="headerLink">
+    <a href="#gateway" class="header-mark"></a>Gateway</h3><p>Provides a simple, yet effective way to route to APIs and provide cross cutting concerns to them such as security, monitoring/metrics, and resiliency.</p>
+<h3 id="openfeign" class="headerLink">
+    <a href="#openfeign" class="header-mark"></a>OpenFeign</h3><p>Declarative REST Client. OpenFeign creates a dynamic implementation of an interface decorated with JAX-RS or Spring MVC annotations.</p>
+<h3 id="cloud-loadbalancer" class="headerLink">
+    <a href="#cloud-loadbalancer" class="header-mark"></a>Cloud LoadBalancer</h3><p>Client-side load-balancing with Spring Cloud LoadBalancer.</p>
+<h2 id="spring-cloud-circuit-breaker" class="headerLink">
+    <a href="#spring-cloud-circuit-breaker" class="header-mark"></a>Spring Cloud Circuit Breaker</h2><h3 id="resilience4j" class="headerLink">
+    <a href="#resilience4j" class="header-mark"></a>Resilience4J</h3><p>Spring Cloud Circuit breaker with Resilience4j as the underlying implementation.</p>
+<h2 id="spring-cloud-messaging" class="headerLink">
+    <a href="#spring-cloud-messaging" class="header-mark"></a>Spring Cloud Messaging</h2><h3 id="cloud-bus" class="headerLink">
+    <a href="#cloud-bus" class="header-mark"></a>Cloud Bus</h3><p>Links nodes of a distributed system with a lightweight message broker which can used to broadcast state changes or other management instructions (requires a binder, e.g. Apache Kafka or RabbitMQ).</p>
+<h3 id="cloud-stream" class="headerLink">
+    <a href="#cloud-stream" class="header-mark"></a>Cloud Stream</h3><p>Framework for building highly scalable event-driven microservices connected with shared messaging systems (requires a binder, e.g. Apache Kafka, RabbitMQ or Solace PubSub+).</p>
+<h2 id="vmware-tanzu-application-service" class="headerLink">
+    <a href="#vmware-tanzu-application-service" class="header-mark"></a>VMware Tanzu Application Service</h2><h3 id="config-client-tas" class="headerLink">
+    <a href="#config-client-tas" class="header-mark"></a>Config Client (TAS)</h3><p>Config client on VMware Tanzu Application Service.<br>
+在 Vmware Tanzu 应用程序服务上配置客户端。</p>
+<h3 id="service-registry-tas" class="headerLink">
+    <a href="#service-registry-tas" class="header-mark"></a>Service Registry (TAS)</h3><p>Eureka service discovery client on VMware Tanzu Application Service.<br>
+Vmware Tanzu 应用程序服务上的 Eureka 服务发现客户端。</p>
+<h2 id="microsoft-azure" class="headerLink">
+    <a href="#microsoft-azure" class="header-mark"></a>Microsoft Azure</h2><h3 id="azure-support" class="headerLink">
+    <a href="#azure-support" class="header-mark"></a>Azure Support</h3><p>Auto-configuration for Azure Services (Service Bus, Storage, Active Directory, Key Vault, and more).<br>
+Azure 服务（服务总线、存储、活动目录、密钥保管库等）的自动配置。</p>
+<h3 id="azure-active-directory" class="headerLink">
+    <a href="#azure-active-directory" class="header-mark"></a>Azure Active Directory</h3><p>Spring Security integration with Azure Active Directory for authentication.<br>
+Spring 安全集成与 Azure 活动目录进行身份验证。</p>
+<h3 id="azure-cosmos-db" class="headerLink">
+    <a href="#azure-cosmos-db" class="header-mark"></a>Azure Cosmos DB</h3><p>Fully managed NoSQL database service for modern app development, including Spring Data support.<br>
+用于现代应用程序开发的完全托管的 NoSQL 数据库服务，包括 Spring 数据支持。</p>
+<h3 id="azure-key-vault" class="headerLink">
+    <a href="#azure-key-vault" class="header-mark"></a>Azure Key Vault</h3><p>All key vault features are supported, e.g. manage application secrets and certificates.<br>
+支持所有密钥保管库功能，例如管理应用程序机密和证书。</p>
+<h3 id="azure-storage" class="headerLink">
+    <a href="#azure-storage" class="header-mark"></a>Azure Storage</h3><p>All Storage features are supported, e.g. blob, fileshare and queue.<br>
+支持所有存储功能，例如 blob、文件共享和队列。</p>
+<h2 id="google-cloud-platform" class="headerLink">
+    <a href="#google-cloud-platform" class="header-mark"></a>Google Cloud Platform</h2><h3 id="gcp-support" class="headerLink">
+    <a href="#gcp-support" class="header-mark"></a>GCP Support</h3><p>Contains auto-configuration support for every Spring Cloud GCP integration. Most of the auto-configuration code is only enabled if other dependencies are added to the classpath.<br>
+包含对每个 Spring Cloud GCP 集成的自动配置支持。大多数自动配置代码仅在其他依赖项添加到类路径时才启用。</p>
+<h3 id="gcp-messaging" class="headerLink">
+    <a href="#gcp-messaging" class="header-mark"></a>GCP Messaging</h3><p>Adds the GCP Support entry and all the required dependencies so that the Google Cloud Pub/Sub integration work out of the box.<br>
+添加 GCP 支持条目和所有必需的依赖项，以便 Google Cloud Pub/Sub 集成开箱即用。</p>
+<h3 id="gcp-storage" class="headerLink">
+    <a href="#gcp-storage" class="header-mark"></a>GCP Storage</h3><p>Adds the GCP Support entry and all the required dependencies so that the Google Cloud Storage integration work out of the box.<br>
+添加 GCP 支持条目和所有必需的依赖项，以便 Google 云存储集成开箱即用。</p>
+<h2 id="不在-spring-initializr-中的其它好用依赖" class="headerLink">
+    <a href="#%e4%b8%8d%e5%9c%a8-spring-initializr-%e4%b8%ad%e7%9a%84%e5%85%b6%e5%ae%83%e5%a5%bd%e7%94%a8%e4%be%9d%e8%b5%96" class="header-mark"></a>不在 Spring Initializr 中的其它好用依赖</h2><h3 id="hutool" class="headerLink">
+    <a href="#hutool" class="header-mark"></a>Hutool</h3><p><a href="https://www.hutool.cn/" target="_blank" rel="noopener noreferrer">Hutool</a> 是一个小而全的 Java 工具类库，通过静态方法封装，降低相关 API 的学习成本，提高工作效率，使 Java 拥有函数式语言般的优雅，让 Java 语言也可以“甜甜的”。<br>
+Hutool 中的工具方法来自每个用户的精雕细琢，它涵盖了 Java 开发底层代码中的方方面面，它既是大型项目开发中解决小问题的利器，也是小型项目中的效率担当；<br>
+Hutool 是项目中“util”包友好的替代，它节省了开发人员对项目中公用类和公用工具方法的封装时间，使开发专注于业务，同时可以最大限度的避免封装不完善带来的 bug。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.hutool.cn%2fdocs%2f%23%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="mybatis-plus" class="headerLink">
+    <a href="#mybatis-plus" class="header-mark"></a>MyBatis-Plus</h3><p><a href="https://baomidou.com/" target="_blank" rel="noopener noreferrer">MyBatis-Plus</a>（简称 MP）是一个 MyBatis 的增强工具，在 MyBatis 的基础上只做增强不做改变，为简化开发、提高效率而生。</p>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fbaomidou.com%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-04-06&nbsp;<a class="git-hash" href="https://github.com/Humble-Xiang/hugo-blog/commit/c35233da6a399af77c2401e6978337d21f10d657" target="_blank" title="commit by OrionPax(orionpax.1997@outlook.com) c35233da6a399af77c2401e6978337d21f10d657: update" rel="noopener noreferrer">
+                                    <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M440.667 182.109l7.143-40c1.313-7.355-4.342-14.109-11.813-14.109h-74.81l14.623-81.891C377.123 38.754 371.468 32 363.997 32h-40.632a12 12 0 0 0-11.813 9.891L296.175 128H197.54l14.623-81.891C213.477 38.754 207.822 32 200.35 32h-40.632a12 12 0 0 0-11.813 9.891L132.528 128H53.432a12 12 0 0 0-11.813 9.891l-7.143 40C33.163 185.246 38.818 192 46.289 192h74.81L98.242 320H19.146a12 12 0 0 0-11.813 9.891l-7.143 40C-1.123 377.246 4.532 384 12.003 384h74.81L72.19 465.891C70.877 473.246 76.532 480 84.003 480h40.632a12 12 0 0 0 11.813-9.891L151.826 384h98.634l-14.623 81.891C234.523 473.246 240.178 480 247.65 480h40.632a12 12 0 0 0 11.813-9.891L315.472 384h79.096a12 12 0 0 0 11.813-9.891l7.143-40c1.313-7.355-4.342-14.109-11.813-14.109h-74.81l22.857-128h79.096a12 12 0 0 0 11.813-9.891zM261.889 320h-98.634l22.857-128h98.634l-22.857 128z"/></svg>c35233d</a></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line print:!tw-hidden">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/spring-initializr/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span><span>|&nbsp;<a class="link-to-source" href=https://github.com/Humble-Xiang/hugo-blog/blob/main/content/posts/spring-initializr.md target="_blank" rel="noopener noreferrer">查看源代码</a>
+                    </span><span>|&nbsp;<a class="link-to-edit" href=https://github.com/Humble-Xiang/hugo-blog/edit/main/content/posts/spring-initializr.md target="_blank" rel="noopener noreferrer">编辑此页</a>
+                    </span><span>|&nbsp;<a class="link-to-report" href=https://github.com/Humble-Xiang/hugo-blog/issues/new?title=[bug]%20%E9%80%9A%E8%BF%87+Spring+Initializr+%E4%BA%86%E8%A7%A3%E5%B8%B8%E7%94%A8%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6&body=|Field|Value|%0A|-|-|%0A|Title|%E9%80%9A%E8%BF%87+Spring+Initializr+%E4%BA%86%E8%A7%A3%E5%B8%B8%E7%94%A8%E5%90%8E%E7%AB%AF%E6%A1%86%E6%9E%B6|%0A|Url|http://localhost:1313/spring-initializr/|%0A|Filename|https://github.com/Humble-Xiang/hugo-blog/blob/main/content/posts/spring-initializr.md| target="_blank" rel="noopener noreferrer">报告问题</a>
+                    </span></div>
+            <div class="post-info-share"></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg>&nbsp;<a href="/tags/backend-framework/">Backend Framework</a></section>
+        <section class="print:!tw-hidden">
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav print:tw-hidden"><a href="/mybatis/" class="prev" rel="prev" title="Mybatis 的使用"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Mybatis 的使用</a>
+            <a href="/lombok/" class="next" rel="next" title="Lombok 的使用">Lombok 的使用<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.125.7">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.0"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg> DoIt</a>
+                </div><div class="footer-line"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"/></svg>2019 - 2024<span class="author">&nbsp;<a href="https://github.com/Humble-Xiang" target="_blank" rel="noopener noreferrer">Humble.Xiang</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons" class="print:!tw-hidden"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32z"/></svg>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{},"data":{"desktop-header-typeit":"Humble.X","mobile-header-typeit":"Humble.X"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":true,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.1,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"table":{"sort":true},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":-1,"speed":100}};</script><script
+    src="/lib/tablesort/tablesort.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lightgallery.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lg-thumbnail.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lg-zoom.min.js"
+    
+  ></script><script
+    src="/lib/clipboard/clipboard.min.js"
+    
+  ></script><script
+    src="/lib/sharer/sharer.min.js"
+    
+  ></script><script
+    src="/lib/typeit/typeit.min.js"
+    
+  ></script><script
+    src="https://website-card-embed.dramacat.top/website-card-embed-loveit.js"
+    
+  ></script><script
+    src="/js/theme.min.js"
+    
+      defer
+    
+  ></script></div>
+</body>
+
+</html>

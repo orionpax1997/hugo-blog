@@ -1,0 +1,56 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Backend Framework - 标签 - 向之礼的个人博客</title>
+        <link>http://localhost:1313/tags/backend-framework/</link>
+        <description>Backend Framework - 标签 - 向之礼的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>humble.xiang@gmail.com (Humble.Xiang)</managingEditor>
+            <webMaster>humble.xiang@gmail.com (Humble.Xiang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 23 May 2021 14:16:00 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/backend-framework/" rel="self" type="application/rss+xml" /><item>
+    <title>唯二好用的连接池之 Druid 的使用</title>
+    <link>http://localhost:1313/druid/</link>
+    <pubDate>Sun, 23 May 2021 14:16:00 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/druid/</guid>
+    <description><![CDATA[简介 Druid 是一个数据库连接池。在功能、性能、扩展性方面，都超过其他数据库连接池，包括 DBCP、C3P0、BoneCP、Proxool、JBoss]]></description>
+</item><item>
+    <title>Lombok 的使用</title>
+    <link>http://localhost:1313/lombok/</link>
+    <pubDate>Tue, 16 Feb 2021 11:33:07 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/lombok/</guid>
+    <description><![CDATA[简介 Java annotation library which helps to reduce boilerplate code. Java 注释库，有助于减少样板代码。 引入依赖 1 2 3 4 5 &lt;dependency&gt; &lt;groupId&gt;org.projectlombok&lt;/groupId&gt; &lt;artifactId&gt;lombok&lt;/artifactId&gt; &lt;optional&gt;true&lt;/optional&gt; &lt;/dependency&gt; 1 2 3 4 5 6 7 8 9 10 11 12 &lt;plugin&gt; &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt; &lt;artifactId&gt;spring-boot-maven-plugin&lt;/artifactId&gt; &lt;configuration&gt; &lt;excludes&gt; &lt;exclude&gt; &lt;groupId&gt;org.projectlombok&lt;/groupId&gt; &lt;artifactId&gt;lombok&lt;/artifactId&gt; &lt;/exclude&gt; &lt;/excludes&gt; &lt;/configuration&gt; &lt;/plugin&gt; 常用注解 常用]]></description>
+</item><item>
+    <title>通过 Spring Initializr 了解常用后端框架</title>
+    <link>http://localhost:1313/spring-initializr/</link>
+    <pubDate>Sun, 14 Feb 2021 16:45:54 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/spring-initializr/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/spring-initializr-banner.5jcrfnfqm400.webp" referrerpolicy="no-referrer">
+            </div>简介 Spring Initializr 从本质上来说就是一个 Web 应用程序，它能为你生成 Spring Boot 项目结构。虽然不能生成应用程序代码，但它能为你提供一个基本的项目结构，以及一个用于构]]></description>
+</item><item>
+    <title>Mybatis 的使用</title>
+    <link>http://localhost:1313/mybatis/</link>
+    <pubDate>Sat, 04 Apr 2020 11:29:00 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/mybatis/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/mybatis-banner.1d2d148o1y1s.webp" referrerpolicy="no-referrer">
+            </div>简介 MyBatis 是一款优秀的持久层框架，它支持自定义 SQL、存储过程以及高级映射。MyBatis 免除了几乎所有的 JDBC 代码以及设置参数和获取结果集的工作。]]></description>
+</item><item>
+    <title>Hibernate 的使用</title>
+    <link>http://localhost:1313/hibernate/</link>
+    <pubDate>Tue, 23 Jul 2019 21:37:28 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/hibernate/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/hibernate-banner.h62ovuf51h4.webp" referrerpolicy="no-referrer">
+            </div>简介 Hibernate 是一种 ORM 框架，全称为 Object_Relative DateBase-Mapping，在 Java 对象与关系数据库之间建立某种映射，以实现直接存取 Java 对象！ 基础 为什么要使用 H]]></description>
+</item><item>
+    <title>POI 的使用</title>
+    <link>http://localhost:1313/poi/</link>
+    <pubDate>Wed, 17 Jul 2019 21:37:24 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/poi/</guid>
+    <description><![CDATA[简介 Apache POI 是一种流行的 API，允许程序员使用 Java 程序创建，修改和显示 MS Office 文件。 它是由 Apache Software Foundation 开发和分发的开源库，用于使用 Java 程序设计或修改 Microsoft Office 文件。]]></description>
+</item></channel>
+</rss>

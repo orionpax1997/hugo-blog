@@ -1,0 +1,64 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - 标签 - 向之礼的个人博客</title>
+        <link>http://localhost:1313/tags/</link>
+        <description>Tags - 标签 - 向之礼的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>humble.xiang@gmail.com (Humble.Xiang)</managingEditor>
+            <webMaster>humble.xiang@gmail.com (Humble.Xiang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 17 Aug 2023 15:47:29 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Essay</title>
+    <link>http://localhost:1313/tags/essay/</link>
+    <pubDate>Thu, 17 Aug 2023 15:47:29 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/tags/essay/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Tool</title>
+    <link>http://localhost:1313/tags/tool/</link>
+    <pubDate>Thu, 09 Mar 2023 14:09:38 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/tags/tool/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Frontend Framework</title>
+    <link>http://localhost:1313/tags/frontend-framework/</link>
+    <pubDate>Wed, 28 Dec 2022 11:05:02 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/tags/frontend-framework/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Support</title>
+    <link>http://localhost:1313/tags/support/</link>
+    <pubDate>Wed, 31 Aug 2022 14:56:46 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/tags/support/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Command-Line Tool</title>
+    <link>http://localhost:1313/tags/command-line-tool/</link>
+    <pubDate>Fri, 03 Sep 2021 08:34:50 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/tags/command-line-tool/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Issue</title>
+    <link>http://localhost:1313/tags/issue/</link>
+    <pubDate>Sat, 03 Jul 2021 11:51:34 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/tags/issue/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Backend Framework</title>
+    <link>http://localhost:1313/tags/backend-framework/</link>
+    <pubDate>Sun, 23 May 2021 14:16:00 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/tags/backend-framework/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Language</title>
+    <link>http://localhost:1313/tags/language/</link>
+    <pubDate>Thu, 25 Jul 2019 11:27:43 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/tags/language/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,1313 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" /><title>软考-系统架构师-选择 - 向之礼的个人博客</title><meta name="Description" content="不能记住过去的人，被判重复过去。"><meta property="og:title" content="软考-系统架构师-选择" />
+<meta property="og:description" content="第 2 章 计算机系统基础知识 2.2 计算机硬件 0-1 存储器 相关公式 磁道记录的最大等待时间: 就是旋转一周的时间 磁道记录的最小等待时间: 就是 0 磁道按顺序排列的" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/system-architect-choice/" /><meta property="og:image" content="https://og-image.dramacat.top/软考-系统架构师-选择?images=https://blog.dramacat.top/images/avatar.jpg" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-04-02T19:29:53+08:00" />
+<meta property="article:modified_time" content="2024-04-06T15:20:04+08:00" /><meta property="og:site_name" content="向之礼的个人博客" />
+
+<meta name="twitter:title" content="软考-系统架构师-选择"/>
+<meta name="twitter:card" content="summary_large_image"/><meta property="twitter:image" content="https://og-image.dramacat.top/软考-系统架构师-选择?images=https://blog.dramacat.top/images/avatar.jpg" /><meta name="twitter:description" content="第 2 章 计算机系统基础知识 2.2 计算机硬件 0-1 存储器 相关公式 磁道记录的最大等待时间: 就是旋转一周的时间 磁道记录的最小等待时间: 就是 0 磁道按顺序排列的"/>
+<meta name="application-name" content="Humble.X">
+<meta name="apple-mobile-web-app-title" content="Humble.X">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><meta name="referrer" content="never"></meta>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest">
+
+<link rel="canonical" href="http://localhost:1313/system-architect-choice/" /><link rel="prev" href="http://localhost:1313/memory_leak/" /><link rel="next" href="http://localhost:1313/system-architect-up/" />
+<link rel="stylesheet" href="/css/main.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">{"@context": "https://schema.org","@type": "BlogPosting",
+        "headline": "软考-系统架构师-选择",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http://localhost:1313/system-architect-choice/"
+        },"image": ["http://localhost:1313/images/Apple-Devices-Preview.png"],"genre": "posts","wordcount":  4826 ,
+        "url": "http://localhost:1313/system-architect-choice/","datePublished": "2024-04-02T19:29:53+08:00","dateModified": "2024-04-06T15:20:04+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Humble.Xiang","logo": "http://localhost:1313/images/avatar.jpg"},"author": {
+                "@type": "Person",
+                "name": "Humble.Xiang",
+                "url": "https://github.com/Humble-Xiang"
+            },"description": ""
+    }</script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {
+          document.body.setAttribute('theme', theme); 
+          document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');
+          if (theme === 'light') {
+            document.documentElement.classList.remove('tw-dark')
+          } else {
+            document.documentElement.classList.add('tw-dark')
+          }
+          window.theme = theme;   
+          window.isDark = window.theme !== 'light' 
+        }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop print:!tw-hidden" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="向之礼的个人博客"><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item"
+                    href="/posts/" > 所有文章 </a><a class="menu-item"
+                    href="/tags/" > 标签 </a><a class="menu-item"
+                    href="/categories/" > 分类 </a><a class="menu-item"
+                    href="/series/" > 系列 </a><a class="menu-item"
+                    href="https://github.com/Humble-Xiang"  title="GitHub" 
+                    rel="noopener noreferrer" target="_blank" ><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d='M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z'/></svg>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-desktop">
+                    <button class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+                    </button>
+                    <button class="search-button search-clear" id="search-clear-desktop" title="清空">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+                    </button>
+                    <span class="search-button search-loading tw-animate-spin" id="search-loading-desktop">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"/></svg>
+                    </span>
+                </span><button class="menu-item theme-select" aria-label="切换主题">
+                    <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg>
+                    <select class="color-theme-select" id="theme-select-desktop" aria-label="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </button></div>
+        </div>
+    </div>
+</header><header class="mobile print:!tw-hidden" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="向之礼的个人博客"><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                <div class="search mobile" id="search-mobile">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-mobile">
+                    <button class="search-button search-toggle tw-h-10" id="search-toggle-mobile" title="搜索">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+                    </button>
+                    <button class="search-button search-clear" id="search-clear-mobile" title="清空">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+                    </button>
+                    <span class="search-button search-loading tw-animate-spin" id="search-loading-mobile">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"/></svg>
+                    </span>
+                </div>
+                <button class="search-cancel" id="search-cancel-mobile">
+                    取消
+                </button>
+            </div><a class="menu-item" href="/posts/" title="" >所有文章</a><a class="menu-item" href="/tags/" title="" >标签</a><a class="menu-item" href="/categories/" title="" >分类</a><a class="menu-item" href="/series/" title="" >系列</a><a class="menu-item" href="https://github.com/Humble-Xiang" title="GitHub" 
+                rel="noopener noreferrer" target="_blank" ><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d='M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z'/></svg></a><button class="menu-item theme-select tw-w-full" aria-label="切换主题">
+                <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg>
+                <select class="color-theme-select" id="theme-select-mobile" aria-label="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </button></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div><main class="main">
+            <div class="container"><div class="toc print:!tw-hidden" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#第-2-章-计算机系统基础知识">第 2 章 计算机系统基础知识</a>
+      <ul>
+        <li><a href="#22-计算机硬件-0-1">2.2 计算机硬件 0-1</a>
+          <ul>
+            <li><a href="#存储器httpsblog-draftdramacattopsystem-architect-up存储器"><a href="https://blog-draft.dramacat.top/system-architect-up/#%E5%AD%98%E5%82%A8%E5%99%A8">存储器</a></a>
+              <ul>
+                <li><a href="#相关公式">相关公式</a></li>
+                <li><a href="#相关题型及解题思路">相关题型及解题思路</a></li>
+              </ul>
+            </li>
+            <li><a href="#指令httpsblog-draftdramacattopsystem-architect-up指令"><a href="https://blog-draft.dramacat.top/system-architect-up/#%E6%8C%87%E4%BB%A4">指令</a></a>
+              <ul>
+                <li><a href="#相关公式-1">相关公式</a></li>
+                <li><a href="#相关题型及解题思路-1">相关题型及解题思路</a></li>
+              </ul>
+            </li>
+            <li><a href="#校验码httpsblog-draftdramacattopsystem-architect-up校验码"><a href="https://blog-draft.dramacat.top/system-architect-up/#%E6%A0%A1%E9%AA%8C%E7%A0%81">校验码</a></a>
+              <ul>
+                <li><a href="#相关公式-2">相关公式</a></li>
+                <li><a href="#相关题型及解题思路-2">相关题型及解题思路</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#23-计算机软件">2.3 计算机软件</a>
+          <ul>
+            <li><a href="#操作系统-3-5"><strong>操作系统 3-5</strong></a>
+              <ul>
+                <li><a href="#进程管理httpsblog-draftdramacattopsystem-architect-up进程管理"><a href="https://blog-draft.dramacat.top/system-architect-up/#%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86">进程管理</a></a>
+                  <ul>
+                    <li><a href="#相关公式-3">相关公式</a></li>
+                    <li><a href="#相关题型及解题思路-3">相关题型及解题思路</a></li>
+                  </ul>
+                </li>
+                <li><a href="#存储管理httpsblog-draftdramacattopsystem-architect-up存储管理"><a href="https://blog-draft.dramacat.top/system-architect-up/#%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86">存储管理</a></a>
+                  <ul>
+                    <li><a href="#相关公式-4">相关公式</a></li>
+                    <li><a href="#相关题型及解题思路-4">相关题型及解题思路</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#文件系统-0-1httpsblog-draftdramacattopsystem-architect-up文件系统-0-1"><a href="https://blog-draft.dramacat.top/system-architect-up/#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F-0-1">文件系统 0-1</a></a>
+              <ul>
+                <li><a href="#相关公式-5">相关公式</a></li>
+                <li><a href="#相关题型及解题思路-5">相关题型及解题思路</a></li>
+              </ul>
+            </li>
+            <li><a href="#组网技术httpsblog-draftdramacattopsystem-architect-up组网技术"><a href="https://blog-draft.dramacat.top/system-architect-up/#%E7%BB%84%E7%BD%91%E6%8A%80%E6%9C%AF">组网技术</a></a>
+              <ul>
+                <li><a href="#相关公式-6">相关公式</a></li>
+                <li><a href="#相关题型及解题思路-6">相关题型及解题思路</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#28-系统工程httpsblog-draftdramacattopsystem-architect-up28-系统工程"><a href="https://blog-draft.dramacat.top/system-architect-up/#28-%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B">2.8 系统工程</a></a>
+          <ul>
+            <li><a href="#相关题型及解题思路-7">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+        <li><a href="#29-系统性能-1-2httpsblog-draftdramacattopsystem-architect-up29-系统性能-1-2"><a href="https://blog-draft.dramacat.top/system-architect-up/#29-%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD-1-2">2.9 系统性能 1-2</a></a>
+          <ul>
+            <li><a href="#相关题型及解题思路-8">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#第-4-章-信息安全技术基础知识-2-4httpsblog-draftdramacattopsystem-architect-up第-4-章-信息安全技术基础知识-2-4"><a href="https://blog-draft.dramacat.top/system-architect-up/#%E7%AC%AC-4-%E7%AB%A0-%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-2-4">第 4 章 信息安全技术基础知识 2-4</a></a>
+      <ul>
+        <li><a href="#相关题型及解题思路-9">相关题型及解题思路</a></li>
+      </ul>
+    </li>
+    <li><a href="#第-5-章-软件工程基础知识-12-15"><strong>第 5 章 软件工程基础知识 12-15</strong></a>
+      <ul>
+        <li><a href="#51-软件工程httpsblog-draftdramacattopsystem-architect-up51-软件工程"><a href="https://blog-draft.dramacat.top/system-architect-up/#51-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B">5.1 软件工程</a></a>
+          <ul>
+            <li><a href="#相关题型及解题思路-10">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+        <li><a href="#52-需求工程httpsblog-draftdramacattopsystem-architect-up52-需求工程"><a href="https://blog-draft.dramacat.top/system-architect-up/#52-%E9%9C%80%E6%B1%82%E5%B7%A5%E7%A8%8B">5.2 需求工程</a></a>
+          <ul>
+            <li><a href="#相关题型及解题思路-11">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+        <li><a href="#53-系统分析与设计httpsblog-draftdramacattopsystem-architect-up53-系统分析与设计"><a href="https://blog-draft.dramacat.top/system-architect-up/#53-%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1">5.3 系统分析与设计</a></a>
+          <ul>
+            <li><a href="#相关题型及解题思路-12">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+        <li><a href="#54-软件测试httpsblog-draftdramacattopsystem-architect-up54-软件测试"><a href="https://blog-draft.dramacat.top/system-architect-up/#54-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95">5.4 软件测试</a></a>
+          <ul>
+            <li><a href="#相关公式-7">相关公式</a></li>
+            <li><a href="#相关题型及解题思路-13">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+        <li><a href="#56-基于构件的软件工程httpsblog-draftdramacattopsystem-architect-up56-基于构件的软件工程"><a href="https://blog-draft.dramacat.top/system-architect-up/#56-%E5%9F%BA%E4%BA%8E%E6%9E%84%E4%BB%B6%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B">5.6 基于构件的软件工程</a></a>
+          <ul>
+            <li><a href="#相关题型及解题思路-14">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+        <li><a href="#57-软件项目管理httpsblog-draftdramacattopsystem-architect-up57-软件项目管理"><a href="https://blog-draft.dramacat.top/system-architect-up/#57-%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86">5.7 软件项目管理</a></a>
+          <ul>
+            <li><a href="#相关公式-8">相关公式</a></li>
+            <li><a href="#相关题型及解题思路-15">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+        <li><a href="#系统转换和维护httpsblog-draftdramacattopsystem-architect-up_系统转换和维护_"><a href="https://blog-draft.dramacat.top/system-architect-up/#_%E7%B3%BB%E7%BB%9F%E8%BD%AC%E6%8D%A2%E5%92%8C%E7%BB%B4%E6%8A%A4_">系统转换和维护</a></a>
+          <ul>
+            <li><a href="#相关题型及解题思路-16">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#第-6-章-数据库设计基础知识-3-5"><strong>第 6 章 数据库设计基础知识 3-5</strong></a>
+      <ul>
+        <li><a href="#62-关系数据库httpsblog-draftdramacattopsystem-architect-up62-关系数据库"><a href="https://blog-draft.dramacat.top/system-architect-up/#62-%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93">6.2 关系数据库</a></a>
+          <ul>
+            <li><a href="#相关题型及解题思路-17">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+        <li><a href="#63-数据库设计httpsblog-draftdramacattopsystem-architect-up63-数据库设计"><a href="https://blog-draft.dramacat.top/system-architect-up/#63-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1">6.3 数据库设计</a></a>
+          <ul>
+            <li><a href="#相关题型及解题思路-18">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+        <li><a href="#规范发和并发httpsblog-draftdramacattopsystem-architect-up_规范发和并发_"><a href="https://blog-draft.dramacat.top/system-architect-up/#_%E8%A7%84%E8%8C%83%E5%8F%91%E5%92%8C%E5%B9%B6%E5%8F%91_">规范发和并发</a></a>
+          <ul>
+            <li><a href="#相关题型及解题思路-19">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#第-7-章-系统架构设计的基础知识-15httpsblog-draftdramacattopsystem-architect-up第-7-章-系统架构设计的基础知识-15"><a href="https://blog-draft.dramacat.top/system-architect-up/#%E7%AC%AC-7-%E7%AB%A0-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-15">第 7 章 系统架构设计的基础知识 15</a></a>
+      <ul>
+        <li><a href="#相关题型及解题思路-20">相关题型及解题思路</a></li>
+      </ul>
+    </li>
+    <li><a href="#第-8-章-系统质量属性与架构评估-10httpsblog-draftdramacattopsystem-architect-up第-8-章-系统质量属性与架构评估-10"><a href="https://blog-draft.dramacat.top/system-architect-up/#%E7%AC%AC-8-%E7%AB%A0-%E7%B3%BB%E7%BB%9F%E8%B4%A8%E9%87%8F%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%9E%B6%E6%9E%84%E8%AF%84%E4%BC%B0-10">第 8 章 系统质量属性与架构评估 10</a></a>
+      <ul>
+        <li><a href="#相关题型及解题思路-21">相关题型及解题思路</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single print:!tw-w-full print:!tw-max-w-none print:!tw-m-0 print:!tw-p-0"><h1 class="single-title animate__animated animate__flipInX">软考-系统架构师-选择</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><img src="http://localhost:1313/images/avatar.jpg" alt="Humble.Xiang avatar" class="tw-inline-block tw-max-h-4 tw-rounded-full tw-translate-y-[-2px] tw-mr-1"><a href="https://github.com/Humble-Xiang" title="Author" target="_blank" rel="noopener noreferrer author" class="author">Humble.Xiang</a>
+                </span></div>
+            <div class="post-meta-line"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;<time datetime="2024-04-02">2024-04-02</time>&nbsp;<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg>&nbsp;<time datetime="2024-04-06">2024-04-06</time>&nbsp;<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;约 4826 字&nbsp;<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;预计阅读 10 分钟&nbsp;</div>
+        </div><div class="details toc print:!tw-block" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#第-2-章-计算机系统基础知识">第 2 章 计算机系统基础知识</a>
+      <ul>
+        <li><a href="#22-计算机硬件-0-1">2.2 计算机硬件 0-1</a>
+          <ul>
+            <li><a href="#存储器httpsblog-draftdramacattopsystem-architect-up存储器"><a href="https://blog-draft.dramacat.top/system-architect-up/#%E5%AD%98%E5%82%A8%E5%99%A8">存储器</a></a>
+              <ul>
+                <li><a href="#相关公式">相关公式</a></li>
+                <li><a href="#相关题型及解题思路">相关题型及解题思路</a></li>
+              </ul>
+            </li>
+            <li><a href="#指令httpsblog-draftdramacattopsystem-architect-up指令"><a href="https://blog-draft.dramacat.top/system-architect-up/#%E6%8C%87%E4%BB%A4">指令</a></a>
+              <ul>
+                <li><a href="#相关公式-1">相关公式</a></li>
+                <li><a href="#相关题型及解题思路-1">相关题型及解题思路</a></li>
+              </ul>
+            </li>
+            <li><a href="#校验码httpsblog-draftdramacattopsystem-architect-up校验码"><a href="https://blog-draft.dramacat.top/system-architect-up/#%E6%A0%A1%E9%AA%8C%E7%A0%81">校验码</a></a>
+              <ul>
+                <li><a href="#相关公式-2">相关公式</a></li>
+                <li><a href="#相关题型及解题思路-2">相关题型及解题思路</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#23-计算机软件">2.3 计算机软件</a>
+          <ul>
+            <li><a href="#操作系统-3-5"><strong>操作系统 3-5</strong></a>
+              <ul>
+                <li><a href="#进程管理httpsblog-draftdramacattopsystem-architect-up进程管理"><a href="https://blog-draft.dramacat.top/system-architect-up/#%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86">进程管理</a></a>
+                  <ul>
+                    <li><a href="#相关公式-3">相关公式</a></li>
+                    <li><a href="#相关题型及解题思路-3">相关题型及解题思路</a></li>
+                  </ul>
+                </li>
+                <li><a href="#存储管理httpsblog-draftdramacattopsystem-architect-up存储管理"><a href="https://blog-draft.dramacat.top/system-architect-up/#%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86">存储管理</a></a>
+                  <ul>
+                    <li><a href="#相关公式-4">相关公式</a></li>
+                    <li><a href="#相关题型及解题思路-4">相关题型及解题思路</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#文件系统-0-1httpsblog-draftdramacattopsystem-architect-up文件系统-0-1"><a href="https://blog-draft.dramacat.top/system-architect-up/#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F-0-1">文件系统 0-1</a></a>
+              <ul>
+                <li><a href="#相关公式-5">相关公式</a></li>
+                <li><a href="#相关题型及解题思路-5">相关题型及解题思路</a></li>
+              </ul>
+            </li>
+            <li><a href="#组网技术httpsblog-draftdramacattopsystem-architect-up组网技术"><a href="https://blog-draft.dramacat.top/system-architect-up/#%E7%BB%84%E7%BD%91%E6%8A%80%E6%9C%AF">组网技术</a></a>
+              <ul>
+                <li><a href="#相关公式-6">相关公式</a></li>
+                <li><a href="#相关题型及解题思路-6">相关题型及解题思路</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#28-系统工程httpsblog-draftdramacattopsystem-architect-up28-系统工程"><a href="https://blog-draft.dramacat.top/system-architect-up/#28-%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B">2.8 系统工程</a></a>
+          <ul>
+            <li><a href="#相关题型及解题思路-7">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+        <li><a href="#29-系统性能-1-2httpsblog-draftdramacattopsystem-architect-up29-系统性能-1-2"><a href="https://blog-draft.dramacat.top/system-architect-up/#29-%E7%B3%BB%E7%BB%9F%E6%80%A7%E8%83%BD-1-2">2.9 系统性能 1-2</a></a>
+          <ul>
+            <li><a href="#相关题型及解题思路-8">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#第-4-章-信息安全技术基础知识-2-4httpsblog-draftdramacattopsystem-architect-up第-4-章-信息安全技术基础知识-2-4"><a href="https://blog-draft.dramacat.top/system-architect-up/#%E7%AC%AC-4-%E7%AB%A0-%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-2-4">第 4 章 信息安全技术基础知识 2-4</a></a>
+      <ul>
+        <li><a href="#相关题型及解题思路-9">相关题型及解题思路</a></li>
+      </ul>
+    </li>
+    <li><a href="#第-5-章-软件工程基础知识-12-15"><strong>第 5 章 软件工程基础知识 12-15</strong></a>
+      <ul>
+        <li><a href="#51-软件工程httpsblog-draftdramacattopsystem-architect-up51-软件工程"><a href="https://blog-draft.dramacat.top/system-architect-up/#51-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B">5.1 软件工程</a></a>
+          <ul>
+            <li><a href="#相关题型及解题思路-10">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+        <li><a href="#52-需求工程httpsblog-draftdramacattopsystem-architect-up52-需求工程"><a href="https://blog-draft.dramacat.top/system-architect-up/#52-%E9%9C%80%E6%B1%82%E5%B7%A5%E7%A8%8B">5.2 需求工程</a></a>
+          <ul>
+            <li><a href="#相关题型及解题思路-11">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+        <li><a href="#53-系统分析与设计httpsblog-draftdramacattopsystem-architect-up53-系统分析与设计"><a href="https://blog-draft.dramacat.top/system-architect-up/#53-%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1">5.3 系统分析与设计</a></a>
+          <ul>
+            <li><a href="#相关题型及解题思路-12">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+        <li><a href="#54-软件测试httpsblog-draftdramacattopsystem-architect-up54-软件测试"><a href="https://blog-draft.dramacat.top/system-architect-up/#54-%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95">5.4 软件测试</a></a>
+          <ul>
+            <li><a href="#相关公式-7">相关公式</a></li>
+            <li><a href="#相关题型及解题思路-13">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+        <li><a href="#56-基于构件的软件工程httpsblog-draftdramacattopsystem-architect-up56-基于构件的软件工程"><a href="https://blog-draft.dramacat.top/system-architect-up/#56-%E5%9F%BA%E4%BA%8E%E6%9E%84%E4%BB%B6%E7%9A%84%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B">5.6 基于构件的软件工程</a></a>
+          <ul>
+            <li><a href="#相关题型及解题思路-14">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+        <li><a href="#57-软件项目管理httpsblog-draftdramacattopsystem-architect-up57-软件项目管理"><a href="https://blog-draft.dramacat.top/system-architect-up/#57-%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86">5.7 软件项目管理</a></a>
+          <ul>
+            <li><a href="#相关公式-8">相关公式</a></li>
+            <li><a href="#相关题型及解题思路-15">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+        <li><a href="#系统转换和维护httpsblog-draftdramacattopsystem-architect-up_系统转换和维护_"><a href="https://blog-draft.dramacat.top/system-architect-up/#_%E7%B3%BB%E7%BB%9F%E8%BD%AC%E6%8D%A2%E5%92%8C%E7%BB%B4%E6%8A%A4_">系统转换和维护</a></a>
+          <ul>
+            <li><a href="#相关题型及解题思路-16">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#第-6-章-数据库设计基础知识-3-5"><strong>第 6 章 数据库设计基础知识 3-5</strong></a>
+      <ul>
+        <li><a href="#62-关系数据库httpsblog-draftdramacattopsystem-architect-up62-关系数据库"><a href="https://blog-draft.dramacat.top/system-architect-up/#62-%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93">6.2 关系数据库</a></a>
+          <ul>
+            <li><a href="#相关题型及解题思路-17">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+        <li><a href="#63-数据库设计httpsblog-draftdramacattopsystem-architect-up63-数据库设计"><a href="https://blog-draft.dramacat.top/system-architect-up/#63-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%AE%BE%E8%AE%A1">6.3 数据库设计</a></a>
+          <ul>
+            <li><a href="#相关题型及解题思路-18">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+        <li><a href="#规范发和并发httpsblog-draftdramacattopsystem-architect-up_规范发和并发_"><a href="https://blog-draft.dramacat.top/system-architect-up/#_%E8%A7%84%E8%8C%83%E5%8F%91%E5%92%8C%E5%B9%B6%E5%8F%91_">规范发和并发</a></a>
+          <ul>
+            <li><a href="#相关题型及解题思路-19">相关题型及解题思路</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#第-7-章-系统架构设计的基础知识-15httpsblog-draftdramacattopsystem-architect-up第-7-章-系统架构设计的基础知识-15"><a href="https://blog-draft.dramacat.top/system-architect-up/#%E7%AC%AC-7-%E7%AB%A0-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-15">第 7 章 系统架构设计的基础知识 15</a></a>
+      <ul>
+        <li><a href="#相关题型及解题思路-20">相关题型及解题思路</a></li>
+      </ul>
+    </li>
+    <li><a href="#第-8-章-系统质量属性与架构评估-10httpsblog-draftdramacattopsystem-architect-up第-8-章-系统质量属性与架构评估-10"><a href="https://blog-draft.dramacat.top/system-architect-up/#%E7%AC%AC-8-%E7%AB%A0-%E7%B3%BB%E7%BB%9F%E8%B4%A8%E9%87%8F%E5%B1%9E%E6%80%A7%E4%B8%8E%E6%9E%B6%E6%9E%84%E8%AF%84%E4%BC%B0-10">第 8 章 系统质量属性与架构评估 10</a></a>
+      <ul>
+        <li><a href="#相关题型及解题思路-21">相关题型及解题思路</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="第-2-章-计算机系统基础知识" class="headerLink">
+    <a href="#%e7%ac%ac-2-%e7%ab%a0-%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%b3%bb%e7%bb%9f%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86" class="header-mark"></a>第 2 章 计算机系统基础知识</h2><h3 id="22-计算机硬件-0-1" class="headerLink">
+    <a href="#22-%e8%ae%a1%e7%ae%97%e6%9c%ba%e7%a1%ac%e4%bb%b6-0-1" class="header-mark"></a>2.2 计算机硬件 0-1</h3><h4 id="存储器httpsblog-draftdramacattopsystem-architect-up存储器" class="headerLink">
+    <a href="#%e5%ad%98%e5%82%a8%e5%99%a8httpsblog-draftdramacattopsystem-architect-up%e5%ad%98%e5%82%a8%e5%99%a8" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#%e5%ad%98%e5%82%a8%e5%99%a8" target="_blank" rel="noopener noreferrer">存储器</a></h4><h5 id="相关公式" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e5%85%ac%e5%bc%8f" class="header-mark"></a>相关公式</h5><ul>
+<li>磁道记录的最大等待时间: 就是旋转一周的时间</li>
+<li>磁道记录的最小等待时间: 就是 0</li>
+<li>磁道按顺序排列的记录等待时间: 旋转一周的时间 - 处理时间</li>
+<li>磁道记录的总处理时间: (旋转一块的时间 + 处理时间) * 总块数 + 等待时间 * (总块数 - 1)</li>
+</ul>
+<h5 id="相关题型及解题思路" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af" class="header-mark"></a>相关题型及解题思路</h5><ul>
+<li><strong>2022 求磁盘调度的响应序列</strong>: 按照采用的调度算法，来求序列，多个相同柱面号的情况下，扇区号由小到大排列，磁头号是无效信息。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3o2jqasm51a0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3o2jqasm51a0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3o2jqasm51a0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3o2jqasm51a0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3o2jqasm51a0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3o2jqasm51a0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>求磁道记录的最长处理时间和最少处理时间: 通常给出逻辑记录的安排顺序表，磁盘的每周旋转速度，每个记录的处理时间，需要<strong>注意还有个隐含的条件是磁盘的每块的旋转时间，且当前快数据旋转读取完后才能开始处理</strong>，求出隐含条件后带入公式计算。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.21dt0hljwn28.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.21dt0hljwn28.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.21dt0hljwn28.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.21dt0hljwn28.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.21dt0hljwn28.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.21dt0hljwn28.webp 2x"
+            alt="alt">
+    </a></figure></li>
+</ul>
+<h4 id="指令httpsblog-draftdramacattopsystem-architect-up指令" class="headerLink">
+    <a href="#%e6%8c%87%e4%bb%a4httpsblog-draftdramacattopsystem-architect-up%e6%8c%87%e4%bb%a4" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#%e6%8c%87%e4%bb%a4" target="_blank" rel="noopener noreferrer">指令</a></h4><h5 id="相关公式-1" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e5%85%ac%e5%bc%8f-1" class="header-mark"></a>相关公式</h5><ul>
+<li>流水线周期: 指令分成不同执行段，其中执行时间最长的段为流水线周期</li>
+<li>流水线执行时间 1: 1 条指令的总执行时间 + (总指令条数 - 1) * 流水线周期</li>
+<li>流水线执行时间 2: (1 条指令的总执行时间 - 流水线周期) + 总指令条数 * 流水线周期</li>
+<li>流水线的吞吐率: 吞吐率即为单位时间内执行的指令条数 = 指令条数 / 流水线执行时间</li>
+<li>流水线的最大吞吐率: 1 / 流水线周期</li>
+<li>流水线的加速比: 不使用流水线的执行时间 / 使用流水线的执行时间</li>
+<li>流水线的最大加速比: 1 条指令不使用流水线的执行时间 / 流水线周期</li>
+</ul>
+<h5 id="相关题型及解题思路-1" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-1" class="header-mark"></a>相关题型及解题思路</h5><ul>
+<li>求流水线相关问题: 如果是让求吞吐率或加速比，通常情况下需要先求出执行时间，也就是说需要套两个公式;如果碰到和缓冲区结合考察的问题，<strong>注意但单双缓冲区的差异，单缓冲区读入和写出不能同时进行，因此读入和写出的时间需要加在一起算做一段</strong>。而双缓冲区的读入和写出可以同时进行，因此可以算做两段。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1cg0efv1irr4.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1cg0efv1irr4.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1cg0efv1irr4.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1cg0efv1irr4.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1cg0efv1irr4.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1cg0efv1irr4.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>求流水线最大加速比: 加上最大两个字，就是求极限值了，通常不会给出总指令条数，而需要设为 n 来计算，求极限时忽略常数，带入公式即可。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4piiqakpphk0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4piiqakpphk0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4piiqakpphk0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4piiqakpphk0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4piiqakpphk0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4piiqakpphk0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+</ul>
+<h4 id="校验码httpsblog-draftdramacattopsystem-architect-up校验码" class="headerLink">
+    <a href="#%e6%a0%a1%e9%aa%8c%e7%a0%81httpsblog-draftdramacattopsystem-architect-up%e6%a0%a1%e9%aa%8c%e7%a0%81" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#%e6%a0%a1%e9%aa%8c%e7%a0%81" target="_blank" rel="noopener noreferrer">校验码</a></h4><h5 id="相关公式-2" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e5%85%ac%e5%bc%8f-2" class="header-mark"></a>相关公式</h5><ul>
+<li>CRC 编码: 1. 在原始信息串后面补多项式的阶个零; 2. 求除数，多项式中幂指数存在的为 1，不存在为 0; 3. 求校验码，进行模 2 除(异或运算)，<strong>余数如果不足多项式的阶的位数则在左边补 0</strong></li>
+</ul>
+<h5 id="相关题型及解题思路-2" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-2" class="header-mark"></a>相关题型及解题思路</h5><ul>
+<li>求 CRC 循环冗余校验码：通常给出原始信息串和生成多项式，让求校验码，套公式即可。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7hpcsdfp6is0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7hpcsdfp6is0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7hpcsdfp6is0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7hpcsdfp6is0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7hpcsdfp6is0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7hpcsdfp6is0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+</ul>
+<h3 id="23-计算机软件" class="headerLink">
+    <a href="#23-%e8%ae%a1%e7%ae%97%e6%9c%ba%e8%bd%af%e4%bb%b6" class="header-mark"></a>2.3 计算机软件</h3><h4 id="操作系统-3-5" class="headerLink">
+    <a href="#%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f-3-5" class="header-mark"></a><strong>操作系统 3-5</strong></h4><h5 id="进程管理httpsblog-draftdramacattopsystem-architect-up进程管理" class="headerLink">
+    <a href="#%e8%bf%9b%e7%a8%8b%e7%ae%a1%e7%90%86httpsblog-draftdramacattopsystem-architect-up%e8%bf%9b%e7%a8%8b%e7%ae%a1%e7%90%86" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#%e8%bf%9b%e7%a8%8b%e7%ae%a1%e7%90%86" target="_blank" rel="noopener noreferrer">进程管理</a></h5><h6 id="相关公式-3" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e5%85%ac%e5%bc%8f-3" class="header-mark"></a>相关公式</h6><ul>
+<li>每个进程需要资源数不同时发生死锁的最大资源数: (进程 1 需要的资源数 - 1) + (进程 2 需要的资源数 - 1) + &hellip; + (进程 n 需要的资源数 - 1)</li>
+<li>每个进程需要资源数相同时发生死锁的最大资源数: 系统中的进程数 * (单个进程需要的资源数 - 1)</li>
+<li>不发生死锁的最小资源数: 发生死锁的最大资源数 + 1</li>
+<li>互斥信号量初始值: 1</li>
+<li>同步信号量的最大值: 资源数量</li>
+<li>同步信号量的最小值: - (进程数量 - 资源数量)</li>
+</ul>
+<h6 id="相关题型及解题思路-3" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-3" class="header-mark"></a>相关题型及解题思路</h6><ul>
+<li>考察进程三态图之间的转换: 给定服务调度算法、给定几个进程的当前状态，某进程发生某事件后，求所有进程的后续状态。以三态图的转变带入后解题。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.15zmwdj8sv6k.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.15zmwdj8sv6k.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.15zmwdj8sv6k.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.15zmwdj8sv6k.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.15zmwdj8sv6k.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.15zmwdj8sv6k.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>考察前趋图，给定前趋图，求可标记为。从开始节点开始读，排除错误答案即可，很简单。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.527am2dbsxk0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.527am2dbsxk0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.527am2dbsxk0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.527am2dbsxk0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.527am2dbsxk0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.527am2dbsxk0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>考察进程资源图，求阻塞节点和化简顺序：求阻塞节点，某进程所请求的资源已经全部分配完毕，该进程为阻塞节点。求化简顺序，先找非阻塞节点，然后释放其占用资源(划掉连线)后，找后续的非阻塞节点，直到所有节点都不被阻塞。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3mg5pyejxi80.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3mg5pyejxi80.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3mg5pyejxi80.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3mg5pyejxi80.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3mg5pyejxi80.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3mg5pyejxi80.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li><strong>综合考察 PV 操作</strong>: 给定前趋图，进程，和需要设置的信号量，然后给出进程部分执行过程中的 PV 操作，求空余的部分的 PV 操作。结合前趋图来看，从最开始无依赖的进程开始填空，进程执行完进行 V 操作，有几个后继则进行几次不同信号量的 V 操作。然后后面等待执行的进行的前驱如果都执行完了，则开始执行，有几个前驱进行几次不同信号量的 P 操作。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3cpj128qreq0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3cpj128qreq0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3cpj128qreq0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3cpj128qreq0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3cpj128qreq0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3cpj128qreq0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>求信号量的取值范围: 给定进程数和资源数，求使用 PV 操作时需要设定的信号量的范围，带入公式计算，信号量为负几，则有几个等待进程。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4lw5jijli5y0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4lw5jijli5y0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4lw5jijli5y0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4lw5jijli5y0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4lw5jijli5y0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4lw5jijli5y0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>考察银行家算法，求当前可用的资源数和安全的执行序列: 给定资源及其可用资源总数，给定几个进程及其最大需求量和已分配资源数图示。<strong>首先用资源的最大总数-当前所有进程分配的数量求出其当前可用的资源数</strong>。然后找到所有执行序列中资源最大需求量都能满足的进程，作为可执行的进程，执行完后把这个进程上已分配的资源数加回，可用资源数，再找下一个可执行进程。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4qmw24kncpe0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4qmw24kncpe0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4qmw24kncpe0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4qmw24kncpe0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4qmw24kncpe0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4qmw24kncpe0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+</ul>
+<h5 id="存储管理httpsblog-draftdramacattopsystem-architect-up存储管理" class="headerLink">
+    <a href="#%e5%ad%98%e5%82%a8%e7%ae%a1%e7%90%86httpsblog-draftdramacattopsystem-architect-up%e5%ad%98%e5%82%a8%e7%ae%a1%e7%90%86" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#%e5%ad%98%e5%82%a8%e7%ae%a1%e7%90%86" target="_blank" rel="noopener noreferrer">存储管理</a></h5><h6 id="相关公式-4" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e5%85%ac%e5%bc%8f-4" class="header-mark"></a>相关公式</h6><ul>
+<li>页内地址的位数: 每页大小以 2 的 n 次方表示时的 n</li>
+<li>页号的 2 进制位数 1: 内存大小 / 每页大小，然后求其以 2 的 n 次方表示时的 n</li>
+<li>页号的 2 进制位数 2: 逻辑地址或物理地址的位数 - 页内地址的位数</li>
+<li>分页式存储物理地址: 高位通过页号在页表中查到物理块号 拼接 低位页内地址(偏移地址)，<strong>逻辑地址和物理地址中低位的偏移地址不变，区别只是将高位的逻辑页号替换为了物理快号</strong></li>
+</ul>
+<h6 id="相关题型及解题思路-4" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-4" class="header-mark"></a>相关题型及解题思路</h6><ul>
+<li>求分页式存储的物理地址: 通常给出页面大小和逻辑地址，以及页号和物理块号的对应表，让求物理地址。首先通过页面大小算出页内地址的位数(<strong>也可以直接看答案中，多数答案与逻辑地址后面几位重复，且前面剩余的在页表里能查到，则其为偏移地址位数，页面大小通常为 4k，则二进制表示为 4 位，16 进制表示为 1 位</strong>)，剩余高位为页号，通过页号找到对应的物理块号，然后将逻辑地址高位替换为物理快号就是物理地址。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.76lanl42ik00.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.76lanl42ik00.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.76lanl42ik00.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.76lanl42ik00.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.76lanl42ik00.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.76lanl42ik00.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>求淘汰那个页面代价最小: 通常给出一个表格，标识每个页面的状态位、修改位、访问位，根据局部性原理，<strong>优先淘汰最近未被访问过的，而后淘汰最近未被修改过的</strong>。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.ehvj7162biw.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.ehvj7162biw.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.ehvj7162biw.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.ehvj7162biw.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.ehvj7162biw.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.ehvj7162biw.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>求段式存储中逻辑地址能否转换为物理地址(不违法)，给定几个(段号，段内偏移)，然后表格中给出段号和段长列，<strong>根据段号找到段长，段内偏移大于段长就违法</strong>。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.76ijeivzch40.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.76ijeivzch40.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.76ijeivzch40.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.76ijeivzch40.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.76ijeivzch40.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.76ijeivzch40.webp 2x"
+            alt="alt">
+    </a></figure></li>
+</ul>
+<h4 id="文件系统-0-1httpsblog-draftdramacattopsystem-architect-up文件系统-0-1" class="headerLink">
+    <a href="#%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f-0-1httpsblog-draftdramacattopsystem-architect-up%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f-0-1" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#%e6%96%87%e4%bb%b6%e7%b3%bb%e7%bb%9f-0-1" target="_blank" rel="noopener noreferrer">文件系统 0-1</a></h4><h5 id="相关公式-5" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e5%85%ac%e5%bc%8f-5" class="header-mark"></a>相关公式</h5><ul>
+<li>一级间接索引逻辑块的个数: 磁盘索引块大小 / 每个地址项的大小</li>
+<li>二级间接索引逻辑块的个数: (磁盘索引块大小 / 每个地址项的大小) * (磁盘索引块大小 / 每个地址项的大小)</li>
+<li>一级间接索引物理块号的表示范围: 直接索引的最大编号 + 1 到 直接索引的最大编号 + 一级间接索引逻辑块的总个数</li>
+<li>可表示的单个文件的最大长度: 可表示的总的逻辑块数 * 磁盘数据块大小</li>
+<li>表示位示图需要的字的个数: 磁盘容量 / 磁盘物理块大小 / 系统字长位数</li>
+</ul>
+<h5 id="相关题型及解题思路-5" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-5" class="header-mark"></a>相关题型及解题思路</h5><ul>
+<li>求逻辑快应采用什么索引: 通常给出一共几个地址项，以及其中几个直接索引，几个一级间接索引，几个二级间接索引，和每个地址项的大小，以及磁盘索引块和磁盘数据块的大小，然后问访问的逻辑块号应采用的是什么索引。题目中没明确说明时，<strong>逻辑块从 0 开始编号</strong>。首先将直接索引进行编号，然后带公式求一级间接索引的表示范围，以上就是二级间接索引的范围，这样就能判断采用的是什么索引。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4u0lba6pkj60.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4u0lba6pkj60.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4u0lba6pkj60.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4u0lba6pkj60.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4u0lba6pkj60.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4u0lba6pkj60.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>求采用什么索引和可表示的单个文件的最大长度: 算出总的表示范围(可表示的总的逻辑块数)(<strong>如果答案没有相近的长度，只用算二级索引就行了</strong>) 乘以磁盘数据块大小，代公式计算，就能算出可表示的单个文件最大的长度。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1v3qdf7n6hxc.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1v3qdf7n6hxc.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1v3qdf7n6hxc.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1v3qdf7n6hxc.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1v3qdf7n6hxc.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1v3qdf7n6hxc.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>求相对路径和绝对路径: 通常给出目录结构图，当前工作目录和需要访问的文件名，求相对路径和绝对路径，很简单。注意一点，路径最后的杠可以省略。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1ghcdu97icsg.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1ghcdu97icsg.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1ghcdu97icsg.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1ghcdu97icsg.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1ghcdu97icsg.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1ghcdu97icsg.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>求需要表示的物理块在位示图中的第几个字描述: 通常需要表示的物理块号，和字长。<strong>注意如果有余数，则向上取整，还有没有明确说明的情况下是从零开始编号的</strong>
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.27y0rbge5ha8.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.27y0rbge5ha8.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.27y0rbge5ha8.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.27y0rbge5ha8.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.27y0rbge5ha8.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.27y0rbge5ha8.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>求位示图需要几个字来表示: 通常给出全部条件带入公式计算即可。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.73t259o9n6w0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.73t259o9n6w0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.73t259o9n6w0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.73t259o9n6w0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.73t259o9n6w0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.73t259o9n6w0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+</ul>
+<h4 id="组网技术httpsblog-draftdramacattopsystem-architect-up组网技术" class="headerLink">
+    <a href="#%e7%bb%84%e7%bd%91%e6%8a%80%e6%9c%afhttpsblog-draftdramacattopsystem-architect-up%e7%bb%84%e7%bd%91%e6%8a%80%e6%9c%af" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#%e7%bb%84%e7%bd%91%e6%8a%80%e6%9c%af" target="_blank" rel="noopener noreferrer">组网技术</a></h4><h5 id="相关公式-6" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e5%85%ac%e5%bc%8f-6" class="header-mark"></a>相关公式</h5><ul>
+<li>子网个数: 用划分了子网号后的网络号位数 - 原来的网络号位数，作为的 2 的幂，求 2 的幂次方</li>
+<li>可使用的主机个数: 32 - 网络号位数，作为 2 的幂，求 2 的幂次方在减 2</li>
+</ul>
+<h5 id="相关题型及解题思路-6" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-6" class="header-mark"></a>相关题型及解题思路</h5><ul>
+<li><strong>2022 考察常用端口号与协议的对应关系</strong>
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2r9nva54kkk.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2r9nva54kkk.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2r9nva54kkk.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2r9nva54kkk.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2r9nva54kkk.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2r9nva54kkk.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li><strong>2022 考察 TCI/IP 协议: 主要考察功能</strong>
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.stflr0l4fs0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.stflr0l4fs0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.stflr0l4fs0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.stflr0l4fs0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.stflr0l4fs0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.stflr0l4fs0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>考察 OSI 七层协议: 主要考察各层的协议、功能、设备
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.496ao1hxl9k0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.496ao1hxl9k0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.496ao1hxl9k0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.496ao1hxl9k0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.496ao1hxl9k0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.496ao1hxl9k0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>求子网个数及每个子网中可用主机数: 求子网个数，通常给出两个 IP 地址，可以根据后面的网络号的位数减一下，代入公式计算。求可用主机数，一样带公式计算即可。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.27ukozq4c6ck.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.27ukozq4c6ck.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.27ukozq4c6ck.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.27ukozq4c6ck.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.27ukozq4c6ck.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.27ukozq4c6ck.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>求不属于网络的子网地址: 判断方式是看网络号是否相同，而网络号在左边，然后从 2 进制的角度来讲，数字越大越考左，所以<strong>大概率是最大的那个数</strong>。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5ek5l3w1dbo0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5ek5l3w1dbo0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5ek5l3w1dbo0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5ek5l3w1dbo0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5ek5l3w1dbo0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5ek5l3w1dbo0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+</ul>
+<h3 id="28-系统工程httpsblog-draftdramacattopsystem-architect-up28-系统工程" class="headerLink">
+    <a href="#28-%e7%b3%bb%e7%bb%9f%e5%b7%a5%e7%a8%8bhttpsblog-draftdramacattopsystem-architect-up28-%e7%b3%bb%e7%bb%9f%e5%b7%a5%e7%a8%8b" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#28-%e7%b3%bb%e7%bb%9f%e5%b7%a5%e7%a8%8b" target="_blank" rel="noopener noreferrer">2.8 系统工程</a></h3><h4 id="相关题型及解题思路-7" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-7" class="header-mark"></a>相关题型及解题思路</h4><ul>
+<li>考察系统工程方法: 背一下
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3r1a6u4adh20.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3r1a6u4adh20.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3r1a6u4adh20.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3r1a6u4adh20.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3r1a6u4adh20.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3r1a6u4adh20.webp 2x"
+            alt="alt">
+    </a></figure></li>
+</ul>
+<h3 id="29-系统性能-1-2httpsblog-draftdramacattopsystem-architect-up29-系统性能-1-2" class="headerLink">
+    <a href="#29-%e7%b3%bb%e7%bb%9f%e6%80%a7%e8%83%bd-1-2httpsblog-draftdramacattopsystem-architect-up29-%e7%b3%bb%e7%bb%9f%e6%80%a7%e8%83%bd-1-2" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#29-%e7%b3%bb%e7%bb%9f%e6%80%a7%e8%83%bd-1-2" target="_blank" rel="noopener noreferrer">2.9 系统性能 1-2</a></h3><h4 id="相关题型及解题思路-8" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-8" class="header-mark"></a>相关题型及解题思路</h4><ul>
+<li>考察性能指标: 背一下
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6isgn12br4w0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6isgn12br4w0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6isgn12br4w0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6isgn12br4w0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6isgn12br4w0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6isgn12br4w0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+</ul>
+<h2 id="第-4-章-信息安全技术基础知识-2-4httpsblog-draftdramacattopsystem-architect-up第-4-章-信息安全技术基础知识-2-4" class="headerLink">
+    <a href="#%e7%ac%ac-4-%e7%ab%a0-%e4%bf%a1%e6%81%af%e5%ae%89%e5%85%a8%e6%8a%80%e6%9c%af%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86-2-4httpsblog-draftdramacattopsystem-architect-up%e7%ac%ac-4-%e7%ab%a0-%e4%bf%a1%e6%81%af%e5%ae%89%e5%85%a8%e6%8a%80%e6%9c%af%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86-2-4" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#%e7%ac%ac-4-%e7%ab%a0-%e4%bf%a1%e6%81%af%e5%ae%89%e5%85%a8%e6%8a%80%e6%9c%af%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86-2-4" target="_blank" rel="noopener noreferrer">第 4 章 信息安全技术基础知识 2-4</a></h2><h3 id="相关题型及解题思路-9" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-9" class="header-mark"></a>相关题型及解题思路</h3><ul>
+<li>考察信息安全的基本要素: 背一下
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1naip4g829wg.png" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1naip4g829wg.png">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1naip4g829wg.png"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1naip4g829wg.png, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1naip4g829wg.png 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1naip4g829wg.png 2x"
+            alt="alt">
+    </a></figure></li>
+<li>考察各种攻击的原理与抵御: 理解记忆
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6tl3l4sb0000.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6tl3l4sb0000.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6tl3l4sb0000.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6tl3l4sb0000.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6tl3l4sb0000.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6tl3l4sb0000.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>考察网络安全协议: 大概记一下协议的应用场景。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3doz4fiuj1c0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3doz4fiuj1c0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3doz4fiuj1c0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3doz4fiuj1c0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3doz4fiuj1c0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3doz4fiuj1c0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>考察信息的加解密技术: 大概记一下涉及到的技术及其作用。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7ezz2q9rzkc0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7ezz2q9rzkc0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7ezz2q9rzkc0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7ezz2q9rzkc0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7ezz2q9rzkc0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7ezz2q9rzkc0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+</ul>
+<h2 id="第-5-章-软件工程基础知识-12-15" class="headerLink">
+    <a href="#%e7%ac%ac-5-%e7%ab%a0-%e8%bd%af%e4%bb%b6%e5%b7%a5%e7%a8%8b%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86-12-15" class="header-mark"></a><strong>第 5 章 软件工程基础知识 12-15</strong></h2><h3 id="51-软件工程httpsblog-draftdramacattopsystem-architect-up51-软件工程" class="headerLink">
+    <a href="#51-%e8%bd%af%e4%bb%b6%e5%b7%a5%e7%a8%8bhttpsblog-draftdramacattopsystem-architect-up51-%e8%bd%af%e4%bb%b6%e5%b7%a5%e7%a8%8b" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#51-%e8%bd%af%e4%bb%b6%e5%b7%a5%e7%a8%8b" target="_blank" rel="noopener noreferrer">5.1 软件工程</a></h3><h4 id="相关题型及解题思路-10" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-10" class="header-mark"></a>相关题型及解题思路</h4><ul>
+<li><strong>2022 考察软件过程模型的定义</strong>
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6j5r6albd1g0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6j5r6albd1g0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6j5r6albd1g0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6j5r6albd1g0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6j5r6albd1g0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6j5r6albd1g0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>考察软件过程模型的差异
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.uvh7zfiraw0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.uvh7zfiraw0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.uvh7zfiraw0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.uvh7zfiraw0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.uvh7zfiraw0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.uvh7zfiraw0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>考察到了 CMMI 的哪一级的成熟度
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6awosvxf4x00.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6awosvxf4x00.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6awosvxf4x00.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6awosvxf4x00.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6awosvxf4x00.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6awosvxf4x00.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>考察软件的生命周期
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.58lsrk295840.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.58lsrk295840.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.58lsrk295840.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.58lsrk295840.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.58lsrk295840.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.58lsrk295840.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>考察敏捷方法的特点
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.61gzkmq9c0o0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.61gzkmq9c0o0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.61gzkmq9c0o0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.61gzkmq9c0o0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.61gzkmq9c0o0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.61gzkmq9c0o0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>考察敏捷方法核心思想
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6bgktz48pk40.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6bgktz48pk40.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6bgktz48pk40.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6bgktz48pk40.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6bgktz48pk40.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6bgktz48pk40.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>考察 RUP 九个核心工作流
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4focfgutqws0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4focfgutqws0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4focfgutqws0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4focfgutqws0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4focfgutqws0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4focfgutqws0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>考察 RUP 的特点
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.536xsnkniho0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.536xsnkniho0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.536xsnkniho0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.536xsnkniho0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.536xsnkniho0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.536xsnkniho0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>考察软件系统用户文档、系统文档的定义
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.558l8g4tlqg0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.558l8g4tlqg0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.558l8g4tlqg0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.558l8g4tlqg0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.558l8g4tlqg0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.558l8g4tlqg0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>考察软件工程过程的定义
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4uyyey7ntaq0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4uyyey7ntaq0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4uyyey7ntaq0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4uyyey7ntaq0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4uyyey7ntaq0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4uyyey7ntaq0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>考察软件设计四个活动的定义
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2s6y7c46spk0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2s6y7c46spk0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2s6y7c46spk0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2s6y7c46spk0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2s6y7c46spk0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2s6y7c46spk0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>考察逆向工程的四个级别的定义
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5acwx5euoug0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5acwx5euoug0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5acwx5euoug0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5acwx5euoug0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5acwx5euoug0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5acwx5euoug0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+</ul>
+<h3 id="52-需求工程httpsblog-draftdramacattopsystem-architect-up52-需求工程" class="headerLink">
+    <a href="#52-%e9%9c%80%e6%b1%82%e5%b7%a5%e7%a8%8bhttpsblog-draftdramacattopsystem-architect-up52-%e9%9c%80%e6%b1%82%e5%b7%a5%e7%a8%8b" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#52-%e9%9c%80%e6%b1%82%e5%b7%a5%e7%a8%8b" target="_blank" rel="noopener noreferrer">5.2 需求工程</a></h3><h4 id="相关题型及解题思路-11" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-11" class="header-mark"></a>相关题型及解题思路</h4><ul>
+<li>考察需求工程的两大过程(需求开发、需求管理)的主要活动
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7k65w0v62u8.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7k65w0v62u8.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7k65w0v62u8.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7k65w0v62u8.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7k65w0v62u8.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7k65w0v62u8.webp 2x"
+            alt="alt">
+    </a></figure></li>
+</ul>
+<h3 id="53-系统分析与设计httpsblog-draftdramacattopsystem-architect-up53-系统分析与设计" class="headerLink">
+    <a href="#53-%e7%b3%bb%e7%bb%9f%e5%88%86%e6%9e%90%e4%b8%8e%e8%ae%be%e8%ae%a1httpsblog-draftdramacattopsystem-architect-up53-%e7%b3%bb%e7%bb%9f%e5%88%86%e6%9e%90%e4%b8%8e%e8%ae%be%e8%ae%a1" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#53-%e7%b3%bb%e7%bb%9f%e5%88%86%e6%9e%90%e4%b8%8e%e8%ae%be%e8%ae%a1" target="_blank" rel="noopener noreferrer">5.3 系统分析与设计</a></h3><h4 id="相关题型及解题思路-12" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-12" class="header-mark"></a>相关题型及解题思路</h4><ul>
+<li>考察内聚程度分类、耦合程度分类
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2k2494q577c0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2k2494q577c0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2k2494q577c0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2k2494q577c0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2k2494q577c0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2k2494q577c0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+</ul>
+<h3 id="54-软件测试httpsblog-draftdramacattopsystem-architect-up54-软件测试" class="headerLink">
+    <a href="#54-%e8%bd%af%e4%bb%b6%e6%b5%8b%e8%af%95httpsblog-draftdramacattopsystem-architect-up54-%e8%bd%af%e4%bb%b6%e6%b5%8b%e8%af%95" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#54-%e8%bd%af%e4%bb%b6%e6%b5%8b%e8%af%95" target="_blank" rel="noopener noreferrer">5.4 软件测试</a></h3><h4 id="相关公式-7" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e5%85%ac%e5%bc%8f-7" class="header-mark"></a>相关公式</h4><ul>
+<li>环形复杂度 1: 流图中边的条数 - 节点数 + 2</li>
+<li>环形复杂度 2: 判定节点数 + 1</li>
+</ul>
+<h4 id="相关题型及解题思路-13" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-13" class="header-mark"></a>相关题型及解题思路</h4><ul>
+<li><strong>2022 考察各个测试阶段的测试对象、测试依据、测试目的</strong>
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.18h1ho3us3vk.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.18h1ho3us3vk.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.18h1ho3us3vk.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.18h1ho3us3vk.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.18h1ho3us3vk.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.18h1ho3us3vk.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>考察白盒测试覆盖级别
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.14hhb8kn3xy8.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.14hhb8kn3xy8.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.14hhb8kn3xy8.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.14hhb8kn3xy8.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.14hhb8kn3xy8.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.14hhb8kn3xy8.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>求环形复杂度：看图带公式即可</li>
+<li>考察静态测试、动态测试的定义
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6p4st42yn000.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6p4st42yn000.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6p4st42yn000.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6p4st42yn000.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6p4st42yn000.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6p4st42yn000.webp 2x"
+            alt="alt">
+    </a></figure></li>
+</ul>
+<h3 id="56-基于构件的软件工程httpsblog-draftdramacattopsystem-architect-up56-基于构件的软件工程" class="headerLink">
+    <a href="#56-%e5%9f%ba%e4%ba%8e%e6%9e%84%e4%bb%b6%e7%9a%84%e8%bd%af%e4%bb%b6%e5%b7%a5%e7%a8%8bhttpsblog-draftdramacattopsystem-architect-up56-%e5%9f%ba%e4%ba%8e%e6%9e%84%e4%bb%b6%e7%9a%84%e8%bd%af%e4%bb%b6%e5%b7%a5%e7%a8%8b" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#56-%e5%9f%ba%e4%ba%8e%e6%9e%84%e4%bb%b6%e7%9a%84%e8%bd%af%e4%bb%b6%e5%b7%a5%e7%a8%8b" target="_blank" rel="noopener noreferrer">5.6 基于构件的软件工程</a></h3><h4 id="相关题型及解题思路-14" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-14" class="header-mark"></a>相关题型及解题思路</h4><ul>
+<li><strong>2022 考察构件的定义</strong></li>
+</ul>
+<h3 id="57-软件项目管理httpsblog-draftdramacattopsystem-architect-up57-软件项目管理" class="headerLink">
+    <a href="#57-%e8%bd%af%e4%bb%b6%e9%a1%b9%e7%9b%ae%e7%ae%a1%e7%90%86httpsblog-draftdramacattopsystem-architect-up57-%e8%bd%af%e4%bb%b6%e9%a1%b9%e7%9b%ae%e7%ae%a1%e7%90%86" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#57-%e8%bd%af%e4%bb%b6%e9%a1%b9%e7%9b%ae%e7%ae%a1%e7%90%86" target="_blank" rel="noopener noreferrer">5.7 软件项目管理</a></h3><h4 id="相关公式-8" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e5%85%ac%e5%bc%8f-8" class="header-mark"></a>相关公式</h4><ul>
+<li>总浮动时间 1: 关键路径 - 活动路径</li>
+<li>总浮动时间 2: 最迟开始 LS - 最早开始 ES</li>
+<li>总浮动时间 3: 最迟完成 LF - 最早完成 EF</li>
+<li>自由浮动时间: 紧后活动最早开始 LS 中的最小的 - 本活动的最早完成 EF</li>
+</ul>
+<h4 id="相关题型及解题思路-15" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-15" class="header-mark"></a>相关题型及解题思路</h4><ul>
+<li><strong>2022 求最低成本完成项目需要多少天：注意间接费用，可能赶工成本更低</strong></li>
+</ul>
+<h3 id="系统转换和维护httpsblog-draftdramacattopsystem-architect-up_系统转换和维护_" class="headerLink">
+    <a href="#%e7%b3%bb%e7%bb%9f%e8%bd%ac%e6%8d%a2%e5%92%8c%e7%bb%b4%e6%8a%a4httpsblog-draftdramacattopsystem-architect-up_%e7%b3%bb%e7%bb%9f%e8%bd%ac%e6%8d%a2%e5%92%8c%e7%bb%b4%e6%8a%a4_" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#_%e7%b3%bb%e7%bb%9f%e8%bd%ac%e6%8d%a2%e5%92%8c%e7%bb%b4%e6%8a%a4_" target="_blank" rel="noopener noreferrer">系统转换和维护</a></h3><h4 id="相关题型及解题思路-16" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-16" class="header-mark"></a>相关题型及解题思路</h4><ul>
+<li><strong>2022 考察遗留系统的演化策略</strong>
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5cbbdu2bv700.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5cbbdu2bv700.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5cbbdu2bv700.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5cbbdu2bv700.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5cbbdu2bv700.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5cbbdu2bv700.webp 2x"
+            alt="alt">
+    </a></figure></li>
+</ul>
+<h2 id="第-6-章-数据库设计基础知识-3-5" class="headerLink">
+    <a href="#%e7%ac%ac-6-%e7%ab%a0-%e6%95%b0%e6%8d%ae%e5%ba%93%e8%ae%be%e8%ae%a1%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86-3-5" class="header-mark"></a><strong>第 6 章 数据库设计基础知识 3-5</strong></h2><h3 id="62-关系数据库httpsblog-draftdramacattopsystem-architect-up62-关系数据库" class="headerLink">
+    <a href="#62-%e5%85%b3%e7%b3%bb%e6%95%b0%e6%8d%ae%e5%ba%93httpsblog-draftdramacattopsystem-architect-up62-%e5%85%b3%e7%b3%bb%e6%95%b0%e6%8d%ae%e5%ba%93" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#62-%e5%85%b3%e7%b3%bb%e6%95%b0%e6%8d%ae%e5%ba%93" target="_blank" rel="noopener noreferrer">6.2 关系数据库</a></h3><h4 id="相关题型及解题思路-17" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-17" class="header-mark"></a>相关题型及解题思路</h4><ul>
+<li><strong>2022 考察函数依赖的公理系统</strong>: 背下并理解四率两规则及其对应的数学代数表示。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3elkf4e09ho0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3elkf4e09ho0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3elkf4e09ho0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3elkf4e09ho0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3elkf4e09ho0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3elkf4e09ho0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li><strong>2022 求等价的关系代数表达式</strong>：常见的就是给个自然连接的表达式，等价的是一个笛卡尔积的表达式，笛卡尔积转自然连接需要经过投影和选择。<strong>还有能用数字代替列名，从 1 开始，如果表达式中看到带引号的数字可以直接排除</strong>。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3ux3o3ymu920.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3ux3o3ymu920.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3ux3o3ymu920.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3ux3o3ymu920.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3ux3o3ymu920.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3ux3o3ymu920.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>求关系代数等价的 SQL: 通常就是考察投影和选择，主要是行的问题，把属性列写一下很容易就能答出来。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6vbmh2dgmgo0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6vbmh2dgmgo0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6vbmh2dgmgo0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6vbmh2dgmgo0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6vbmh2dgmgo0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6vbmh2dgmgo0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>求元组个数和属性列数: 属性列很简单，自然连接求交集，笛卡尔积求并集，元组个数是，通过属性列相同且值相同连接后剩余的行数。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1svhfsvafz5s.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1svhfsvafz5s.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1svhfsvafz5s.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1svhfsvafz5s.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1svhfsvafz5s.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1svhfsvafz5s.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>求候选键/属性闭包等式成立的代数表达式: 根据依赖集找出从未在右边出现过的属性，其必然是候选键之一，然后以其为基础看看能不能遍历所有属性，将无法遍历的加入候选键中。属性闭包表达式括号里所有属性，能求出依赖的所有属性就是闭包等式成立，通常就是全部候选键。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4pcplcadb140.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4pcplcadb140.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4pcplcadb140.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4pcplcadb140.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4pcplcadb140.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4pcplcadb140.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>求模式分解后是否保持函数依赖、是否无损连接: 是否保持函数依赖先求分解后的模式分别的函数依赖，如果拆分后的属性，包含了原来的依赖关系中的所有属性，那么就能继承相应的依赖关系。然后如果剩余全部未被包含的依赖能通过函数依赖的公理系统得到，那么就能说保持了函数依赖。是否保持无损连接分解后的模式先求交集，然后看交集的属性能不能推出，任意一个差集里的属性，如果可以那就算无损连接。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6g9hbzkcenw0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6g9hbzkcenw0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6g9hbzkcenw0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6g9hbzkcenw0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6g9hbzkcenw0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6g9hbzkcenw0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+</ul>
+<h3 id="63-数据库设计httpsblog-draftdramacattopsystem-architect-up63-数据库设计" class="headerLink">
+    <a href="#63-%e6%95%b0%e6%8d%ae%e5%ba%93%e8%ae%be%e8%ae%a1httpsblog-draftdramacattopsystem-architect-up63-%e6%95%b0%e6%8d%ae%e5%ba%93%e8%ae%be%e8%ae%a1" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#63-%e6%95%b0%e6%8d%ae%e5%ba%93%e8%ae%be%e8%ae%a1" target="_blank" rel="noopener noreferrer">6.3 数据库设计</a></h3><h4 id="相关题型及解题思路-18" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-18" class="header-mark"></a>相关题型及解题思路</h4><ul>
+<li>求属于概念结构设计的什么冲突: 理解概念结构的冲突。<strong>如果连着解决冲突的方式一起考，也可以根据解决方式倒推冲突类型</strong>
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1335yuslpl0g.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1335yuslpl0g.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1335yuslpl0g.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1335yuslpl0g.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1335yuslpl0g.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1335yuslpl0g.webp 2x"
+            alt="alt">
+    </a></figure></li>
+<li>求关系模式达到了第几范式: 理解各种范式的限定条件。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4mdz4t1ajta0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4mdz4t1ajta0.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4mdz4t1ajta0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4mdz4t1ajta0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4mdz4t1ajta0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4mdz4t1ajta0.webp 2x"
+            alt="alt">
+    </a></figure></li>
+</ul>
+<h3 id="规范发和并发httpsblog-draftdramacattopsystem-architect-up_规范发和并发_" class="headerLink">
+    <a href="#%e8%a7%84%e8%8c%83%e5%8f%91%e5%92%8c%e5%b9%b6%e5%8f%91httpsblog-draftdramacattopsystem-architect-up_%e8%a7%84%e8%8c%83%e5%8f%91%e5%92%8c%e5%b9%b6%e5%8f%91_" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#_%e8%a7%84%e8%8c%83%e5%8f%91%e5%92%8c%e5%b9%b6%e5%8f%91_" target="_blank" rel="noopener noreferrer">规范发和并发</a></h3><h4 id="相关题型及解题思路-19" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-19" class="header-mark"></a>相关题型及解题思路</h4><ul>
+<li>求事务能否加锁成功: 很简单，排它(写)锁就是一个事务加了，其他事务什么锁也加不了。共享(读)锁就是一个事务加了，其他事务只能加共享(读)锁，不能加排它(写)锁。
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7b4qv3t1rr00.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7b4qv3t1rr00.webp">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7b4qv3t1rr00.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7b4qv3t1rr00.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7b4qv3t1rr00.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7b4qv3t1rr00.webp 2x"
+            alt="alt">
+    </a></figure></li>
+</ul>
+<h2 id="第-7-章-系统架构设计的基础知识-15httpsblog-draftdramacattopsystem-architect-up第-7-章-系统架构设计的基础知识-15" class="headerLink">
+    <a href="#%e7%ac%ac-7-%e7%ab%a0-%e7%b3%bb%e7%bb%9f%e6%9e%b6%e6%9e%84%e8%ae%be%e8%ae%a1%e7%9a%84%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86-15httpsblog-draftdramacattopsystem-architect-up%e7%ac%ac-7-%e7%ab%a0-%e7%b3%bb%e7%bb%9f%e6%9e%b6%e6%9e%84%e8%ae%be%e8%ae%a1%e7%9a%84%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86-15" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#%e7%ac%ac-7-%e7%ab%a0-%e7%b3%bb%e7%bb%9f%e6%9e%b6%e6%9e%84%e8%ae%be%e8%ae%a1%e7%9a%84%e5%9f%ba%e7%a1%80%e7%9f%a5%e8%af%86-15" target="_blank" rel="noopener noreferrer">第 7 章 系统架构设计的基础知识 15</a></h2><h3 id="相关题型及解题思路-20" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-20" class="header-mark"></a>相关题型及解题思路</h3><ul>
+<li><strong>2022 给定系统需求问应采用什么架构风格: 架构风格分类理解记忆</strong>
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.9q5ki5kspfc.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.9q5ki5kspfc.webp" data-sub-html="<h2>alt</h2><p>alt</p>">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.9q5ki5kspfc.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.9q5ki5kspfc.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.9q5ki5kspfc.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.9q5ki5kspfc.webp 2x"
+            alt="alt">
+    </a><figcaption class="image-caption">alt</figcaption>
+    </figure></li>
+<li><strong>2022 考察软件架构复用类型的定义</strong>
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6114vjanjhg0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6114vjanjhg0.webp" data-sub-html="<h2>alt</h2><p>alt</p>">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6114vjanjhg0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6114vjanjhg0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6114vjanjhg0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6114vjanjhg0.webp 2x"
+            alt="alt">
+    </a><figcaption class="image-caption">alt</figcaption>
+    </figure></li>
+<li>考察软件架构复的阶段
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.sz8qpqmjehs.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.sz8qpqmjehs.webp" data-sub-html="<h2>alt</h2><p>alt</p>">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.sz8qpqmjehs.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.sz8qpqmjehs.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.sz8qpqmjehs.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.sz8qpqmjehs.webp 2x"
+            alt="alt">
+    </a><figcaption class="image-caption">alt</figcaption>
+    </figure></li>
+<li>考察 DSSA 的定义
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4lrq13wysgo0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4lrq13wysgo0.webp" data-sub-html="<h2>alt</h2><p>alt</p>">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4lrq13wysgo0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4lrq13wysgo0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4lrq13wysgo0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4lrq13wysgo0.webp 2x"
+            alt="alt">
+    </a><figcaption class="image-caption">alt</figcaption>
+    </figure></li>
+<li>考察 DSSA 三个基本活动：目的与活动的对应关系
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6grp3qdkwgg0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6grp3qdkwgg0.webp" data-sub-html="<h2>alt</h2><p>alt</p>">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6grp3qdkwgg0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6grp3qdkwgg0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6grp3qdkwgg0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6grp3qdkwgg0.webp 2x"
+            alt="alt">
+    </a><figcaption class="image-caption">alt</figcaption>
+    </figure></li>
+<li>考察分层架构风格: 理解记忆
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1syxi574bxuo.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1syxi574bxuo.webp" data-sub-html="<h2>alt</h2><p>alt</p>">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1syxi574bxuo.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1syxi574bxuo.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1syxi574bxuo.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1syxi574bxuo.webp 2x"
+            alt="alt">
+    </a><figcaption class="image-caption">alt</figcaption>
+    </figure></li>
+</ul>
+<h2 id="第-8-章-系统质量属性与架构评估-10httpsblog-draftdramacattopsystem-architect-up第-8-章-系统质量属性与架构评估-10" class="headerLink">
+    <a href="#%e7%ac%ac-8-%e7%ab%a0-%e7%b3%bb%e7%bb%9f%e8%b4%a8%e9%87%8f%e5%b1%9e%e6%80%a7%e4%b8%8e%e6%9e%b6%e6%9e%84%e8%af%84%e4%bc%b0-10httpsblog-draftdramacattopsystem-architect-up%e7%ac%ac-8-%e7%ab%a0-%e7%b3%bb%e7%bb%9f%e8%b4%a8%e9%87%8f%e5%b1%9e%e6%80%a7%e4%b8%8e%e6%9e%b6%e6%9e%84%e8%af%84%e4%bc%b0-10" class="header-mark"></a><a href="https://blog-draft.dramacat.top/system-architect-up/#%e7%ac%ac-8-%e7%ab%a0-%e7%b3%bb%e7%bb%9f%e8%b4%a8%e9%87%8f%e5%b1%9e%e6%80%a7%e4%b8%8e%e6%9e%b6%e6%9e%84%e8%af%84%e4%bc%b0-10" target="_blank" rel="noopener noreferrer">第 8 章 系统质量属性与架构评估 10</a></h2><h3 id="相关题型及解题思路-21" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e9%a2%98%e5%9e%8b%e5%8f%8a%e8%a7%a3%e9%a2%98%e6%80%9d%e8%b7%af-21" class="header-mark"></a>相关题型及解题思路</h3><ul>
+<li><strong>2022 考察软件系统的质量属性</strong></li>
+<li><strong>2022 给定描述问是哪个面向架构的质量属性: 理解记忆</strong>
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1u1q487j2ncw.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1u1q487j2ncw.webp" data-sub-html="<h2>alt</h2><p>alt</p>">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1u1q487j2ncw.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1u1q487j2ncw.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1u1q487j2ncw.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1u1q487j2ncw.webp 2x"
+            alt="alt">
+    </a><figcaption class="image-caption">alt</figcaption>
+    </figure></li>
+<li><strong>2022 考察敏感点、权衡点、风险点的判断</strong>
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.400qjk8cu300.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.400qjk8cu300.webp" data-sub-html="<h2>alt</h2><p>alt</p>">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.400qjk8cu300.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.400qjk8cu300.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.400qjk8cu300.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.400qjk8cu300.webp 2x"
+            alt="alt">
+    </a><figcaption class="image-caption">alt</figcaption>
+    </figure></li>
+<li>考察质量属性场景的六个部分
+<figure><a class="lightgallery" href="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3ywd7q8ejfs0.webp" title="alt" data-thumbnail="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3ywd7q8ejfs0.webp" data-sub-html="<h2>alt</h2><p>alt</p>">
+        <img
+            
+            loading="lazy"
+            src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3ywd7q8ejfs0.webp"
+            srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3ywd7q8ejfs0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3ywd7q8ejfs0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3ywd7q8ejfs0.webp 2x"
+            alt="alt">
+    </a><figcaption class="image-caption">alt</figcaption>
+    </figure></li>
+</ul>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-04-06&nbsp;<a class="git-hash" href="https://github.com/Humble-Xiang/hugo-blog/commit/c35233da6a399af77c2401e6978337d21f10d657" target="_blank" title="commit by OrionPax(orionpax.1997@outlook.com) c35233da6a399af77c2401e6978337d21f10d657: update" rel="noopener noreferrer">
+                                    <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M440.667 182.109l7.143-40c1.313-7.355-4.342-14.109-11.813-14.109h-74.81l14.623-81.891C377.123 38.754 371.468 32 363.997 32h-40.632a12 12 0 0 0-11.813 9.891L296.175 128H197.54l14.623-81.891C213.477 38.754 207.822 32 200.35 32h-40.632a12 12 0 0 0-11.813 9.891L132.528 128H53.432a12 12 0 0 0-11.813 9.891l-7.143 40C33.163 185.246 38.818 192 46.289 192h74.81L98.242 320H19.146a12 12 0 0 0-11.813 9.891l-7.143 40C-1.123 377.246 4.532 384 12.003 384h74.81L72.19 465.891C70.877 473.246 76.532 480 84.003 480h40.632a12 12 0 0 0 11.813-9.891L151.826 384h98.634l-14.623 81.891C234.523 473.246 240.178 480 247.65 480h40.632a12 12 0 0 0 11.813-9.891L315.472 384h79.096a12 12 0 0 0 11.813-9.891l7.143-40c1.313-7.355-4.342-14.109-11.813-14.109h-74.81l22.857-128h79.096a12 12 0 0 0 11.813-9.891zM261.889 320h-98.634l22.857-128h98.634l-22.857 128z"/></svg>c35233d</a></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line print:!tw-hidden">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/system-architect-choice/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span><span>|&nbsp;<a class="link-to-source" href=https://github.com/Humble-Xiang/hugo-blog/blob/main/content/posts/system-architect-choice.md target="_blank" rel="noopener noreferrer">查看源代码</a>
+                    </span><span>|&nbsp;<a class="link-to-edit" href=https://github.com/Humble-Xiang/hugo-blog/edit/main/content/posts/system-architect-choice.md target="_blank" rel="noopener noreferrer">编辑此页</a>
+                    </span><span>|&nbsp;<a class="link-to-report" href=https://github.com/Humble-Xiang/hugo-blog/issues/new?title=[bug]%20%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88-%E9%80%89%E6%8B%A9&body=|Field|Value|%0A|-|-|%0A|Title|%E8%BD%AF%E8%80%83-%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E5%B8%88-%E9%80%89%E6%8B%A9|%0A|Url|http://localhost:1313/system-architect-choice/|%0A|Filename|https://github.com/Humble-Xiang/hugo-blog/blob/main/content/posts/system-architect-choice.md| target="_blank" rel="noopener noreferrer">报告问题</a>
+                    </span></div>
+            <div class="post-info-share"></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"></section>
+        <section class="print:!tw-hidden">
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav print:tw-hidden"><a href="/memory_leak/" class="prev" rel="prev" title="Java 内存泄漏的定位"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Java 内存泄漏的定位</a>
+            <a href="/system-architect-up/" class="next" rel="next" title="软考-系统架构师-上篇">软考-系统架构师-上篇<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.125.7">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.0"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg> DoIt</a>
+                </div><div class="footer-line"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"/></svg>2019 - 2024<span class="author">&nbsp;<a href="https://github.com/Humble-Xiang" target="_blank" rel="noopener noreferrer">Humble.Xiang</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons" class="print:!tw-hidden"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32z"/></svg>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{},"data":{"desktop-header-typeit":"Humble.X","mobile-header-typeit":"Humble.X"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":true,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.1,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"table":{"sort":true},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":-1,"speed":100}};</script><script
+    src="/lib/tablesort/tablesort.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lightgallery.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lg-thumbnail.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lg-zoom.min.js"
+    
+  ></script><script
+    src="/lib/clipboard/clipboard.min.js"
+    
+  ></script><script
+    src="/lib/sharer/sharer.min.js"
+    
+  ></script><script
+    src="/lib/typeit/typeit.min.js"
+    
+  ></script><script
+    src="https://website-card-embed.dramacat.top/website-card-embed-loveit.js"
+    
+  ></script><script
+    src="/js/theme.min.js"
+    
+      defer
+    
+  ></script></div>
+</body>
+
+</html>

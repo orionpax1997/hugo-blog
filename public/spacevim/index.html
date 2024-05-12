@@ -1,0 +1,1668 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" /><title>SpaceVim 的使用 - 向之礼的个人博客</title><meta name="Description" content="不能记住过去的人，被判重复过去。"><meta property="og:title" content="SpaceVim 的使用" />
+<meta property="og:description" content="简介SpaceVim 是一个社区驱动的 Vim 和 Neovim 发行版。它的灵感来自 spacemacs。它分层管理插件集合，这有助于将相关包收集在一起以提供功能。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/spacevim/" /><meta property="og:image" content="https://og-image.dramacat.top/SpaceVim 的使用?images=https://blog.dramacat.top/images/avatar.jpg" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-03-09T14:09:38+08:00" />
+<meta property="article:modified_time" content="2023-11-13T10:31:13+08:00" /><meta property="og:site_name" content="向之礼的个人博客" />
+
+
+<meta name="twitter:title" content="SpaceVim 的使用"/>
+<meta name="twitter:card" content="summary_large_image"/><meta property="twitter:image" content="https://og-image.dramacat.top/SpaceVim 的使用?images=https://blog.dramacat.top/images/avatar.jpg" /><meta name="twitter:description" content="简介SpaceVim 是一个社区驱动的 Vim 和 Neovim 发行版。它的灵感来自 spacemacs。它分层管理插件集合，这有助于将相关包收集在一起以提供功能。"/>
+<meta name="application-name" content="Humble.X">
+<meta name="apple-mobile-web-app-title" content="Humble.X">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><meta name="referrer" content="never"></meta>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest">
+
+<link rel="canonical" href="http://localhost:1313/spacevim/" /><link rel="prev" href="http://localhost:1313/spacemacs/" /><link rel="next" href="http://localhost:1313/system-architect/" />
+<link rel="stylesheet" href="/css/main.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">{"@context": "https://schema.org","@type": "BlogPosting",
+        "headline": "SpaceVim 的使用",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http://localhost:1313/spacevim/"
+        },"image": ["http://localhost:1313/images/Apple-Devices-Preview.png"],"genre": "posts","keywords":["Tool"],"wordcount":  4027 ,
+        "url": "http://localhost:1313/spacevim/","datePublished": "2023-03-09T14:09:38+08:00","dateModified": "2023-11-13T10:31:13+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Humble.Xiang","logo": "http://localhost:1313/images/avatar.jpg"},"author": {
+                "@type": "Person",
+                "name": "Humble.Xiang",
+                "url": "https://github.com/Humble-Xiang"
+            },"description": ""
+    }</script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {
+          document.body.setAttribute('theme', theme); 
+          document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');
+          if (theme === 'light') {
+            document.documentElement.classList.remove('tw-dark')
+          } else {
+            document.documentElement.classList.add('tw-dark')
+          }
+          window.theme = theme;   
+          window.isDark = window.theme !== 'light' 
+        }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop print:!tw-hidden" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="向之礼的个人博客"><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item"
+                    href="/posts/" > 所有文章 </a><a class="menu-item"
+                    href="/tags/" > 标签 </a><a class="menu-item"
+                    href="/categories/" > 分类 </a><a class="menu-item"
+                    href="/series/" > 系列 </a><a class="menu-item"
+                    href="https://github.com/Humble-Xiang"  title="GitHub" 
+                    rel="noopener noreferrer" target="_blank" ><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d='M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z'/></svg>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-desktop">
+                    <button class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+                    </button>
+                    <button class="search-button search-clear" id="search-clear-desktop" title="清空">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+                    </button>
+                    <span class="search-button search-loading tw-animate-spin" id="search-loading-desktop">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"/></svg>
+                    </span>
+                </span><button class="menu-item theme-select" aria-label="切换主题">
+                    <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg>
+                    <select class="color-theme-select" id="theme-select-desktop" aria-label="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </button></div>
+        </div>
+    </div>
+</header><header class="mobile print:!tw-hidden" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="向之礼的个人博客"><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                <div class="search mobile" id="search-mobile">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-mobile">
+                    <button class="search-button search-toggle tw-h-10" id="search-toggle-mobile" title="搜索">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+                    </button>
+                    <button class="search-button search-clear" id="search-clear-mobile" title="清空">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+                    </button>
+                    <span class="search-button search-loading tw-animate-spin" id="search-loading-mobile">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"/></svg>
+                    </span>
+                </div>
+                <button class="search-cancel" id="search-cancel-mobile">
+                    取消
+                </button>
+            </div><a class="menu-item" href="/posts/" title="" >所有文章</a><a class="menu-item" href="/tags/" title="" >标签</a><a class="menu-item" href="/categories/" title="" >分类</a><a class="menu-item" href="/series/" title="" >系列</a><a class="menu-item" href="https://github.com/Humble-Xiang" title="GitHub" 
+                rel="noopener noreferrer" target="_blank" ><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d='M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z'/></svg></a><button class="menu-item theme-select tw-w-full" aria-label="切换主题">
+                <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg>
+                <select class="color-theme-select" id="theme-select-mobile" aria-label="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </button></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div><main class="main">
+            <div class="container"><div class="toc print:!tw-hidden" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#简介">简介</a></li>
+    <li><a href="#入门">入门</a></li>
+    <li><a href="#文档">文档</a></li>
+    <li><a href="#可用层">可用层</a></li>
+    <li><a href="#配置">配置</a></li>
+    <li><a href="#应用场景">应用场景</a>
+      <ul>
+        <li><a href="#跳跃加入和分裂">跳跃、加入和分裂</a>
+          <ul>
+            <li><a href="#跳跃">跳跃</a></li>
+            <li><a href="#加入和分裂">加入和分裂</a></li>
+          </ul>
+        </li>
+        <li><a href="#编辑">编辑</a>
+          <ul>
+            <li><a href="#扩展文本区域">扩展文本区域</a></li>
+            <li><a href="#复制和粘贴">复制和粘贴</a></li>
+            <li><a href="#增加减少数字">增加/减少数字</a></li>
+            <li><a href="#用-iedit-替换文本">用 iedit 替换文本</a></li>
+          </ul>
+        </li>
+        <li><a href="#文件树的使用">文件树的使用</a>
+          <ul>
+            <li><a href="#文件树导航">文件树导航</a></li>
+            <li><a href="#使用文件树打开文件">使用文件树打开文件</a></li>
+          </ul>
+        </li>
+        <li><a href="#窗口管理器使用">窗口管理器使用</a>
+          <ul>
+            <li><a href="#通用编辑器窗口">通用编辑器窗口</a></li>
+            <li><a href="#窗口操作键绑定">窗口操作键绑定</a></li>
+          </ul>
+        </li>
+        <li><a href="#shell-使用">Shell 使用</a></li>
+        <li><a href="#git-使用">Git 使用</a></li>
+        <li><a href="#撤消树使用">撤消树使用</a></li>
+        <li><a href="#自定义-snippets">自定义 Snippets</a></li>
+        <li><a href="#自定义按键绑定">自定义按键绑定</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single print:!tw-w-full print:!tw-max-w-none print:!tw-m-0 print:!tw-p-0"><h1 class="single-title animate__animated animate__flipInX">SpaceVim 的使用</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><img src="http://localhost:1313/images/avatar.jpg" alt="Humble.Xiang avatar" class="tw-inline-block tw-max-h-4 tw-rounded-full tw-translate-y-[-2px] tw-mr-1"><a href="https://github.com/Humble-Xiang" title="Author" target="_blank" rel="noopener noreferrer author" class="author">Humble.Xiang</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/geek/"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>Geek</a></span>&nbsp;<span class="post-category">和</span>&nbsp;<span class="post-series">系列 <a href="/series/%E7%94%9F%E5%91%BD%E4%B8%8D%E6%81%AF-%E6%8A%98%E8%85%BE%E4%B8%8D%E6%AD%A2/"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M464 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V86a6 6 0 0 1 6-6h404a6 6 0 0 1 6 6v340a6 6 0 0 1-6 6zm-42-92v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm0-96v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm0-96v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm-252 12c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36zm0 96c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36zm0 96c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36z"/></svg>生命不息 折腾不止</a></span></div>
+            <div class="post-meta-line"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;<time datetime="2023-03-09">2023-03-09</time>&nbsp;<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg>&nbsp;<time datetime="2023-11-13">2023-11-13</time>&nbsp;<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;约 4027 字&nbsp;<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;预计阅读 9 分钟&nbsp;</div>
+        </div><div class="details series-nav open">
+                                <div class="details-summary series-title">
+                                    <span>系列 - </span>
+                                    <span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+                                </div>
+                                <div class="details-content series-content">
+                                    <nav>
+                                        <ul><li><span class="active">SpaceVim 的使用</span></li>
+                                                    <li><a href="/spacemacs/">Spacemacs 的使用</a></li>
+                                                    <li><a href="/white-piao/">使用 White Piao 快乐看剧吧</a></li>
+                                                    <li><a href="/website-card-embed/">使用 Website Card Embed 在你的 Blog 中以卡片形式进行文章引用</a></li>
+                                                    <li><a href="/website-description-analysis/">使用 Website Description Analysis 解析网页简介信息</a></li>
+                                                    <li><a href="/surfingkeys/">使用 Surfingkeys 以 VIM 的方式操作你的浏览器</a></li>
+                                                    <li><a href="/homebrew/">Homebrew 的使用</a></li>
+                                                    <li><a href="/neovim/">neovim 的使用</a></li>
+                                                    <li><a href="/hammerspoon/">Hammerspoon 的使用</a></li>
+                                                    <li><a href="/ranger/">命令行下的文件管理器 Ranger</a></li>
+                                                    <li><a href="/mac-terminal/">MacOS 下的终端 &#43; Shell 选择</a></li>
+                                                    <li><a href="/windows-terminal/">Windows 下的终端解决方案</a></li>
+                                                    <li><a href="/ladder/">如何科学上网？</a></li>
+                                                    <li><a href="/scoop/">Windows 下的软件包管理工具 Scoop</a></li>
+                                                    <li><a href="/hugo/">如何使用 Hugo 进行个人博客搭建？</a></li></ul>
+                                    </nav>
+                                </div>
+                            </div><div class="details toc print:!tw-block" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#简介">简介</a></li>
+    <li><a href="#入门">入门</a></li>
+    <li><a href="#文档">文档</a></li>
+    <li><a href="#可用层">可用层</a></li>
+    <li><a href="#配置">配置</a></li>
+    <li><a href="#应用场景">应用场景</a>
+      <ul>
+        <li><a href="#跳跃加入和分裂">跳跃、加入和分裂</a>
+          <ul>
+            <li><a href="#跳跃">跳跃</a></li>
+            <li><a href="#加入和分裂">加入和分裂</a></li>
+          </ul>
+        </li>
+        <li><a href="#编辑">编辑</a>
+          <ul>
+            <li><a href="#扩展文本区域">扩展文本区域</a></li>
+            <li><a href="#复制和粘贴">复制和粘贴</a></li>
+            <li><a href="#增加减少数字">增加/减少数字</a></li>
+            <li><a href="#用-iedit-替换文本">用 iedit 替换文本</a></li>
+          </ul>
+        </li>
+        <li><a href="#文件树的使用">文件树的使用</a>
+          <ul>
+            <li><a href="#文件树导航">文件树导航</a></li>
+            <li><a href="#使用文件树打开文件">使用文件树打开文件</a></li>
+          </ul>
+        </li>
+        <li><a href="#窗口管理器使用">窗口管理器使用</a>
+          <ul>
+            <li><a href="#通用编辑器窗口">通用编辑器窗口</a></li>
+            <li><a href="#窗口操作键绑定">窗口操作键绑定</a></li>
+          </ul>
+        </li>
+        <li><a href="#shell-使用">Shell 使用</a></li>
+        <li><a href="#git-使用">Git 使用</a></li>
+        <li><a href="#撤消树使用">撤消树使用</a></li>
+        <li><a href="#自定义-snippets">自定义 Snippets</a></li>
+        <li><a href="#自定义按键绑定">自定义按键绑定</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><div class="details admonition warning open">
+                <div class="details-summary admonition-title">
+                    <span class="icon warning"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M569.517 440.013C587.975 472.007 564.806 512 527.94 512H48.054c-36.937 0-59.999-40.055-41.577-71.987L246.423 23.985c18.467-32.009 64.72-31.951 83.154 0l239.94 416.028zM288 354c-25.405 0-46 20.595-46 46s20.595 46 46 46 46-20.595 46-46-20.595-46-46-46zm-43.673-165.346l7.418 136c.347 6.364 5.609 11.346 11.982 11.346h48.546c6.373 0 11.635-4.982 11.982-11.346l7.418-136c.375-6.874-5.098-12.654-11.982-12.654h-63.383c-6.884 0-12.356 5.78-11.981 12.654z"/></svg></span>警告<span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+                </div>
+                <div class="details-content">
+                    <div class="admonition-content">
+                        本文最后更新于 <span class="timeago" datetime="2023-11-13T10:31:13" title="November 13, 2023">2023-11-13</span>，文中内容可能已过时。</div>
+                </div>
+            </div><h2 id="简介" class="headerLink">
+    <a href="#%e7%ae%80%e4%bb%8b" class="header-mark"></a>简介</h2><p>SpaceVim 是一个社区驱动的 Vim 和 Neovim 发行版。它的灵感来自 spacemacs。它分层管理插件集合，这有助于将相关包收集在一起以提供功能。这种方法有助于保持配置井井有条，并通过让用户不必考虑要安装哪些包来减少用户的开销。</p>
+<h2 id="入门" class="headerLink">
+    <a href="#%e5%85%a5%e9%97%a8" class="header-mark"></a>入门</h2><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspacevim.org%2fquick-start-guide%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h2 id="文档" class="headerLink">
+    <a href="#%e6%96%87%e6%a1%a3" class="header-mark"></a>文档</h2><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspacevim.org%2fdocumentation%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h2 id="可用层" class="headerLink">
+    <a href="#%e5%8f%af%e7%94%a8%e5%b1%82" class="header-mark"></a>可用层</h2><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspacevim.org%2flayers%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h2 id="配置" class="headerLink">
+    <a href="#%e9%85%8d%e7%bd%ae" class="header-mark"></a>配置</h2><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span><span class="lnt">84
+</span><span class="lnt">85
+</span><span class="lnt">86
+</span><span class="lnt">87
+</span><span class="lnt">88
+</span><span class="lnt">89
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c">#=============================================================================</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Copyright (c) 2019-2023 Humble.Xiang</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Author: Humble.Xiang &lt; humble.xiang@gmail.com &gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c"># URL: https://blog.dramacat.top/</span>
+</span></span><span class="line"><span class="cl"><span class="c"># License: GPLv3</span>
+</span></span><span class="line"><span class="cl"><span class="c">#=============================================================================</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">options</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># 顶部标签列表序号类型</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">buffer_index_type</span> <span class="p">=</span> <span class="mi">4</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># 引导函数，配置原生键位映射</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">bootstrap_after</span> <span class="p">=</span> <span class="s2">&#34;myspacevim#after&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># 主题</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">colorscheme</span> <span class="p">=</span> <span class="s2">&#34;onedark&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># 中文帮助</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">vim_help_language</span> <span class="p">=</span> <span class="s2">&#34;cn&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># 启用真彩色</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">enable_guicolors</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># 顶部标签栏上的文件类型图标</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">enable_tabline_filetype_icon</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># 状态栏上显示当前模式</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">enable_statusline_mode</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># 文件树从左侧唤出</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">filetree_direction</span> <span class="p">=</span> <span class="s2">&#34;left&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># 文件树使用 defx</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">filemanager</span> <span class="p">=</span> <span class="s2">&#34;defx&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># 字体</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">guifont</span> <span class="p">=</span> <span class="s2">&#34;FiraCode Nerd Font&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># 活动窗口状态栏上的分割符号形状</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">statusline_separator</span> <span class="p">=</span> <span class="s2">&#34;arrow&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># 非活动窗口状态栏上的分割符号形状</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">statusline_iseparator</span> <span class="p">=</span> <span class="s2">&#34;arrow&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 自动补全</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">layers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s1">&#39;autocomplete&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Enter complete 完成当前选择</span>
+</span></span><span class="line"><span class="cl"><span class="nx">auto_completion_return_key_behavior</span> <span class="p">=</span> <span class="s2">&#34;complete&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c"># Tab smart 循环候选、扩展片段、跳转参数</span>
+</span></span><span class="line"><span class="cl"><span class="nx">auto_completion_tab_key_behavior</span> <span class="p">=</span> <span class="s2">&#34;smart&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 中文</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">layers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;chinese&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 主题</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">layers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;colorscheme&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 核心</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">layers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s1">&#39;core&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 显示隐藏文件</span>
+</span></span><span class="line"><span class="cl"><span class="nx">filetree_show_hidden</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 文件树中显示 git 状态</span>
+</span></span><span class="line"><span class="cl"><span class="nx">enable_filetree_gitstatus</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 格式化</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">layers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;format&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 保存时格式化</span>
+</span></span><span class="line"><span class="cl"><span class="nx">format_on_save</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Git</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">layers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;git&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">git_plugin</span> <span class="p">=</span> <span class="s1">&#39;fugitive&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># Shell</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">layers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s1">&#39;shell&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 设置 Shell 从底部唤出</span>
+</span></span><span class="line"><span class="cl"><span class="nx">default_position</span> <span class="p">=</span> <span class="s1">&#39;bottom&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 更好的高亮</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">layers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;treesitter&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 模糊查询</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">layers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;telescope&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 版本控制</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">layers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;VersionControl&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 笔记 不加 telescope 启动会报错</span>
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">layers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">name</span> <span class="p">=</span> <span class="s2">&#34;zettelkasten&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="应用场景" class="headerLink">
+    <a href="#%e5%ba%94%e7%94%a8%e5%9c%ba%e6%99%af" class="header-mark"></a>应用场景</h2><h3 id="跳跃加入和分裂" class="headerLink">
+    <a href="#%e8%b7%b3%e8%b7%83%e5%8a%a0%e5%85%a5%e5%92%8c%e5%88%86%e8%a3%82" class="header-mark"></a>跳跃、加入和分裂</h3><p>前缀<code>SPC j</code>用于跳跃、连接和拆分。</p>
+<h4 id="跳跃" class="headerLink">
+    <a href="#%e8%b7%b3%e8%b7%83" class="header-mark"></a>跳跃</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">按键绑定</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>SPC j $</code></td>
+<td style="text-align:left">转到行尾（并在行中的前一个位置设置标记）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j 0</code></td>
+<td style="text-align:left">转到行首（并在行中的前一个位置设置标记）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j b</code></td>
+<td style="text-align:left">向后跳</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j c</code></td>
+<td style="text-align:left">跳转到上次更改</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j d</code></td>
+<td style="text-align:left">跳转到当前目录的列表</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j D</code></td>
+<td style="text-align:left">跳转到当前目录的列表（其他窗口）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j f</code></td>
+<td style="text-align:left">向前跳</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j I</code></td>
+<td style="text-align:left">跳转到任何缓冲区中的定义（明确轮廓）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j i</code></td>
+<td style="text-align:left">跳转到缓冲区中的定义（明确轮廓）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j j</code></td>
+<td style="text-align:left">跳转到缓冲区中的一个字符（easymotion）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j J</code></td>
+<td style="text-align:left">跳转到缓冲区中的一组两个字符 (easymotion)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j k</code></td>
+<td style="text-align:left">跳转到下一行并使用自动缩进规则缩进</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j l</code></td>
+<td style="text-align:left">使用 avy (easymotion) 跳转到一行</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j q</code></td>
+<td style="text-align:left">显示 dumb-jump quick look 工具提示 (TODO)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j u</code></td>
+<td style="text-align:left">跳转到当前窗口中的 URL</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j v</code></td>
+<td style="text-align:left">跳转到 Emacs Lisp 变量的定义/声明 (TODO)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j w</code></td>
+<td style="text-align:left">跳转到当前缓冲区中的一个词 (easymotion)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="加入和分裂" class="headerLink">
+    <a href="#%e5%8a%a0%e5%85%a5%e5%92%8c%e5%88%86%e8%a3%82" class="header-mark"></a>加入和分裂</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">按键绑定</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>J</code></td>
+<td style="text-align:left">加入当前行与下一行</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j o</code></td>
+<td style="text-align:left">将代码块连接到单行语句中</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j m</code></td>
+<td style="text-align:left">将单行拆分为多行</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j k</code></td>
+<td style="text-align:left">转到下一行并使用自动缩进规则缩进</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j n</code></td>
+<td style="text-align:left">在点处拆分当前行，插入新行并自动缩进</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j o</code></td>
+<td style="text-align:left">在 point 处拆分当前行，但让 point 在当前行上</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j s</code></td>
+<td style="text-align:left">就地拆分带引号的字符串或 s-expression</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC j S</code></td>
+<td style="text-align:left">用 拆分带引号的字符串或 s-expression <code>\n</code>，并自动缩进新行</td>
+</tr>
+</tbody>
+</table>
+<h3 id="编辑" class="headerLink">
+    <a href="#%e7%bc%96%e8%be%91" class="header-mark"></a>编辑</h3><h4 id="扩展文本区域" class="headerLink">
+    <a href="#%e6%89%a9%e5%b1%95%e6%96%87%e6%9c%ac%e5%8c%ba%e5%9f%9f" class="header-mark"></a>扩展文本区域</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">按键绑定</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>v</code></td>
+<td style="text-align:left">将文本的视觉选择扩展到更大的区域</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>V</code></td>
+<td style="text-align:left">将文本的视觉选择缩小到较小的区域</td>
+</tr>
+</tbody>
+</table>
+<h4 id="复制和粘贴" class="headerLink">
+    <a href="#%e5%a4%8d%e5%88%b6%e5%92%8c%e7%b2%98%e8%b4%b4" class="header-mark"></a>复制和粘贴</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">按键绑定</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&lt;Leader&gt; y</code></td>
+<td style="text-align:left">将所选文本复制到系统剪贴板</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;Leader&gt; p</code></td>
+<td style="text-align:left">在此处之后粘贴系统剪贴板中的文本</td>
+</tr>
+</tbody>
+</table>
+<h4 id="增加减少数字" class="headerLink">
+    <a href="#%e5%a2%9e%e5%8a%a0%e5%87%8f%e5%b0%91%e6%95%b0%e5%ad%97" class="header-mark"></a>增加/减少数字</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">按键绑定</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>SPC n +</code></td>
+<td style="text-align:left">将光标下的数字加一并启动瞬态</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC n -</code></td>
+<td style="text-align:left">将光标下的数字减一并启动瞬态</td>
+</tr>
+</tbody>
+</table>
+<p>在瞬态：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">按键绑定</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>+</code></td>
+<td style="text-align:left">将光标下的数字加一</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>-</code></td>
+<td style="text-align:left">将光标下的数字减一</td>
+</tr>
+<tr>
+<td style="text-align:left">任何其他键</td>
+<td style="text-align:left">离开过渡状态</td>
+</tr>
+</tbody>
+</table>
+<p>**提示：**您可以使用前缀参数设置步长（默认为 1）（即<code>10 SPC n +</code>会将光标下的数字加 10）</p>
+<h4 id="用-iedit-替换文本" class="headerLink">
+    <a href="#%e7%94%a8-iedit-%e6%9b%bf%e6%8d%a2%e6%96%87%e6%9c%ac" class="header-mark"></a>用 iedit 替换文本</h4><p>SpaceVim 使用强大的 iedit 模式来快速编辑多次出现的符号或选择。</p>
+<p><strong>两种新模式：</strong> <code>iedit-Normal</code> /<code>iedit-Insert</code></p>
+<p>iedit 的默认颜色是<code>red</code>/ <code>green</code>，它基于当前的配色方案。</p>
+<p><strong>状态转换：</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">按键绑定</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>SPC s e</code></td>
+<td style="text-align:left">使用所有匹配项启动 iedit</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC s E</code></td>
+<td style="text-align:left">仅使用当前匹配启动 iedit</td>
+</tr>
+</tbody>
+</table>
+<p><strong>在 iedit-Normal 模式下：</strong></p>
+<p><code>iedit-Normal</code>mode 继承自<code>Normal</code>mode，以下键绑定是特定于<code>iedit-Normal</code>mode 的。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">按键绑定</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&lt;Esc&gt;</code></td>
+<td style="text-align:left">回到<code>Normal</code>模式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>i</code></td>
+<td style="text-align:left">当前字符后的启动<code>iedit-Insert</code>模式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>a</code></td>
+<td style="text-align:left"><code>iedit-Insert</code>当前字符之前的启动模式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>I</code></td>
+<td style="text-align:left">转到开头和启动<code>iedit-Insert</code>模式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>A</code></td>
+<td style="text-align:left">转到结束和开始<code>iedit-Insert</code>模式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;Left&gt;</code>/<code>h</code></td>
+<td style="text-align:left">向左移动光标</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;Right&gt;</code>/<code>l</code></td>
+<td style="text-align:left">向右移动光标</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>0</code>/<code>&lt;Home&gt;</code></td>
+<td style="text-align:left">转到当前事件的开头</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>$</code>/<code>&lt;End&gt;</code></td>
+<td style="text-align:left">转到当前事件的末尾</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>C</code></td>
+<td style="text-align:left">从光标位置删除到结束和开始<code>iedit-Insert</code>模式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>D</code></td>
+<td style="text-align:left">删除事件</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>s</code></td>
+<td style="text-align:left">删除光标下的字符并启动 iedit-Insert 模式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>S</code></td>
+<td style="text-align:left">删除事件并启动 iedit-Insert 模式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>x</code></td>
+<td style="text-align:left">删除所有出现的光标下的字符</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>X</code></td>
+<td style="text-align:left">删除所有出现的光标之前的字符</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>gg</code></td>
+<td style="text-align:left">去第一次出现</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>G</code></td>
+<td style="text-align:left">转到最后一次出现</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>f{char}</code></td>
+<td style="text-align:left">第一次出现<code>{char}</code>在右边。</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>n</code></td>
+<td style="text-align:left">转到下一个事件</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>N</code></td>
+<td style="text-align:left">转到上一个事件</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>p</code></td>
+<td style="text-align:left">用最后被抽出（复制）的文本替换出现的地方</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;Tab&gt;</code></td>
+<td style="text-align:left">切换当前事件</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Ctrl-n</code></td>
+<td style="text-align:left">前进并激活下一场比赛</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Ctrl-x</code></td>
+<td style="text-align:left">停用当前比赛并继续前进</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Ctrl-p</code></td>
+<td style="text-align:left">停用当前匹配项并向后移动</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>e</code></td>
+<td style="text-align:left">前进到词尾</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>w</code></td>
+<td style="text-align:left">前进到下一个单词的开头</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>b</code></td>
+<td style="text-align:left">移动到当前单词的开头</td>
+</tr>
+</tbody>
+</table>
+<p><strong>在 iedit-Insert 模式下：</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">按键绑定</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>Ctrl-g</code>/<code>&lt;Esc&gt;</code></td>
+<td style="text-align:left">回到<code>iedit-Normal</code>模式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Ctrl-b</code>/<code>&lt;Left&gt;</code></td>
+<td style="text-align:left">向左移动光标</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Ctrl-f</code>/<code>&lt;Right&gt;</code></td>
+<td style="text-align:left">向右移动光标</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Ctrl-a</code>/<code>&lt;Home&gt;</code></td>
+<td style="text-align:left">将光标移动到当前事件的开头</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Ctrl-e</code>/<code>&lt;End&gt;</code></td>
+<td style="text-align:left">将光标移动到当前事件的末尾</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Ctrl-w</code></td>
+<td style="text-align:left">删除光标前的单词</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Ctrl-k</code></td>
+<td style="text-align:left">删除光标后的所有单词</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Ctrl-u</code></td>
+<td style="text-align:left">删除光标前的所有字符</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Ctrl-h</code>/<code>&lt;Backspace&gt;</code></td>
+<td style="text-align:left">删除光标前的字符</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;Delete&gt;</code></td>
+<td style="text-align:left">删除光标后的字符</td>
+</tr>
+</tbody>
+</table>
+<h3 id="文件树的使用" class="headerLink">
+    <a href="#%e6%96%87%e4%bb%b6%e6%a0%91%e7%9a%84%e4%bd%bf%e7%94%a8" class="header-mark"></a>文件树的使用</h3><h4 id="文件树导航" class="headerLink">
+    <a href="#%e6%96%87%e4%bb%b6%e6%a0%91%e5%af%bc%e8%88%aa" class="header-mark"></a>文件树导航</h4><p>导航以<code>hjkl</code>按键为中心，希望提供像<a href="https://github.com/vifm" target="_blank" rel="noopener noreferrer">vifm</a>中那样的快速导航体验</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">按键绑定</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&lt;F3&gt;</code>/<code>SPC f t</code></td>
+<td style="text-align:left">切换文件资源管理器</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>在文件树中</strong></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;Left&gt;</code>/<code>h</code></td>
+<td style="text-align:left">转到父节点并折叠展开的目录</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;Down&gt;</code>/<code>j</code></td>
+<td style="text-align:left">选择下一个文件或目录</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;Up&gt;</code>/<code>k</code></td>
+<td style="text-align:left">选择上一个文件或目录</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;right&gt;</code>/<code>l</code></td>
+<td style="text-align:left">打开选定的文件或展开目录</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;Enter&gt;</code></td>
+<td style="text-align:left">打开文件或切换到目录</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>N</code></td>
+<td style="text-align:left">在光标下创建新文件</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>r</code></td>
+<td style="text-align:left">重命名光标下的文件</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>d</code></td>
+<td style="text-align:left">删除光标下的文件</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>K</code></td>
+<td style="text-align:left">在光标下创建新目录</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>y y</code></td>
+<td style="text-align:left">将文件完整路径复制到系统剪贴板</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>y Y</code></td>
+<td style="text-align:left">将文件复制到系统剪贴板</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>P</code></td>
+<td style="text-align:left">将文件粘贴到光标下的位置</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>.</code></td>
+<td style="text-align:left">切换隐藏文件</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>s v</code></td>
+<td style="text-align:left">拆分编辑</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>s g</code></td>
+<td style="text-align:left">垂直分割编辑</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>p</code></td>
+<td style="text-align:left">预览</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>i</code></td>
+<td style="text-align:left">切换到目录历史</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>v</code></td>
+<td style="text-align:left">快速查看</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>g x</code></td>
+<td style="text-align:left">与 vimfiler 关联执行</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>'</code></td>
+<td style="text-align:left">切换标记当前行</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>V</code></td>
+<td style="text-align:left">清除所有标记</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&gt;</code></td>
+<td style="text-align:left">增加文件树屏幕宽度</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;</code></td>
+<td style="text-align:left">减少文件树屏幕宽度</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;Home&gt;</code></td>
+<td style="text-align:left">跳转到第一行</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;End&gt;</code></td>
+<td style="text-align:left">跳转到最后一行</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Ctrl-Home</code></td>
+<td style="text-align:left">切换到项目根目录</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Ctrl-r</code></td>
+<td style="text-align:left">重绘</td>
+</tr>
+</tbody>
+</table>
+<h4 id="使用文件树打开文件" class="headerLink">
+    <a href="#%e4%bd%bf%e7%94%a8%e6%96%87%e4%bb%b6%e6%a0%91%e6%89%93%e5%bc%80%e6%96%87%e4%bb%b6" class="header-mark"></a>使用文件树打开文件</h4><p>如果只打开一个文件缓冲区，则在活动窗口中打开一个文件，否则我们需要使用 vim-choosewin 来选择一个窗口打开文件</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">按键绑定</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>l</code>/<code>&lt;Enter&gt;</code></td>
+<td style="text-align:left">在一个窗口中打开文件</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>s g</code></td>
+<td style="text-align:left">在垂直分割窗口中打开文件</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>s v</code></td>
+<td style="text-align:left">在水平分割窗口中打开文件</td>
+</tr>
+</tbody>
+</table>
+<h3 id="窗口管理器使用" class="headerLink">
+    <a href="#%e7%aa%97%e5%8f%a3%e7%ae%a1%e7%90%86%e5%99%a8%e4%bd%bf%e7%94%a8" class="header-mark"></a>窗口管理器使用</h3><p>窗口管理器键绑定只能在正常模式下使用。默认领导者<code>[WIN]</code>是，您可以通过以下部分<code>s</code>更改它：<code>windows_leader``[options]</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[options]
+</span></span><span class="line"><span class="cl">    windows_leader = &#34;s&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><table>
+<thead>
+<tr>
+<th style="text-align:left">按键绑定</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>q</code></td>
+<td style="text-align:left">智能缓冲关闭</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>WIN v</code></td>
+<td style="text-align:left">：分裂</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>WIN V</code></td>
+<td style="text-align:left">与前一个缓冲区分开</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>WIN g</code></td>
+<td style="text-align:left">:vsplit</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>WIN G</code></td>
+<td style="text-align:left">与前一个缓冲区垂直分割</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>WIN t</code></td>
+<td style="text-align:left">打开新标签页 (:tabnew)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>WIN o</code></td>
+<td style="text-align:left">关闭其他窗口（：仅）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>WIN x</code></td>
+<td style="text-align:left">删除缓冲区，留下空白窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>WIN q</code></td>
+<td style="text-align:left">删除当前缓冲区</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>WIN Q</code></td>
+<td style="text-align:left">关闭当前缓冲区 (:close)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Shift-Tab</code></td>
+<td style="text-align:left">切换到备用窗口（来回切换）</td>
+</tr>
+</tbody>
+</table>
+<p>SpaceVim 已经映射 normal <code>q</code>(record a macro) 为 smart buffer close，并且 record a macro (vim&rsquo;s <code>q</code>) 已经被映射到<code>&lt;Leader&gt; q r</code>，如果你想禁用这个特性，你可以使用<code>vimcompatible</code>mode.</p>
+<h4 id="通用编辑器窗口" class="headerLink">
+    <a href="#%e9%80%9a%e7%94%a8%e7%bc%96%e8%be%91%e5%99%a8%e7%aa%97%e5%8f%a3" class="header-mark"></a>通用编辑器窗口</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">按键绑定</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>&lt;F2&gt;</code></td>
+<td style="text-align:left">切换标签栏</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;F3&gt;</code></td>
+<td style="text-align:left">切换 Vimfiler</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Ctrl-Down</code></td>
+<td style="text-align:left">移动到拆分下方 ( <code>Ctrl-w j</code>)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Ctrl-Up</code></td>
+<td style="text-align:left">移动到上拆分 ( <code>Ctrl-w k</code>)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Ctrl-Left</code></td>
+<td style="text-align:left">向左移动拆分 ( <code>Ctrl-w h</code>)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>Ctrl-Right</code></td>
+<td style="text-align:left">向右拆分 ( <code>Ctrl-w l</code>)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="窗口操作键绑定" class="headerLink">
+    <a href="#%e7%aa%97%e5%8f%a3%e6%93%8d%e4%bd%9c%e9%94%ae%e7%bb%91%e5%ae%9a" class="header-mark"></a>窗口操作键绑定</h4><p>每个窗口都有一个数字显示在状态行的开头，可以使用 快速访问<code>SPC number</code>。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">按键绑定</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>SPC 1</code></td>
+<td style="text-align:left">去 1 号窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC 2</code></td>
+<td style="text-align:left">去 2 号窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC 3</code></td>
+<td style="text-align:left">去 3 号窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC 4</code></td>
+<td style="text-align:left">去 4 号窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC 5</code></td>
+<td style="text-align:left">去 5 号窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC 6</code></td>
+<td style="text-align:left">去 6 号窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC 7</code></td>
+<td style="text-align:left">去 7 号窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC 8</code></td>
+<td style="text-align:left">去 8 号窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC 9</code></td>
+<td style="text-align:left">去 9 号窗口</td>
+</tr>
+</tbody>
+</table>
+<p>Windows 操作命令（以 开头<code>w</code>）：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">按键绑定</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>SPC w .</code></td>
+<td style="text-align:left">窗口瞬态</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w &lt;Tab&gt;</code></td>
+<td style="text-align:left">切换到当前帧中的备用窗口（来回切换）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w =</code></td>
+<td style="text-align:left">平衡分割窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w b</code></td>
+<td style="text-align:left">强制焦点回到迷你缓冲区（TODO）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w c</code></td>
+<td style="text-align:left">分心阅读当前窗口（工具层）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w C</code></td>
+<td style="text-align:left">通过 vim-choosewin（工具层）无干扰阅读其他窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w d</code></td>
+<td style="text-align:left">删除一个窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC u SPC w d</code></td>
+<td style="text-align:left">删除窗口及其当前缓冲区（不删除文件）（TODO）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w D</code></td>
+<td style="text-align:left">使用 vim-choosewin 删除另一个窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC u SPC w D</code></td>
+<td style="text-align:left">使用 vim-choosewin 删除另一个窗口及其当前缓冲区（TODO）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w t</code></td>
+<td style="text-align:left">切换窗口专用（专用窗口不能被模式重用）（TODO）</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w f</code></td>
+<td style="text-align:left">切换跟随模式</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w F</code></td>
+<td style="text-align:left">创建新标签</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w h</code></td>
+<td style="text-align:left">移动到左边的窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w H</code></td>
+<td style="text-align:left">向左移动窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w j</code></td>
+<td style="text-align:left">移动到下面的窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w J</code></td>
+<td style="text-align:left">将窗口移动到底部</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w k</code></td>
+<td style="text-align:left">移动到上面的窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w K</code></td>
+<td style="text-align:left">将窗口移动到顶部</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w l</code></td>
+<td style="text-align:left">移动到右边的窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w L</code></td>
+<td style="text-align:left">向右移动窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w m</code></td>
+<td style="text-align:left">最大化/最小化窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w M</code></td>
+<td style="text-align:left">使用 vim-choosewin 交换窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w o</code></td>
+<td style="text-align:left">在选项卡之间循环和聚焦</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w p m</code></td>
+<td style="text-align:left">在弹出窗口中打开消息缓冲区 (TODO)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w p p</code></td>
+<td style="text-align:left">关闭当前的粘性弹出窗口 (TODO)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w r</code></td>
+<td style="text-align:left">向前旋转窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w R</code></td>
+<td style="text-align:left">向后旋转窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w s</code>/<code>SPC w -</code></td>
+<td style="text-align:left">水平分割</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w S</code></td>
+<td style="text-align:left">水平拆分并聚焦新窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w u</code></td>
+<td style="text-align:left">撤消窗口布局</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w U</code></td>
+<td style="text-align:left">重做窗口布局</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w v</code>/<code>SPC w /</code></td>
+<td style="text-align:left">垂直分割</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w V</code></td>
+<td style="text-align:left">垂直拆分并聚焦新窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w w</code></td>
+<td style="text-align:left">窗口之间的循环和焦点</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w W</code></td>
+<td style="text-align:left">使用 vim-choosewin 选择窗口</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPC w x</code></td>
+<td style="text-align:left">与下一个窗口交换当前窗口</td>
+</tr>
+</tbody>
+</table>
+<h3 id="shell-使用" class="headerLink">
+    <a href="#shell-%e4%bd%bf%e7%94%a8" class="header-mark"></a>Shell 使用</h3><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspacevim.org%2flayers%2fshell%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="git-使用" class="headerLink">
+    <a href="#git-%e4%bd%bf%e7%94%a8" class="header-mark"></a>Git 使用</h3><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspacevim.org%2flayers%2fgit%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="撤消树使用" class="headerLink">
+    <a href="#%e6%92%a4%e6%b6%88%e6%a0%91%e4%bd%bf%e7%94%a8" class="header-mark"></a>撤消树使用</h3><p>撤消树将撤消历史可视化，可以更轻松地浏览和切换不同的撤消分支。默认键绑定是<code>F7</code>. 如果<code>+python</code>或<code>+python3</code>被启用，mundo 将被加载，否则 undotree 将被加载。</p>
+<p>撤消树窗口中的键绑定：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">按键绑定</th>
+<th style="text-align:left">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>G</code></td>
+<td style="text-align:left">移至底部</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>J</code></td>
+<td style="text-align:left">搬老写</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>K</code></td>
+<td style="text-align:left">移动更新写入</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>N</code></td>
+<td style="text-align:left">上一场比赛</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>P</code></td>
+<td style="text-align:left">玩</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;2-LeftMouse&gt;</code></td>
+<td style="text-align:left">鼠标点击</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>/</code></td>
+<td style="text-align:left">搜索</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;CR&gt;</code></td>
+<td style="text-align:left">预览</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>d</code></td>
+<td style="text-align:left">差异</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;down&gt;</code></td>
+<td style="text-align:left">变老</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>&lt;up&gt;</code></td>
+<td style="text-align:left">更新</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>i</code></td>
+<td style="text-align:left">切换内联</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>j</code></td>
+<td style="text-align:left">变老</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>k</code></td>
+<td style="text-align:left">更新</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>n</code></td>
+<td style="text-align:left">下一场比赛</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>o</code></td>
+<td style="text-align:left">预览</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>p</code></td>
+<td style="text-align:left">差分电流缓冲器</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>q</code></td>
+<td style="text-align:left">辞职</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>r</code></td>
+<td style="text-align:left">差异</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>gg</code></td>
+<td style="text-align:left">移到顶部</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>?</code></td>
+<td style="text-align:left">切换帮助</td>
+</tr>
+</tbody>
+</table>
+<h3 id="自定义-snippets" class="headerLink">
+    <a href="#%e8%87%aa%e5%ae%9a%e4%b9%89-snippets" class="header-mark"></a>自定义 Snippets</h3><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fspacevim.org%2flayers%2fautocomplete%2f%23completion-engine"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="自定义按键绑定" class="headerLink">
+    <a href="#%e8%87%aa%e5%ae%9a%e4%b9%89%e6%8c%89%e9%94%ae%e7%bb%91%e5%ae%9a" class="header-mark"></a>自定义按键绑定</h3><p>由于 toml 配置的局限性，SpaceVim 提供了两种启动函数 <code>bootstrap_before</code> 和 <code>bootstrap_after</code>，在该函数内可以使用 Vim script。 可通过 <code>~/.SpaceVim.d/init.toml</code> 的 <code>[options]</code> 片段中的这两个选项 <code>bootstrap_before</code> 和 <code>bootstrap_after</code> 来指定函数名称，例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="p">[</span><span class="l">options]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">bootstrap_before = &#34;myspacevim#before&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">bootstrap_after  = &#34;myspacevim#after&#34;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>这两种启动函数的区别在于，<code>bootstrap_before</code>函数是在载入用户配置时候执行的， 而<code>bootstrap_after</code>函数是在触发<code>VimEnter</code>事件时执行的。</p>
+<p>启动函数文件应放置在 Vim &amp;runtimepath 的 autoload 文件夹内。例如：</p>
+<p>文件名：<code>~/.SpaceVim.d/autoload/myspacevim.vim</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">function</span><span class="p">!</span> <span class="nx">myspacevim</span>#<span class="nx">before</span><span class="p">()</span> <span class="nx">abort</span>
+</span></span><span class="line"><span class="cl">    <span class="k">let</span> <span class="nx">g</span>:<span class="nx">neomake_c_enabled_makers</span> <span class="p">=</span> [<span class="s1">&#39;clang&#39;</span>]
+</span></span><span class="line"><span class="cl">    <span class="nx">nnoremap</span> <span class="nx">jk</span> <span class="p">&lt;</span><span class="nx">esc</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="k">endfunction</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">function</span><span class="p">!</span> <span class="nx">myspacevim</span>#<span class="nx">after</span><span class="p">()</span> <span class="nx">abort</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">iunmap</span> <span class="nx">jk</span>
+</span></span><span class="line"><span class="cl"><span class="k">endfunction</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在启动函数中，可以使用<code>:lua</code> 命令对 SpaceVim 进行配置，比如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">function</span><span class="p">!</span> <span class="nx">myspacevim</span>#<span class="nx">before</span><span class="p">()</span> <span class="nx">abort</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">lua</span> <span class="p">&lt;&lt;</span> <span class="nx">EOF</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">local</span> <span class="nx">opt</span> <span class="p">=</span> <span class="nx">requires</span><span class="p">(</span><span class="s1">&#39;spacevim.opt&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">opt</span>.<span class="nx">enable_projects_cache</span> <span class="p">=</span> <span class="nx">false</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">opt</span>.<span class="nx">enable_statusline_mode</span> <span class="p">=</span> <span class="nx">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">EOF</span>
+</span></span><span class="line"><span class="cl"><span class="k">endfunction</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>函数 <code>bootstrap_before</code> 将在读取用户配置后执行，而函数 <code>bootstrap_after</code> 将在 VimEnter autocmd 之后执行。</p>
+<p>如果你需要添加自定义以 <code>SPC</code> 为前缀的快捷键，你需要使用 bootstrap function， 在其中加入以下代码（注意你定义的按键必须是 SpaceVim 没有使用的）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">function</span><span class="p">!</span> <span class="nx">myspacevim</span>#<span class="nx">before</span><span class="p">()</span> <span class="nx">abort</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">call</span> <span class="nx">SpaceVim</span>#<span class="nx">custom</span>#<span class="nx">SPCGroupName</span><span class="p">(</span>[<span class="s1">&#39;G&#39;</span>]<span class="p">,</span> <span class="s1">&#39;+TestGroup&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">call</span> <span class="nx">SpaceVim</span>#<span class="nx">custom</span>#<span class="nx">SPC</span><span class="p">(</span><span class="s1">&#39;nore&#39;</span><span class="p">,</span> [<span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span>]<span class="p">,</span> <span class="s1">&#39;echom 1&#39;</span><span class="p">,</span> <span class="s1">&#39;echomessage 1&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">endfunction</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>同样地，如果你需要定义语言相关的功能，可以使用以下函数定义：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vim" data-lang="vim"><span class="line"><span class="cl"><span class="k">function</span><span class="p">!</span> <span class="nx">myspacevim</span>#<span class="nx">before</span><span class="p">()</span> <span class="nx">abort</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">call</span> <span class="nx">SpaceVim</span>#<span class="nx">custom</span>#<span class="nx">LangSPCGroupName</span><span class="p">(</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> [<span class="s1">&#39;G&#39;</span>]<span class="p">,</span> <span class="s1">&#39;+TestGroup&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">call</span> <span class="nx">SpaceVim</span>#<span class="nx">custom</span>#<span class="nx">LangSPC</span><span class="p">(</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="s1">&#39;nore&#39;</span><span class="p">,</span> [<span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="s1">&#39;t&#39;</span>]<span class="p">,</span> <span class="s1">&#39;echom 1&#39;</span><span class="p">,</span> <span class="s1">&#39;echomessage 1&#39;</span><span class="p">,</span> <span class="m">1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">endfunction</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这些按键绑定以语言相关的前缀键开头，默认的前缀键是 <code>,</code> 。 同样，你为特定语言定义的按键必须是 SpaceVim 没有使用的。</p>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2023-11-13&nbsp;<a class="git-hash" href="https://github.com/Humble-Xiang/hugo-blog/commit/453733192a1b1e048b753ed17961f67a523f98ba" target="_blank" title="commit by Humble.X(Humble.Xiang@gmail.com) 453733192a1b1e048b753ed17961f67a523f98ba: chore: 修改域名" rel="noopener noreferrer">
+                                    <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M440.667 182.109l7.143-40c1.313-7.355-4.342-14.109-11.813-14.109h-74.81l14.623-81.891C377.123 38.754 371.468 32 363.997 32h-40.632a12 12 0 0 0-11.813 9.891L296.175 128H197.54l14.623-81.891C213.477 38.754 207.822 32 200.35 32h-40.632a12 12 0 0 0-11.813 9.891L132.528 128H53.432a12 12 0 0 0-11.813 9.891l-7.143 40C33.163 185.246 38.818 192 46.289 192h74.81L98.242 320H19.146a12 12 0 0 0-11.813 9.891l-7.143 40C-1.123 377.246 4.532 384 12.003 384h74.81L72.19 465.891C70.877 473.246 76.532 480 84.003 480h40.632a12 12 0 0 0 11.813-9.891L151.826 384h98.634l-14.623 81.891C234.523 473.246 240.178 480 247.65 480h40.632a12 12 0 0 0 11.813-9.891L315.472 384h79.096a12 12 0 0 0 11.813-9.891l7.143-40c1.313-7.355-4.342-14.109-11.813-14.109h-74.81l22.857-128h79.096a12 12 0 0 0 11.813-9.891zM261.889 320h-98.634l22.857-128h98.634l-22.857 128z"/></svg>4537331</a></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line print:!tw-hidden">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/spacevim/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span><span>|&nbsp;<a class="link-to-source" href=https://github.com/Humble-Xiang/hugo-blog/blob/main/content/posts/spacevim.md target="_blank" rel="noopener noreferrer">查看源代码</a>
+                    </span><span>|&nbsp;<a class="link-to-edit" href=https://github.com/Humble-Xiang/hugo-blog/edit/main/content/posts/spacevim.md target="_blank" rel="noopener noreferrer">编辑此页</a>
+                    </span><span>|&nbsp;<a class="link-to-report" href=https://github.com/Humble-Xiang/hugo-blog/issues/new?title=[bug]%20SpaceVim+%E7%9A%84%E4%BD%BF%E7%94%A8&body=|Field|Value|%0A|-|-|%0A|Title|SpaceVim+%E7%9A%84%E4%BD%BF%E7%94%A8|%0A|Url|http://localhost:1313/spacevim/|%0A|Filename|https://github.com/Humble-Xiang/hugo-blog/blob/main/content/posts/spacevim.md| target="_blank" rel="noopener noreferrer">报告问题</a>
+                    </span></div>
+            <div class="post-info-share"></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg>&nbsp;<a href="/tags/tool/">Tool</a></section>
+        <section class="print:!tw-hidden">
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav print:tw-hidden"><a href="/spacemacs/" class="prev" rel="prev" title="Spacemacs 的使用"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Spacemacs 的使用</a>
+            <a href="/system-architect/" class="next" rel="next" title="软考-系统架构师">软考-系统架构师<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.125.7">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.0"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg> DoIt</a>
+                </div><div class="footer-line"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"/></svg>2019 - 2024<span class="author">&nbsp;<a href="https://github.com/Humble-Xiang" target="_blank" rel="noopener noreferrer">Humble.Xiang</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons" class="print:!tw-hidden"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32z"/></svg>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{},"data":{"desktop-header-typeit":"Humble.X","mobile-header-typeit":"Humble.X"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":true,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.1,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"table":{"sort":true},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":-1,"speed":100}};</script><script
+    src="/lib/tablesort/tablesort.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lightgallery.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lg-thumbnail.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lg-zoom.min.js"
+    
+  ></script><script
+    src="/lib/clipboard/clipboard.min.js"
+    
+  ></script><script
+    src="/lib/sharer/sharer.min.js"
+    
+  ></script><script
+    src="/lib/typeit/typeit.min.js"
+    
+  ></script><script
+    src="https://website-card-embed.dramacat.top/website-card-embed-loveit.js"
+    
+  ></script><script
+    src="/js/theme.min.js"
+    
+      defer
+    
+  ></script></div>
+</body>
+
+</html>

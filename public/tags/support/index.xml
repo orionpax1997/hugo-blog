@@ -1,0 +1,51 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Support - 标签 - 向之礼的个人博客</title>
+        <link>http://localhost:1313/tags/support/</link>
+        <description>Support - 标签 - 向之礼的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>humble.xiang@gmail.com (Humble.Xiang)</managingEditor>
+            <webMaster>humble.xiang@gmail.com (Humble.Xiang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 31 Aug 2022 14:56:46 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/support/" rel="self" type="application/rss+xml" /><item>
+    <title>PostgreSQL 的使用</title>
+    <link>http://localhost:1313/postgresql/</link>
+    <pubDate>Wed, 31 Aug 2022 14:56:46 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/postgresql/</guid>
+    <description><![CDATA[简介 现在称为 PostgreSQL 的对象关系数据库管理系统源自加州大学伯克利分校编写的 POSTGRES 包。经过二十多年的发展，PostgreSQL 现在是世界上最先进的开源数据]]></description>
+</item><item>
+    <title>Oracle 的使用</title>
+    <link>http://localhost:1313/oracle/</link>
+    <pubDate>Sat, 09 Oct 2021 20:36:44 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/oracle/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/oracle-banner.1s81s4rls7b4.webp" referrerpolicy="no-referrer">
+            </div>简介 Oracle Database，又名 Oracle RDBMS，简称 Oracle。是甲骨文公司推出的一款关系数据库管理系统。 Oracle 数据库系统是目前世界上流行的关系数据]]></description>
+</item><item>
+    <title>MySQL 的使用</title>
+    <link>http://localhost:1313/mysql/</link>
+    <pubDate>Sun, 15 Mar 2020 11:50:21 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/mysql/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/mysql-banner.4b94mi3v2ty0.webp" referrerpolicy="no-referrer">
+            </div>简介 MySQL 是最流行的关系型数据库管理系统，在 WEB 应用方面 MySQL 是最好的 RDBMS(Relational Database Management System：关系数据库管理系统)应用软件之一。 基础 基础命令 1 2 3 4 5 6 7]]></description>
+</item><item>
+    <title>Node.js 的使用</title>
+    <link>http://localhost:1313/nodejs/</link>
+    <pubDate>Mon, 23 Sep 2019 17:11:43 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/nodejs/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/nodejs-banner.6rfb93mmq280.webp" referrerpolicy="no-referrer">
+            </div>简介 Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。 Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。 安装 基础 您需要了解多少 JavaScript 才能使用 Node.js]]></description>
+</item><item>
+    <title>Tomcat 的使用</title>
+    <link>http://localhost:1313/tomcat/</link>
+    <pubDate>Tue, 23 Jul 2019 22:41:51 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/tomcat/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/tomcat-banner.td82kzu3j6o.webp" referrerpolicy="no-referrer">
+            </div>简介 Tomcat 服务器是一个免费的开放源代码的 Web 应用服务器，属于轻量级应用服务器，在中小型系统和并发访问用户不是很多的场合下被普遍使用，是开发和调试 JSP]]></description>
+</item></channel>
+</rss>

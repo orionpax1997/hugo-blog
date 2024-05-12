@@ -1,0 +1,92 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Frontend Framework - 标签 - 向之礼的个人博客</title>
+        <link>http://localhost:1313/tags/frontend-framework/</link>
+        <description>Frontend Framework - 标签 - 向之礼的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>humble.xiang@gmail.com (Humble.Xiang)</managingEditor>
+            <webMaster>humble.xiang@gmail.com (Humble.Xiang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 28 Dec 2022 11:05:02 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/frontend-framework/" rel="self" type="application/rss+xml" /><item>
+    <title>《Refactoring UI》读书笔记</title>
+    <link>http://localhost:1313/refactoring_ui/</link>
+    <pubDate>Wed, 28 Dec 2022 11:05:02 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/refactoring_ui/</guid>
+    <description><![CDATA[如果你从事网站设计工作，请帮自己一个忙，买这本书。 从头开始 从一个功能开始，而不是布局当你开始设计一个新的应用创意时，你首先设计什么？如果它是]]></description>
+</item><item>
+    <title>Element UI 组件库的使用</title>
+    <link>http://localhost:1313/element-ui/</link>
+    <pubDate>Thu, 24 Jun 2021 17:29:38 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/element-ui/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/element-ui-banner.5l10skpow6c0.webp" referrerpolicy="no-referrer">
+            </div>简介Element，一套为开发者、设计师和产品经理准备的基于 Vue 3.0 的桌面端组件库 问题 DatePicker 组件生成 input 和 Input 、Select 组件生成的 input 在设置宽度 100]]></description>
+</item><item>
+    <title>Flutter 的使用</title>
+    <link>http://localhost:1313/flutter/</link>
+    <pubDate>Sat, 21 Mar 2020 21:04:37 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/flutter/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/flutter-banner.w78dvdkz54w.webp" referrerpolicy="no-referrer">
+            </div>基础 Dart 什么是 Dart ?因为 JavaScript 的种种问题，Dart 最初是 Google 设计用来代替 JavaScript 的语言。但是 JavaScript 因为 Node.js 成为了前后端同吃的全栈语言，前端的开发模式也因此改变，D]]></description>
+</item><item>
+    <title>NestJS 的使用</title>
+    <link>http://localhost:1313/nestjs/</link>
+    <pubDate>Sat, 28 Sep 2019 20:31:02 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/nestjs/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/nestjs-banner.5dzkq3y3or00.webp" referrerpolicy="no-referrer">
+            </div>简介 NestJS 是一个用于构建高效，可扩展的 Node.js 服务器端应用程序的框架。它使用渐进式 JavaScript，内置并完全支持 TypeScript（但仍然允许]]></description>
+</item><item>
+    <title>微信小程序的开发</title>
+    <link>http://localhost:1313/wechat-mini-program/</link>
+    <pubDate>Sun, 04 Aug 2019 20:12:17 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/wechat-mini-program/</guid>
+    <description><![CDATA[简介小程序是一种不需要下载安装即可使用的应用，它实现了应用“触手可及”的梦想，用户扫一扫或搜一下即可打开应用。微信小程序则是微信平台的小程序]]></description>
+</item><item>
+    <title>Taro 的使用</title>
+    <link>http://localhost:1313/taro/</link>
+    <pubDate>Thu, 25 Jul 2019 11:27:29 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/taro/</guid>
+    <description><![CDATA[简介 Taro 是一套遵循 React 语法规范的 多端开发 解决方案。现如今市面上端的形态多种多样，Web、React-Native、微信小程序等各种端大行其道，当]]></description>
+</item><item>
+    <title>React Router 的使用</title>
+    <link>http://localhost:1313/react-router/</link>
+    <pubDate>Tue, 23 Jul 2019 22:16:45 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/react-router/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/react-router-banner.p571qwyx0ds.webp" referrerpolicy="no-referrer">
+            </div>简介 React Router 是完整的 React 路由解决方案。React Router 保持 UI 与 URL 同步。它拥有简单的 API 与强大的功能例如代码缓冲加载、动态路由匹配、以及建立正确的位置过渡]]></description>
+</item><item>
+    <title>Redux 的使用</title>
+    <link>http://localhost:1313/redux/</link>
+    <pubDate>Tue, 23 Jul 2019 22:16:26 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/redux/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/redux-banner.1fckuxa9wvmo.webp" referrerpolicy="no-referrer">
+            </div>简介 Redux 是 JavaScript 状态容器，提供可预测化的状态管理。 三大原则 单一数据源 整个应用的 state 被储存在一棵 object tree 中，并且这个 object tree 只存在于唯一一个 store 中。 State 是只读的（]]></description>
+</item><item>
+    <title>Jquery 的使用</title>
+    <link>http://localhost:1313/jquery/</link>
+    <pubDate>Tue, 23 Jul 2019 22:16:07 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/jquery/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/jquery-banner.2zvc64pkoq80.webp" referrerpolicy="no-referrer">
+            </div>简介 jQuery 是一个快速、简洁的 JavaScript 函数库，jQuery 设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装 JavaScript 常]]></description>
+</item><item>
+    <title>React 的使用</title>
+    <link>http://localhost:1313/react/</link>
+    <pubDate>Tue, 23 Jul 2019 21:45:22 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/react/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/react-banner.3b3ttc6ic9q0.webp" referrerpolicy="no-referrer">
+            </div>简介React 是一个用于构建用户界面的 JavaScript 库。(就是个状态机，将根据数据源映射出 UI，遵守一定的规范可以将，UI 和 逻辑分离，更容易调试和编写单]]></description>
+</item></channel>
+</rss>

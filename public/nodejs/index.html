@@ -1,0 +1,1374 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" /><title>Node.js 的使用 - 向之礼的个人博客</title><meta name="Description" content="不能记住过去的人，被判重复过去。"><meta property="og:title" content="Node.js 的使用" />
+<meta property="og:description" content="简介 Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。 Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。 安装 基础 您需要了解多少 JavaScript 才能使用 Node.js" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/nodejs/" /><meta property="og:image" content="https://og-image.dramacat.top/Node.js 的使用?images=https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/nodejs-banner.6rfb93mmq280.webp" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-09-23T17:11:43+08:00" />
+<meta property="article:modified_time" content="2024-04-06T15:20:04+08:00" /><meta property="og:site_name" content="向之礼的个人博客" />
+
+<meta name="twitter:title" content="Node.js 的使用"/>
+<meta name="twitter:card" content="summary_large_image"/><meta property="twitter:image" content="https://og-image.dramacat.top/Node.js 的使用?images=https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/nodejs-banner.6rfb93mmq280.webp" /><meta name="twitter:description" content="简介 Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。 Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。 安装 基础 您需要了解多少 JavaScript 才能使用 Node.js"/>
+<meta name="application-name" content="Humble.X">
+<meta name="apple-mobile-web-app-title" content="Humble.X">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><meta name="referrer" content="never"></meta>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest">
+
+<link rel="canonical" href="http://localhost:1313/nodejs/" /><link rel="prev" href="http://localhost:1313/ladder/" /><link rel="next" href="http://localhost:1313/nestjs/" />
+<link rel="stylesheet" href="/css/main.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">{"@context": "https://schema.org","@type": "BlogPosting",
+        "headline": "Node.js 的使用",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http://localhost:1313/nodejs/"
+        },"image": ["https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/nodejs-banner.6rfb93mmq280.webp"],"genre": "posts","keywords":["Support"],"wordcount":  3544 ,
+        "url": "http://localhost:1313/nodejs/","datePublished": "2019-09-23T17:11:43+08:00","dateModified": "2024-04-06T15:20:04+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Humble.Xiang","logo": "http://localhost:1313/images/avatar.jpg"},"author": {
+                "@type": "Person",
+                "name": "Humble.Xiang",
+                "url": "https://github.com/Humble-Xiang"
+            },"description": ""
+    }</script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {
+          document.body.setAttribute('theme', theme); 
+          document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');
+          if (theme === 'light') {
+            document.documentElement.classList.remove('tw-dark')
+          } else {
+            document.documentElement.classList.add('tw-dark')
+          }
+          window.theme = theme;   
+          window.isDark = window.theme !== 'light' 
+        }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop print:!tw-hidden" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="向之礼的个人博客"><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item"
+                    href="/posts/" > 所有文章 </a><a class="menu-item"
+                    href="/tags/" > 标签 </a><a class="menu-item"
+                    href="/categories/" > 分类 </a><a class="menu-item"
+                    href="/series/" > 系列 </a><a class="menu-item"
+                    href="https://github.com/Humble-Xiang"  title="GitHub" 
+                    rel="noopener noreferrer" target="_blank" ><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d='M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z'/></svg>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-desktop">
+                    <button class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+                    </button>
+                    <button class="search-button search-clear" id="search-clear-desktop" title="清空">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+                    </button>
+                    <span class="search-button search-loading tw-animate-spin" id="search-loading-desktop">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"/></svg>
+                    </span>
+                </span><button class="menu-item theme-select" aria-label="切换主题">
+                    <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg>
+                    <select class="color-theme-select" id="theme-select-desktop" aria-label="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </button></div>
+        </div>
+    </div>
+</header><header class="mobile print:!tw-hidden" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="向之礼的个人博客"><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                <div class="search mobile" id="search-mobile">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-mobile">
+                    <button class="search-button search-toggle tw-h-10" id="search-toggle-mobile" title="搜索">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+                    </button>
+                    <button class="search-button search-clear" id="search-clear-mobile" title="清空">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+                    </button>
+                    <span class="search-button search-loading tw-animate-spin" id="search-loading-mobile">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"/></svg>
+                    </span>
+                </div>
+                <button class="search-cancel" id="search-cancel-mobile">
+                    取消
+                </button>
+            </div><a class="menu-item" href="/posts/" title="" >所有文章</a><a class="menu-item" href="/tags/" title="" >标签</a><a class="menu-item" href="/categories/" title="" >分类</a><a class="menu-item" href="/series/" title="" >系列</a><a class="menu-item" href="https://github.com/Humble-Xiang" title="GitHub" 
+                rel="noopener noreferrer" target="_blank" ><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d='M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z'/></svg></a><button class="menu-item theme-select tw-w-full" aria-label="切换主题">
+                <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg>
+                <select class="color-theme-select" id="theme-select-mobile" aria-label="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </button></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div><main class="main">
+            <div class="container"><div class="toc print:!tw-hidden" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#简介">简介</a></li>
+    <li><a href="#安装">安装</a></li>
+    <li><a href="#基础">基础</a>
+      <ul>
+        <li><a href="#您需要了解多少-javascript-才能使用-nodejs">您需要了解多少 JavaScript 才能使用 Node.js？</a></li>
+        <li><a href="#从命令行运行-nodejs-脚本">从命令行运行 Node.js 脚本</a></li>
+        <li><a href="#使用-nodejs-输出到命令行">使用 Node.js 输出到命令行</a></li>
+        <li><a href="#错误处理">错误处理</a></li>
+        <li><a href="#node-模块系统">Node 模块系统</a>
+          <ul>
+            <li><a href="#概述">概述</a></li>
+            <li><a href="#什么是模块化">什么是模块化？</a></li>
+            <li><a href="#导出-exports">导出 <code>exports</code></a></li>
+            <li><a href="#加载-require">加载 <code>require</code></a></li>
+          </ul>
+        </li>
+        <li><a href="#npm-包管理器">npm 包管理器</a></li>
+        <li><a href="#packagejson-和-package-lockjson-指南">package.json 和 package-lock.json 指南</a>
+          <ul>
+            <li><a href="#文件结构">文件结构</a></li>
+            <li><a href="#属性细分">属性细分</a>
+              <ul>
+                <li><a href="#姓名">姓名</a></li>
+                <li><a href="#作者">作者</a></li>
+                <li><a href="#贡献者">贡献者</a></li>
+                <li><a href="#错误">错误</a></li>
+                <li><a href="#主页">主页</a></li>
+                <li><a href="#版本">版本</a></li>
+                <li><a href="#执照">执照</a></li>
+                <li><a href="#关键词">关键词</a></li>
+                <li><a href="#描述">描述</a></li>
+                <li><a href="#存储库">存储库</a></li>
+                <li><a href="#主要的">主要的</a></li>
+                <li><a href="#私人的">私人的</a></li>
+                <li><a href="#脚本">脚本</a></li>
+                <li><a href="#依赖关系">依赖关系</a></li>
+                <li><a href="#开发依赖">开发依赖</a></li>
+                <li><a href="#引擎">引擎</a></li>
+                <li><a href="#浏览器列表">浏览器列表</a></li>
+                <li><a href="#命令特定的属性">命令特定的属性</a></li>
+              </ul>
+            </li>
+            <li><a href="#软件包版本">软件包版本</a></li>
+          </ul>
+        </li>
+        <li><a href="#常用标准库">常用标准库</a>
+          <ul>
+            <li><a href="#fs">fs</a></li>
+            <li><a href="#path">path</a></li>
+            <li><a href="#os">os</a></li>
+            <li><a href="#events">events</a></li>
+            <li><a href="#http">http</a></li>
+            <li><a href="#buffers">Buffers</a></li>
+            <li><a href="#streams">Streams</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#扩展">扩展</a>
+      <ul>
+        <li><a href="#其他包管理器">其他包管理器</a>
+          <ul>
+            <li><a href="#yarn">Yarn</a></li>
+            <li><a href="#pnpm">pnpm</a></li>
+          </ul>
+        </li>
+        <li><a href="#如何在-nodejs-中接受来自命令行的输入">如何在 Node.js 中接受来自命令行的输入</a></li>
+        <li><a href="#npx-包运行器">npx 包运行器</a></li>
+        <li><a href="#事件轮询">事件轮询</a></li>
+        <li><a href="#异步编程">异步编程</a></li>
+        <li><a href="#构建-http-服务器">构建 HTTP 服务器</a></li>
+        <li><a href="#发出-http-请求">发出 HTTP 请求</a></li>
+        <li><a href="#文件读写">文件读写</a></li>
+        <li><a href="#如何在-nodejs-中打印对象">如何在 Node.js 中打印对象</a></li>
+        <li><a href="#nodejs-最佳实践">Node.js 最佳实践</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single print:!tw-w-full print:!tw-max-w-none print:!tw-m-0 print:!tw-p-0"><h1 class="single-title animate__animated animate__flipInX">Node.js 的使用</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><img src="http://localhost:1313/images/avatar.jpg" alt="Humble.Xiang avatar" class="tw-inline-block tw-max-h-4 tw-rounded-full tw-translate-y-[-2px] tw-mr-1"><a href="https://github.com/Humble-Xiang" title="Author" target="_blank" rel="noopener noreferrer author" class="author">Humble.Xiang</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/development/"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>Development</a></span></div>
+            <div class="post-meta-line"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;<time datetime="2019-09-23">2019-09-23</time>&nbsp;<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg>&nbsp;<time datetime="2024-04-06">2024-04-06</time>&nbsp;<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;约 3544 字&nbsp;<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;预计阅读 8 分钟&nbsp;</div>
+        </div><div class="featured-image"><img
+        
+        loading="eager"
+        src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/nodejs-banner.6rfb93mmq280.webp"
+        srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/nodejs-banner.6rfb93mmq280.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/nodejs-banner.6rfb93mmq280.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/nodejs-banner.6rfb93mmq280.webp 2x"
+        title="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/nodejs-banner.6rfb93mmq280.webp" ></div><div class="details toc print:!tw-block" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#简介">简介</a></li>
+    <li><a href="#安装">安装</a></li>
+    <li><a href="#基础">基础</a>
+      <ul>
+        <li><a href="#您需要了解多少-javascript-才能使用-nodejs">您需要了解多少 JavaScript 才能使用 Node.js？</a></li>
+        <li><a href="#从命令行运行-nodejs-脚本">从命令行运行 Node.js 脚本</a></li>
+        <li><a href="#使用-nodejs-输出到命令行">使用 Node.js 输出到命令行</a></li>
+        <li><a href="#错误处理">错误处理</a></li>
+        <li><a href="#node-模块系统">Node 模块系统</a>
+          <ul>
+            <li><a href="#概述">概述</a></li>
+            <li><a href="#什么是模块化">什么是模块化？</a></li>
+            <li><a href="#导出-exports">导出 <code>exports</code></a></li>
+            <li><a href="#加载-require">加载 <code>require</code></a></li>
+          </ul>
+        </li>
+        <li><a href="#npm-包管理器">npm 包管理器</a></li>
+        <li><a href="#packagejson-和-package-lockjson-指南">package.json 和 package-lock.json 指南</a>
+          <ul>
+            <li><a href="#文件结构">文件结构</a></li>
+            <li><a href="#属性细分">属性细分</a>
+              <ul>
+                <li><a href="#姓名">姓名</a></li>
+                <li><a href="#作者">作者</a></li>
+                <li><a href="#贡献者">贡献者</a></li>
+                <li><a href="#错误">错误</a></li>
+                <li><a href="#主页">主页</a></li>
+                <li><a href="#版本">版本</a></li>
+                <li><a href="#执照">执照</a></li>
+                <li><a href="#关键词">关键词</a></li>
+                <li><a href="#描述">描述</a></li>
+                <li><a href="#存储库">存储库</a></li>
+                <li><a href="#主要的">主要的</a></li>
+                <li><a href="#私人的">私人的</a></li>
+                <li><a href="#脚本">脚本</a></li>
+                <li><a href="#依赖关系">依赖关系</a></li>
+                <li><a href="#开发依赖">开发依赖</a></li>
+                <li><a href="#引擎">引擎</a></li>
+                <li><a href="#浏览器列表">浏览器列表</a></li>
+                <li><a href="#命令特定的属性">命令特定的属性</a></li>
+              </ul>
+            </li>
+            <li><a href="#软件包版本">软件包版本</a></li>
+          </ul>
+        </li>
+        <li><a href="#常用标准库">常用标准库</a>
+          <ul>
+            <li><a href="#fs">fs</a></li>
+            <li><a href="#path">path</a></li>
+            <li><a href="#os">os</a></li>
+            <li><a href="#events">events</a></li>
+            <li><a href="#http">http</a></li>
+            <li><a href="#buffers">Buffers</a></li>
+            <li><a href="#streams">Streams</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#扩展">扩展</a>
+      <ul>
+        <li><a href="#其他包管理器">其他包管理器</a>
+          <ul>
+            <li><a href="#yarn">Yarn</a></li>
+            <li><a href="#pnpm">pnpm</a></li>
+          </ul>
+        </li>
+        <li><a href="#如何在-nodejs-中接受来自命令行的输入">如何在 Node.js 中接受来自命令行的输入</a></li>
+        <li><a href="#npx-包运行器">npx 包运行器</a></li>
+        <li><a href="#事件轮询">事件轮询</a></li>
+        <li><a href="#异步编程">异步编程</a></li>
+        <li><a href="#构建-http-服务器">构建 HTTP 服务器</a></li>
+        <li><a href="#发出-http-请求">发出 HTTP 请求</a></li>
+        <li><a href="#文件读写">文件读写</a></li>
+        <li><a href="#如何在-nodejs-中打印对象">如何在 Node.js 中打印对象</a></li>
+        <li><a href="#nodejs-最佳实践">Node.js 最佳实践</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="简介" class="headerLink">
+    <a href="#%e7%ae%80%e4%bb%8b" class="header-mark"></a>简介</h2><blockquote>
+<p>Node.js 是一个基于 Chrome V8 引擎的 JavaScript 运行环境。 Node.js 使用了一个事件驱动、非阻塞式 I/O 的模型，使其轻量又高效。</p>
+</blockquote>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fintroduction-to-nodejs"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h2 id="安装" class="headerLink">
+    <a href="#%e5%ae%89%e8%a3%85" class="header-mark"></a>安装</h2><p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2fdownload%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2fdownload%2fpackage-manager%2f"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h2 id="基础" class="headerLink">
+    <a href="#%e5%9f%ba%e7%a1%80" class="header-mark"></a>基础</h2><h3 id="您需要了解多少-javascript-才能使用-nodejs" class="headerLink">
+    <a href="#%e6%82%a8%e9%9c%80%e8%a6%81%e4%ba%86%e8%a7%a3%e5%a4%9a%e5%b0%91-javascript-%e6%89%8d%e8%83%bd%e4%bd%bf%e7%94%a8-nodejs" class="header-mark"></a>您需要了解多少 JavaScript 才能使用 Node.js？</h3><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fhow-much-javascript-do-you-need-to-know-to-use-nodejs"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="从命令行运行-nodejs-脚本" class="headerLink">
+    <a href="#%e4%bb%8e%e5%91%bd%e4%bb%a4%e8%a1%8c%e8%bf%90%e8%a1%8c-nodejs-%e8%84%9a%e6%9c%ac" class="header-mark"></a>从命令行运行 Node.js 脚本</h3><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2frun-nodejs-scripts-from-the-command-line"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="使用-nodejs-输出到命令行" class="headerLink">
+    <a href="#%e4%bd%bf%e7%94%a8-nodejs-%e8%be%93%e5%87%ba%e5%88%b0%e5%91%bd%e4%bb%a4%e8%a1%8c" class="header-mark"></a>使用 Node.js 输出到命令行</h3><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2foutput-to-the-command-line-using-nodejs"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="错误处理" class="headerLink">
+    <a href="#%e9%94%99%e8%af%af%e5%a4%84%e7%90%86" class="header-mark"></a>错误处理</h3><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2ferror-handling-in-nodejs"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="node-模块系统" class="headerLink">
+    <a href="#node-%e6%a8%a1%e5%9d%97%e7%b3%bb%e7%bb%9f" class="header-mark"></a>Node 模块系统</h3><h4 id="概述" class="headerLink">
+    <a href="#%e6%a6%82%e8%bf%b0" class="header-mark"></a>概述</h4><blockquote>
+<p>Node.js 采用模块化结构，按照 CommonJS 规范定义和使用模块。模块与文件是一一对应关系，即加载一个模块，实际上就是加载对应的一个模块文件。</p>
+</blockquote>
+<p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fexpose-functionality-from-a-nodejs-file-using-exports"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fblog.csdn.net%2fzhangyuan19880606%2farticle%2fdetails%2f51508699"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h4 id="什么是模块化" class="headerLink">
+    <a href="#%e4%bb%80%e4%b9%88%e6%98%af%e6%a8%a1%e5%9d%97%e5%8c%96" class="header-mark"></a>什么是模块化？</h4><ul>
+<li>存在文件作用域</li>
+<li>存在通信规则
+<ul>
+<li>加载(require)</li>
+<li>导出(module.exports)</li>
+</ul>
+</li>
+</ul>
+<h4 id="导出-exports" class="headerLink">
+    <a href="#%e5%af%bc%e5%87%ba-exports" class="header-mark"></a>导出 <code>exports</code></h4><p>node 中每个 js 文件，都有一个 module 对象，其 exports 属性相当于其暴露的接口对象。可以使用<code>module.exports.xxx = xxx</code>添加向外暴露的接口。如果一个文件只向外暴露一个方法或者其他类型的属性，可以直接使用<code>module.exports = xxx</code>。注意在 Node 解释 js 文件时，会在其头部加上隐式的<code>let exports = module.exports</code>因此只要不改变指针指向的情况下，可以使用<code>export</code>代替<code>module.exports</code>。</p>
+<h4 id="加载-require" class="headerLink">
+    <a href="#%e5%8a%a0%e8%bd%bd-require" class="header-mark"></a>加载 <code>require</code></h4><ul>
+<li>加载规则
+<ul>
+<li>会执行加载模块中的代码</li>
+<li>重复 require，不会执行模块中的代码，仅能拿到<code>module.exports</code>接口对象。</li>
+</ul>
+</li>
+<li>模块标识
+<ul>
+<li>核心模块
+<ul>
+<li>被编译到二进制文件中，直接使用名字加载。</li>
+</ul>
+</li>
+<li>第三方模块
+<ul>
+<li>凡是第三方模块都需要使用 npm 来下载</li>
+<li>加载的时候使用<code>require(’packageName’)</code></li>
+<li>加载的文件的位置在<code>node_modules/packageName/package.json</code> 中<code>{”main”:”加载文件“}</code></li>
+<li>没有配置加载文件的情况会默认为<code>index.js</code></li>
+<li><code>node_modules</code>文件夹会从当前文件所在路径，向上迭代查找使用最近的一个。</li>
+</ul>
+</li>
+<li>自定义模块
+<ul>
+<li><code>./</code>开头，代表当前路径,不可省。</li>
+<li><code>../</code>开头，代表上级路径,不可省。</li>
+<li>引入时<code>.js</code>后缀可省</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="npm-包管理器" class="headerLink">
+    <a href="#npm-%e5%8c%85%e7%ae%a1%e7%90%86%e5%99%a8" class="header-mark"></a>npm 包管理器</h3><p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fan-introduction-to-the-npm-package-manager"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fwhere-does-npm-install-the-packages"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fhow-to-use-or-execute-a-package-installed-using-npm"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2ffind-the-installed-version-of-an-npm-package"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2funinstalling-npm-packages"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fnpm-global-or-local-packages"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fnpm-dependencies-and-devdependencies"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h3 id="packagejson-和-package-lockjson-指南" class="headerLink">
+    <a href="#packagejson-%e5%92%8c-package-lockjson-%e6%8c%87%e5%8d%97" class="header-mark"></a>package.json 和 package-lock.json 指南</h3><p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fthe-package-json-guide"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fthe-package-lock-json-file"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<p>如果您使用 JavaScript，或者您曾经与 JavaScript 项目、Node.js 或前端项目进行过交互，那么您肯定会遇到该<code>package.json</code>文件。</p>
+<p>那个有什么用途？你应该知道什么，你可以用它做什么很酷的事情？</p>
+<p>该<code>package.json</code>文件是您项目的清单。它可以做很多事情，完全不相关。例如，它是工具配置的中央存储库。它也是所有已安装软件包的名称和版本的存储<code>npm</code>位置。<code>yarn</code></p>
+<h4 id="文件结构" class="headerLink">
+    <a href="#%e6%96%87%e4%bb%b6%e7%bb%93%e6%9e%84" class="header-mark"></a>文件结构</h4><p>这是一个示例 package.json 文件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>它是空的！<code>package.json</code>对于应用程序，文件中的内容没有固定要求。唯一的要求是它尊重 JSON 格式，否则尝试以编程方式访问其属性的程序无法读取它。</p>
+<p>如果您正在构建一个想要分发的 Node.js 包，<code>npm</code>事情发生了根本性的变化，那么您必须拥有一组可以帮助其他人使用它的属性。稍后我们将看到更多关于此的内容。</p>
+<p>这是另一个 package.json：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;test-project&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>它定义了一个<code>name</code>属性，该属性告诉应用程序或包的名称，该名称包含在该文件所在的同一文件夹中。</p>
+<p>这是一个更复杂的示例，它是从示例 Vue.js 应用程序中提取的：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;test-project&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;1.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;description&#34;</span><span class="p">:</span> <span class="s2">&#34;A Vue.js project&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;main&#34;</span><span class="p">:</span> <span class="s2">&#34;src/main.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;private&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;scripts&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;dev&#34;</span><span class="p">:</span> <span class="s2">&#34;webpack-dev-server --inline --progress --config build/webpack.dev.conf.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;start&#34;</span><span class="p">:</span> <span class="s2">&#34;npm run dev&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;unit&#34;</span><span class="p">:</span> <span class="s2">&#34;jest --config test/unit/jest.conf.js --coverage&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;test&#34;</span><span class="p">:</span> <span class="s2">&#34;npm run unit&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;lint&#34;</span><span class="p">:</span> <span class="s2">&#34;eslint --ext .js,.vue src test/unit&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="s2">&#34;node build/build.js&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;dependencies&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;vue&#34;</span><span class="p">:</span> <span class="s2">&#34;^2.5.2&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;devDependencies&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;autoprefixer&#34;</span><span class="p">:</span> <span class="s2">&#34;^7.1.2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;babel-core&#34;</span><span class="p">:</span> <span class="s2">&#34;^6.22.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;babel-eslint&#34;</span><span class="p">:</span> <span class="s2">&#34;^8.2.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;babel-helper-vue-jsx-merge-props&#34;</span><span class="p">:</span> <span class="s2">&#34;^2.0.3&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;babel-jest&#34;</span><span class="p">:</span> <span class="s2">&#34;^21.0.2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;babel-loader&#34;</span><span class="p">:</span> <span class="s2">&#34;^7.1.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;babel-plugin-dynamic-import-node&#34;</span><span class="p">:</span> <span class="s2">&#34;^1.2.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;babel-plugin-syntax-jsx&#34;</span><span class="p">:</span> <span class="s2">&#34;^6.18.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;babel-plugin-transform-es2015-modules-commonjs&#34;</span><span class="p">:</span> <span class="s2">&#34;^6.26.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;babel-plugin-transform-runtime&#34;</span><span class="p">:</span> <span class="s2">&#34;^6.22.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;babel-plugin-transform-vue-jsx&#34;</span><span class="p">:</span> <span class="s2">&#34;^3.5.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;babel-preset-env&#34;</span><span class="p">:</span> <span class="s2">&#34;^1.3.2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;babel-preset-stage-2&#34;</span><span class="p">:</span> <span class="s2">&#34;^6.22.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;chalk&#34;</span><span class="p">:</span> <span class="s2">&#34;^2.0.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;copy-webpack-plugin&#34;</span><span class="p">:</span> <span class="s2">&#34;^4.0.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;css-loader&#34;</span><span class="p">:</span> <span class="s2">&#34;^0.28.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;eslint&#34;</span><span class="p">:</span> <span class="s2">&#34;^4.15.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;eslint-config-airbnb-base&#34;</span><span class="p">:</span> <span class="s2">&#34;^11.3.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;eslint-friendly-formatter&#34;</span><span class="p">:</span> <span class="s2">&#34;^3.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;eslint-import-resolver-webpack&#34;</span><span class="p">:</span> <span class="s2">&#34;^0.8.3&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;eslint-loader&#34;</span><span class="p">:</span> <span class="s2">&#34;^1.7.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;eslint-plugin-import&#34;</span><span class="p">:</span> <span class="s2">&#34;^2.7.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;eslint-plugin-vue&#34;</span><span class="p">:</span> <span class="s2">&#34;^4.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;extract-text-webpack-plugin&#34;</span><span class="p">:</span> <span class="s2">&#34;^3.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;file-loader&#34;</span><span class="p">:</span> <span class="s2">&#34;^1.1.4&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;friendly-errors-webpack-plugin&#34;</span><span class="p">:</span> <span class="s2">&#34;^1.6.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;html-webpack-plugin&#34;</span><span class="p">:</span> <span class="s2">&#34;^2.30.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;jest&#34;</span><span class="p">:</span> <span class="s2">&#34;^22.0.4&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;jest-serializer-vue&#34;</span><span class="p">:</span> <span class="s2">&#34;^0.3.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;node-notifier&#34;</span><span class="p">:</span> <span class="s2">&#34;^5.1.2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;optimize-css-assets-webpack-plugin&#34;</span><span class="p">:</span> <span class="s2">&#34;^3.2.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;ora&#34;</span><span class="p">:</span> <span class="s2">&#34;^1.2.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;portfinder&#34;</span><span class="p">:</span> <span class="s2">&#34;^1.0.13&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;postcss-import&#34;</span><span class="p">:</span> <span class="s2">&#34;^11.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;postcss-loader&#34;</span><span class="p">:</span> <span class="s2">&#34;^2.0.8&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;postcss-url&#34;</span><span class="p">:</span> <span class="s2">&#34;^7.2.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;rimraf&#34;</span><span class="p">:</span> <span class="s2">&#34;^2.6.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;semver&#34;</span><span class="p">:</span> <span class="s2">&#34;^5.3.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;shelljs&#34;</span><span class="p">:</span> <span class="s2">&#34;^0.7.6&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;uglifyjs-webpack-plugin&#34;</span><span class="p">:</span> <span class="s2">&#34;^1.1.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;url-loader&#34;</span><span class="p">:</span> <span class="s2">&#34;^0.5.8&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;vue-jest&#34;</span><span class="p">:</span> <span class="s2">&#34;^1.0.2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;vue-loader&#34;</span><span class="p">:</span> <span class="s2">&#34;^13.3.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;vue-style-loader&#34;</span><span class="p">:</span> <span class="s2">&#34;^3.0.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;vue-template-compiler&#34;</span><span class="p">:</span> <span class="s2">&#34;^2.5.2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;webpack&#34;</span><span class="p">:</span> <span class="s2">&#34;^3.6.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;webpack-bundle-analyzer&#34;</span><span class="p">:</span> <span class="s2">&#34;^2.9.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;webpack-dev-server&#34;</span><span class="p">:</span> <span class="s2">&#34;^2.9.1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;webpack-merge&#34;</span><span class="p">:</span> <span class="s2">&#34;^4.1.0&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;engines&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;node&#34;</span><span class="p">:</span> <span class="s2">&#34;&gt;= 6.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;npm&#34;</span><span class="p">:</span> <span class="s2">&#34;&gt;= 3.0.0&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;browserslist&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;&gt; 1%&#34;</span><span class="p">,</span> <span class="s2">&#34;last 2 versions&#34;</span><span class="p">,</span> <span class="s2">&#34;not ie &lt;= 8&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这里发生<em>了很多</em>事情：</p>
+<ul>
+<li><code>version</code>表示当前版本</li>
+<li><code>name</code>设置应用程序/包名称</li>
+<li><code>description</code>是应用程序/包的简要说明</li>
+<li><code>main</code>设置应用程序的入口点</li>
+<li><code>private</code>如果设置为<code>true</code>防止应用程序/包被意外发布<code>npm</code></li>
+<li><code>scripts</code>定义了一组可以运行的节点脚本</li>
+<li><code>dependencies``npm</code>设置作为依赖项安装的软件包列表</li>
+<li><code>devDependencies``npm</code>设置作为开发依赖项安装的软件包列表</li>
+<li><code>engines</code>设置此包/应用程序适用于哪些版本的 Node.js</li>
+<li><code>browserslist</code>用于告诉您要支持哪些浏览器（及其版本）</li>
+</ul>
+<p>所有这些属性都被<code>npm</code>我们可以使用的任何一个或其他工具使用。</p>
+<h4 id="属性细分" class="headerLink">
+    <a href="#%e5%b1%9e%e6%80%a7%e7%bb%86%e5%88%86" class="header-mark"></a>属性细分</h4><p>本节详细介绍了您可以使用的属性。我们指的是“包”，但同样适用于您不用作包的本地应用程序。</p>
+<p>大多数这些属性仅在https://www.npmjs.com/上使用，其他属性由与您的代码交互的脚本使用，例如<code>npm</code>或其他。</p>
+<h5 id="姓名" class="headerLink">
+    <a href="#%e5%a7%93%e5%90%8d" class="header-mark"></a>姓名</h5><p>设置包名。</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;name&#34;</span><span class="err">:</span> <span class="s2">&#34;test-project&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>名称必须少于 214 个字符，不能有空格，只能包含小写字母、连字符 ( <code>-</code>) 或下划线 ( <code>_</code>)。</p>
+<p>这是因为当一个包在 上发布时<code>npm</code>，它会根据这个属性获得自己的 URL。</p>
+<p>如果您在 GitHub 上公开发布此包，则此属性的一个很好的值是 GitHub 存储库名称。</p>
+<h5 id="作者" class="headerLink">
+    <a href="#%e4%bd%9c%e8%80%85" class="header-mark"></a>作者</h5><p>列出包作者姓名</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;author&#34;</span><span class="p">:</span> <span class="s2">&#34;Joe &lt;joe@whatever.com&gt; (https://whatever.com)&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>也可以使用这种格式：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;author&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Joe&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;email&#34;</span><span class="p">:</span> <span class="s2">&#34;joe@whatever.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;url&#34;</span><span class="p">:</span> <span class="s2">&#34;https://whatever.com&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="贡献者" class="headerLink">
+    <a href="#%e8%b4%a1%e7%8c%ae%e8%80%85" class="header-mark"></a>贡献者</h5><p>除了作者之外，该项目还可以有一个或多个贡献者。该属性是一个列出它们的数组。</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;contributors&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;Joe &lt;joe@whatever.com&gt; (https://whatever.com)&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>也可以使用这种格式：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;contributors&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;Joe&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;email&#34;</span><span class="p">:</span> <span class="s2">&#34;joe@whatever.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;url&#34;</span><span class="p">:</span> <span class="s2">&#34;https://whatever.com&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="错误" class="headerLink">
+    <a href="#%e9%94%99%e8%af%af" class="header-mark"></a>错误</h5><p>包问题跟踪器的链接，很可能是 GitHub 问题页面</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;bugs&#34;</span><span class="p">:</span> <span class="s2">&#34;https://github.com/whatever/package/issues&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="主页" class="headerLink">
+    <a href="#%e4%b8%bb%e9%a1%b5" class="header-mark"></a>主页</h5><p>设置包主页</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;homepage&#34;</span><span class="p">:</span> <span class="s2">&#34;https://whatever.com/package&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="版本" class="headerLink">
+    <a href="#%e7%89%88%e6%9c%ac" class="header-mark"></a>版本</h5><p>表示包的当前版本。</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;version&#34;</span><span class="err">:</span> <span class="s2">&#34;1.0.0&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此属性遵循版本的语义版本控制 (semver) 表示法，这意味着版本始终用 3 个数字表示：<code>x.x.x</code>.</p>
+<p>第一个数字是主要版本，第二个是次要版本，第三个是补丁版本。</p>
+<p>这些数字有一个含义：仅修复错误的版本是补丁版本，引入向后兼容更改的版本是次要版本，主要版本可以有重大更改。</p>
+<h5 id="执照" class="headerLink">
+    <a href="#%e6%89%a7%e7%85%a7" class="header-mark"></a>执照</h5><p>表示包的许可证。</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;license&#34;</span><span class="err">:</span> <span class="s2">&#34;MIT&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="关键词" class="headerLink">
+    <a href="#%e5%85%b3%e9%94%ae%e8%af%8d" class="header-mark"></a>关键词</h5><p>此属性包含与您的包的功能相关联的关键字数组。</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;keywords&#34;</span><span class="err">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;email&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;machine learning&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;ai&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这有助于人们在浏览类似包或浏览https://www.npmjs.com/网站时找到您的包。</p>
+<h5 id="描述" class="headerLink">
+    <a href="#%e6%8f%8f%e8%bf%b0" class="header-mark"></a>描述</h5><p>此属性包含包的简要说明</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;description&#34;</span><span class="err">:</span> <span class="s2">&#34;A package to work with strings&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>如果您决定将包发布到<code>npm</code>以便人们可以了解包的内容，这将特别有用。</p>
+<h5 id="存储库" class="headerLink">
+    <a href="#%e5%ad%98%e5%82%a8%e5%ba%93" class="header-mark"></a>存储库</h5><p>此属性指定此包存储库所在的位置。</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;repository&#34;</span><span class="err">:</span> <span class="s2">&#34;github:whatever/testing&#34;</span><span class="err">,</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注意<code>github</code>前缀。还有其他受欢迎的服务：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;repository&#34;</span><span class="err">:</span> <span class="s2">&#34;gitlab:whatever/testing&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;repository&#34;</span><span class="err">:</span> <span class="s2">&#34;bitbucket:whatever/testing&#34;</span><span class="err">,</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>您可以显式设置版本控制系统：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;repository&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;git&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;url&#34;</span><span class="p">:</span> <span class="s2">&#34;https://github.com/whatever/testing.git&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>您可以使用不同的版本控制系统：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;repository&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;type&#34;</span><span class="p">:</span> <span class="s2">&#34;svn&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;url&#34;</span><span class="p">:</span> <span class="s2">&#34;...&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="主要的" class="headerLink">
+    <a href="#%e4%b8%bb%e8%a6%81%e7%9a%84" class="header-mark"></a>主要的</h5><p>设置包的入口点。</p>
+<p>当您在应用程序中导入此包时，应用程序将在其中搜索模块导出。</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;main&#34;</span><span class="err">:</span> <span class="s2">&#34;src/main.js&#34;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="私人的" class="headerLink">
+    <a href="#%e7%a7%81%e4%ba%ba%e7%9a%84" class="header-mark"></a>私人的</h5><p>如果设置为<code>true</code>防止应用程序/包被意外发布<code>npm</code></p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;private&#34;</span><span class="err">:</span> <span class="kc">true</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="脚本" class="headerLink">
+    <a href="#%e8%84%9a%e6%9c%ac" class="header-mark"></a>脚本</h5><p>定义一组可以运行的节点脚本</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;scripts&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;dev&#34;</span><span class="p">:</span> <span class="s2">&#34;webpack-dev-server --inline --progress --config build/webpack.dev.conf.js&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;start&#34;</span><span class="p">:</span> <span class="s2">&#34;npm run dev&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;unit&#34;</span><span class="p">:</span> <span class="s2">&#34;jest --config test/unit/jest.conf.js --coverage&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;test&#34;</span><span class="p">:</span> <span class="s2">&#34;npm run unit&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;lint&#34;</span><span class="p">:</span> <span class="s2">&#34;eslint --ext .js,.vue src test/unit&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="s2">&#34;node build/build.js&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这些脚本是命令行应用程序。您可以通过调用<code>npm run XXXX</code>or 来运行它们<code>yarn XXXX</code>，其中<code>XXXX</code>是命令名称。示例：<code>npm run dev</code>。</p>
+<p>您可以为命令使用任何您想要的名称，并且脚本可以执行任何您想要的操作。</p>
+<h5 id="依赖关系" class="headerLink">
+    <a href="#%e4%be%9d%e8%b5%96%e5%85%b3%e7%b3%bb" class="header-mark"></a>依赖关系</h5><p><code>npm</code>设置作为依赖项安装的软件包列表。</p>
+<p>使用 npm 或 yarn 安装包时：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">BASHcopy
+</span></span><span class="line"><span class="cl">npm install &lt;PACKAGENAME&gt;
+</span></span><span class="line"><span class="cl">yarn add &lt;PACKAGENAME&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>该软件包会自动插入此列表中。</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;dependencies&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;vue&#34;</span><span class="p">:</span> <span class="s2">&#34;^2.5.2&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="开发依赖" class="headerLink">
+    <a href="#%e5%bc%80%e5%8f%91%e4%be%9d%e8%b5%96" class="header-mark"></a>开发依赖</h5><p><code>npm</code>设置作为开发依赖项安装的软件包列表。</p>
+<p>它们的不同之处<code>dependencies</code>在于它们只能安装在开发机器上，而不需要在生产中运行代码。</p>
+<p>使用 npm 或 yarn 安装包时：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">BASHcopy
+</span></span><span class="line"><span class="cl">npm install --save-dev &lt;PACKAGENAME&gt;
+</span></span><span class="line"><span class="cl">yarn add --dev &lt;PACKAGENAME&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>该软件包会自动插入此列表中。</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;devDependencies&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;autoprefixer&#34;</span><span class="p">:</span> <span class="s2">&#34;^7.1.2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;babel-core&#34;</span><span class="p">:</span> <span class="s2">&#34;^6.22.1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="引擎" class="headerLink">
+    <a href="#%e5%bc%95%e6%93%8e" class="header-mark"></a>引擎</h5><p>设置此包/应用程序使用的 Node.js 版本和其他命令</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;engines&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;node&#34;</span><span class="p">:</span> <span class="s2">&#34;&gt;= 6.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;npm&#34;</span><span class="p">:</span> <span class="s2">&#34;&gt;= 3.0.0&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;yarn&#34;</span><span class="p">:</span> <span class="s2">&#34;^0.13.0&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="浏览器列表" class="headerLink">
+    <a href="#%e6%b5%8f%e8%a7%88%e5%99%a8%e5%88%97%e8%a1%a8" class="header-mark"></a>浏览器列表</h5><p>用于告诉您要支持哪些浏览器（及其版本）。它被 Babel、Autoprefixer 和其他工具引用，仅将 polyfills 和 fallbacks 添加到您的目标浏览器中。</p>
+<p>例子：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;browserslist&#34;</span><span class="err">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;&gt; 1%&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;last 2 versions&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;not ie &lt;= 8&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此配置意味着您希望以至少 1% 的使用率（来自<a href="https://caniuse.com/" target="_blank" rel="noopener noreferrer">CanIUse.com</a>统计数据）支持所有浏览器的最后 2 个主要版本，IE8 和更低版本除外。</p>
+<p>（<a href="https://www.npmjs.com/package/browserslist" target="_blank" rel="noopener noreferrer">查看更多</a>）</p>
+<h5 id="命令特定的属性" class="headerLink">
+    <a href="#%e5%91%bd%e4%bb%a4%e7%89%b9%e5%ae%9a%e7%9a%84%e5%b1%9e%e6%80%a7" class="header-mark"></a>命令特定的属性</h5><p>该<code>package.json</code>文件还可以托管特定于命令的配置，例如 Babel、ESLint 等。</p>
+<p>每个都有一个特定的属性，比如<code>eslintConfig</code>，<code>babel</code>等等。这些是特定于命令的，您可以在相应的命令/项目文档中找到如何使用它们。</p>
+<h4 id="软件包版本" class="headerLink">
+    <a href="#%e8%bd%af%e4%bb%b6%e5%8c%85%e7%89%88%e6%9c%ac" class="header-mark"></a>软件包版本</h4><p>您已经在上面的描述中看到了像这样的版本号：<code>~3.0.0</code>或<code>^0.13.0</code>. 它们是什么意思，您可以使用哪些其他版本说明符？</p>
+<p>该符号指定您的包从该依赖项接受哪些更新。</p>
+<p>鉴于使用 semver（语义版本控制）所有版本都有 3 位数字，第一个是主要版本，第二个是次要版本，第三个是补丁版本，你有这些“<a href="https://nodejs.dev/learn/semantic-versioning-using-npm/" target="_blank" rel="noopener noreferrer">规则</a>”。</p>
+<p>您可以组合范围内的大多数版本，例如：<code>1.0.0 || &gt;=1.1.0 &lt;1.2.0</code>，以使用 1.0.0 或 1.1.0 以上的一个版本，但低于 1.2.0。</p>
+<h3 id="常用标准库" class="headerLink">
+    <a href="#%e5%b8%b8%e7%94%a8%e6%a0%87%e5%87%86%e5%ba%93" class="header-mark"></a>常用标准库</h3><h4 id="fs" class="headerLink">
+    <a href="#fs" class="header-mark"></a>fs</h4><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fthe-nodejs-fs-module"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h4 id="path" class="headerLink">
+    <a href="#path" class="header-mark"></a>path</h4><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fthe-nodejs-path-module"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h4 id="os" class="headerLink">
+    <a href="#os" class="header-mark"></a>os</h4><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fthe-nodejs-os-module"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h4 id="events" class="headerLink">
+    <a href="#events" class="header-mark"></a>events</h4><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fthe-nodejs-events-module"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h4 id="http" class="headerLink">
+    <a href="#http" class="header-mark"></a>http</h4><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fthe-nodejs-http-module"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h4 id="buffers" class="headerLink">
+    <a href="#buffers" class="header-mark"></a>Buffers</h4><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fnodejs-buffers"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h4 id="streams" class="headerLink">
+    <a href="#streams" class="header-mark"></a>Streams</h4><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fnodejs-streams"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h2 id="扩展" class="headerLink">
+    <a href="#%e6%89%a9%e5%b1%95" class="header-mark"></a>扩展</h2><h3 id="其他包管理器" class="headerLink">
+    <a href="#%e5%85%b6%e4%bb%96%e5%8c%85%e7%ae%a1%e7%90%86%e5%99%a8" class="header-mark"></a>其他包管理器</h3><h4 id="yarn" class="headerLink">
+    <a href="#yarn" class="header-mark"></a>Yarn</h4><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fyarn.bootcss.com%2fdocs%2fgetting-started"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h4 id="pnpm" class="headerLink">
+    <a href="#pnpm" class="header-mark"></a>pnpm</h4><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fpnpm.io%2fzh%2finstallation"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="如何在-nodejs-中接受来自命令行的输入" class="headerLink">
+    <a href="#%e5%a6%82%e4%bd%95%e5%9c%a8-nodejs-%e4%b8%ad%e6%8e%a5%e5%8f%97%e6%9d%a5%e8%87%aa%e5%91%bd%e4%bb%a4%e8%a1%8c%e7%9a%84%e8%be%93%e5%85%a5" class="header-mark"></a>如何在 Node.js 中接受来自命令行的输入</h3><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2faccept-input-from-the-command-line-in-nodejs"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="npx-包运行器" class="headerLink">
+    <a href="#npx-%e5%8c%85%e8%bf%90%e8%a1%8c%e5%99%a8" class="header-mark"></a>npx 包运行器</h3><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fthe-npx-nodejs-package-runner"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="事件轮询" class="headerLink">
+    <a href="#%e4%ba%8b%e4%bb%b6%e8%bd%ae%e8%af%a2" class="header-mark"></a>事件轮询</h3><p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fthe-nodejs-event-loop"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2funderstanding-process-nexttick"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fwww.php.cn%2fjs-tutorial-408369.html"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h3 id="异步编程" class="headerLink">
+    <a href="#%e5%bc%82%e6%ad%a5%e7%bc%96%e7%a8%8b" class="header-mark"></a>异步编程</h3><p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fjavascript-asynchronous-programming-and-callbacks"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2funderstanding-javascript-promises"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fmodern-asynchronous-javascript-with-async-and-await"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fthe-nodejs-event-emitter"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h3 id="构建-http-服务器" class="headerLink">
+    <a href="#%e6%9e%84%e5%bb%ba-http-%e6%9c%8d%e5%8a%a1%e5%99%a8" class="header-mark"></a>构建 HTTP 服务器</h3><p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fbuild-an-http-server"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fget-http-request-body-data-using-nodejs"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h3 id="发出-http-请求" class="headerLink">
+    <a href="#%e5%8f%91%e5%87%ba-http-%e8%af%b7%e6%b1%82" class="header-mark"></a>发出 HTTP 请求</h3><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fmaking-http-requests-with-nodejs"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="文件读写" class="headerLink">
+    <a href="#%e6%96%87%e4%bb%b6%e8%af%bb%e5%86%99" class="header-mark"></a>文件读写</h3><p><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fnodejs-file-stats"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fnodejs-file-paths"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2freading-files-with-nodejs"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fwriting-files-with-nodejs"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fworking-with-folders-in-nodejs"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe></p>
+<h3 id="如何在-nodejs-中打印对象" class="headerLink">
+    <a href="#%e5%a6%82%e4%bd%95%e5%9c%a8-nodejs-%e4%b8%ad%e6%89%93%e5%8d%b0%e5%af%b9%e8%b1%a1" class="header-mark"></a>如何在 Node.js 中打印对象</h3><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fnodejs.dev%2flearn%2fhow-to-log-an-object-in-nodejs"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+<h3 id="nodejs-最佳实践" class="headerLink">
+    <a href="#nodejs-%e6%9c%80%e4%bd%b3%e5%ae%9e%e8%b7%b5" class="header-mark"></a>Node.js 最佳实践</h3><iframe
+  class="website-card-embed"
+  data-src="https://website-card-embed.dramacat.top/?url=https%3a%2f%2fgithub.com%2fi0natan%2fnodebestpractices%2fblob%2fmaster%2fREADME.chinese.md"
+  style="width: 100%; height: 124px"
+  frameborder="no"
+></iframe>
+</div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-04-06&nbsp;<a class="git-hash" href="https://github.com/Humble-Xiang/hugo-blog/commit/c35233da6a399af77c2401e6978337d21f10d657" target="_blank" title="commit by OrionPax(orionpax.1997@outlook.com) c35233da6a399af77c2401e6978337d21f10d657: update" rel="noopener noreferrer">
+                                    <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M440.667 182.109l7.143-40c1.313-7.355-4.342-14.109-11.813-14.109h-74.81l14.623-81.891C377.123 38.754 371.468 32 363.997 32h-40.632a12 12 0 0 0-11.813 9.891L296.175 128H197.54l14.623-81.891C213.477 38.754 207.822 32 200.35 32h-40.632a12 12 0 0 0-11.813 9.891L132.528 128H53.432a12 12 0 0 0-11.813 9.891l-7.143 40C33.163 185.246 38.818 192 46.289 192h74.81L98.242 320H19.146a12 12 0 0 0-11.813 9.891l-7.143 40C-1.123 377.246 4.532 384 12.003 384h74.81L72.19 465.891C70.877 473.246 76.532 480 84.003 480h40.632a12 12 0 0 0 11.813-9.891L151.826 384h98.634l-14.623 81.891C234.523 473.246 240.178 480 247.65 480h40.632a12 12 0 0 0 11.813-9.891L315.472 384h79.096a12 12 0 0 0 11.813-9.891l7.143-40c1.313-7.355-4.342-14.109-11.813-14.109h-74.81l22.857-128h79.096a12 12 0 0 0 11.813-9.891zM261.889 320h-98.634l22.857-128h98.634l-22.857 128z"/></svg>c35233d</a></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line print:!tw-hidden">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/nodejs/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span><span>|&nbsp;<a class="link-to-source" href=https://github.com/Humble-Xiang/hugo-blog/blob/main/content/posts/nodejs.md target="_blank" rel="noopener noreferrer">查看源代码</a>
+                    </span><span>|&nbsp;<a class="link-to-edit" href=https://github.com/Humble-Xiang/hugo-blog/edit/main/content/posts/nodejs.md target="_blank" rel="noopener noreferrer">编辑此页</a>
+                    </span><span>|&nbsp;<a class="link-to-report" href=https://github.com/Humble-Xiang/hugo-blog/issues/new?title=[bug]%20Node.js+%E7%9A%84%E4%BD%BF%E7%94%A8&body=|Field|Value|%0A|-|-|%0A|Title|Node.js+%E7%9A%84%E4%BD%BF%E7%94%A8|%0A|Url|http://localhost:1313/nodejs/|%0A|Filename|https://github.com/Humble-Xiang/hugo-blog/blob/main/content/posts/nodejs.md| target="_blank" rel="noopener noreferrer">报告问题</a>
+                    </span></div>
+            <div class="post-info-share"></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg>&nbsp;<a href="/tags/support/">Support</a></section>
+        <section class="print:!tw-hidden">
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav print:tw-hidden"><a href="/ladder/" class="prev" rel="prev" title="如何科学上网？"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>如何科学上网？</a>
+            <a href="/nestjs/" class="next" rel="next" title="NestJS 的使用">NestJS 的使用<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.125.7">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.0"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg> DoIt</a>
+                </div><div class="footer-line"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"/></svg>2019 - 2024<span class="author">&nbsp;<a href="https://github.com/Humble-Xiang" target="_blank" rel="noopener noreferrer">Humble.Xiang</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons" class="print:!tw-hidden"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32z"/></svg>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{},"data":{"desktop-header-typeit":"Humble.X","mobile-header-typeit":"Humble.X"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":true,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.1,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"table":{"sort":true},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":-1,"speed":100}};</script><script
+    src="/lib/tablesort/tablesort.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lightgallery.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lg-thumbnail.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lg-zoom.min.js"
+    
+  ></script><script
+    src="/lib/clipboard/clipboard.min.js"
+    
+  ></script><script
+    src="/lib/sharer/sharer.min.js"
+    
+  ></script><script
+    src="/lib/typeit/typeit.min.js"
+    
+  ></script><script
+    src="https://website-card-embed.dramacat.top/website-card-embed-loveit.js"
+    
+  ></script><script
+    src="/js/theme.min.js"
+    
+      defer
+    
+  ></script></div>
+</body>
+
+</html>

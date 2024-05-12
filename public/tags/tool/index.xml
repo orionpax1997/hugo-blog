@@ -1,0 +1,54 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tool - 标签 - 向之礼的个人博客</title>
+        <link>http://localhost:1313/tags/tool/</link>
+        <description>Tool - 标签 - 向之礼的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>humble.xiang@gmail.com (Humble.Xiang)</managingEditor>
+            <webMaster>humble.xiang@gmail.com (Humble.Xiang)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 09 Mar 2023 14:09:38 &#43;0800</lastBuildDate><atom:link href="http://localhost:1313/tags/tool/" rel="self" type="application/rss+xml" /><item>
+    <title>SpaceVim 的使用</title>
+    <link>http://localhost:1313/spacevim/</link>
+    <pubDate>Thu, 09 Mar 2023 14:09:38 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/spacevim/</guid>
+    <description><![CDATA[简介SpaceVim 是一个社区驱动的 Vim 和 Neovim 发行版。它的灵感来自 spacemacs。它分层管理插件集合，这有助于将相关包收集在一起以提供功能。]]></description>
+</item><item>
+    <title>Spacemacs 的使用</title>
+    <link>http://localhost:1313/spacemacs/</link>
+    <pubDate>Wed, 01 Feb 2023 16:01:00 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/spacemacs/</guid>
+    <description><![CDATA[简介Spacemacs 是一种体验 Emacs 的新方式——它是一个复杂而优美的设置，专注于人体工程学、记忆法和一致性。 只需克隆并启动它，然后按空格键即可]]></description>
+</item><item>
+    <title>Google Chrome 的使用</title>
+    <link>http://localhost:1313/google-chrome/</link>
+    <pubDate>Fri, 25 Feb 2022 08:40:21 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/google-chrome/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/chrome-banner.3gw9yc1adf60.webp" referrerpolicy="no-referrer">
+            </div>简介Google Chrome 是一款由 Google 公司开发的网页浏览器，该浏览器基于其他开源软件撰写，包括 WebKit，目标是提升稳定性、速度和安全性，并创造出简]]></description>
+</item><item>
+    <title>Visual Studio Code 的使用</title>
+    <link>http://localhost:1313/vscode/</link>
+    <pubDate>Fri, 24 Sep 2021 17:20:00 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/vscode/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/vscode-banner.n67beq6fr8w.webp" referrerpolicy="no-referrer">
+            </div>简介Visual Studio Code（简称 VS Code）是一款由微软开发且跨平台的免费源代码编辑器。该软件支持语法高亮、代码自动补全（又称 Intelli]]></description>
+</item><item>
+    <title>IntelliJ IDEA 的使用</title>
+    <link>http://localhost:1313/idea/</link>
+    <pubDate>Wed, 24 Mar 2021 17:40:56 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/idea/</guid>
+    <description><![CDATA[简介 IntelliJ IDEA 主要用于支持 Java、Scala、Groovy 等语言的开发工具，同时具备支持目前主流的技术和框架，擅长于企业应用、移动应用和 Web 应用的]]></description>
+</item><item>
+    <title>Hammerspoon 的使用</title>
+    <link>http://localhost:1313/hammerspoon/</link>
+    <pubDate>Sun, 08 Mar 2020 21:06:45 &#43;0800</pubDate><author>
+        <name>Humble.Xiang</name>
+    </author><guid>http://localhost:1313/hammerspoon/</guid>
+    <description><![CDATA[简介Hammerspoon 是一个 MacOS 下的开源的自动化工具。在操作系统和 Lua 脚本之间构建了桥梁。Hammerspoon 除了本身提供的操作系统的 api 外]]></description>
+</item></channel>
+</rss>

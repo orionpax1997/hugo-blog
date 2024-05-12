@@ -1,0 +1,1716 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noodp" /><title>neovim 的使用 - 向之礼的个人博客</title><meta name="Description" content="不能记住过去的人，被判重复过去。"><meta property="og:title" content="neovim 的使用" />
+<meta property="og:description" content="前言为了更快的速度和很多 neovim 才支持的插件，从 vim 迁移过来了。 基础 Normal 1 2 3 4 5 6 7 8 9 10 11 j : 下移一字符 k : 上移一字符 h : 左移一字符 l : 右移一字符" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/neovim/" /><meta property="og:image" content="https://og-image.dramacat.top/neovim 的使用?images=https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/neovim-banner.53yb7en2hsc0.webp" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-03-12T13:34:31+08:00" />
+<meta property="article:modified_time" content="2024-04-06T15:20:04+08:00" /><meta property="og:site_name" content="向之礼的个人博客" />
+
+
+<meta name="twitter:title" content="neovim 的使用"/>
+<meta name="twitter:card" content="summary_large_image"/><meta property="twitter:image" content="https://og-image.dramacat.top/neovim 的使用?images=https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/neovim-banner.53yb7en2hsc0.webp" /><meta name="twitter:description" content="前言为了更快的速度和很多 neovim 才支持的插件，从 vim 迁移过来了。 基础 Normal 1 2 3 4 5 6 7 8 9 10 11 j : 下移一字符 k : 上移一字符 h : 左移一字符 l : 右移一字符"/>
+<meta name="application-name" content="Humble.X">
+<meta name="apple-mobile-web-app-title" content="Humble.X">
+
+<meta name="theme-color" content="#f8f8f8"><meta name="msapplication-TileColor" content="#da532c"><meta name="referrer" content="never"></meta>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest">
+
+<link rel="canonical" href="http://localhost:1313/neovim/" /><link rel="prev" href="http://localhost:1313/hammerspoon/" /><link rel="next" href="http://localhost:1313/http/" />
+<link rel="stylesheet" href="/css/main.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" href="/lib/animate/animate.min.css">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">{"@context": "https://schema.org","@type": "BlogPosting",
+        "headline": "neovim 的使用",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http://localhost:1313/neovim/"
+        },"image": ["https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/neovim-banner.53yb7en2hsc0.webp"],"genre": "posts","keywords":["Command-line Tool"],"wordcount":  4653 ,
+        "url": "http://localhost:1313/neovim/","datePublished": "2020-03-12T13:34:31+08:00","dateModified": "2024-04-06T15:20:04+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "Humble.Xiang","logo": "http://localhost:1313/images/avatar.jpg"},"author": {
+                "@type": "Person",
+                "name": "Humble.Xiang",
+                "url": "https://github.com/Humble-Xiang"
+            },"description": ""
+    }</script></head>
+
+<body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">
+        function setTheme(theme) {
+          document.body.setAttribute('theme', theme); 
+          document.documentElement.style.setProperty('color-scheme', theme === 'light' ? 'light' : 'dark');
+          if (theme === 'light') {
+            document.documentElement.classList.remove('tw-dark')
+          } else {
+            document.documentElement.classList.add('tw-dark')
+          }
+          window.theme = theme;   
+          window.isDark = window.theme !== 'light' 
+        }
+        function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
+        function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('auto' === 'light' || 'auto' === 'dark' || 'auto' === 'black') setTheme('auto'), saveTheme('auto'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
+        let metaColors = {'light': '#f8f8f8','dark': '#252627','black': '#000000'}
+        getMeta('theme-color').content = metaColors[document.body.getAttribute('theme')];
+        window.switchThemeEventSet = new Set()
+    </script>
+    <div id="back-to-top"></div>
+    <div id="mask"></div><div class="wrapper"><header class="desktop print:!tw-hidden" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="向之礼的个人博客"><span id="desktop-header-typeit" class="typeit"></span></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item"
+                    href="/posts/" > 所有文章 </a><a class="menu-item"
+                    href="/tags/" > 标签 </a><a class="menu-item"
+                    href="/categories/" > 分类 </a><a class="menu-item"
+                    href="/series/" > 系列 </a><a class="menu-item"
+                    href="https://github.com/Humble-Xiang"  title="GitHub" 
+                    rel="noopener noreferrer" target="_blank" ><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d='M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z'/></svg>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-desktop">
+                    <button class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+                    </button>
+                    <button class="search-button search-clear" id="search-clear-desktop" title="清空">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+                    </button>
+                    <span class="search-button search-loading tw-animate-spin" id="search-loading-desktop">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"/></svg>
+                    </span>
+                </span><button class="menu-item theme-select" aria-label="切换主题">
+                    <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg>
+                    <select class="color-theme-select" id="theme-select-desktop" aria-label="切换主题">
+                        <option value="light">浅色</option>
+                        <option value="dark">深色</option>
+                        <option value="black">黑色</option>
+                        <option value="auto">跟随系统</option>
+                    </select>
+                </button></div>
+        </div>
+    </div>
+</header><header class="mobile print:!tw-hidden" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="向之礼的个人博客"><span id="mobile-header-typeit" class="typeit"></span></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                <div class="search mobile" id="search-mobile">
+                    <input type="text"
+                        placeholder="搜索文章标题或内容..."
+                        id="search-input-mobile">
+                    <button class="search-button search-toggle tw-h-10" id="search-toggle-mobile" title="搜索">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"/></svg>
+                    </button>
+                    <button class="search-button search-clear" id="search-clear-mobile" title="清空">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm121.6 313.1c4.7 4.7 4.7 12.3 0 17L338 377.6c-4.7 4.7-12.3 4.7-17 0L256 312l-65.1 65.6c-4.7 4.7-12.3 4.7-17 0L134.4 338c-4.7-4.7-4.7-12.3 0-17l65.6-65-65.6-65.1c-4.7-4.7-4.7-12.3 0-17l39.6-39.6c4.7-4.7 12.3-4.7 17 0l65 65.7 65.1-65.6c4.7-4.7 12.3-4.7 17 0l39.6 39.6c4.7 4.7 4.7 12.3 0 17L312 256l65.6 65.1z"/></svg>
+                    </button>
+                    <span class="search-button search-loading tw-animate-spin" id="search-loading-mobile">
+                        <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"/></svg>
+                    </span>
+                </div>
+                <button class="search-cancel" id="search-cancel-mobile">
+                    取消
+                </button>
+            </div><a class="menu-item" href="/posts/" title="" >所有文章</a><a class="menu-item" href="/tags/" title="" >标签</a><a class="menu-item" href="/categories/" title="" >分类</a><a class="menu-item" href="/series/" title="" >系列</a><a class="menu-item" href="https://github.com/Humble-Xiang" title="GitHub" 
+                rel="noopener noreferrer" target="_blank" ><svg class='icon' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 496 512'><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d='M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z'/></svg></a><button class="menu-item theme-select tw-w-full" aria-label="切换主题">
+                <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M8 256c0 136.966 111.033 248 248 248s248-111.034 248-248S392.966 8 256 8 8 119.033 8 256zm248 184V72c101.705 0 184 82.311 184 184 0 101.705-82.311 184-184 184z"/></svg>
+                <select class="color-theme-select" id="theme-select-mobile" aria-label="切换主题">
+                    <option value="light">浅色</option>
+                    <option value="dark">深色</option>
+                    <option value="black">黑色</option>
+                    <option value="auto">跟随系统</option>
+                </select>
+            </button></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div><main class="main">
+            <div class="container"><div class="toc print:!tw-hidden" id="toc-auto">
+        <h2 class="toc-title">目录</h2>
+        <div class="toc-content" id="toc-content-auto"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#基础">基础</a>
+      <ul>
+        <li><a href="#normal">Normal</a></li>
+        <li><a href="#insert">Insert</a></li>
+      </ul>
+    </li>
+    <li><a href="#vim-的四种模式">Vim 的四种模式</a>
+      <ul>
+        <li><a href="#normal-模式">Normal 模式</a></li>
+        <li><a href="#insert-模式">Insert 模式</a></li>
+        <li><a href="#command-模式">Command 模式</a></li>
+        <li><a href="#visual-模式">Visual 模式</a></li>
+      </ul>
+    </li>
+    <li><a href="#vim-多文件操作">Vim 多文件操作</a>
+      <ul>
+        <li><a href="#概念">概念</a></li>
+        <li><a href="#相关命令">相关命令</a>
+          <ul>
+            <li><a href="#buffer">Buffer</a></li>
+            <li><a href="#window">Window</a></li>
+            <li><a href="#tab">Tab</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#操作系统剪切板">操作系统剪切板</a></li>
+    <li><a href="#vim-的自动补全">Vim 的自动补全</a></li>
+    <li><a href="#vim-的配置持久化">VIM 的配置持久化</a></li>
+    <li><a href="#快捷键映射">快捷键映射</a></li>
+    <li><a href="#宏">宏</a></li>
+    <li><a href="#配置">配置</a></li>
+  </ul>
+</nav></div>
+    </div><script>document.getElementsByTagName("main")[0].setAttribute("autoTOC", "true")</script><article class="page single print:!tw-w-full print:!tw-max-w-none print:!tw-m-0 print:!tw-p-0"><h1 class="single-title animate__animated animate__flipInX">neovim 的使用</h1><div class="post-meta">
+            <div class="post-meta-line">
+                <span class="post-author"><img src="http://localhost:1313/images/avatar.jpg" alt="Humble.Xiang avatar" class="tw-inline-block tw-max-h-4 tw-rounded-full tw-translate-y-[-2px] tw-mr-1"><a href="https://github.com/Humble-Xiang" title="Author" target="_blank" rel="noopener noreferrer author" class="author">Humble.Xiang</a>
+                </span>&nbsp;<span class="post-category">收录于 </span>&nbsp;<span class="post-category">类别 <a href="/categories/geek/"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M464 128H272l-54.63-54.63c-6-6-14.14-9.37-22.63-9.37H48C21.49 64 0 85.49 0 112v288c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V176c0-26.51-21.49-48-48-48zm0 272H48V112h140.12l54.63 54.63c6 6 14.14 9.37 22.63 9.37H464v224z"/></svg>Geek</a></span>&nbsp;<span class="post-category">和</span>&nbsp;<span class="post-series">系列 <a href="/series/%E7%94%9F%E5%91%BD%E4%B8%8D%E6%81%AF-%E6%8A%98%E8%85%BE%E4%B8%8D%E6%AD%A2/"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M464 32H48C21.49 32 0 53.49 0 80v352c0 26.51 21.49 48 48 48h416c26.51 0 48-21.49 48-48V80c0-26.51-21.49-48-48-48zm-6 400H54a6 6 0 0 1-6-6V86a6 6 0 0 1 6-6h404a6 6 0 0 1 6 6v340a6 6 0 0 1-6 6zm-42-92v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm0-96v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm0-96v24c0 6.627-5.373 12-12 12H204c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h200c6.627 0 12 5.373 12 12zm-252 12c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36zm0 96c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36zm0 96c0 19.882-16.118 36-36 36s-36-16.118-36-36 16.118-36 36-36 36 16.118 36 36z"/></svg>生命不息 折腾不止</a></span></div>
+            <div class="post-meta-line"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M148 288h-40c-6.6 0-12-5.4-12-12v-40c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12zm108-12v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 96v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm-96 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm192 0v-40c0-6.6-5.4-12-12-12h-40c-6.6 0-12 5.4-12 12v40c0 6.6 5.4 12 12 12h40c6.6 0 12-5.4 12-12zm96-260v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h48V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h128V12c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v52h48c26.5 0 48 21.5 48 48zm-48 346V160H48v298c0 3.3 2.7 6 6 6h340c3.3 0 6-2.7 6-6z"/></svg>&nbsp;<time datetime="2020-03-12">2020-03-12</time>&nbsp;<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg>&nbsp;<time datetime="2024-04-06">2024-04-06</time>&nbsp;<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.9 142.1l-46.1 46.1c-4.7 4.7-12.3 4.7-17 0l-111-111c-4.7-4.7-4.7-12.3 0-17l46.1-46.1c18.7-18.7 49.1-18.7 67.9 0l60.1 60.1c18.8 18.7 18.8 49.1 0 67.9zM284.2 99.8L21.6 362.4.4 483.9c-2.9 16.4 11.4 30.6 27.8 27.8l121.5-21.3 262.6-262.6c4.7-4.7 4.7-12.3 0-17l-111-111c-4.8-4.7-12.4-4.7-17.1 0zM124.1 339.9c-5.5-5.5-5.5-14.3 0-19.8l154-154c5.5-5.5 14.3-5.5 19.8 0s5.5 14.3 0 19.8l-154 154c-5.5 5.5-14.3 5.5-19.8 0zM88 424h48v36.3l-64.5 11.3-31.1-31.1L51.7 376H88v48z"/></svg>&nbsp;约 4653 字&nbsp;<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"/></svg>&nbsp;预计阅读 10 分钟&nbsp;</div>
+        </div><div class="featured-image"><img
+        
+        loading="eager"
+        src="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/neovim-banner.53yb7en2hsc0.webp"
+        srcset="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/neovim-banner.53yb7en2hsc0.webp, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/neovim-banner.53yb7en2hsc0.webp 1.5x, https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/neovim-banner.53yb7en2hsc0.webp 2x"
+        title="https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/neovim-banner.53yb7en2hsc0.webp" ></div><div class="details series-nav open">
+                                <div class="details-summary series-title">
+                                    <span>系列 - </span>
+                                    <span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+                                </div>
+                                <div class="details-content series-content">
+                                    <nav>
+                                        <ul>
+                                                    <li><a href="/spacevim/">SpaceVim 的使用</a></li>
+                                                    <li><a href="/spacemacs/">Spacemacs 的使用</a></li>
+                                                    <li><a href="/white-piao/">使用 White Piao 快乐看剧吧</a></li>
+                                                    <li><a href="/website-card-embed/">使用 Website Card Embed 在你的 Blog 中以卡片形式进行文章引用</a></li>
+                                                    <li><a href="/website-description-analysis/">使用 Website Description Analysis 解析网页简介信息</a></li>
+                                                    <li><a href="/surfingkeys/">使用 Surfingkeys 以 VIM 的方式操作你的浏览器</a></li>
+                                                    <li><a href="/homebrew/">Homebrew 的使用</a></li><li><span class="active">neovim 的使用</span></li>
+                                                    <li><a href="/hammerspoon/">Hammerspoon 的使用</a></li>
+                                                    <li><a href="/ranger/">命令行下的文件管理器 Ranger</a></li>
+                                                    <li><a href="/mac-terminal/">MacOS 下的终端 &#43; Shell 选择</a></li>
+                                                    <li><a href="/windows-terminal/">Windows 下的终端解决方案</a></li>
+                                                    <li><a href="/ladder/">如何科学上网？</a></li>
+                                                    <li><a href="/scoop/">Windows 下的软件包管理工具 Scoop</a></li>
+                                                    <li><a href="/hugo/">如何使用 Hugo 进行个人博客搭建？</a></li></ul>
+                                    </nav>
+                                </div>
+                            </div><div class="details toc print:!tw-block" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span class="details-icon"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#基础">基础</a>
+      <ul>
+        <li><a href="#normal">Normal</a></li>
+        <li><a href="#insert">Insert</a></li>
+      </ul>
+    </li>
+    <li><a href="#vim-的四种模式">Vim 的四种模式</a>
+      <ul>
+        <li><a href="#normal-模式">Normal 模式</a></li>
+        <li><a href="#insert-模式">Insert 模式</a></li>
+        <li><a href="#command-模式">Command 模式</a></li>
+        <li><a href="#visual-模式">Visual 模式</a></li>
+      </ul>
+    </li>
+    <li><a href="#vim-多文件操作">Vim 多文件操作</a>
+      <ul>
+        <li><a href="#概念">概念</a></li>
+        <li><a href="#相关命令">相关命令</a>
+          <ul>
+            <li><a href="#buffer">Buffer</a></li>
+            <li><a href="#window">Window</a></li>
+            <li><a href="#tab">Tab</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#操作系统剪切板">操作系统剪切板</a></li>
+    <li><a href="#vim-的自动补全">Vim 的自动补全</a></li>
+    <li><a href="#vim-的配置持久化">VIM 的配置持久化</a></li>
+    <li><a href="#快捷键映射">快捷键映射</a></li>
+    <li><a href="#宏">宏</a></li>
+    <li><a href="#配置">配置</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="前言" class="headerLink">
+    <a href="#%e5%89%8d%e8%a8%80" class="header-mark"></a>前言</h2><p>为了更快的速度和很多 neovim 才支持的插件，从 vim 迁移过来了。</p>
+<h2 id="基础" class="headerLink">
+    <a href="#%e5%9f%ba%e7%a1%80" class="header-mark"></a>基础</h2><h3 id="normal" class="headerLink">
+    <a href="#normal" class="header-mark"></a>Normal</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">j             : 下移一字符
+</span></span><span class="line"><span class="cl">k             : 上移一字符
+</span></span><span class="line"><span class="cl">h             : 左移一字符
+</span></span><span class="line"><span class="cl">l             : 右移一字符
+</span></span><span class="line"><span class="cl">w(word)/W     : 移动到下一个单词开头（WORD 将空白符分割的识别为单词）
+</span></span><span class="line"><span class="cl">b(backword)/B : 回到上一个单词开头
+</span></span><span class="line"><span class="cl">gg            : 移动到文件开头
+</span></span><span class="line"><span class="cl">G             : 移动到文件结尾
+</span></span><span class="line"><span class="cl">zz            : 把光标行置为屏幕中间
+</span></span><span class="line"><span class="cl">*             : 当前单词向前匹配
+</span></span><span class="line"><span class="cl">#             : 当前单词向后匹配
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">:/ : 向后搜索(n/N : 跳转到下一个/上一个匹配)
+</span></span><span class="line"><span class="cl">:? : 向前搜索
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">x       : 删除一个字符
+</span></span><span class="line"><span class="cl">daw     : 删除一个单词
+</span></span><span class="line"><span class="cl">[num]dd : 删除 num 行
+</span></span><span class="line"><span class="cl">r       : 修改一个字符
+</span></span><span class="line"><span class="cl">~       : 修改大小写
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">v : 字符选择
+</span></span><span class="line"><span class="cl">V : 行选择
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="insert" class="headerLink">
+    <a href="#insert" class="header-mark"></a>Insert</h3><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ctrl + n : 单词补全
+</span></span><span class="line"><span class="cl">ctrl + h : 删除上一个字符
+</span></span><span class="line"><span class="cl">ctrl + w : 删除上一个单词
+</span></span><span class="line"><span class="cl">ctrl + u : 删除当前行插入位置之前的内容
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="vim-的四种模式" class="headerLink">
+    <a href="#vim-%e7%9a%84%e5%9b%9b%e7%a7%8d%e6%a8%a1%e5%bc%8f" class="header-mark"></a>Vim 的四种模式</h2><h3 id="normal-模式" class="headerLink">
+    <a href="#normal-%e6%a8%a1%e5%bc%8f" class="header-mark"></a>Normal 模式</h3><ul>
+<li>Normal 模式可以进行各种命令操作和移动</li>
+<li>大部分情况下你是浏览而不是编辑，所以 Vim 默认是 Normal 模式</li>
+</ul>
+<h3 id="insert-模式" class="headerLink">
+    <a href="#insert-%e6%a8%a1%e5%bc%8f" class="header-mark"></a>Insert 模式</h3><ul>
+<li>Insert 模式和普通编辑器差不多用来做文本输入</li>
+<li>使用 i(insert)、a(append)、o(open a line below)、I、A、O、gi(回到最后一次编辑的位置) 进入 Insert 模式</li>
+<li>Esc 从 Insert 模式退回到 Normal 模式</li>
+</ul>
+<h3 id="command-模式" class="headerLink">
+    <a href="#command-%e6%a8%a1%e5%bc%8f" class="header-mark"></a>Command 模式</h3><ul>
+<li>Command 模式用来执行 Vim 命令</li>
+</ul>
+<h3 id="visual-模式" class="headerLink">
+    <a href="#visual-%e6%a8%a1%e5%bc%8f" class="header-mark"></a>Visual 模式</h3><ul>
+<li>Visual 模式用来选择 要进行操作的内容</li>
+</ul>
+<h2 id="vim-多文件操作" class="headerLink">
+    <a href="#vim-%e5%a4%9a%e6%96%87%e4%bb%b6%e6%93%8d%e4%bd%9c" class="header-mark"></a>Vim 多文件操作</h2><h3 id="概念" class="headerLink">
+    <a href="#%e6%a6%82%e5%bf%b5" class="header-mark"></a>概念</h3><ul>
+<li>Buffer 指打开的一个文件的内存缓冲区</li>
+<li>Window 是 Buffer 的可视化分割区域</li>
+<li>Tab 可以组织窗口作为一个工作区</li>
+</ul>
+<h3 id="相关命令" class="headerLink">
+    <a href="#%e7%9b%b8%e5%85%b3%e5%91%bd%e4%bb%a4" class="header-mark"></a>相关命令</h3><h4 id="buffer" class="headerLink">
+    <a href="#buffer" class="header-mark"></a>Buffer</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">:ls   : 列举当前缓冲区
+</span></span><span class="line"><span class="cl">:b&lt;n&gt; : 跳转到第 n 个缓冲区
+</span></span><span class="line"><span class="cl">:bpre、bnext、bfirst、blast
+</span></span><span class="line"><span class="cl">:b &lt;buffer_name&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="window" class="headerLink">
+    <a href="#window" class="header-mark"></a>Window</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;Ctrl + w&gt;s         : 水平分割
+</span></span><span class="line"><span class="cl">&lt;Ctrl + w&gt;v         : 垂直分割
+</span></span><span class="line"><span class="cl">&lt;Ctrl + w&gt;w         : 窗口切换
+</span></span><span class="line"><span class="cl">&lt;Ctrl + w&gt;[h,j,k,l] : 窗口切换
+</span></span><span class="line"><span class="cl">&lt;Ctrl + w&gt;[H,J,K,L] : 窗口移动
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="tab" class="headerLink">
+    <a href="#tab" class="header-mark"></a>Tab</h4><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">:tabe &lt;filename&gt; 在新标签页中打开文件
+</span></span><span class="line"><span class="cl">&lt;Ctrl + w&gt;T    : 把当前窗口移动到新标签页
+</span></span><span class="line"><span class="cl">:tabc[lose]    : 关闭当前页及其中所有窗口
+</span></span><span class="line"><span class="cl">:tabo[nly]     : 自保留活动标签页，关闭其它
+</span></span><span class="line"><span class="cl">:tabn[ext]     : 切换标签页
+</span></span><span class="line"><span class="cl">gt             : 切换标签页
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="操作系统剪切板" class="headerLink">
+    <a href="#%e6%93%8d%e4%bd%9c%e7%b3%bb%e7%bb%9f%e5%89%aa%e5%88%87%e6%9d%bf" class="header-mark"></a>操作系统剪切板</h2><p>Vim 中使用 delete yank put 操作时会使用寄存器保存内容，不指定的话就是无名寄存器和寄存器 0。其它还有 a-z 寄存器。+寄存器代表系统剪切板。复制到系统剪切板可以<code>&quot;+y</code>,从系统剪切板粘贴为<code>&quot;+p</code>。</p>
+<h2 id="vim-的自动补全" class="headerLink">
+    <a href="#vim-%e7%9a%84%e8%87%aa%e5%8a%a8%e8%a1%a5%e5%85%a8" class="header-mark"></a>Vim 的自动补全</h2><ul>
+<li><code>Ctrl + n</code>/<code>Ctrl + p</code> : 补全单词</li>
+<li><code>Ctrl + x</code>/<code>Ctrl + f</code> : 补全文件名</li>
+<li><code>Ctrl + x</code>/<code>Ctrl + o</code> : 补全代码(需要插件)</li>
+</ul>
+<h2 id="vim-的配置持久化" class="headerLink">
+    <a href="#vim-%e7%9a%84%e9%85%8d%e7%bd%ae%e6%8c%81%e4%b9%85%e5%8c%96" class="header-mark"></a>VIM 的配置持久化</h2><p>Linux/Unix 下新建一个隐藏文件 <code>vim ~/.vimrc</code><br>
+Windows 下使用<code>$MYVIMRC</code>来定位配置文件位置<br>
+NeoVIM 的配置文件的位置应为<code>~/AppData/Local/nvim/init.vim</code> 或 <code>~/.config/nvim/init.vim</code>;</p>
+<h2 id="快捷键映射" class="headerLink">
+    <a href="#%e5%bf%ab%e6%8d%b7%e9%94%ae%e6%98%a0%e5%b0%84" class="header-mark"></a>快捷键映射</h2><p><code>[n(normal生效)/v(visual生效)/i(insert生效)][nore(非递归映射)]map &lt;target_key_sequence&gt; &lt;source_key_sequence&gt;</code> : 创建源操作映射为目标操作，比如<code>map - x</code>，然后按<code>-</code>就会删除字符</p>
+<h2 id="宏" class="headerLink">
+    <a href="#%e5%ae%8f" class="header-mark"></a>宏</h2><p>使用<code>q&lt;register&gt;</code>开始录制，可以进行 insert 和 normal 模式下的正常操作，<code>q</code>结束录制。使用<code>@&lt;register&gt;</code>在当前行执行宏命令。使用 V 选中多行:进入命令模式输入<code>normal @&lt;register&gt;</code>在选中行执行宏命令。</p>
+<h2 id="配置" class="headerLink">
+    <a href="#%e9%85%8d%e7%bd%ae" class="header-mark"></a>配置</h2><p>Show You Code</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
+</span><span class="lnt">246
+</span><span class="lnt">247
+</span><span class="lnt">248
+</span><span class="lnt">249
+</span><span class="lnt">250
+</span><span class="lnt">251
+</span><span class="lnt">252
+</span><span class="lnt">253
+</span><span class="lnt">254
+</span><span class="lnt">255
+</span><span class="lnt">256
+</span><span class="lnt">257
+</span><span class="lnt">258
+</span><span class="lnt">259
+</span><span class="lnt">260
+</span><span class="lnt">261
+</span><span class="lnt">262
+</span><span class="lnt">263
+</span><span class="lnt">264
+</span><span class="lnt">265
+</span><span class="lnt">266
+</span><span class="lnt">267
+</span><span class="lnt">268
+</span><span class="lnt">269
+</span><span class="lnt">270
+</span><span class="lnt">271
+</span><span class="lnt">272
+</span><span class="lnt">273
+</span><span class="lnt">274
+</span><span class="lnt">275
+</span><span class="lnt">276
+</span><span class="lnt">277
+</span><span class="lnt">278
+</span><span class="lnt">279
+</span><span class="lnt">280
+</span><span class="lnt">281
+</span><span class="lnt">282
+</span><span class="lnt">283
+</span><span class="lnt">284
+</span><span class="lnt">285
+</span><span class="lnt">286
+</span><span class="lnt">287
+</span><span class="lnt">288
+</span><span class="lnt">289
+</span><span class="lnt">290
+</span><span class="lnt">291
+</span><span class="lnt">292
+</span><span class="lnt">293
+</span><span class="lnt">294
+</span><span class="lnt">295
+</span><span class="lnt">296
+</span><span class="lnt">297
+</span><span class="lnt">298
+</span><span class="lnt">299
+</span><span class="lnt">300
+</span><span class="lnt">301
+</span><span class="lnt">302
+</span><span class="lnt">303
+</span><span class="lnt">304
+</span><span class="lnt">305
+</span><span class="lnt">306
+</span><span class="lnt">307
+</span><span class="lnt">308
+</span><span class="lnt">309
+</span><span class="lnt">310
+</span><span class="lnt">311
+</span><span class="lnt">312
+</span><span class="lnt">313
+</span><span class="lnt">314
+</span><span class="lnt">315
+</span><span class="lnt">316
+</span><span class="lnt">317
+</span><span class="lnt">318
+</span><span class="lnt">319
+</span><span class="lnt">320
+</span><span class="lnt">321
+</span><span class="lnt">322
+</span><span class="lnt">323
+</span><span class="lnt">324
+</span><span class="lnt">325
+</span><span class="lnt">326
+</span><span class="lnt">327
+</span><span class="lnt">328
+</span><span class="lnt">329
+</span><span class="lnt">330
+</span><span class="lnt">331
+</span><span class="lnt">332
+</span><span class="lnt">333
+</span><span class="lnt">334
+</span><span class="lnt">335
+</span><span class="lnt">336
+</span><span class="lnt">337
+</span><span class="lnt">338
+</span><span class="lnt">339
+</span><span class="lnt">340
+</span><span class="lnt">341
+</span><span class="lnt">342
+</span><span class="lnt">343
+</span><span class="lnt">344
+</span><span class="lnt">345
+</span><span class="lnt">346
+</span><span class="lnt">347
+</span><span class="lnt">348
+</span><span class="lnt">349
+</span><span class="lnt">350
+</span><span class="lnt">351
+</span><span class="lnt">352
+</span><span class="lnt">353
+</span><span class="lnt">354
+</span><span class="lnt">355
+</span><span class="lnt">356
+</span><span class="lnt">357
+</span><span class="lnt">358
+</span><span class="lnt">359
+</span><span class="lnt">360
+</span><span class="lnt">361
+</span><span class="lnt">362
+</span><span class="lnt">363
+</span><span class="lnt">364
+</span><span class="lnt">365
+</span><span class="lnt">366
+</span><span class="lnt">367
+</span><span class="lnt">368
+</span><span class="lnt">369
+</span><span class="lnt">370
+</span><span class="lnt">371
+</span><span class="lnt">372
+</span><span class="lnt">373
+</span><span class="lnt">374
+</span><span class="lnt">375
+</span><span class="lnt">376
+</span><span class="lnt">377
+</span><span class="lnt">378
+</span><span class="lnt">379
+</span><span class="lnt">380
+</span><span class="lnt">381
+</span><span class="lnt">382
+</span><span class="lnt">383
+</span><span class="lnt">384
+</span><span class="lnt">385
+</span><span class="lnt">386
+</span><span class="lnt">387
+</span><span class="lnt">388
+</span><span class="lnt">389
+</span><span class="lnt">390
+</span><span class="lnt">391
+</span><span class="lnt">392
+</span><span class="lnt">393
+</span><span class="lnt">394
+</span><span class="lnt">395
+</span><span class="lnt">396
+</span><span class="lnt">397
+</span><span class="lnt">398
+</span><span class="lnt">399
+</span><span class="lnt">400
+</span><span class="lnt">401
+</span><span class="lnt">402
+</span><span class="lnt">403
+</span><span class="lnt">404
+</span><span class="lnt">405
+</span><span class="lnt">406
+</span><span class="lnt">407
+</span><span class="lnt">408
+</span><span class="lnt">409
+</span><span class="lnt">410
+</span><span class="lnt">411
+</span><span class="lnt">412
+</span><span class="lnt">413
+</span><span class="lnt">414
+</span><span class="lnt">415
+</span><span class="lnt">416
+</span><span class="lnt">417
+</span><span class="lnt">418
+</span><span class="lnt">419
+</span><span class="lnt">420
+</span><span class="lnt">421
+</span><span class="lnt">422
+</span><span class="lnt">423
+</span><span class="lnt">424
+</span><span class="lnt">425
+</span><span class="lnt">426
+</span><span class="lnt">427
+</span><span class="lnt">428
+</span><span class="lnt">429
+</span><span class="lnt">430
+</span><span class="lnt">431
+</span><span class="lnt">432
+</span><span class="lnt">433
+</span><span class="lnt">434
+</span><span class="lnt">435
+</span><span class="lnt">436
+</span><span class="lnt">437
+</span><span class="lnt">438
+</span><span class="lnt">439
+</span><span class="lnt">440
+</span><span class="lnt">441
+</span><span class="lnt">442
+</span><span class="lnt">443
+</span><span class="lnt">444
+</span><span class="lnt">445
+</span><span class="lnt">446
+</span><span class="lnt">447
+</span><span class="lnt">448
+</span><span class="lnt">449
+</span><span class="lnt">450
+</span><span class="lnt">451
+</span><span class="lnt">452
+</span><span class="lnt">453
+</span><span class="lnt">454
+</span><span class="lnt">455
+</span><span class="lnt">456
+</span><span class="lnt">457
+</span><span class="lnt">458
+</span><span class="lnt">459
+</span><span class="lnt">460
+</span><span class="lnt">461
+</span><span class="lnt">462
+</span><span class="lnt">463
+</span><span class="lnt">464
+</span><span class="lnt">465
+</span><span class="lnt">466
+</span><span class="lnt">467
+</span><span class="lnt">468
+</span><span class="lnt">469
+</span><span class="lnt">470
+</span><span class="lnt">471
+</span><span class="lnt">472
+</span><span class="lnt">473
+</span><span class="lnt">474
+</span><span class="lnt">475
+</span><span class="lnt">476
+</span><span class="lnt">477
+</span><span class="lnt">478
+</span><span class="lnt">479
+</span><span class="lnt">480
+</span><span class="lnt">481
+</span><span class="lnt">482
+</span><span class="lnt">483
+</span><span class="lnt">484
+</span><span class="lnt">485
+</span><span class="lnt">486
+</span><span class="lnt">487
+</span><span class="lnt">488
+</span><span class="lnt">489
+</span><span class="lnt">490
+</span><span class="lnt">491
+</span><span class="lnt">492
+</span><span class="lnt">493
+</span><span class="lnt">494
+</span><span class="lnt">495
+</span><span class="lnt">496
+</span><span class="lnt">497
+</span><span class="lnt">498
+</span><span class="lnt">499
+</span><span class="lnt">500
+</span><span class="lnt">501
+</span><span class="lnt">502
+</span><span class="lnt">503
+</span><span class="lnt">504
+</span><span class="lnt">505
+</span><span class="lnt">506
+</span><span class="lnt">507
+</span><span class="lnt">508
+</span><span class="lnt">509
+</span><span class="lnt">510
+</span><span class="lnt">511
+</span><span class="lnt">512
+</span><span class="lnt">513
+</span><span class="lnt">514
+</span><span class="lnt">515
+</span><span class="lnt">516
+</span><span class="lnt">517
+</span><span class="lnt">518
+</span><span class="lnt">519
+</span><span class="lnt">520
+</span><span class="lnt">521
+</span><span class="lnt">522
+</span><span class="lnt">523
+</span><span class="lnt">524
+</span><span class="lnt">525
+</span><span class="lnt">526
+</span><span class="lnt">527
+</span><span class="lnt">528
+</span><span class="lnt">529
+</span><span class="lnt">530
+</span><span class="lnt">531
+</span><span class="lnt">532
+</span><span class="lnt">533
+</span><span class="lnt">534
+</span><span class="lnt">535
+</span><span class="lnt">536
+</span><span class="lnt">537
+</span><span class="lnt">538
+</span><span class="lnt">539
+</span><span class="lnt">540
+</span><span class="lnt">541
+</span><span class="lnt">542
+</span><span class="lnt">543
+</span><span class="lnt">544
+</span><span class="lnt">545
+</span><span class="lnt">546
+</span><span class="lnt">547
+</span><span class="lnt">548
+</span><span class="lnt">549
+</span><span class="lnt">550
+</span><span class="lnt">551
+</span><span class="lnt">552
+</span><span class="lnt">553
+</span><span class="lnt">554
+</span><span class="lnt">555
+</span><span class="lnt">556
+</span><span class="lnt">557
+</span><span class="lnt">558
+</span><span class="lnt">559
+</span><span class="lnt">560
+</span><span class="lnt">561
+</span><span class="lnt">562
+</span><span class="lnt">563
+</span><span class="lnt">564
+</span><span class="lnt">565
+</span><span class="lnt">566
+</span><span class="lnt">567
+</span><span class="lnt">568
+</span><span class="lnt">569
+</span><span class="lnt">570
+</span><span class="lnt">571
+</span><span class="lnt">572
+</span><span class="lnt">573
+</span><span class="lnt">574
+</span><span class="lnt">575
+</span><span class="lnt">576
+</span><span class="lnt">577
+</span><span class="lnt">578
+</span><span class="lnt">579
+</span><span class="lnt">580
+</span><span class="lnt">581
+</span><span class="lnt">582
+</span><span class="lnt">583
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="s2">&#34; ================================================================</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; Created by OrionPax on 2019/08/26</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; Last Modified: 2020/03/12</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 1. 基础设置</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;   - Editor behavior</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;   - Terminal Behaviors</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 2. 插件设置</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;   - 移动</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;   - 编辑</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;   - Markdown</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;   - 版本控制</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;   - 增强</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;   - 配置</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 3. 按键映射</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;   - 移动</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;   - 编辑</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;   - Tab</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;   - Screen</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;   - Markdown</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ================================================================</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ================================================================</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 1. 基础设置</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ================================================================</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ------------------------ Editor behavior ------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 设置显示行号</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">number</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 设置相对行号</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">relativenumber</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 设置光标下划线</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">cursorline</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 一个tab等于多少个空格，当 expandtab的情况下，会影响在插入模式下按下&lt;tab&gt;键输入的空格，以及真正的 </span><span class="se">\t</span><span class="s2"> 用多少个空格显示</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">tabstop</span><span class="o">=</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 将 tab 转层空格</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">expandtab</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; noexpandtab 的情况下，tabstop 只会影响 </span><span class="se">\t</span><span class="s2"> 显示多少个空格（因为插入模式下按 &lt;tab&gt; 将会输入一个字符 </span><span class="se">\t</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; set noexpandtab</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 使用 &gt;&gt; &lt;&lt; 或 == 来缩进代码的时候补出的空格数。这个值也会影响 autoindent 自动缩进的值。</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">shiftwidth</span><span class="o">=</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; insert 模式下，一个 tab 键按下后，展示成几个空格</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">softtabstop</span><span class="o">=</span><span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 设置自动缩进</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">autoindent</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 显示不可见字符</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">list</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 设置 tab 和 空白符的显示方式</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">listchars</span><span class="o">=</span><span class="n">tab</span><span class="p">:</span>\<span class="o">|</span>\ <span class="p">,</span><span class="n">trail</span><span class="p">:</span><span class="err">▫</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 开启真彩色支持</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">termguicolors</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 保持光标上下的最小行数</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">scrolloff</span><span class="o">=</span><span class="mi">4</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 在按下Esc后等待多长时间来决定是否还有输入.默认值为 1000 毫秒</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">ttimeoutlen</span><span class="o">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 设置键盘映射没有超时</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">notimeout</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 设置需要折行</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">wrap</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 设置 textwidth = 0 的话，就不会自动换行了，默认是&#34;</span> <span class="mi">78</span><span class="err">，超过这个数量的话按空格会自动换行</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">tw</span><span class="o">=</span><span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 设置缩进方式</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">indentexpr</span><span class="o">=</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 启用折叠 zc/zo 折叠和取消折叠</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">foldenable</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 缩进折叠，相同的缩进中代码会被折叠</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">foldmethod</span><span class="o">=</span><span class="n">indent</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 设置折叠级别</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">foldlevel</span><span class="o">=</span><span class="mi">99</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 设置格式化选项</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">formatoptions</span><span class="o">-=</span><span class="n">tc</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 设置新分割窗口在右边</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">splitright</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 设置新分割窗口在下边</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">splitbelow</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 不在底部显示当前模式</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">noshowmode</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 命令模式下，在底部显示，当前键入的指令</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">showcmd</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 命令模式下，底部操作指令按下 Tab 键自动补全。第一次按下 Tab，会显示所有匹配的操作指令的清单；第二次按下 Tab，会依次选择各个指令。</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">wildmenu</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 搜索时忽略大小写</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">ignorecase</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 输入大写字符时大小写敏感</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">smartcase</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 执行替换命令时将修改结果放到一个单独的窗口，执行 Esc 取消</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">inccommand</span><span class="o">=</span><span class="n">split</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 设置 ctrl + n 自动补全的配置</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">completeopt</span><span class="o">=</span><span class="n">longest</span><span class="p">,</span><span class="n">noinsert</span><span class="p">,</span><span class="n">menuone</span><span class="p">,</span><span class="n">noselect</span><span class="p">,</span><span class="n">preview</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 设置滚动屏幕更快</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">ttyfast</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 设置滚动屏幕更快</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">lazyredraw</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 出错时发出视觉提醒，通常是屏幕闪烁</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">visualbell</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 设置文件备份</span>
+</span></span><span class="line"><span class="cl"><span class="n">silent</span> <span class="o">!</span><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">~/.</span><span class="n">config</span><span class="o">/</span><span class="n">nvim</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">backup</span>
+</span></span><span class="line"><span class="cl"><span class="n">silent</span> <span class="o">!</span><span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">~/.</span><span class="n">config</span><span class="o">/</span><span class="n">nvim</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">undo</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">backupdir</span><span class="o">=~/.</span><span class="n">config</span><span class="o">/</span><span class="n">nvim</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">backup</span><span class="p">,</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">directory</span><span class="o">=~/.</span><span class="n">config</span><span class="o">/</span><span class="n">nvim</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">backup</span><span class="p">,</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="n">has</span><span class="p">(</span><span class="s1">&#39;persistent_undo&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">set</span> <span class="n">undofile</span>
+</span></span><span class="line"><span class="cl">	<span class="n">set</span> <span class="n">undodir</span><span class="o">=~/.</span><span class="n">config</span><span class="o">/</span><span class="n">nvim</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">undo</span><span class="p">,</span><span class="o">.</span>
+</span></span><span class="line"><span class="cl"><span class="n">endif</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 隐藏标尺</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; set colorcolumn=80</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 根据光标位置自动更新高亮 tag 的间隔时间，单位为毫秒</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">updatetime</span><span class="o">=</span><span class="mi">1000</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 普通模式光标的可移动位置，设置 onemore 可以移动到最后一个字符后</span>
+</span></span><span class="line"><span class="cl"><span class="n">set</span> <span class="n">virtualedit</span><span class="o">=</span><span class="n">block</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 打开文件跳转到最后编辑时的光标位置</span>
+</span></span><span class="line"><span class="cl"><span class="n">au</span> <span class="n">BufReadPost</span> <span class="o">*</span> <span class="k">if</span> <span class="n">line</span><span class="p">(</span><span class="s2">&#34;&#39;</span><span class="se">\&#34;</span><span class="s2">&#34;</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="o">&amp;&amp;</span> <span class="n">line</span><span class="p">(</span><span class="s2">&#34;&#39;</span><span class="se">\&#34;</span><span class="s2">&#34;</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">line</span><span class="p">(</span><span class="s2">&#34;$&#34;</span><span class="p">)</span> <span class="o">|</span> <span class="n">exe</span> <span class="s2">&#34;normal! g&#39;</span><span class="se">\&#34;</span><span class="s2">&#34;</span> <span class="o">|</span> <span class="n">endif</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ------------------------ Terminal Behaviors ------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">neoterm_autoscroll</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">autocmd</span> <span class="n">TermOpen</span> <span class="n">term</span><span class="p">:</span><span class="o">//*</span> <span class="n">startinsert</span>
+</span></span><span class="line"><span class="cl"><span class="n">tnoremap</span> <span class="o">&lt;</span><span class="n">C</span><span class="o">-</span><span class="n">N</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">C</span><span class="o">-</span>\<span class="o">&gt;&lt;</span><span class="n">C</span><span class="o">-</span><span class="n">N</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">tnoremap</span> <span class="o">&lt;</span><span class="n">C</span><span class="o">-</span><span class="n">O</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">C</span><span class="o">-</span>\<span class="o">&gt;&lt;</span><span class="n">C</span><span class="o">-</span><span class="n">N</span><span class="o">&gt;&lt;</span><span class="n">C</span><span class="o">-</span><span class="n">O</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">terminal_color_0</span>  <span class="o">=</span> <span class="s1">&#39;#000000&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">terminal_color_1</span>  <span class="o">=</span> <span class="s1">&#39;#FF5555&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">terminal_color_2</span>  <span class="o">=</span> <span class="s1">&#39;#50FA7B&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">terminal_color_3</span>  <span class="o">=</span> <span class="s1">&#39;#F1FA8C&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">terminal_color_4</span>  <span class="o">=</span> <span class="s1">&#39;#BD93F9&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">terminal_color_5</span>  <span class="o">=</span> <span class="s1">&#39;#FF79C6&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">terminal_color_6</span>  <span class="o">=</span> <span class="s1">&#39;#8BE9FD&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">terminal_color_7</span>  <span class="o">=</span> <span class="s1">&#39;#BFBFBF&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">terminal_color_8</span>  <span class="o">=</span> <span class="s1">&#39;#4D4D4D&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">terminal_color_9</span>  <span class="o">=</span> <span class="s1">&#39;#FF6E67&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">terminal_color_10</span> <span class="o">=</span> <span class="s1">&#39;#5AF78E&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">terminal_color_11</span> <span class="o">=</span> <span class="s1">&#39;#F4F99D&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">terminal_color_12</span> <span class="o">=</span> <span class="s1">&#39;#CAA9FA&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">terminal_color_13</span> <span class="o">=</span> <span class="s1">&#39;#FF92D0&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">terminal_color_14</span> <span class="o">=</span> <span class="s1">&#39;#9AEDFE&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">augroup</span> <span class="n">TermHandling</span>
+</span></span><span class="line"><span class="cl">	<span class="n">autocmd</span><span class="o">!</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34; Turn off line numbers, listchars, auto enter insert mode and map esc to</span>
+</span></span><span class="line"><span class="cl">	<span class="s2">&#34; exit insert mode</span>
+</span></span><span class="line"><span class="cl">	<span class="n">autocmd</span> <span class="n">TermOpen</span> <span class="o">*</span> <span class="n">setlocal</span> <span class="n">listchars</span><span class="o">=</span> <span class="n">nonumber</span> <span class="n">norelativenumber</span>
+</span></span><span class="line"><span class="cl">				\ <span class="o">|</span> <span class="n">startinsert</span>
+</span></span><span class="line"><span class="cl">	<span class="n">autocmd</span> <span class="n">FileType</span> <span class="n">fzf</span> <span class="n">call</span> <span class="n">LayoutTerm</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span> <span class="s1">&#39;horizontal&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">augroup</span> <span class="n">END</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">function</span><span class="o">!</span> <span class="n">LayoutTerm</span><span class="p">(</span><span class="n">size</span><span class="p">,</span> <span class="n">orientation</span><span class="p">)</span> <span class="n">abort</span>
+</span></span><span class="line"><span class="cl">	<span class="n">let</span> <span class="n">timeout</span> <span class="o">=</span> <span class="mf">16.0</span>
+</span></span><span class="line"><span class="cl">	<span class="n">let</span> <span class="n">animation_total</span> <span class="o">=</span> <span class="mf">120.0</span>
+</span></span><span class="line"><span class="cl">	<span class="n">let</span> <span class="n">timer</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">				\ <span class="s1">&#39;size&#39;</span><span class="p">:</span> <span class="n">a</span><span class="p">:</span><span class="n">size</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">				\ <span class="s1">&#39;step&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">				\ <span class="s1">&#39;steps&#39;</span><span class="p">:</span> <span class="n">animation_total</span> <span class="o">/</span> <span class="n">timeout</span>
+</span></span><span class="line"><span class="cl">				\<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">a</span><span class="p">:</span><span class="n">orientation</span> <span class="o">==</span> <span class="s1">&#39;horizontal&#39;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">resize</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">		<span class="n">function</span><span class="o">!</span> <span class="n">timer</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="n">timer</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="n">execute</span> <span class="s1">&#39;resize &#39;</span> <span class="o">.</span> <span class="n">string</span><span class="p">(</span><span class="o">&amp;</span><span class="n">lines</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">step</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">steps</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">			<span class="n">let</span> <span class="bp">self</span><span class="o">.</span><span class="n">step</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">		<span class="n">endfunction</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">		<span class="n">vertical</span> <span class="n">resize</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">		<span class="n">function</span><span class="o">!</span> <span class="n">timer</span><span class="o">.</span><span class="n">f</span><span class="p">(</span><span class="n">timer</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">			<span class="n">execute</span> <span class="s1">&#39;vertical resize &#39;</span> <span class="o">.</span> <span class="n">string</span><span class="p">(</span><span class="o">&amp;</span><span class="n">columns</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">size</span> <span class="o">*</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">step</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">steps</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">			<span class="n">let</span> <span class="bp">self</span><span class="o">.</span><span class="n">step</span> <span class="o">+=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">		<span class="n">endfunction</span>
+</span></span><span class="line"><span class="cl">	<span class="n">endif</span>
+</span></span><span class="line"><span class="cl">	<span class="n">call</span> <span class="n">timer_start</span><span class="p">(</span><span class="n">float2nr</span><span class="p">(</span><span class="n">timeout</span><span class="p">),</span> <span class="n">timer</span><span class="o">.</span><span class="n">f</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;repeat&#39;</span><span class="p">:</span> <span class="n">float2nr</span><span class="p">(</span><span class="n">timer</span><span class="o">.</span><span class="n">steps</span><span class="p">)})</span>
+</span></span><span class="line"><span class="cl"><span class="n">endfunction</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; Open autoclosing terminal, with optional size and orientation</span>
+</span></span><span class="line"><span class="cl"><span class="n">function</span><span class="o">!</span> <span class="n">OpenTerm</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="o">...</span><span class="p">)</span> <span class="n">abort</span>
+</span></span><span class="line"><span class="cl">	<span class="n">let</span> <span class="n">orientation</span> <span class="o">=</span> <span class="n">get</span><span class="p">(</span><span class="n">a</span><span class="p">:,</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;horizontal&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="k">if</span> <span class="n">orientation</span> <span class="o">==</span> <span class="s1">&#39;horizontal&#39;</span>
+</span></span><span class="line"><span class="cl">		<span class="n">new</span> <span class="o">|</span> <span class="n">wincmd</span> <span class="n">J</span>
+</span></span><span class="line"><span class="cl">	<span class="k">else</span>
+</span></span><span class="line"><span class="cl">		<span class="n">vnew</span> <span class="o">|</span> <span class="n">wincmd</span> <span class="n">L</span>
+</span></span><span class="line"><span class="cl">	<span class="n">endif</span>
+</span></span><span class="line"><span class="cl">	<span class="n">call</span> <span class="n">LayoutTerm</span><span class="p">(</span><span class="n">get</span><span class="p">(</span><span class="n">a</span><span class="p">:,</span> <span class="mi">1</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">),</span> <span class="n">orientation</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="n">call</span> <span class="n">termopen</span><span class="p">(</span><span class="n">a</span><span class="p">:</span><span class="n">cmd</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;on_exit&#39;</span><span class="p">:</span> <span class="p">{</span><span class="n">j</span><span class="p">,</span><span class="n">c</span><span class="p">,</span><span class="n">e</span> <span class="o">-&gt;</span> <span class="n">execute</span><span class="p">(</span><span class="s1">&#39;if c == 0 | close | endif&#39;</span><span class="p">)}})</span>
+</span></span><span class="line"><span class="cl"><span class="n">endfunction</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ================================================================</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 2. 插件设置</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ================================================================</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">call</span> <span class="n">plug</span><span class="c1">#begin(&#39;~/.config/nvim/plugged&#39;)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ---------------------------- 显示 -----------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 展示开始画面，显示最近编辑过的文件</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;mhinz/vim-startify&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 将当前光标下的字符串，在文件所有用到的位置，标注展示</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;rrethy/vim-illuminate&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 在命令栏显示缓冲区列表</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;bling/vim-bufferline&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 一个好看的底部状态栏</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;theniceboy/eleline.vim&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 一个好看的配色方案</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;ajmwagar/vim-deus&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 每个变量都有不同的颜色</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; &lt;LEADER&gt;sh 切换开启关闭</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;jaxbot/semantic-highlight.vim&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 显示颜色代码的真实颜色</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;norcalli/nvim-colorizer.lua&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 为括号添加不同的颜色</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;luochen1990/rainbow&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 更好看的 Tab Line</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;mg979/vim-xtabline&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ---------------------------- 移动 -----------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 全文快速移动，</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; &lt;LEADER&gt;&lt;LEADER&gt;s{char} 搜索跳转</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; &lt;LEADER&gt;&lt;LEADER&gt;w 跳转到后面的单词首字母</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; &lt;LEADER&gt;&lt;LEADER&gt;b 跳转到前面的单词首字母</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;easymotion/vim-easymotion&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 标签</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; &lt;C-B&gt;              : 显示所有标签</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; &lt;LEADER&gt;bt         : 打标签</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; &lt;LEADER&gt;ba         : 加批注</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; :ClearBookmarks    : 清除缓冲区文件所有标签</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; :ClearAllBookmarks : 清除所有标签</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;MattesGroeger/vim-bookmarks&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 快速文件搜索</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; :Files [PATH] : 搜索文件</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; :GFiles [OPTS] : 搜索 Git 文件</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; :Buffers : 打开缓冲区</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; :History :  最近访问文件</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; :Colors : Colors 切换</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;junegunn/fzf&#39;</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;dir&#39;</span><span class="p">:</span><span class="s1">&#39;~/.fzf&#39;</span><span class="p">,</span><span class="s1">&#39;do&#39;</span><span class="p">:</span> <span class="p">{</span> <span class="o">-&gt;</span> <span class="n">fzf</span><span class="c1">#install() }}</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;junegunn/fzf.vim&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 在 NVIM 中使用 Ranger</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; &lt;C-F&gt; 打开 Ragner</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;francoiscabrol/ranger.vim&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; Plug &#39;liuchengxu/vista.vim&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ---------------------------- 编辑 -----------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 表格对齐，使用命令 Tabularize</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; Shift + v 选中多行，使用:&#39;&lt;,&#39;&gt; Tabularize/{string} 按等号、冒号、表格对齐文本。</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;godlygeek/tabular&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="s1">&#39;on&#39;</span><span class="p">:</span> <span class="s1">&#39;Tabularize&#39;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 成对编辑</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ys iw {char} 增加</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; cs {oldChar} {newChat} 修改</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ds {char} 删除</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;tpope/vim-surround&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 文本替换</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; :Far {pattern} {replace-with} {file-mask} [params] : 搜索并替换，使用 t 选择修改内容</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; :F {pattern} {file-mask} [params] : 搜索</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; :Fardo [params] : 确认修改</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;brooth/far.vim&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 中文排版</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; :Pangu</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;hotoo/pangu.vim&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 注释</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; &#34;</span> <span class="err">选中</span> <span class="n">gc</span><span class="err">、</span><span class="n">gcc</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;tpope/vim-commentary&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 代码片段</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; &lt;C-J&gt; 使用代码片段/跳转到下一占位符</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; &lt;C-K&gt; 跳转到上一占位符</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;SirVer/ultisnips&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;honza/vim-snippets&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 成对符号自动补全</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;jiangmiao/auto-pairs&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 使用 + - 放大缩小选中区域</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;terryma/vim-expand-region&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; &lt;LEADER&gt;ssip 替换当前段落中光标下方的单词</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;svermeulen/vim-subversive&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 格式化</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; :Prettier 格式化代码</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;prettier/vim-prettier&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  \ <span class="s1">&#39;do&#39;</span><span class="p">:</span> <span class="s1">&#39;yarn install&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  \ <span class="s1">&#39;for&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;javascript&#39;</span><span class="p">,</span> <span class="s1">&#39;typescript&#39;</span><span class="p">,</span> <span class="s1">&#39;css&#39;</span><span class="p">,</span> <span class="s1">&#39;less&#39;</span><span class="p">,</span> <span class="s1">&#39;scss&#39;</span><span class="p">,</span> <span class="s1">&#39;json&#39;</span><span class="p">,</span> <span class="s1">&#39;graphql&#39;</span><span class="p">,</span> <span class="s1">&#39;markdown&#39;</span><span class="p">,</span> <span class="s1">&#39;vue&#39;</span><span class="p">,</span> <span class="s1">&#39;yaml&#39;</span><span class="p">,</span> <span class="s1">&#39;html&#39;</span><span class="p">]</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; -------------------------- 文件类型支持 -------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; JSON 高亮</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;elzr/vim-json&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; JavaScript 高亮</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;pangloss/vim-javascript&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="s1">&#39;for&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;vim-plug&#39;</span><span class="p">,</span> <span class="s1">&#39;php&#39;</span><span class="p">,</span> <span class="s1">&#39;html&#39;</span><span class="p">,</span> <span class="s1">&#39;javascript&#39;</span><span class="p">,</span> <span class="s1">&#39;css&#39;</span><span class="p">,</span> <span class="s1">&#39;less&#39;</span><span class="p">]</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;yuezk/vim-js&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="s1">&#39;for&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;vim-plug&#39;</span><span class="p">,</span> <span class="s1">&#39;php&#39;</span><span class="p">,</span> <span class="s1">&#39;html&#39;</span><span class="p">,</span> <span class="s1">&#39;javascript&#39;</span><span class="p">,</span> <span class="s1">&#39;css&#39;</span><span class="p">,</span> <span class="s1">&#39;less&#39;</span><span class="p">]</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; JSX 高亮</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;MaxMEllon/vim-jsx-pretty&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="s1">&#39;for&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;vim-plug&#39;</span><span class="p">,</span> <span class="s1">&#39;php&#39;</span><span class="p">,</span> <span class="s1">&#39;html&#39;</span><span class="p">,</span> <span class="s1">&#39;javascript&#39;</span><span class="p">,</span> <span class="s1">&#39;css&#39;</span><span class="p">,</span> <span class="s1">&#39;less&#39;</span><span class="p">]</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; Markdown</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; :MarkdownPreview</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;iamcco/markdown-preview.nvim&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="s1">&#39;do&#39;</span><span class="p">:</span> <span class="s1">&#39;cd app &amp; yarn install&#39;</span><span class="p">,</span><span class="s1">&#39;for&#39;</span> <span class="p">:[</span><span class="s1">&#39;markdown&#39;</span><span class="p">,</span> <span class="s1">&#39;vim-plug&#39;</span><span class="p">]}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 生成TOC</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; :GenTocMarked</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;mzlogin/vim-markdown-toc&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="s1">&#39;for&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;gitignore&#39;</span><span class="p">,</span> <span class="s1">&#39;markdown&#39;</span><span class="p">]</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 无序、有序列表自动补齐</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;theniceboy/bullets.vim&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ---------------------------- 版本控制 --------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; Git 支持</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; &lt;C-G&gt; 仅显示修改代码段，其他折叠</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; &lt;LEADER&gt;gp 展示修改内容</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; &lt;LEADER&gt;gj 跳转到下一处修改</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; &lt;LEADER&gt;gk 跳转到上一处修改</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;airblade/vim-gitgutter&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; :FzfGitignore</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 从 https://www.gitignore.io/ 上创建 .gitignore 文件</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;fszymanski/fzf-gitignore&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="s1">&#39;do&#39;</span><span class="p">:</span> <span class="s1">&#39;:UpdateRemotePlugins&#39;</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 本地修改历史</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; &lt;C-U&gt; 打开本地文件修改历史</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;mbbill/undotree&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ------------------------- 其他编辑器增强 ------------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 输入 &#34;</span> <span class="err">时显示寄存器内容</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;junegunn/vim-peekaboo&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; Plug &#39;neoclide/coc.nvim&#39;, {&#39;branch&#39;: &#39;release&#39;}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; VIM 终端增强</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;wincent/terminus&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 向其他 VIM 插件添加文件类型的符号</span>
+</span></span><span class="line"><span class="cl"><span class="n">Plug</span> <span class="s1">&#39;ryanoasis/vim-devicons&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">call</span> <span class="n">plug</span><span class="c1">#end()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ---------------------------- 配置 ------------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; MarkdownPreview</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">mkdp_auto_start</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">mkdp_auto_close</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">mkdp_refresh_slow</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">mkdp_command_for_global</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">mkdp_open_to_the_world</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">mkdp_open_ip</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">mkdp_echo_preview_url</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">mkdp_browserfunc</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">mkdp_preview_options</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">			\ <span class="s1">&#39;mkit&#39;</span><span class="p">:</span> <span class="p">{},</span>
+</span></span><span class="line"><span class="cl">			\ <span class="s1">&#39;katex&#39;</span><span class="p">:</span> <span class="p">{},</span>
+</span></span><span class="line"><span class="cl">			\ <span class="s1">&#39;uml&#39;</span><span class="p">:</span> <span class="p">{},</span>
+</span></span><span class="line"><span class="cl">			\ <span class="s1">&#39;maid&#39;</span><span class="p">:</span> <span class="p">{},</span>
+</span></span><span class="line"><span class="cl">			\ <span class="s1">&#39;disable_sync_scroll&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			\ <span class="s1">&#39;sync_scroll_type&#39;</span><span class="p">:</span> <span class="s1">&#39;middle&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">			\ <span class="s1">&#39;hide_yaml_meta&#39;</span><span class="p">:</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">			\ <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">mkdp_markdown_css</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">mkdp_highlight_css</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">mkdp_port</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">mkdp_page_title</span> <span class="o">=</span> <span class="s1">&#39;「${name}」&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; GitGutter</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">gitgutter_map_keys</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">gitgutter_override_sign_column_highlight</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">gitgutter_preview_win_floating</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 设置 deus 配色</span>
+</span></span><span class="line"><span class="cl"><span class="n">colorscheme</span> <span class="n">deus</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; semantic-highlight</span>
+</span></span><span class="line"><span class="cl"><span class="n">autocmd</span> <span class="n">BufRead</span> <span class="o">*</span> <span class="p">:</span><span class="n">SemanticHighlightToggle</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; nvim-colorizer 显示 #FEDC56 这种颜色字符的真实颜色</span>
+</span></span><span class="line"><span class="cl"><span class="n">lua</span> <span class="n">require</span><span class="s1">&#39;colorizer&#39;</span><span class="o">.</span><span class="n">setup</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ranger.vim</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">ranger_map_keys</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; Vista.vim</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; noremap &lt;silent&gt; T :Vista!!&lt;CR&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; let g:vista_icon_indent = [&#34;</span><span class="err">╰─▸</span> <span class="s2">&#34;, &#34;</span><span class="err">├─▸</span> <span class="s2">&#34;]</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; let g:vista_default_executive = &#39;ctags&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; let g:vista_fzf_preview = [&#39;right:50%&#39;]</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; let g:vista#renderer#enable_icon = 1</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; let g:vista#renderer#icons = {</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; \   &#34;</span><span class="n">function</span><span class="s2">&#34;: &#34;</span>\<span class="n">uf794</span><span class="s2">&#34;,</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; \   &#34;</span><span class="n">variable</span><span class="s2">&#34;: &#34;</span>\<span class="n">uf71b</span><span class="s2">&#34;,</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; \  }</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; function! NearestMethodOrFunction() abort</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;		return get(b:, &#39;vista_nearest_method_or_function&#39;, &#39;&#39;)</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; endfunction</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; set statusline+=%{NearestMethodOrFunction()}</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; autocmd VimEnter * call vista#RunForNearestMethodOrFunction()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; Ultisnips</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">tex_flavor</span> <span class="o">=</span> <span class="s2">&#34;latex&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">UltiSnipsSnippetDirectories</span> <span class="o">=</span> <span class="p">[</span><span class="o">$</span><span class="n">HOME</span><span class="o">.</span><span class="s1">&#39;/.config/nvim/my-ultisnips/&#39;</span><span class="p">,</span> <span class="s1">&#39;UltiSnips&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; Undotree</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">undotree_DiffAutoOpen</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">undotree_SetFocusWhenToggle</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">undotree_ShortIndicators</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">undotree_WindowLayout</span> <span class="o">=</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">undotree_DiffpanelHeight</span> <span class="o">=</span> <span class="mi">8</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">undotree_SplitWidth</span> <span class="o">=</span> <span class="mi">24</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; vim-bookmarks</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">bookmark_no_default_key_mappings</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">bookmark_auto_save</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">bookmark_highlight_lines</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">bookmark_center</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">bookmark_auto_close</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; rainbow</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">rainbow_active</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; xtabline</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">xtabline_settings</span> <span class="o">=</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">xtabline_settings</span><span class="o">.</span><span class="n">enable_mappings</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">xtabline_settings</span><span class="o">.</span><span class="n">tabline_modes</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;tabs&#39;</span><span class="p">,</span> <span class="s1">&#39;buffers&#39;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">xtabline_settings</span><span class="o">.</span><span class="n">enable_persistance</span> <span class="o">=</span> <span class="mi">0</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">xtabline_settings</span><span class="o">.</span><span class="n">last_open_first</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ================================================================</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 3. 按键映射</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ================================================================</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">mapleader</span><span class="o">=</span><span class="s2">&#34; &#34;</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ---------------------------- 移动 ------------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; Ctrl + JK 快速移动</span>
+</span></span><span class="line"><span class="cl"><span class="n">nnoremap</span> <span class="o">&lt;</span><span class="n">S</span><span class="o">-</span><span class="n">J</span><span class="o">&gt;</span> <span class="mi">5j</span>
+</span></span><span class="line"><span class="cl"><span class="n">nnoremap</span> <span class="o">&lt;</span><span class="n">S</span><span class="o">-</span><span class="n">K</span><span class="o">&gt;</span> <span class="mi">5</span><span class="n">k</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ---------------------------- 编辑 ------------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 保存并格式化</span>
+</span></span><span class="line"><span class="cl"><span class="n">nnoremap</span> <span class="o">&lt;</span><span class="n">C</span><span class="o">-</span><span class="n">S</span><span class="o">&gt;</span> <span class="p">:</span><span class="n">w</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span><span class="n">h</span>
+</span></span><span class="line"><span class="cl"><span class="n">inoremap</span> <span class="o">&lt;</span><span class="n">C</span><span class="o">-</span><span class="n">S</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">Esc</span><span class="o">&gt;</span><span class="p">:</span><span class="n">w</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span><span class="n">i</span>
+</span></span><span class="line"><span class="cl"><span class="n">autocmd</span> <span class="n">Filetype</span> <span class="n">markdown</span> <span class="n">nnoremap</span> <span class="o">&lt;</span><span class="n">C</span><span class="o">-</span><span class="n">S</span><span class="o">&gt;</span> <span class="p">:</span><span class="n">Prettier</span><span class="o">&lt;</span><span class="n">Esc</span><span class="o">&gt;</span><span class="p">:</span><span class="n">w</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span><span class="n">h</span>
+</span></span><span class="line"><span class="cl"><span class="n">autocmd</span> <span class="n">Filetype</span> <span class="n">markdown</span> <span class="n">inoremap</span> <span class="o">&lt;</span><span class="n">C</span><span class="o">-</span><span class="n">S</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">Esc</span><span class="o">&gt;</span> <span class="p">:</span><span class="n">Prettier</span><span class="o">&lt;</span><span class="n">Esc</span><span class="o">&gt;</span><span class="p">:</span><span class="n">w</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span><span class="n">i</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 空格转 Tab</span>
+</span></span><span class="line"><span class="cl"><span class="n">nnoremap</span> <span class="n">stt</span> <span class="p">:</span><span class="o">%</span><span class="n">s</span><span class="o">/</span>    <span class="o">/</span>\<span class="n">t</span><span class="o">/</span><span class="n">g</span>
+</span></span><span class="line"><span class="cl"><span class="n">vnoremap</span> <span class="n">stt</span> <span class="p">:</span><span class="n">s</span><span class="o">/</span>    <span class="o">/</span>\<span class="n">t</span><span class="o">/</span><span class="n">g</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; Tab 转空格</span>
+</span></span><span class="line"><span class="cl"><span class="n">nnoremap</span> <span class="n">tts</span> <span class="p">:</span><span class="o">%</span><span class="n">s</span><span class="o">/</span>\<span class="n">t</span><span class="o">/</span>    <span class="o">/</span><span class="n">g</span>
+</span></span><span class="line"><span class="cl"><span class="n">vnoremap</span> <span class="n">tts</span> <span class="p">:</span><span class="n">s</span><span class="o">/</span>\<span class="n">t</span><span class="o">/</span>    <span class="o">/</span><span class="n">g</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 普通模式按一下 &lt;/&gt; 缩进</span>
+</span></span><span class="line"><span class="cl"><span class="n">nnoremap</span> <span class="o">&lt;</span> <span class="o">&lt;&lt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">nnoremap</span> <span class="o">&gt;</span> <span class="o">&gt;&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 禁用 s 键</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="n">s</span> <span class="o">&lt;</span><span class="n">nop</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ---------------------------- Tab ------------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 创建 Tab</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="n">tab</span> <span class="p">:</span><span class="n">tabe</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; &lt;LEADER&gt;+数字键 切换tab</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">silent</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="mi">1</span> <span class="mi">1</span><span class="n">gt</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">silent</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="mi">2</span> <span class="mi">2</span><span class="n">gt</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">silent</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="mi">3</span> <span class="mi">3</span><span class="n">gt</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">silent</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="mi">4</span> <span class="mi">4</span><span class="n">gt</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">silent</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="mi">5</span> <span class="mi">5</span><span class="n">gt</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">silent</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="mi">6</span> <span class="mi">6</span><span class="n">gt</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">silent</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="mi">7</span> <span class="mi">7</span><span class="n">gt</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">silent</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="mi">8</span> <span class="mi">8</span><span class="n">gt</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">silent</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="mi">9</span> <span class="mi">9</span><span class="n">gt</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">silent</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="mi">0</span> <span class="mi">10</span><span class="n">gt</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; --------------------------- Buffers -----------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; &lt;LEADER&gt;&lt;LEADER&gt;+数字键 切换 Buffers</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">silent</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="mi">1</span> <span class="p">:</span><span class="n">b1</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">silent</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="mi">2</span> <span class="p">:</span><span class="n">b2</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">silent</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="mi">3</span> <span class="p">:</span><span class="n">b3</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">silent</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="mi">4</span> <span class="p">:</span><span class="n">b4</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">silent</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="mi">5</span> <span class="p">:</span><span class="n">b5</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">silent</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="mi">6</span> <span class="p">:</span><span class="n">b6</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">silent</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="mi">7</span> <span class="p">:</span><span class="n">b7</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">silent</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="mi">8</span> <span class="p">:</span><span class="n">b8</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">silent</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="mi">9</span> <span class="p">:</span><span class="n">b9</span><span class="o">&lt;</span><span class="n">cr</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ---------------------------- Screen ------------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; sh / sv 分屏</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="n">sh</span> <span class="p">:</span><span class="n">set</span> <span class="n">nosplitbelow</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span><span class="p">:</span><span class="n">split</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="n">sv</span> <span class="p">:</span><span class="n">set</span> <span class="n">nosplitright</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span><span class="p">:</span><span class="n">vsplit</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span><span class="p">:</span><span class="n">set</span> <span class="n">splitright</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 移动分屏线</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">up</span><span class="o">&gt;</span> <span class="p">:</span><span class="n">res</span> <span class="o">+</span><span class="mi">5</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">down</span><span class="o">&gt;</span> <span class="p">:</span><span class="n">res</span> <span class="o">-</span><span class="mi">5</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">left</span><span class="o">&gt;</span> <span class="p">:</span><span class="n">vertical</span> <span class="n">resize</span><span class="o">-</span><span class="mi">5</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">right</span><span class="o">&gt;</span> <span class="p">:</span><span class="n">vertical</span> <span class="n">resize</span><span class="o">+</span><span class="mi">5</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 分屏 &lt;LEADER&gt; + h/j/k/l 屏幕间切换</span>
+</span></span><span class="line"><span class="cl"><span class="n">nnoremap</span> <span class="o">&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="n">h</span> <span class="o">&lt;</span><span class="n">C</span><span class="o">-</span><span class="n">W</span><span class="o">&gt;</span><span class="n">h</span>
+</span></span><span class="line"><span class="cl"><span class="n">nnoremap</span> <span class="o">&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="n">j</span> <span class="o">&lt;</span><span class="n">C</span><span class="o">-</span><span class="n">W</span><span class="o">&gt;</span><span class="n">j</span>
+</span></span><span class="line"><span class="cl"><span class="n">nnoremap</span> <span class="o">&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="n">k</span> <span class="o">&lt;</span><span class="n">C</span><span class="o">-</span><span class="n">W</span><span class="o">&gt;</span><span class="n">k</span>
+</span></span><span class="line"><span class="cl"><span class="n">nnoremap</span> <span class="o">&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="n">l</span> <span class="o">&lt;</span><span class="n">C</span><span class="o">-</span><span class="n">W</span><span class="o">&gt;</span><span class="n">l</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ---------------------------- Markdown ------------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 使用 Snippets</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; autocmd Filetype markdown inoremap &lt;buffer&gt; &lt;LEADER&gt;1 #&lt;Space&gt;&lt;Enter&gt;&lt;++&gt;&lt;Esc&gt;kA</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; autocmd Filetype markdown inoremap &lt;buffer&gt; &lt;LEADER&gt;2 ##&lt;Space&gt;&lt;Enter&gt;&lt;++&gt;&lt;Esc&gt;kA</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; autocmd Filetype markdown inoremap &lt;buffer&gt; &lt;LEADER&gt;3 ###&lt;Space&gt;&lt;Enter&gt;&lt;++&gt;&lt;Esc&gt;kA</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; autocmd Filetype markdown inoremap &lt;buffer&gt; &lt;LEADER&gt;4 ####&lt;Space&gt;&lt;Enter&gt;&lt;++&gt;&lt;Esc&gt;kA</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; autocmd Filetype markdown inoremap &lt;buffer&gt; &lt;LEADER&gt;5 #####&lt;Space&gt;&lt;Enter&gt;&lt;++&gt;&lt;Esc&gt;kA</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; autocmd Filetype markdown inoremap &lt;buffer&gt; &lt;LEADER&gt;f &lt;Esc&gt;/&lt;++&gt;&lt;CR&gt;:nohlsearch&lt;CR&gt;&#34;</span><span class="n">_c4l</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; autocmd Filetype markdown inoremap &lt;buffer&gt; &lt;LEADER&gt;w &lt;Esc&gt;/ &lt;++&gt;&lt;CR&gt;:nohlsearch&lt;CR&gt;&#34;</span><span class="n">_c5l</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; autocmd Filetype markdown inoremap &lt;buffer&gt; &lt;LEADER&gt;l ---&lt;Enter&gt;&lt;Enter&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; autocmd Filetype markdown inoremap &lt;buffer&gt; &lt;LEADER&gt;b **** &lt;++&gt;&lt;Esc&gt;F*hi</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; autocmd Filetype markdown inoremap &lt;buffer&gt; &lt;LEADER&gt;w `` &lt;++&gt;&lt;Esc&gt;F`i</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; autocmd Filetype markdown inoremap &lt;buffer&gt; &lt;LEADER&gt;c ```&lt;Enter&gt;&lt;++&gt;&lt;Enter&gt;```&lt;Enter&gt;&lt;Enter&gt;&lt;++&gt;&lt;Esc&gt;4kA</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; autocmd Filetype markdown inoremap &lt;buffer&gt; &lt;LEADER&gt;p ![](&lt;++&gt;) &lt;++&gt;&lt;Esc&gt;F[a</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; autocmd Filetype markdown inoremap &lt;buffer&gt; &lt;LEADER&gt;a [](&lt;++&gt;) &lt;++&gt;&lt;Esc&gt;F[a</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ---------------------------- 插件 ------------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; semantic-highlight</span>
+</span></span><span class="line"><span class="cl"><span class="n">nnoremap</span> <span class="o">&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="n">sh</span> <span class="p">:</span><span class="n">SemanticHighlightToggle</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ranger.vim</span>
+</span></span><span class="line"><span class="cl"><span class="n">nnoremap</span> <span class="o">&lt;</span><span class="n">silent</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">C</span><span class="o">-</span><span class="n">F</span><span class="o">&gt;</span> <span class="p">:</span><span class="n">RangerNewTab</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; Ultisnips</span>
+</span></span><span class="line"><span class="cl"><span class="n">inoremap</span> <span class="o">&lt;</span><span class="n">C</span><span class="o">-</span><span class="n">N</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">nop</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">UltiSnipsExpandTrigger</span><span class="o">=</span><span class="s2">&#34;&lt;C-J&gt;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">UltiSnipsJumpForwardTrigger</span><span class="o">=</span><span class="s2">&#34;&lt;C-J&gt;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">let</span> <span class="n">g</span><span class="p">:</span><span class="n">UltiSnipsJumpBackwardTrigger</span><span class="o">=</span><span class="s2">&#34;&lt;C-K&gt;&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; Undotree</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="o">&lt;</span><span class="n">C</span><span class="o">-</span><span class="n">U</span><span class="o">&gt;</span> <span class="p">:</span><span class="n">UndotreeToggle</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">function</span> <span class="n">g</span><span class="p">:</span><span class="n">Undotree_CustomMap</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">	<span class="n">nmap</span> <span class="o">&lt;</span><span class="n">buffer</span><span class="o">&gt;</span> <span class="n">j</span> <span class="o">&lt;</span><span class="n">plug</span><span class="o">&gt;</span><span class="n">UndotreeNextState</span>
+</span></span><span class="line"><span class="cl">	<span class="n">nmap</span> <span class="o">&lt;</span><span class="n">buffer</span><span class="o">&gt;</span> <span class="n">k</span> <span class="o">&lt;</span><span class="n">plug</span><span class="o">&gt;</span><span class="n">UndotreePreviousState</span>
+</span></span><span class="line"><span class="cl">	<span class="n">nmap</span> <span class="o">&lt;</span><span class="n">buffer</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">S</span><span class="o">-</span><span class="n">J</span><span class="o">&gt;</span> <span class="mi">5</span><span class="o">&lt;</span><span class="n">plug</span><span class="o">&gt;</span><span class="n">UndotreeNextState</span>
+</span></span><span class="line"><span class="cl">	<span class="n">nmap</span> <span class="o">&lt;</span><span class="n">buffer</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">S</span><span class="o">-</span><span class="n">K</span><span class="o">&gt;</span> <span class="mi">5</span><span class="o">&lt;</span><span class="n">plug</span><span class="o">&gt;</span><span class="n">UndotreePreviousState</span>
+</span></span><span class="line"><span class="cl"><span class="n">endfunc</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; GitGutter</span>
+</span></span><span class="line"><span class="cl"><span class="n">nnoremap</span> <span class="o">&lt;</span><span class="n">C</span><span class="o">-</span><span class="n">G</span><span class="o">&gt;</span> <span class="p">:</span><span class="n">GitGutterFold</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">nnoremap</span> <span class="o">&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="n">gp</span> <span class="p">:</span><span class="n">GitGutterPreviewHunk</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">nnoremap</span> <span class="o">&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="n">gk</span> <span class="p">:</span><span class="n">GitGutterPrevHunk</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="n">nnoremap</span> <span class="o">&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="n">gj</span> <span class="p">:</span><span class="n">GitGutterNextHunk</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; vim-subversive</span>
+</span></span><span class="line"><span class="cl"><span class="n">nmap</span> <span class="o">&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="n">ss</span> <span class="o">&lt;</span><span class="n">plug</span><span class="o">&gt;</span><span class="p">(</span><span class="n">SubversiveSubstituteWordRange</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; vim-bookmarks</span>
+</span></span><span class="line"><span class="cl"><span class="n">nmap</span> <span class="o">&lt;</span><span class="n">C</span><span class="o">-</span><span class="n">B</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">Plug</span><span class="o">&gt;</span><span class="n">BookmarkShowAll</span>
+</span></span><span class="line"><span class="cl"><span class="n">nmap</span> <span class="o">&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="n">bt</span> <span class="o">&lt;</span><span class="n">Plug</span><span class="o">&gt;</span><span class="n">BookmarkToggle</span>
+</span></span><span class="line"><span class="cl"><span class="n">nmap</span> <span class="o">&lt;</span><span class="n">LEADER</span><span class="o">&gt;</span><span class="n">ba</span> <span class="o">&lt;</span><span class="n">Plug</span><span class="o">&gt;</span><span class="n">BookmarkAnnotate</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; ---------------------------- 其他 ------------------------------</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 打开 NVIM 的配置文件</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="n">grc</span> <span class="p">:</span><span class="n">e</span> <span class="o">~/.</span><span class="n">config</span><span class="o">/</span><span class="n">nvim</span><span class="o">/</span><span class="n">init</span><span class="o">.</span><span class="n">vim</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 取消搜索标记</span>
+</span></span><span class="line"><span class="cl"><span class="n">noremap</span> <span class="n">ns</span> <span class="p">:</span><span class="n">nohlsearch</span><span class="o">&lt;</span><span class="n">CR</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="s2">&#34; 视图模式复制到系统剪切板</span>
+</span></span><span class="line"><span class="cl"><span class="n">vnoremap</span> <span class="n">y</span> <span class="s2">&#34;+y</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+
+        <div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-04-06&nbsp;<a class="git-hash" href="https://github.com/Humble-Xiang/hugo-blog/commit/c35233da6a399af77c2401e6978337d21f10d657" target="_blank" title="commit by OrionPax(orionpax.1997@outlook.com) c35233da6a399af77c2401e6978337d21f10d657: update" rel="noopener noreferrer">
+                                    <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M440.667 182.109l7.143-40c1.313-7.355-4.342-14.109-11.813-14.109h-74.81l14.623-81.891C377.123 38.754 371.468 32 363.997 32h-40.632a12 12 0 0 0-11.813 9.891L296.175 128H197.54l14.623-81.891C213.477 38.754 207.822 32 200.35 32h-40.632a12 12 0 0 0-11.813 9.891L132.528 128H53.432a12 12 0 0 0-11.813 9.891l-7.143 40C33.163 185.246 38.818 192 46.289 192h74.81L98.242 320H19.146a12 12 0 0 0-11.813 9.891l-7.143 40C-1.123 377.246 4.532 384 12.003 384h74.81L72.19 465.891C70.877 473.246 76.532 480 84.003 480h40.632a12 12 0 0 0 11.813-9.891L151.826 384h98.634l-14.623 81.891C234.523 473.246 240.178 480 247.65 480h40.632a12 12 0 0 0 11.813-9.891L315.472 384h79.096a12 12 0 0 0 11.813-9.891l7.143-40c1.313-7.355-4.342-14.109-11.813-14.109h-74.81l22.857-128h79.096a12 12 0 0 0 11.813-9.891zM261.889 320h-98.634l22.857-128h98.634l-22.857 128z"/></svg>c35233d</a></span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line print:!tw-hidden">
+            <div class="post-info-md"><span><a class="link-to-mardown" href=/neovim/index.md target="_blank" rel="noopener noreferrer">阅读原始文档</a>
+                    </span><span>|&nbsp;<a class="link-to-source" href=https://github.com/Humble-Xiang/hugo-blog/blob/main/content/posts/neovim.md target="_blank" rel="noopener noreferrer">查看源代码</a>
+                    </span><span>|&nbsp;<a class="link-to-edit" href=https://github.com/Humble-Xiang/hugo-blog/edit/main/content/posts/neovim.md target="_blank" rel="noopener noreferrer">编辑此页</a>
+                    </span><span>|&nbsp;<a class="link-to-report" href=https://github.com/Humble-Xiang/hugo-blog/issues/new?title=[bug]%20neovim+%E7%9A%84%E4%BD%BF%E7%94%A8&body=|Field|Value|%0A|-|-|%0A|Title|neovim+%E7%9A%84%E4%BD%BF%E7%94%A8|%0A|Url|http://localhost:1313/neovim/|%0A|Filename|https://github.com/Humble-Xiang/hugo-blog/blob/main/content/posts/neovim.md| target="_blank" rel="noopener noreferrer">报告问题</a>
+                    </span></div>
+            <div class="post-info-share"></div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"/></svg>&nbsp;<a href="/tags/command-line-tool/">Command-Line Tool</a></section>
+        <section class="print:!tw-hidden">
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav print:tw-hidden"><a href="/hammerspoon/" class="prev" rel="prev" title="Hammerspoon 的使用"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/></svg>Hammerspoon 的使用</a>
+            <a href="/http/" class="next" rel="next" title="什么是 HTTP？">什么是 HTTP？<svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"/></svg></a></div>
+</div>
+</article></div>
+        </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">
+                    由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreferrer" title="Hugo 0.125.7">Hugo</a> 强力驱动&nbsp;|&nbsp;主题 - <a href="https://github.com/HEIGE-PCloud/DoIt" target="_blank" rel="noopener noreferrer" title="DoIt 0.4.0"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M402.3 344.9l32-32c5-5 13.7-1.5 13.7 5.7V464c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V112c0-26.5 21.5-48 48-48h273.5c7.1 0 10.7 8.6 5.7 13.7l-32 32c-1.5 1.5-3.5 2.3-5.7 2.3H48v352h352V350.5c0-2.1.8-4.1 2.3-5.6zm156.6-201.8L296.3 405.7l-90.4 10c-26.2 2.9-48.5-19.2-45.6-45.6l10-90.4L432.9 17.1c22.9-22.9 59.9-22.9 82.7 0l43.2 43.2c22.9 22.9 22.9 60 .1 82.8zM460.1 174L402 115.9 216.2 301.8l-7.3 65.3 65.3-7.3L460.1 174zm64.8-79.7l-43.2-43.2c-4.1-4.1-10.8-4.1-14.8 0L436 82l58.1 58.1 30.9-30.9c4-4.2 4-10.8-.1-14.9z"/></svg> DoIt</a>
+                </div><div class="footer-line"><svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 448c-110.532 0-200-89.451-200-200 0-110.531 89.451-200 200-200 110.532 0 200 89.451 200 200 0 110.532-89.451 200-200 200zm107.351-101.064c-9.614 9.712-45.53 41.396-104.065 41.396-82.43 0-140.484-61.425-140.484-141.567 0-79.152 60.275-139.401 139.762-139.401 55.531 0 88.738 26.62 97.593 34.779a11.965 11.965 0 0 1 1.936 15.322l-18.155 28.113c-3.841 5.95-11.966 7.282-17.499 2.921-8.595-6.776-31.814-22.538-61.708-22.538-48.303 0-77.916 35.33-77.916 80.082 0 41.589 26.888 83.692 78.277 83.692 32.657 0 56.843-19.039 65.726-27.225 5.27-4.857 13.596-4.039 17.82 1.738l19.865 27.17a11.947 11.947 0 0 1-1.152 15.518z"/></svg>2019 - 2024<span class="author">&nbsp;<a href="https://github.com/Humble-Xiang" target="_blank" rel="noopener noreferrer">Humble.Xiang</a></span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span></div>
+            <div class="footer-line"></div>
+            <div class="footer-line">
+            </div>
+        </div></footer></div>
+
+    <div id="fixed-buttons" class="print:!tw-hidden"><a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="回到顶部">
+            <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"/></svg>
+        </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+            <svg class="icon"
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!-- Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) --><path d="M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32z"/></svg>
+        </a>
+    </div><div class="assets"><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":15},"comment":{},"data":{"desktop-header-typeit":"Humble.X","mobile-header-typeit":"Humble.X"},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"search":{"distance":100,"findAllMatches":false,"fuseIndexURL":"/index.json","highlightTag":"em","ignoreFieldNorm":false,"ignoreLocation":true,"isCaseSensitive":false,"location":0,"maxResultLength":10,"minMatchCharLength":2,"noResultsFound":"没有找到结果","snippetLength":50,"threshold":0.1,"type":"fuse","useExtendedSearch":false},"sharerjs":true,"table":{"sort":true},"typeit":{"cursorChar":"|","cursorSpeed":1000,"data":{"desktop-header-typeit":["desktop-header-typeit"],"mobile-header-typeit":["mobile-header-typeit"]},"duration":-1,"speed":100}};</script><script
+    src="/lib/tablesort/tablesort.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lightgallery.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lg-thumbnail.min.js"
+    
+  ></script><script
+    src="/lib/lightgallery/lg-zoom.min.js"
+    
+  ></script><script
+    src="/lib/clipboard/clipboard.min.js"
+    
+  ></script><script
+    src="/lib/sharer/sharer.min.js"
+    
+  ></script><script
+    src="/lib/typeit/typeit.min.js"
+    
+  ></script><script
+    src="https://website-card-embed.dramacat.top/website-card-embed-loveit.js"
+    
+  ></script><script
+    src="/js/theme.min.js"
+    
+      defer
+    
+  ></script></div>
+</body>
+
+</html>
