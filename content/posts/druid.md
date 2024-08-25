@@ -1,7 +1,6 @@
 ---
 title: "唯二好用的连接池之 Druid 的使用"
 date: 2021-05-23T14:16:00+08:00
-categories: ["Development"]
 tags: ["Backend Framework"]
 ---
 

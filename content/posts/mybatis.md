@@ -1,7 +1,6 @@
 ---
 title: "Mybatis 的使用"
 date: 2020-04-04T11:29:00+08:00
-categories: ["Development"]
 tags: ["Backend FrameWork"]
 featuredImage: "https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/mybatis-banner.1d2d148o1y1s.webp"
 ---

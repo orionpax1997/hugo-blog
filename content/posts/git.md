@@ -1,7 +1,6 @@
 ---
 title: "Git 的使用"
 date: 2019-08-29T20:03:23+08:00
-categories: ["Development"]
 tags: ["Command-line Tool"]
 featuredImage: "https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/git-banner.1ubrnpzvtoio.webp"
 ---

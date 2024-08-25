@@ -1,7 +1,6 @@
 ---
 title: "Lombok 的使用"
 date: 2021-02-16T11:33:07+08:00
-categories: ["Development"]
 tags: ["Backend Framework"]
 ---
 

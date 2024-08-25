@@ -1,7 +1,6 @@
 ---
 title: "Java 内存泄漏的定位"
 date: 2023-08-17T15:47:29+08:00
-categories: ["Geek"]
 tags: ["Essay"]
 ---
 

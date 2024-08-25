@@ -1,7 +1,6 @@
 ---
 title: "Homebrew 的使用"
 date: 2021-09-03T08:34:50+08:00
-categories: ["Geek"]
 tags: ["Command-line Tool"]
 series: ["生命不息 折腾不止"]
 featuredImage: "https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/homebrew-banner.2ht2xznez020.webp"

@@ -1,7 +1,6 @@
 ---
 title: "TypeScript 知识总结"
 date: 2019-07-25T11:27:43+08:00
-categories: ["Development"]
 tags: ["Language"]
 featuredImage: "https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/typescript-banner.5k3u8801deg0.webp"
 ---

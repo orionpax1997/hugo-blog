@@ -1,7 +1,6 @@
 ---
 title: "JavaScript 知识总结"
 date: 2019-07-18T22:04:47+08:00
-categories: ["Development"]
 tags: ["Language"]
 ---
 

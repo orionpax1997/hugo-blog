@@ -1,7 +1,6 @@
 ---
 title: "Visual Studio Code 的使用"
 date: 2021-09-24T17:20:00+08:00
-categories: ["Development"]
 tags: ["Tool"]
 featuredImage: "https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/vscode-banner.n67beq6fr8w.webp"
 ---

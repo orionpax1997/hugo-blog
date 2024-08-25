@@ -1,7 +1,6 @@
 ---
 title: "Mini Progarm 技术选型"
 date: 2019-10-16T13:34:10+08:00
-categories: ["Development"]
 tags: ["Essay"]
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Element UI 组件库的使用"
 date: 2021-06-24T17:29:38+08:00
-categories: ["Development"]
 tags: ["Frontend Framework"]
 featuredImage: "https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/element-ui-banner.5l10skpow6c0.webp"
 ---

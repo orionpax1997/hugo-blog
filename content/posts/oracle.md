@@ -1,7 +1,6 @@
 ---
 title: "Oracle 的使用"
 date: 2021-10-09T20:36:44+08:00
-categories: ["Development"]
 tags: ["Support"]
 featuredImage: "https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/oracle-banner.1s81s4rls7b4.webp"
 ---

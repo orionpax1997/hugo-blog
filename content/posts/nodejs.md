@@ -1,7 +1,6 @@
 ---
 title: "Node.js 的使用"
 date: 2019-09-23T17:11:43+08:00
-categories: ["Development"]
 tags: ["Support"]
 featuredImage: "https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/nodejs-banner.6rfb93mmq280.webp"
 ---

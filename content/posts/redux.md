@@ -1,7 +1,6 @@
 ---
 title: "Redux 的使用"
 date: 2019-07-23T22:16:26+08:00
-categories: ["Development"]
 tags: ["Frontend Framework"]
 featuredImage: "https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/redux-banner.1fckuxa9wvmo.webp"
 ---

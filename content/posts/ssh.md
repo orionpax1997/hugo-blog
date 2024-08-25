@@ -1,7 +1,6 @@
 ---
 title: "SSH 命令的使用"
 date: 2019-12-31T18:36:53+08:00
-categories: ["Geek"]
 tags: ["Command-line Tool"]
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "Java 知识总结"
 date: 2019-07-18T22:38:46+08:00
-categories: ["Development"]
 tags: ["Language"]
 ---
 

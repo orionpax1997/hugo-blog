@@ -1,7 +1,6 @@
 ---
 title: "Hibernate 的使用"
 date: 2019-07-23T21:37:28+08:00
-categories: ["Development"]
 tags: ["Backend Framework"]
 featuredImage: "https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/hibernate-banner.h62ovuf51h4.webp"
 ---

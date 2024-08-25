@@ -1,7 +1,6 @@
 ---
 title: "Taro 的使用"
 date: 2019-07-25T11:27:29+08:00
-categories: ["Development"]
 tags: ["Frontend Framework"]
 ---
 

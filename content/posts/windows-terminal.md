@@ -1,7 +1,6 @@
 ---
 title: "Windows 下的终端解决方案"
 date: 2019-10-10T18:05:34+08:00
-categories: ["Geek"]
 tags: ["Essay"]
 series: ["生命不息 折腾不止"]
 ---

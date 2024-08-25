@@ -2,7 +2,6 @@
 title: "如何科学上网？"
 date: 2019-09-23T11:03:15+08:00
 draft: true
-categories: ["Geek"]
 tags: ["Essay"]
 series: ["生命不息 折腾不止"]
 ---

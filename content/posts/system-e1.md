@@ -1,7 +1,6 @@
 ---
 title: "Windows、MacOS 和 Linux 如何查找并停止占用端口的服务？"
 date: 2019-07-20T20:17:21+08:00
-categories: ["Geek"]
 tags: ["Issue"]
 ---
 

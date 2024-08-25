@@ -1,7 +1,6 @@
 ---
 title: "MacOS 下的终端 + Shell 选择"
 date: 2020-03-04T22:55:25+08:00
-categories: ["Geek"]
 tags: ["Essay"]
 series: ["生命不息 折腾不止"]
 ---

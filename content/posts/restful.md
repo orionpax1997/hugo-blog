@@ -1,7 +1,6 @@
 ---
 title: "什么是 RESTful？"
 date: 2020-03-14T22:24:11+08:00
-categories: ["Development"]
 tags: ["Essay"]
 ---
 

@@ -1,7 +1,6 @@
 ---
 title: "POI 的使用"
 date: 2019-07-17T21:37:24+08:00
-categories: ["Development"]
 tags: ["Backend Framework"]
 ---
 

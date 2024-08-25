@@ -1,7 +1,6 @@
 ---
 title: "curl 的使用"
 date: 2020-01-06T19:36:40+08:00
-categories: ["Geek"]
 tags: ["Command-line Tool"]
 ---
 

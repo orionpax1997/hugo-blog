@@ -1,7 +1,6 @@
 ---
 title: "微信小程序的开发"
 date: 2019-08-04T20:12:17+08:00
-categories: ["Development"]
 tags: ["Frontend Framework"]
 ---
 

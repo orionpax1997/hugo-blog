@@ -1,7 +1,6 @@
 ---
 title: "IntelliJ IDEA 的使用"
 date: 2021-03-24T17:40:56+08:00
-categories: ["Development"]
 tags: ["Tool"]
 ---
 

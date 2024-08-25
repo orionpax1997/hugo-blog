@@ -1,7 +1,6 @@
 ---
 title: "什么是TCP/IP？"
 date: 2020-01-08T17:40:25+08:00
-categories: ["Development"]
 tags: ["Essay"]
 ---
 

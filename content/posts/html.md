@@ -1,7 +1,6 @@
 ---
 title: "HTML 知识总结"
 date: 2019-07-17T22:44:04+08:00
-categories: ["Development"]
 tags: ["Language"]
 ---
 

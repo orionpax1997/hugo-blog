@@ -1,7 +1,6 @@
 ---
 title: "Google Chrome 的使用"
 date: 2022-02-25T08:40:21+08:00
-categories: ["Geek"]
 tags: ["Tool"]
 featuredImage: "https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/chrome-banner.3gw9yc1adf60.webp"
 ---

@@ -1,8 +1,7 @@
 ---
 title: "通过 Spring Initializr 了解常用后端框架"
 date: 2021-02-14T16:45:54+08:00
-categories: ["Development"]
-tags: ["Backend Framework"]
+tags: ["Essay"]
 featuredImage: "https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/spring-initializr-banner.5jcrfnfqm400.webp"
 ---
 

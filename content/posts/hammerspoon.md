@@ -1,7 +1,6 @@
 ---
 title: "Hammerspoon 的使用"
 date: 2020-03-08T21:06:45+08:00
-categories: ["Geek"]
 tags: ["Tool"]
 series: ["生命不息 折腾不止"]
 ---

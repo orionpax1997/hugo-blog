@@ -1,7 +1,6 @@
 ---
 title: "如何处理 IE GET 方式请求数据缓存问题？"
 date: 2021-07-03T11:51:34+08:00
-categories: ["Development"]
 tags: ["Issue"]
 ---
 

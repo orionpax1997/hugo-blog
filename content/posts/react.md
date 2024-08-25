@@ -1,7 +1,6 @@
 ---
 title: "React 的使用"
 date: 2019-07-23T21:45:22+08:00
-categories: ["Development"]
 tags: ["Frontend Framework"]
 featuredImage: "https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/react-banner.3b3ttc6ic9q0.webp"
 ---

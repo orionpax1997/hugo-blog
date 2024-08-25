@@ -1,7 +1,6 @@
 ---
 title: "如何使用 Hugo 进行个人博客搭建？"
 date: 2019-07-08T21:19:27+08:00
-categories: ["Geek"]
 tags: ["Command-line Tool"]
 series: ["生命不息 折腾不止"]
 featuredImage: "https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/hugo-banner.mlfdu0pbh9c.webp"
@@ -162,8 +161,6 @@ deploy:
 
 1. (可选，已有 GitHub 账号的跳过这一步) 注册并登录 GitHub
 
-{{< card "https://www.msy.plus/2021/10/04/github-singup/" >}}
-
 2. 点击 [clone](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FHumble-Xiang%2FDoIt-vercel-hugo-template&env=HUGO_VERSION&envDescription=HUGO_VERSION%20%E9%9C%80%E8%A6%81%E8%AE%BE%E7%BD%AE%E4%B8%BA%200.92.1) 通过 [Vercel 模版](https://github.com/Humble-Xiang/DoIt-vercel-hugo-template) 构建项目，输入项目名称创建项目，填写环境变量并点击 Deploy，耐心等待一段时间，Congratulations! 点击 Go to Dashboard - Visit 你已经看到你的博客网站了。使用 Vercel 创建的项目是已经配置了 CI 的，当你向 GitHub 的仓库提交代码时，Vercel 会自动重新打包并发布项目，因此你做的所有提交都会使网站重新构建。
 
 ![Create Git Repository](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.2km7cyjvqhg0.webp "Create Git Repository")
@@ -258,7 +255,5 @@ title = "网站标题"
 {{< card "https://github.com/Humble-Xiang/og-image" >}}
 
 7. (可选，如果你需要评论系统) 部署你自己的 Waline 服务端，并修改 `params.page.comment.waline` 中的配置。
-
-{{< card "https://waline.js.org/guide/get-started.html" >}}
 
 8. 开写！

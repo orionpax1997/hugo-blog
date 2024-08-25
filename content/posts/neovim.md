@@ -1,7 +1,6 @@
 ---
 title: "neovim 的使用"
 date: 2020-03-12T13:34:31+08:00
-categories: ["Geek"]
 tags: ["Command-line Tool"]
 series: ["生命不息 折腾不止"]
 featuredImage: "https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/neovim-banner.53yb7en2hsc0.webp"
