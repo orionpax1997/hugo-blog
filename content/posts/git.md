@@ -3,7 +3,7 @@ title: "Git 的使用"
 date: 2019-08-29T20:03:23+08:00
 categories: ["Development"]
 tags: ["Command-line Tool"]
-featuredImage: "https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/git-banner.1ubrnpzvtoio.webp"
+featuredImage: "https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/git-banner.1ubrnpzvtoio.webp"
 ---
 
 ## 简介
@@ -40,7 +40,7 @@ featuredImage: "https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@mast
 
 {{< card "https://segmentfault.com/a/1190000017053187" >}}
 
-![Git-中的工作区、暂存区、版本库](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/Git-中的工作区、暂存区、版本库.zefosvz18dc.webp "Git 中的工作区、暂存区、版本库")
+![Git-中的工作区、暂存区、版本库](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/Git-中的工作区、暂存区、版本库.zefosvz18dc.webp "Git 中的工作区、暂存区、版本库")
 
 Git 命令图解
 
@@ -396,7 +396,7 @@ GIT_COMMITTER_DATE="yyyy-MM-ddTHH:mm:ss" git commit --amend --date="yyyy-MM-ddTH
 
 1. `ssh-keygen -C 'your_email'` 生成 SSH Key 时，对文件进行命名。
 
-   ![同时使用-Github-和-GitLab-如何管理多个-SSH-Key-1](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/同时使用-Github-和-GitLab-如何管理多个-SSH-Key-1.4glzuamwuse.webp)
+   ![同时使用-Github-和-GitLab-如何管理多个-SSH-Key-1](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/同时使用-Github-和-GitLab-如何管理多个-SSH-Key-1.4glzuamwuse.webp)
 
 2. 运行私钥管理器 `ssh-agent bash`
 3. 将生成的私钥添加到管理器 `ssh-add ~/.ssh/your_id_rsa`
@@ -428,7 +428,7 @@ GIT_COMMITTER_DATE="yyyy-MM-ddTHH:mm:ss" git commit --amend --date="yyyy-MM-ddTH
 
 6. 测试 `ssh -T git@Host`
 
-   ![同时使用-Github-和-GitLab-如何管理多个-SSH-Key-2](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/同时使用-Github-和-GitLab-如何管理多个-SSH-Key-2.7fj9tiay2280.webp)
+   ![同时使用-Github-和-GitLab-如何管理多个-SSH-Key-2](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/同时使用-Github-和-GitLab-如何管理多个-SSH-Key-2.7fj9tiay2280.webp)
 
 ### 如何在 GitHub 上搜索感兴趣的项目
 

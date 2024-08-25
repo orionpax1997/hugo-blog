@@ -16,11 +16,11 @@ Pre-release 期，请自行前往 [Latest Releases](https://github.com/Humble-Xi
 
 ## 预览
 
-<img src="https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/1901668311844_.405d4tzihri0.webp" style="width:270px">
-<img src="https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/1891668311843_.6zff2cgo69s0.webp" style="width:270px">
-<img src="https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/1881668311843_.5ygharpm5m00.webp" style="width:270px">
-<img src="https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/1871668311843_.6xpkzoagz5o0.webp" style="width:270px">
-<img src="https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/1861668311843_.12tt7m3ng9io.webp" style="width:270px">
+<img src="https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/1901668311844_.405d4tzihri0.webp" style="width:270px">
+<img src="https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/1891668311843_.6zff2cgo69s0.webp" style="width:270px">
+<img src="https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/1881668311843_.5ygharpm5m00.webp" style="width:270px">
+<img src="https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/1871668311843_.6xpkzoagz5o0.webp" style="width:270px">
+<img src="https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/1861668311843_.12tt7m3ng9io.webp" style="width:270px">
 
 ## 贡献
 

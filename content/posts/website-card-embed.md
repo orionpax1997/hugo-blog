@@ -12,7 +12,7 @@ series: ["生命不息 折腾不止"]
 
 ## 演示
 
-![Kapture-2022-03-03-at-10](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/geek/Kapture-2022-03-03-at-10.3b3ttcjbbf80.gif "Demo")
+![Kapture-2022-03-03-at-10](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/Kapture-2022-03-03-at-10.3b3ttcjbbf80.gif "Demo")
 
 ## 快速上手
 

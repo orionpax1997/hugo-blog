@@ -15,7 +15,7 @@ date: 2022-04-24T19:37:52+08:00
 
 范围广，把时间用于重要的知识点，各个击破，混合练习。
 
-![52781650886538_](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/geek/52781650886538_.7jbclpbzfjk0.webp "综合知识知识点分布")
+![52781650886538_](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/52781650886538_.7jbclpbzfjk0.webp "综合知识知识点分布")
 
 ### 计算机组成与体系结构
 
@@ -167,26 +167,26 @@ Flynn 于 1972 年提出了计算平台的 Flynn 分类法，主要根据指令�
 
 ##### 嵌入式芯片
 
-![嵌入式芯片](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.qe6zlvkn47k.webp "嵌入式芯片")
+![嵌入式芯片](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.qe6zlvkn47k.webp "嵌入式芯片")
 
 #### **存储系统**
 
 ##### 层次化存储结构
 
-![层次化存储结构](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.86mck5yn4es.webp "层次化存储结构")
+![层次化存储结构](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.86mck5yn4es.webp "层次化存储结构")
 
 ##### Cache
 
-![Cache](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.770czk63ej40.webp "Cache")
-![时空局部性](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.49j70lwd6ug0.webp "时空局部性")
-![Cache 平均周期计算公式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.1x5rzea2tl9c.webp "Cache 平均周期计算公式")
-![Cache 映像方式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.6v6b1wl63f80.webp "Cache 映像方式")
+![Cache](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.770czk63ej40.webp "Cache")
+![时空局部性](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.49j70lwd6ug0.webp "时空局部性")
+![Cache 平均周期计算公式](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.1x5rzea2tl9c.webp "Cache 平均周期计算公式")
+![Cache 映像方式](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.6v6b1wl63f80.webp "Cache 映像方式")
 
 - FIFO(First in First out): 先进先出
 - LRU(Least recently used): 最近最少使用
 - LFU(Least-frequently used): 最近不经常使用
 
-![Cache 页面淘汰](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.3ve1cnue7z00.webp "Cache 页面淘汰")
+![Cache 页面淘汰](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.3ve1cnue7z00.webp "Cache 页面淘汰")
 
 ##### 主存编址
 
@@ -203,7 +203,7 @@ Flynn 于 1972 年提出了计算平台的 Flynn 分类法，主要根据指令�
 
 ##### 磁盘基本结构与存取过程
 
-![平均存取时间计算公式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.4r0yy09kxew0.webp "平均存取时间计算公式")
+![平均存取时间计算公式](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.4r0yy09kxew0.webp "平均存取时间计算公式")
 
 ##### 磁盘优化分布存储
 
@@ -218,23 +218,23 @@ Flynn 于 1972 年提出了计算平台的 Flynn 分类法，主要根据指令�
 
 ##### 磁盘移臂调度算法
 
-![磁盘移臂调度算法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.7i6za6uicms0.webp "磁盘移臂调度算法")
+![磁盘移臂调度算法](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.7i6za6uicms0.webp "磁盘移臂调度算法")
 
 #### 总线
 
-![总线](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.3tulolsdd3c0.webp "总线")
+![总线](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.3tulolsdd3c0.webp "总线")
 
 #### 校验码
 
-![校验码](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.3dokxqnwr0y0.webp "校验码")
+![校验码](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.3dokxqnwr0y0.webp "校验码")
 
 ##### 奇偶校验
 
-![奇偶校验](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.1816sb5pkw2k.webp "奇偶校验")
+![奇偶校验](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.1816sb5pkw2k.webp "奇偶校验")
 
 ##### 循环校验码 CRC
 
-![循环校验码CRC](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.2k3w1ufbkba0.webp "循环校验码CRC")
+![循环校验码CRC](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.2k3w1ufbkba0.webp "循环校验码CRC")
 
 ##### 海明校验
 
@@ -243,63 +243,63 @@ Flynn 于 1972 年提出了计算平台的 Flynn 分类法，主要根据指令�
 
 ### 操作系统
 
-![操作系统](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.44dam5wxqvq0.webp "操作系统")
+![操作系统](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.44dam5wxqvq0.webp "操作系统")
 
 #### 进程管理
 
 ##### 进程的基本概念
 
-![进程的概念](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.2zz9ywmx9ao0.webp "进程的概念")
-![PCB](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.wj1re53fys0.webp "PCB")
-![进程与程序](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.ah4t7hwdgw4.webp "进程与程序")
-![进程与线程](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.6zirl6agpoo0.webp "进程与线程")
+![进程的概念](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.2zz9ywmx9ao0.webp "进程的概念")
+![PCB](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.wj1re53fys0.webp "PCB")
+![进程与程序](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.ah4t7hwdgw4.webp "进程与程序")
+![进程与线程](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.6zirl6agpoo0.webp "进程与线程")
 
 ##### 进程的状态
 
-![进程的状态](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.15kyqc7z781s.webp "进程的状态")
+![进程的状态](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.15kyqc7z781s.webp "进程的状态")
 
 ##### 信号量与 PV 操作
 
-![进程的同步与互斥](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.247blhg9dshs.webp "进程的同步与互斥")
-![PV操作](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.2zjwzuj4t3u0.webp "PV操作")
+![进程的同步与互斥](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.247blhg9dshs.webp "进程的同步与互斥")
+![PV操作](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.2zjwzuj4t3u0.webp "PV操作")
 
 ##### 前趋图
 
-![前趋图](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.3jbt7g07ch20.webp "前趋图")
-![前趋图和PV操作](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.43l8di6uhnk0.webp "前趋图和PV操作")
+![前趋图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.3jbt7g07ch20.webp "前趋图")
+![前趋图和PV操作](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.43l8di6uhnk0.webp "前趋图和PV操作")
 
 ##### 死锁
 
 死锁的资源数计算：至少需要多少个资源不可能出现死锁 >= 进程数 \* (每个进程需要的资源数 - 1) + 1
 
-![死锁](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.5uvotunfu8w0.webp "死锁")
+![死锁](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.5uvotunfu8w0.webp "死锁")
 
 ##### 银行家算法
 
-![银行家算法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.46h41dbhrjs0.webp "银行家算法")
+![银行家算法](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.46h41dbhrjs0.webp "银行家算法")
 
 #### 存储管理
 
 ##### 页式存储
 
-![页式存储](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.4jenedgxgyo0.webp "页式存储")
-![页式存储淘汰顺序](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.74tal9m2na80.webp "页式存储淘汰顺序")
+![页式存储](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.4jenedgxgyo0.webp "页式存储")
+![页式存储淘汰顺序](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.74tal9m2na80.webp "页式存储淘汰顺序")
 
 ##### 段式存储
 
-![段式存储](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.kchncnkmp74.webp "段式存储")
+![段式存储](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.kchncnkmp74.webp "段式存储")
 
 ##### 段页式存储
 
-![段页式存储](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.1jl75thkf01s.webp "段页式存储")
+![段页式存储](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.1jl75thkf01s.webp "段页式存储")
 
 ##### 快表
 
-![快表](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.52if5ohcwrg0.webp "快表")
+![快表](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.52if5ohcwrg0.webp "快表")
 
 ##### 页面置换算法
 
-![页面置换算法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.2mvjaiiu8ey0.webp "页面置换算法")
+![页面置换算法](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.2mvjaiiu8ey0.webp "页面置换算法")
 
 #### 文件管理
 
@@ -313,7 +313,7 @@ Flynn 于 1972 年提出了计算平台的 Flynn 分类法，主要根据指令�
 
 单个文件表示的最大长度 = (最后一个逻辑块号 + 1) \* 磁盘索引块大小
 
-![索引文件结构](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.3zcm30q6gu40.webp "索引文件结构")
+![索引文件结构](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.3zcm30q6gu40.webp "索引文件结构")
 
 ##### 位示图
 
@@ -323,61 +323,61 @@ Flynn 于 1972 年提出了计算平台的 Flynn 分类法，主要根据指令�
 
 (磁盘编号 + 1) / 字长 = 字号 余 (位号 + 1)
 
-![位示图](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.1m93pbwycsow.webp "位示图")
+![位示图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.1m93pbwycsow.webp "位示图")
 
 ##### 树形目录结构
 
-![树形目录结构](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.o5cscp7ihgg.webp "树形目录结构")
+![树形目录结构](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.o5cscp7ihgg.webp "树形目录结构")
 
 #### 微内核操作系统
 
-![微内核操作系统](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.646da1d0umg0.webp "微内核操作系统")
+![微内核操作系统](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.646da1d0umg0.webp "微内核操作系统")
 
 #### 嵌入式系统
 
-![嵌入式系统](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.6msi2vptk7g.webp "嵌入式系统")
+![嵌入式系统](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.6msi2vptk7g.webp "嵌入式系统")
 
-![嵌入式操作系统](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.69oa4tvzm3s0.webp "嵌入式操作系统")
+![嵌入式操作系统](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.69oa4tvzm3s0.webp "嵌入式操作系统")
 
-![实时操作系统调度算法](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.3qmih72szya0.webp "实时操作系统调度算法")
+![实时操作系统调度算法](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.3qmih72szya0.webp "实时操作系统调度算法")
 
 ### 数据库系统
 
-![数据库系统](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.4dgho1om5gg0.webp "数据库系统")
+![数据库系统](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.4dgho1om5gg0.webp "数据库系统")
 
 #### 数据库模式
 
-![数据库模式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.4rozupkziig0.webp "数据库模式")
+![数据库模式](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.4rozupkziig0.webp "数据库模式")
 
-![关系表类型](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.1ulwrx1c75uo.webp "关系表类型")
+![关系表类型](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.1ulwrx1c75uo.webp "关系表类型")
 
-![数据库视图](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.z0qzioj7v1s.webp "数据库视图")
+![数据库视图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.z0qzioj7v1s.webp "数据库视图")
 
 #### 分布式数据库
 
-![分布式数据库特点](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.3bismdbizho0.webp "分布式数据库特点")
+![分布式数据库特点](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.3bismdbizho0.webp "分布式数据库特点")
 
-![分布式数据库架构](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.8uqsvf5ttio.webp "分布式数据库架构")
+![分布式数据库架构](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.8uqsvf5ttio.webp "分布式数据库架构")
 
-![分布透明性](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.37q8482rzxq0.webp "分布透明性")
+![分布透明性](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.37q8482rzxq0.webp "分布透明性")
 
-![分布式数据库事务处理](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.numexot8ae8.webp "分布式数据库事务处理")
+![分布式数据库事务处理](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.numexot8ae8.webp "分布式数据库事务处理")
 
 #### 数据库设计过程
 
-![数据库设计过程](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.45ao9qxhfvy0.webp "数据库设计过程")
+![数据库设计过程](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.45ao9qxhfvy0.webp "数据库设计过程")
 
 #### 概念结构设计
 
-![概念结构设计](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.4tdy0wbrioa0.webp "概念结构设计")
+![概念结构设计](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.4tdy0wbrioa0.webp "概念结构设计")
 
 #### 逻辑结构设计
 
-![完整性约束](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.nkdrl2ttcds.webp "完整性约束")
+![完整性约束](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.nkdrl2ttcds.webp "完整性约束")
 
-![逻辑结构设计](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.5sevi8yomxo0.webp "逻辑结构设计")
+![逻辑结构设计](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.5sevi8yomxo0.webp "逻辑结构设计")
 
-![关系模式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.11j1hbbibci8.webp "关系模式")
+![关系模式](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.11j1hbbibci8.webp "关系模式")
 
 #### 关系代数
 
@@ -399,21 +399,21 @@ Flynn 于 1972 年提出了计算平台的 Flynn 分类法，主要根据指令�
 
 ##### 规范化理论基本概念
 
-![键](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.ethsvxqj4ow.webp "键")
+![键](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.ethsvxqj4ow.webp "键")
 
-![求候选键](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.558alejw2pw0.webp "求候选键")
+![求候选键](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.558alejw2pw0.webp "求候选键")
 
-![函数依赖](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.6flulj7aqz80.webp "函数依赖")
+![函数依赖](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.6flulj7aqz80.webp "函数依赖")
 
 ##### Armstrong 公理
 
-![Armstrong 公理1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.6ieodi9ec340.webp "Armstrong 公理1")
+![Armstrong 公理1](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.6ieodi9ec340.webp "Armstrong 公理1")
 
-![Armstrong 公理2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.g3o9o6yxds0.webp "Armstrong 公理2")
+![Armstrong 公理2](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.g3o9o6yxds0.webp "Armstrong 公理2")
 
 ##### 范式判断
 
-![范式](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.3unjtsj6hcw0.webp "范式")
+![范式](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.3unjtsj6hcw0.webp "范式")
 
 1NF 是对属性的`原子性`，要求属性具有原子性，不可再分解；
 
@@ -495,75 +495,75 @@ BC 范式（BCNF）是 Boyce-Codd 范式的缩写，其定义是：在关系模�
 
 ##### 模式分解
 
-![保持函数依赖](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.6022ydqw60c0.webp "保持函数依赖")
+![保持函数依赖](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.6022ydqw60c0.webp "保持函数依赖")
 
-![无损分解](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.4otba378myy0.webp "无损分解")
+![无损分解](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.4otba378myy0.webp "无损分解")
 
 #### 数据库控制技术
 
 ##### 并发控制
 
-![事务的特性](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.2ygfkj444qa0.webp "事务的特性")
+![事务的特性](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.2ygfkj444qa0.webp "事务的特性")
 
-![并发的问题](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.21aghk58m8tc.webp "并发的问题")
+![并发的问题](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.21aghk58m8tc.webp "并发的问题")
 
-![封锁协议1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.1nchl3glex34.webp "封锁协议1")
+![封锁协议1](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.1nchl3glex34.webp "封锁协议1")
 
-![封锁协议2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.484z7vvftg20.webp "封锁协议2")
+![封锁协议2](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.484z7vvftg20.webp "封锁协议2")
 
 ##### 数据库的安全性
 
-![数据库的安全性](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.9k5c3w903yk.webp "数据库的安全性")
+![数据库的安全性](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.9k5c3w903yk.webp "数据库的安全性")
 
 ##### 数据库备份与恢复技术
 
-![数据备份1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.4zrd6pe7kiw0.webp "数据备份1")
+![数据备份1](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.4zrd6pe7kiw0.webp "数据备份1")
 
-![数据备份2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.2bpepyn4p8g0.webp "数据备份2")
+![数据备份2](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.2bpepyn4p8g0.webp "数据备份2")
 
-![故障与恢复](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.2fhdyh253xa8.webp "故障与恢复")
+![故障与恢复](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.2fhdyh253xa8.webp "故障与恢复")
 
 ### 计算机网络
 
 #### 计算机网络概述
 
-![计算机网络概述](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.v1oj5pddjts.webp "计算机网络概述")
+![计算机网络概述](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.v1oj5pddjts.webp "计算机网络概述")
 
 #### TCP
 
 ##### TCP/IP 协议组
 
-![TCP/IP 协议族1](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.227u54oljb34.webp "TCP/IP 协议族1")
-![TCP/IP 协议族2](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.1a98mr0xyw2o.webp "TCP/IP 协议族2")
-![TCP 与 UDP](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.5dlhewguex4.webp "TCP 与 UDP")
+![TCP/IP 协议族1](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.227u54oljb34.webp "TCP/IP 协议族1")
+![TCP/IP 协议族2](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.1a98mr0xyw2o.webp "TCP/IP 协议族2")
+![TCP 与 UDP](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.5dlhewguex4.webp "TCP 与 UDP")
 
 ##### 开放互联参考模型
 
-![OSI/RM 七层模型](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.7i66xd0p2g40.webp "OSI/RM 七层模型")
+![OSI/RM 七层模型](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.7i66xd0p2g40.webp "OSI/RM 七层模型")
 
 ##### DNS 服务应用
 
-![DNS](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.60guns9rzoc0.webp "DNS")
+![DNS](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.60guns9rzoc0.webp "DNS")
 
 ##### DHCP 服务应用
 
-![DHCP](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.6h795s9nb6w0.webp "DHCP")
+![DHCP](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.6h795s9nb6w0.webp "DHCP")
 
 #### 网络规划与设计
 
-![网络规划与设计](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.3zxah0czvz60.webp "网络规划与设计")
+![网络规划与设计](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.3zxah0czvz60.webp "网络规划与设计")
 
-![逻辑网络设计](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.7a504pa8irk0.webp "逻辑网络设计")
+![逻辑网络设计](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.7a504pa8irk0.webp "逻辑网络设计")
 
-![物理网络设计](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.3jzxnrnm3vs0.webp "物理网络设计")
+![物理网络设计](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.3jzxnrnm3vs0.webp "物理网络设计")
 
-![层次化网络设计](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.5z4enzh338o0.webp "层次化网络设计")
+![层次化网络设计](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.5z4enzh338o0.webp "层次化网络设计")
 
 #### 网络存储技术
 
-![网络存储技术分类](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.45tdrjr5wt40.webp "网络存储技术分类")
+![网络存储技术分类](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.45tdrjr5wt40.webp "网络存储技术分类")
 
-![Raid](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.5hbp9y5cv8s0.webp "Raid")
+![Raid](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.5hbp9y5cv8s0.webp "Raid")
 
 ## 计算公式
 

@@ -3,7 +3,7 @@ title: "NestJS 的使用"
 date: 2019-09-28T20:31:02+08:00
 categories: ["Development"]
 tags: ["Frontend Framework"]
-featuredImage: "https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/nestjs-banner.5dzkq3y3or00.webp"
+featuredImage: "https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/nestjs-banner.5dzkq3y3or00.webp"
 ---
 
 ## 简介

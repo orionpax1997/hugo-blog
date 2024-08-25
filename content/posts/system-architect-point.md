@@ -91,49 +91,49 @@ date: 2023-11-03T17:21:12+08:00
 ##### 软件工程
 
 - ⭐ 考察软件过程模型的定义
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6j5r6albd1g0.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.6j5r6albd1g0.webp)
 - ⭐ 考察软件过程模型的差异
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.uvh7zfiraw0.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.uvh7zfiraw0.webp)
 - 考察到了 CMMI 的哪一级的成熟度
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6awosvxf4x00.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.6awosvxf4x00.webp)
 - 考察软件的生命周期
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.58lsrk295840.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.58lsrk295840.webp)
 - 考察敏捷方法的特点
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.61gzkmq9c0o0.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.61gzkmq9c0o0.webp)
 - 考察敏捷方法核心思想
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6bgktz48pk40.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.6bgktz48pk40.webp)
 - 考察 RUP 九个核心工作流
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4focfgutqws0.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.4focfgutqws0.webp)
 - 考察 RUP 的特点
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.536xsnkniho0.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.536xsnkniho0.webp)
 - 考察软件系统用户文档、系统文档的定义
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.558l8g4tlqg0.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.558l8g4tlqg0.webp)
 - 考察软件工程过程的定义
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4uyyey7ntaq0.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.4uyyey7ntaq0.webp)
 - 考察软件设计四个活动的定义
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2s6y7c46spk0.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.2s6y7c46spk0.webp)
 - 考察逆向工程的四个级别的定义
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5acwx5euoug0.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.5acwx5euoug0.webp)
 
 ##### 需求工程
 
 - 考察需求工程的两大过程（需求开发、需求管理）的主要活动
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7k65w0v62u8.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.7k65w0v62u8.webp)
 
 ##### 系统分析与设计
 
 - 考察内聚程度分类、耦合程度分类
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2k2494q577c0.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.2k2494q577c0.webp)
 
 ##### 软件测试
 
 - ⭐ 考察各个测试阶段的测试对象、测试依据、测试目的
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.18h1ho3us3vk.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.18h1ho3us3vk.webp)
 - 求环形复杂度：看图带公式即可 环形复杂度 = 判定节点数 + 1
 - 考察白盒测试覆盖级别
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.14hhb8kn3xy8.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.14hhb8kn3xy8.webp)
 - 考察静态测试、动态测试的定义
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6p4st42yn000.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.6p4st42yn000.webp)
 
 ##### 基于构件的软件工程
 
@@ -146,7 +146,7 @@ date: 2023-11-03T17:21:12+08:00
 ##### 系统转换和维护
 
 - **考察遗留系统的演化策略**
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5cbbdu2bv700.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.5cbbdu2bv700.webp)
 
 ### 数据库设计基础知识
 
@@ -160,28 +160,28 @@ date: 2023-11-03T17:21:12+08:00
 
 #### ⭐ 函数依赖的公理系统
 
-![函数依赖的公理系统](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.76imy2qc0wc0.webp)
+![函数依赖的公理系统](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.76imy2qc0wc0.webp)
 
 #### 相关题型及解题思路
 
 - ⭐ 求关系模式达到了第几范式：理解各种范式的限定条件。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4mdz4t1ajta0.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.4mdz4t1ajta0.webp)
 - ⭐ **考察函数依赖的公理系统**: 背下并理解四率两规则及其对应的数学代数表示。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3elkf4e09ho0.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.3elkf4e09ho0.webp)
 - **求等价的关系代数表达式**：常见的就是给个自然连接的表达式，等价的是一个笛卡尔积的表达式，笛卡尔积转自然连接需要经过投影和选择。**还有能用数字代替列名，从 1 开始，如果表达式中看到带引号的数字可以直接排除**。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.3ux3o3ymu920.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.3ux3o3ymu920.webp)
 - 求关系代数等价的 SQL: 通常就是考察投影和选择，主要是行的问题，把属性列写一下很容易就能答出来。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6vbmh2dgmgo0.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.6vbmh2dgmgo0.webp)
 - 求元组个数和属性列数：属性列很简单，自然连接求交集，笛卡尔积求并集，元组个数是，通过属性列相同且值相同连接后剩余的行数。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1svhfsvafz5s.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.1svhfsvafz5s.webp)
 - 求候选键/属性闭包等式成立的代数表达式：根据依赖集找出从未在右边出现过的属性，其必然是候选键之一，然后以其为基础看看能不能遍历所有属性，将无法遍历的加入候选键中。属性闭包表达式括号里所有属性，能求出依赖的所有属性就是闭包等式成立，通常就是全部候选键。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4pcplcadb140.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.4pcplcadb140.webp)
 - 求模式分解后是否保持函数依赖、是否无损连接：是否保持函数依赖先求分解后的模式分别的函数依赖，如果拆分后的属性，包含了原来的依赖关系中的所有属性，那么就能继承相应的依赖关系。然后如果剩余全部未被包含的依赖能通过函数依赖的公理系统得到，那么就能说保持了函数依赖。是否保持无损连接分解后的模式先求交集，然后看交集的属性能不能推出，任意一个差集里的属性，如果可以那就算无损连接。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6g9hbzkcenw0.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.6g9hbzkcenw0.webp)
 - 求属于概念结构设计的什么冲突：理解概念结构的冲突。**如果连着解决冲突的方式一起考，也可以根据解决方式倒推冲突类型**
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1335yuslpl0g.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.1335yuslpl0g.webp)
 - 求事务能否加锁成功：很简单，排它（写）锁就是一个事务加了，其他事务什么锁也加不了。共享（读）锁就是一个事务加了，其他事务只能加共享（读）锁，不能加排它（写）锁。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.7b4qv3t1rr00.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.7b4qv3t1rr00.webp)
 
 ### ⭐ 系统架构设计的基础知识
 
@@ -259,9 +259,9 @@ DSSA 就是**专用于一类特定类型的任务（领域）**的、在整个�
 #### 相关题型及解题思路
 
 - **⭐ 给定系统需求问应采用什么架构风格：架构风格分类理解记忆**
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.9q5ki5kspfc.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.9q5ki5kspfc.webp)
 - **⭐ 考察软件架构复用类型的定义**
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.6114vjanjhg0.webp)
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.6114vjanjhg0.webp)
 - 考察 ABSD 开发过程
 - 考察 DSSA 的定义
 - 考察 DSSA 三个基本活动：目的与活动的对应关系
@@ -321,9 +321,9 @@ ATAM 被分为四个主要的活动领域，分别是**场景和需求收集、�
 #### 相关题型及解题思路
 
 - **⭐ 给定描述问是哪个面向架构的质量属性：理解记忆**
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.1u1q487j2ncw.webp "alt")
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.1u1q487j2ncw.webp "alt")
 - **⭐ 考察敏感点、权衡点、风险点的判断**
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.400qjk8cu300.webp "alt")
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.400qjk8cu300.webp "alt")
 - 考察质量属性场景的六个部分
 - 考察 SAAM 基于场景的架构分析方法的定义
 - 考察 ATAM 架构权衡分析法的定义
@@ -363,7 +363,7 @@ ATAM 被分为四个主要的活动领域，分别是**场景和需求收集、�
 
 ### 考点分析
 
-![案例历年真题](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.1hs1f7uknp.webp "案例历年真题")
+![案例历年真题](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.1hs1f7uknp.webp "案例历年真题")
 
 1. **架构**: 2023 之前案例的第一题是稳定的考架构风格+质量属性送分，教材改版后不出意外的情况下应该是下篇的八大架构中出题了，所以新版教材中的**八大架构的特点和架构图**是重中之重。
 2. **建模（需求分析）**：结构化建模（需求分析）和面向对象的建模（需求分析）轮流来，结构化建模主要考**数据流图+数据字典**，面向对象的建模主要考**用例图、类图、活动图、状态图**。
@@ -383,7 +383,7 @@ ATAM 被分为四个主要的活动领域，分别是**场景和需求收集、�
 
 ##### 软件架构风格对比
 
-![软件架构风格对比](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.4lzein1n1j40.webp "软件架构风格对比")
+![软件架构风格对比](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.4lzein1n1j40.webp "软件架构风格对比")
 
 ##### 2022 年 11 月试题 1
 
@@ -409,7 +409,7 @@ ATAM 被分为四个主要的活动领域，分别是**场景和需求收集、�
 
 在架构评估过程中，质量属性效用树（utility tree）是对系统质量属性进行识别和优先级排序的重要工具。请将合适的质量属性名称填入图 1-1 中（1）、（2）空白处，并选择题干描述的 （a）～（k）填入（3）～（6） 空白处，完成该系统的效用树。
 
-![图 1-1](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.4jnxeihyw9.webp "图 1-1")
+![图 1-1](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.4jnxeihyw9.webp "图 1-1")
 
 ###### 【问题 2】（13 分）
 
@@ -441,7 +441,7 @@ ATAM 被分为四个主要的活动领域，分别是**场景和需求收集、�
 
 不是很适合出案例题，偏宏观概念的东西比较多，就算考到的话不太把握重点。
 
-![某航空公司信息系统架构图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.5j40rzhdz0.webp "某航空公司信息系统架构图")
+![某航空公司信息系统架构图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.5j40rzhdz0.webp "某航空公司信息系统架构图")
 
 #### 层次式架构
 
@@ -451,9 +451,9 @@ ATAM 被分为四个主要的活动领域，分别是**场景和需求收集、�
 
 出案例题的概率中等，还是要记忆一下。
 
-![某汽车公司云原生架构图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.6wqjw1j2v9.webp "某汽车公司云原生架构图")
+![某汽车公司云原生架构图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.6wqjw1j2v9.webp "某汽车公司云原生架构图")
 
-![某电商业务云原生架构图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.7eglkmpte4.webp "某电商业务云原生架构图")
+![某电商业务云原生架构图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.7eglkmpte4.webp "某电商业务云原生架构图")
 
 ##### 主要架构模式
 
@@ -489,7 +489,7 @@ Kubernetes 已经成为容器编排的事实标准，被广泛用于自动部署
 
 出案例题的概率低，比较老得架构，这两年新版教材出来，应该都会侧重于新架构。
 
-![业务集成参考架构](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.51dz3fhyto.webp "业务集成参考架构")
+![业务集成参考架构](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.51dz3fhyto.webp "业务集成参考架构")
 
 #### **⭐ 嵌入式系统架构**
 
@@ -501,7 +501,7 @@ Kubernetes 已经成为容器编排的事实标准，被广泛用于自动部署
 
 系统功能按照**系统一子系统一功能/模块**逐级展开，在多设备部署场景下， 支持根据实际需求裁剪某些非必要的子系统或功能/模块，
 
-![鸿蒙架构图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.6f0i7ex8hy.webp "鸿蒙架构图")
+![鸿蒙架构图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.6f0i7ex8hy.webp "鸿蒙架构图")
 
 ###### 分层说明
 
@@ -546,7 +546,7 @@ HarmonyOS 架构的系统安全性主要体现在**搭载 HarmonyOS 的分布式
 
 出案例题的概率很高，但是 2023 年 11 月考过了，至少会隔一次再出。
 
-![某网奥运 Lambda 架构图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.6ik456q64d.webp "某网奥运 Lambda 架构图")
+![某网奥运 Lambda 架构图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.6ik456q64d.webp "某网奥运 Lambda 架构图")
 
 ### 建模（需求分析）
 
@@ -556,7 +556,7 @@ HarmonyOS 架构的系统安全性主要体现在**搭载 HarmonyOS 的分布式
 - 三大模型：功能模型（数据流图）、行为模型（状态转换图）、数据模型（E-R 图）以及数据字典。
 - 数据字典：数据字典是在 DFD 的基础上，对 DFD 中出现的所有命名元素都加以定义，使得每个图形元素的名字都有一个确切的解释。DFD 和数据字典等工具相配合，就可以从图形和文字两个方面对系统的逻辑模型进行完整的描述。是所有人员工作的依据，统一的标准。它可以确保数据在系统中的完整性和一致性。数据字典中一般有 6 类条目，分别是数据元素、数据结构、数据流、数据存储、加工逻辑和外部实体。不同类型的条目有不同的属性需要描述。
 
-![结构化建模](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.13lle6ur3n.webp)
+![结构化建模](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.13lle6ur3n.webp)
 
 ##### **功能模型（数据流图）**
 
@@ -577,8 +577,8 @@ HarmonyOS 架构的系统安全性主要体现在**搭载 HarmonyOS 的分布式
     - 奇迹：加工只有输出没有输入
     - 灰洞：加工中输入不足以产生输出
 
-![数据流图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.4uaqzemrck.webp "数据流图")
-![分层数据流图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.pf5narre5.webp "分层数据流图")
+![数据流图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.4uaqzemrck.webp "数据流图")
+![分层数据流图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.pf5narre5.webp "分层数据流图")
 
 ##### 数据模型（E-R 图）
 
@@ -594,14 +594,14 @@ HarmonyOS 架构的系统安全性主要体现在**搭载 HarmonyOS 的分布式
   - 1:N 的联系中，联系可以单独作为一个关系模式，也可以在 N 端中加入 1 端实体的主键。
   - M:N 的联系中，联系必须作为一个单独的关系模式，其主键是 M 和 N 端的联合主键。
 
-![E-R 图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.67xa3i9gk5.webp "E-R 图")
-![E-R 图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.92py9avjcu.webp "E-R 图")
+![E-R 图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.67xa3i9gk5.webp "E-R 图")
+![E-R 图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.92py9avjcu.webp "E-R 图")
 
 ##### 行为模型（状态转换图）
 
-![状态转换图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.969k6zvs4n.webp "状态转换图")
+![状态转换图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.969k6zvs4n.webp "状态转换图")
 
-![状态转换图图例](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.8ojiierb1g.webp "状态转换图图例")
+![状态转换图图例](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.8ojiierb1g.webp "状态转换图图例")
 
 只能有一个初始状态，可以有多个中间状态和最终状态。中间状态的状态名必须要有，状态变量和行为可选。
 
@@ -609,13 +609,13 @@ HarmonyOS 架构的系统安全性主要体现在**搭载 HarmonyOS 的分布式
 
 面向对象的分析，是为了**确定问题域，理解问题**。包含五个活动：**认定对象、组织对象、描述对象间的相互作用、确定对象的操作、定义对象的内部信息**。
 
-![面向对象需求建模](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.9nzlvqaym5.webp "面向对象需求建模")
+![面向对象需求建模](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.9nzlvqaym5.webp "面向对象需求建模")
 
 面向对象的分析模型主要由**顶层架构图、用例与用例图、领域概念模型**构成；
 
 面向对象的设计模型则包含**以包图表示的软件体系结构图、以交互图表示的用例实现图、完整精确的类图、针对复杂对象的状态图和用以描述流程化处理过程的活动图**等。
 
-![面向对象的分析模型和设计模型](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.3rb1opx9su.webp "面向对象的分析模型和设计模型")
+![面向对象的分析模型和设计模型](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.3rb1opx9su.webp "面向对象的分析模型和设计模型")
 
 UML（统一建模语言）：是一种**可视化的建模语言，而非程序设计语言**，支持从需求分析开始的软件开发的全过程。
 从总体上来看，UML 的结构包括**构造块、规则和公共机制**三个部分。
@@ -631,63 +631,63 @@ UML 的关系：
 3. 泛化：一般/特殊的关系，**子类和父类**之间的关系
 4. 实现：一个类元指定了另一个类元保证执行的契约。
 
-![UML 的关系](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.7w6n0u14yp.webp "UML 的关系")
+![UML 的关系](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.7w6n0u14yp.webp "UML 的关系")
 
-![UML 图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.3d4lxuyl1s.webp "UML 图")
+![UML 图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.3d4lxuyl1s.webp "UML 图")
 
 ##### **用例图**
 
 静态图，展现了一组**用例、参与者以及它们之间的关系**。用例图中的参与者是人、硬件或其他系统可以扮演的角色；用例是参与者完成的一系列操作，用例之间的关系有**扩展、包含、泛化**。
 
-![用例图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.839uw9z4ua.webp "用例图")
+![用例图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.839uw9z4ua.webp "用例图")
 
 ##### **类图**
 
 静态图，为系统的静态设计视图，展现一组**对象、接口、协作和它们之间的关系**。
 
-![类图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.73trj3qpn3.webp "类图")
+![类图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.73trj3qpn3.webp "类图")
 
 ##### **状态图**
 
 动态图，展现了一个状态机，描述**单个对象在多个用例中的行为**，包括简单状态和组合状态。转换可以通过**事件触发器**触发，事件触发后相应的**监护条件**会进行检查。状态图中转换和状态是两个独立的概念，如下：图中方框代表状态，箭头上的代表触发事件，实心圆点为起点和终点。
 
-![状态图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.9kfzy162c4.webp "状态图")
+![状态图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.9kfzy162c4.webp "状态图")
 
 ##### **活动图**
 
 动态图，是一种**特殊的状态图**，展现了在系统内**从一个活动到另一个活动的流程**。活动的分岔和汇合线是一条水平粗线。牢记下图中**并发分岔、并发汇合、监护表达式、分支、流**等名词及含义。每个分岔的分支数代表了可同时运行的线程数。活动图中能够并行执行的是在一个分岔粗线下的分支上的活动。
 
-![活动图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.6wqjnoi1yu.webp "活动图")
+![活动图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.6wqjnoi1yu.webp "活动图")
 
 ##### 对象图
 
 静态图，展现**某一时刻一组对象及它们之间的关系**，为类图的某一快照。在没有类图的前提下，对象图就是静态设计视图。
 
-![对象图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.lvjpsx9jh.webp "对象图")
+![对象图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.lvjpsx9jh.webp "对象图")
 
 ##### 序列/顺序图
 
 动态图，是场景的图形化表示，描述了**以时间顺序组织的对象之间的交互活动**。有同步消息（进行阻塞调用，调用者中止执行，等待控制权返回，需要等待返回消息，用实心三角箭头表示），异步消息（发出消息后继续执行，不引起调用者阳塞，也不等待返回消息，由空心箭头表示）、返回消息（由从右到左的虚线箭头表示）三种。
 
-![序列图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.1aot9tn8zy.webp "序列图")
+![序列图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.1aot9tn8zy.webp "序列图")
 
 ##### 通信/协作图
 
 动态图，即协作图，**强调参加交互的对象的组织**。
 
-![通信图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.8ojiil9fjk.webp "通信图")
+![通信图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.8ojiil9fjk.webp "通信图")
 
 ##### 构件图
 
 静态图，为系统静态实现视图，**展现了一组构件之间的组织和依赖**。
 
-![构件图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.2obcdv2csn.webp "构件图")
+![构件图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.2obcdv2csn.webp "构件图")
 
 ##### 部署图
 
 静态图，为系统静态部署视图，部署图**物理模块的节点分布**。它与构件图相关，通常一个结点包含一个或多个构件。其依赖关系类似于包依赖，因此部署组件之间的依赖是单向的类似于包含关系。
 
-![部署图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.1hs159fntw.webp "部署图")
+![部署图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.1hs159fntw.webp "部署图")
 
 #### SysML
 
@@ -703,24 +703,24 @@ SysML 提供了需求图 （Requirements Diagram）用于对**系统需求，以
 
 用例可以有效地捕获功能需求，但不适合表达非功能需求。将基于文本的需求合并到 SysML 中可有效适应各种需求。
 
-![需求图](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.5fkelypgy8.webp "需求图")
+![需求图](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.5fkelypgy8.webp "需求图")
 
 SysML 规定了七个需求关系，使建模者能够将需求彼此关联以及与其他模型元素关联。这些关系包括定义需求层次结构、派生需求、满足需求、验证需求和细化需求的关系。然而，这些关系的语义并不是在形式上定义的，而是可以解释的。因此，有必要定义一些关于如何使用这些关系的启发式、指南和实践，以便有一个一致的模型。
 
 1. 复合关系：复合需求可以包含需求层次结构中的子需求。复合需求可以声明系统应执行 A 和 B，可以将其分解为系统应执行 A 和系统应进行 B 的子需求。
-  ![复合关系](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.2vek9btwsg.webp)
+  ![复合关系](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.2vek9btwsg.webp)
 2. 派生关系：派生的需求通常对应于系统层次结构下一级的需求。一个简单的例子是车辆加速需求，该需求被分析以导出发动机动力等方面的需求。
-  ![派生关系](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.8dwoph3vwq.webp)
+  ![派生关系](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.8dwoph3vwq.webp)
 3. 细化关系：细化关系可用于描述如何使用模型元素或元素集进一步细化需求。例如，可以使用用例或活动图来细化基于文本的功能需求。或者，可以使用它来显示基于文本的需求如何细化模型元素。在这种情况下，可以使用一些阐述的文本来细化不太精细的模型元素。
-  ![细化关系](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.4xucxe16xs.webp)
+  ![细化关系](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.4xucxe16xs.webp)
 4. 满足关系：满足关系描述了设计或实现模型如何满足一个或多个需求。然后，系统建模者可以指定旨在满足要求的系统设计元素。
-  ![满足关系](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.45hhfnk1qw.webp)
+  ![满足关系](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.45hhfnk1qw.webp)
 5. 验证关系：验证关系定义了测试用例或其他模型元素如何验证需求。在 SysML 中，测试用例或其他元素可以用作表示任何标准检验方法的通用机制，分析，演示或测试。
-  ![验证关系](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.7p3yz88z5.webp)
+  ![验证关系](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.7p3yz88z5.webp)
 6. 复制关系：真正需要跨产品系列和项目重用需求。典型的方案是适用于产品和/或产品系列中重复使用的项目和要求的法定法规或合同要求。SysML 引入了从属需求的概念。
-  ![复制关系](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.8dwoph8srq.webp)
+  ![复制关系](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.8dwoph8srq.webp)
 7. 追溯关系：追溯关系提供了需求和任何其他模型元素之间的通用关系。追溯的语义不包含任何实际约束，因此非常弱。但是，追溯关系对于将需求与源文档相关联或在规范树中的规范之间建立关系可能很有用。
-  ![追溯关系](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.7zq8ylzs0r.webp)
+  ![追溯关系](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.7zq8ylzs0r.webp)
 
 ### 数据库
 
@@ -738,7 +738,7 @@ SysML 规定了七个需求关系，使建模者能够将需求彼此关联以�
 - NOSQL 数据库慢慢开始具备 SQL 数据库的一些复杂查询功能，比如 MongoDB。
 - 对于事务的支持也可以用一些系统级的原子操作来实现例如乐观锁之类的方法来曲线救国。
 
-![关系数据库与非关系数据库对比](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.41xvjcpoo4.webp "关系数据库与非关系数据库对比")
+![关系数据库与非关系数据库对比](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.41xvjcpoo4.webp "关系数据库与非关系数据库对比")
 
 #### 反规范化设计
 
@@ -787,7 +787,7 @@ SysML 规定了七个需求关系，使建模者能够将需求彼此关联以�
 4. I/O 线程接收到 binlog 内容后，将内容写入到本地的 relay-log。
 5. SQL 线程读取 I/O 线程写入的 relay-log，并且根据 relay-log 的内容对从数据库做对应的操作。
 
-![Mysql 主从复制](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.26laqsbezi.webp "Mysql 主从复制")
+![Mysql 主从复制](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.26laqsbezi.webp "Mysql 主从复制")
 
 #### redis 的数据类型
 
@@ -881,7 +881,7 @@ sorted set 多了一个权重参数 score,集合中的元素能够按 score 进�
 
 比方说下面这张图里面，Key 1 和 Key 2 会落入到 Node 1 中，Key 3、Key 4 会落入到 Node 2 中，Key 5 落入到 Node 3 中，Key 6 落入到 Node 4 中。
 
-![一致性哈希分片](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.8s34j74u78.webp "一致性哈希分片")
+![一致性哈希分片](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.8s34j74u78.webp "一致性哈希分片")
 
 ##### Redis Cluster 哈希槽
 
@@ -918,7 +918,7 @@ Redis 的持久化策略有两种：
 
 前者称为主节点(master)，后者称为从节点(slave)；数据的复制是单向的，只能由主节点到从节点。
 
-![主从模式](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.9dcs5ljbfk.webp "主从模式")
+![主从模式](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.9dcs5ljbfk.webp "主从模式")
 
 主从模式的优点：
 
@@ -937,7 +937,7 @@ Redis 的持久化策略有两种：
 
 在复制的基础上，哨兵实现了自动化的故障恢复。
 
-![哨兵模式](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.86tgx01b40.webp "哨兵模式")
+![哨兵模式](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.86tgx01b40.webp "哨兵模式")
 
 1. 每个 Sentinel 以 每秒钟 一次的频率，向它所有的 主服务器、从服务器 以及其他 Sentinel 实例 发送一个 PING 命令。
 2. 如果一个 实例（instance）距离最后一次有效回复 PING 命令的时间超过 down-after-milliseconds 所指定的值，那么这个实例会被 Sentinel 标记为 主观下线。
@@ -948,7 +948,7 @@ Redis 的持久化策略有两种：
 7. Sentinel 和其他 Sentinel 协商 主节点 的状态，如果 主节点处于 SDOWN`状态，则投票自动选出新的主节点。将剩余的 从节点 指向 新的主节点 进行 数据复制。
 8. 当没有足够数量的 Sentinel 同意 主服务器 下线时， 主服务器 的 客观下线状态 就会被移除。当 主服务器 重新向 Sentinel 的 PING 命令返回 有效回复 时，主服务器 的 主观下线状态 就会被移除。
 
-![哨兵模式原理](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.syro8k4vr.webp "哨兵模式原理")
+![哨兵模式原理](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.syro8k4vr.webp "哨兵模式原理")
 
 优点：
 
@@ -976,11 +976,11 @@ Redis 的持久化策略有两种：
 
 读的时候，**先读缓存，缓存没有的话，就读数据库，然后取出数据后放入缓存**，同时返回响应。
 
-![Cache-Aside 读流程](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.5xagdg3s8c.webp "Cache-Aside 读流程")
+![Cache-Aside 读流程](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.5xagdg3s8c.webp "Cache-Aside 读流程")
 
 更新的时候，**先更新数据库，然后再删除缓存**。
 
-![Cache-Aside 写流程](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.7p3f8cofi7.webp "Cache-Aside 写流程")
+![Cache-Aside 写流程](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.7p3f8cofi7.webp "Cache-Aside 写流程")
 
 ###### Read/Write Through（读写穿透）
 
@@ -988,11 +988,11 @@ Read/Write Through 模式中，服务端把缓存作为主要数据存储。应�
 
 从缓存读取数据，读到直接返回，如果读取不到的话，从数据库加载，写入缓存后，再返回响应。看上去和 Cache-Aside 一样，其实 Read-Through 就是多了一层 Cache-Provider。
 
-![Read Through 流程](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.8ad2unq6oh.webp "Read Through 流程")
+![Read Through 流程](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.8ad2unq6oh.webp "Read Through 流程")
 
 写流程也是由缓存抽象层完成数据源和缓存数据的更新。
 
-![Write Through 流程](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.pf5qglj0q.webp "Write Through 流程")
+![Write Through 流程](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.pf5qglj0q.webp "Write Through 流程")
 
 ###### Write behind（异步缓存写入）
 
@@ -1000,7 +1000,7 @@ Write behind 跟 Read-Through/Write-Through 有相似的地方，都是由 Cache
 
 区别是，Read/Write Through 是同步更新缓存和数据的，Write Behind 则是只更新缓存，不直接更新数据库，通过批量异步的方式来更新数据库。
 
-![Write behind 流程](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.lw6g0nww.webp "Write behind 流程")
+![Write behind 流程](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.lw6g0nww.webp "Write behind 流程")
 
 这种方式下，缓存和数据库的一致性不强，对一致性要求高的系统要谨慎使用。但是它适合频繁写的场景，MySQL 的 InnoDB Buffer Pool 机制就使用到这种模式。
 
@@ -1022,7 +1022,7 @@ Write behind 跟 Read-Through/Write-Through 有相似的地方，都是由 Cache
 
 假设有 A、B 两个请求，请求 A 做更新操作，请求 B 做查询读取操作。
 
-![并发读写流程](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.45i4659i5.webp "并发读写流程")
+![并发读写流程](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.45i4659i5.webp "并发读写流程")
 
 1. 线程 A 发起一个写操作，第一步 del cache
 2. 此时线程 B 发起一个读操作，cache miss
@@ -1038,7 +1038,7 @@ Write behind 跟 Read-Through/Write-Through 有相似的地方，都是由 Cache
 2. 再更新数据库
 3. 休眠一会（休眠时间 = 读业务逻辑数据的耗时 + 几百毫秒，为了确保读请求结束，写请求可以删除读请求可能带来的缓存脏数据），再次删除缓存。
 
-![延时双删](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.39l0348kqp.webp "延时双删")
+![延时双删](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.39l0348kqp.webp "延时双删")
 
 ##### 删除缓存重试机制
 
@@ -1050,7 +1050,7 @@ Write behind 跟 Read-Through/Write-Through 有相似的地方，都是由 Cache
 4. 消费消息队列的消息，获取要删除的 key
 5. 重试删除缓存操作
 
-![删除缓存重试机制](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.92pycezoj5.webp "删除缓存重试机制")
+![删除缓存重试机制](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.92pycezoj5.webp "删除缓存重试机制")
 
 ##### 读取 binlog 异步删除缓存
 
@@ -1058,13 +1058,13 @@ Write behind 跟 Read-Through/Write-Through 有相似的地方，都是由 Cache
 
 以 mysql 为例 可以使用阿里的 canal 将 binlog 日志采集发送到 MQ 队列里面，然后通过 ACK 机制确认处理这条更新消息，删除缓存，保证数据缓存一致性。
 
-![通过 binlog 异步删除缓存](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.8hgaq48gob.webp "通过 binlog 异步删除缓存")
+![通过 binlog 异步删除缓存](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.8hgaq48gob.webp "通过 binlog 异步删除缓存")
 
 ## 论文
 
 ### 考点分析
 
-![论文历年真题](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/image.iby21trtm.webp "论文历年真题")
+![论文历年真题](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/image.iby21trtm.webp "论文历年真题")
 
 2020 开始就有关于新版教材下篇八大架构的题目了，当时是超纲的（微服务架构、云原生架构、安全架构）。
 

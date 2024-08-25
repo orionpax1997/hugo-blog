@@ -4,7 +4,7 @@ date: 2019-07-08T21:19:27+08:00
 categories: ["Geek"]
 tags: ["Command-line Tool"]
 series: ["生命不息 折腾不止"]
-featuredImage: "https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/hugo-banner.mlfdu0pbh9c.webp"
+featuredImage: "https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/hugo-banner.mlfdu0pbh9c.webp"
 ---
 
 ## 简介
@@ -166,8 +166,8 @@ deploy:
 
 2. 点击 [clone](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FHumble-Xiang%2FDoIt-vercel-hugo-template&env=HUGO_VERSION&envDescription=HUGO_VERSION%20%E9%9C%80%E8%A6%81%E8%AE%BE%E7%BD%AE%E4%B8%BA%200.92.1) 通过 [Vercel 模版](https://github.com/Humble-Xiang/DoIt-vercel-hugo-template) 构建项目，输入项目名称创建项目，填写环境变量并点击 Deploy，耐心等待一段时间，Congratulations! 点击 Go to Dashboard - Visit 你已经看到你的博客网站了。使用 Vercel 创建的项目是已经配置了 CI 的，当你向 GitHub 的仓库提交代码时，Vercel 会自动重新打包并发布项目，因此你做的所有提交都会使网站重新构建。
 
-![Create Git Repository](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/geek/image.2km7cyjvqhg0.webp "Create Git Repository")
-![Configure Project](https://cdn.staticaly.com/gh/Humble-Xiang/picx-images@master/geek/image.6zgp55b2u0g0.webp "Configure Project")
+![Create Git Repository](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.2km7cyjvqhg0.webp "Create Git Repository")
+![Configure Project](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/geek/image.6zgp55b2u0g0.webp "Configure Project")
 
 3. Vercel 自动生成的域名可能不是你想要的，`Vercel -> Project -> Settings -> Domains` 中可以进行修改，没有自己域名的话可以使用 Vercel 提供的二级域名并修改前缀。有自己的域名可以直接添加已有的域名，然后到域名商管理系统配置域名记录，等待生效，生效后会自动签发 SSL 证书，开启 HTTPS。
 

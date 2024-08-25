@@ -56,7 +56,7 @@ Spring Boot 项目使用 Mac 电脑启动很慢，但是使用 Windows 电脑启
 
 `hostname` 查看自己的主机名称， `sudo vim /etc/hosts` 修改 host 文件 `127.0.0.1 localhost` 后添加主机名称
 
-![idea-1](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/idea-1.xs1ogs9e1ps.webp)
+![idea-1](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/idea-1.xs1ogs9e1ps.webp)
 
 {{< card "https://www.cnblogs.com/ontoweb-zp/p/10855386.html" >}}
 {{< card url="https://youtrack.jetbrains.com/issue/IDEA-161967" title="Freezes after saving caches when debugger connects on macOS Sierra" description="Freezes for about 9 seconds when performing Finished. Saving caches (see the attached screenshot and log). I noticed nothing obviously abnormal in the log. In fact, the freeze happens AFTER the last line of the log. This problem only shows up when Debugging, and does not show up when Running.">}}

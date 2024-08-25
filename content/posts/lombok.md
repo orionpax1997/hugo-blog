@@ -38,29 +38,29 @@ tags: ["Backend Framework"]
 
 ## 常用注解
 
-![常用注解](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/常用注解.kwkr8zcmt5o.webp "常用注解")
+![常用注解](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/常用注解.kwkr8zcmt5o.webp "常用注解")
 
 ### **1. @Getter/@Setter**
 
 自动产生 getter/setter
 
-![Getter-Setter-对比](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/Getter-Setter-对比.2ectizc9q8bo.webp "Getter Setter 对比")
+![Getter-Setter-对比](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/Getter-Setter-对比.2ectizc9q8bo.webp "Getter Setter 对比")
 
 ### **2. @ToString**
 
 自动重写  `toString()`  方法，会印出所有变量
 
-![ToString-对比](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/ToString-对比.59m8aczbsm00.webp "ToString 对比")
+![ToString-对比](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/ToString-对比.59m8aczbsm00.webp "ToString 对比")
 
 ### **3. @EqualsAndHashCode**
 
 自动生成  `equals(Object other)`  和  `hashcode()`  方法，包括所有非静态变量和非 transient 的变量
 
-![EqualsAndHashCode-对比](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/EqualsAndHashCode-对比.1psijewz7neo.webp "EqualsAndHashCode 对比")
+![EqualsAndHashCode-对比](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/EqualsAndHashCode-对比.1psijewz7neo.webp "EqualsAndHashCode 对比")
 
 如果某些变量不想要加进判断，可以透过 exclude 排除，也可以使用 of 指定某些字段
 
-![EqualsAndHashCode-exclude](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/EqualsAndHashCode-exclude.21d46kl3dv28.webp "EqualsAndHashCode exclude")
+![EqualsAndHashCode-exclude](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/EqualsAndHashCode-exclude.21d46kl3dv28.webp "EqualsAndHashCode exclude")
 
 Q : 为什么只有一个整体的  `@EqualsAndHashCode`  注解，而不是分开的两个  `@Equals`  和  `@HashCode`？
 
@@ -72,11 +72,11 @@ A : 在 Java 中有规定，当两个对象 equals 时，他们的 hashcode 一�
 
 **@NoArgsConstructor** : 生成一个没有参数的构造器
 
-![NoArgsConstructor-对比](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/NoArgsConstructor-对比.qyvd6do72ow.webp "NoArgsConstructor 对比")
+![NoArgsConstructor-对比](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/NoArgsConstructor-对比.qyvd6do72ow.webp "NoArgsConstructor 对比")
 
 **@AllArgsConstructor** : 生成一个包含所有参数的构造器
 
-![AllArgsConstructor-对比](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/AllArgsConstructor-对比.4rt4pvwq6du0.webp "AllArgsConstructor 对比")
+![AllArgsConstructor-对比](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/AllArgsConstructor-对比.4rt4pvwq6du0.webp "AllArgsConstructor 对比")
 
 这里注意一个 Java 的小坑，当我们没有指定构造器时，Java 编译器会帮我们自动生成一个没有任何参数的构造器给该类，但是如果我们自己写了构造器之后，Java 就不会自动帮我们补上那个无参数的构造器了
 
@@ -84,7 +84,7 @@ A : 在 Java 中有规定，当两个对象 equals 时，他们的 hashcode 一�
 
 **@RequiredArgsConstructor** : 生成一个包含 "特定参数" 的构造器，特定参数指的是那些有加上 final 修饰词的变量们
 
-![RequiredArgsConstructor-对比](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/RequiredArgsConstructor-对比.7dk2zy4h8d40.webp "RequiredArgsConstructor 对比")
+![RequiredArgsConstructor-对比](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/RequiredArgsConstructor-对比.7dk2zy4h8d40.webp "RequiredArgsConstructor 对比")
 
 补充一下，如果所有的变量都是正常的，都没有用 final 修饰的话，那就会生成一个没有参数的构造器
 
@@ -97,7 +97,7 @@ A : 在 Java 中有规定，当两个对象 equals 时，他们的 hashcode 一�
 - @EqualsAndHashCode
 - @RequiredArgsConstructor
 
-![Data-对比](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/Data-对比.6ug0ltaxd5c0.webp "Data 对比")
+![Data-对比](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/Data-对比.6ug0ltaxd5c0.webp "Data 对比")
 
 @Data 是使用频率最高的 lombok 注解，通常 @Data 会加在一个值可以被更新的对象上，像是日常使用的 DTO 们、或是 JPA 裡的 Entity 们，就很适合加上 @Data 注解，也就是 @Data for mutable class
 
@@ -110,7 +110,7 @@ A : 在 Java 中有规定，当两个对象 equals 时，他们的 hashcode 一�
 - @EqualsAndHashCode
 - @RequiredArgsConstructor
 
-![Value-对比](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/Value-对比.3vvnuc9vnmo0.webp "Value 对比")
+![Value-对比](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/Value-对比.3vvnuc9vnmo0.webp "Value 对比")
 
 上面那个 @Data 适合用在 POJO 或 DTO 上，而这个 @Value 注解，则是适合加在值不希望被改变的类上，像是某个类的值当创建后就不希望被更改，只希望我们读它而已，就适合加上 @Value 注解，也就是 @Value for immutable class
 
@@ -120,7 +120,7 @@ A : 在 Java 中有规定，当两个对象 equals 时，他们的 hashcode 一�
 
 自动生成流式 set 值写法，从此之后再也不用写一堆 setter 了
 
-![Builder-对比](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/Builder-对比.2fym9o42tikg.webp "Builder 对比")
+![Builder-对比](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/Builder-对比.2fym9o42tikg.webp "Builder 对比")
 
 注意，虽然只要加上 @Builder 注解，我们就能够用流式写法快速设定对象的值，但是 setter 还是必须要写不能省略的，因为 Spring 或是其他框架有很多地方都会用到对象的 getter/setter 对他们取值/赋值
 
@@ -130,7 +130,7 @@ A : 在 Java 中有规定，当两个对象 equals 时，他们的 hashcode 一�
 
 自动生成该类的 log 静态常量，要打日志就可以直接打，不用再手动 new log 静态常量了
 
-![Slf4j-对比](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/Slf4j-对比.2x52jzrsoe20.webp "Slf4j 对比")
+![Slf4j-对比](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/Slf4j-对比.2x52jzrsoe20.webp "Slf4j 对比")
 
 除了 @Slf4j 之外，lombok 也提供其他日志框架的变种注解可以用，像是 @Log、@Log4j...等，他们都是帮我们创建一个静态常量 log，只是使用的库不一样而已
 

@@ -34,8 +34,8 @@ markmap:
 ### 案例题相关题型及解题思路
 
 - 给定两种架构风格和需要对比的方面，问为何采用其中一个。给定系统的核心需求，问应该采用什么风格：理解记忆各个软件架构风格和其对比情况。
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.2ea5u73tha1w.webp "alt")
-  ![alt](https://jsd.cdn.zzko.cn/gh/orionpax1997/picx-images-hosting@master/Development/image.5cax7er7h5o0.webp "alt")
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.2ea5u73tha1w.webp "alt")
+  ![alt](https://raw.githubusercontent.com/orionpax1997/picx-images-hosting/master/Development/image.5cax7er7h5o0.webp "alt")
 
 ## 第 8 章 系统质量属性与架构评估
 
