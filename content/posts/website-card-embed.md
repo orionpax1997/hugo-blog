@@ -36,7 +36,7 @@ series: ["生命不息 折腾不止"]
 
 Website Card Embed 提供了降级方案 `[![what-is-hugo](https://website-card-embed-demo.dramacat.top/api/screenshot?url=https://gohugo.io/about/what-is-hugo/)](https://gohugo.io/about/what-is-hugo/)`，可以使用基础的 Markdown 语法渲染一张带链接的图片在 Github 中使用。
 
-[![what-is-hugo](https://website-card-embed.dramacat.top/api/screenshot?url=https://gohugo.io/about/what-is-hugo/)](https://gohugo.io/about/what-is-hugo/)
+[![what-is-hugo](https://website-card-embed.vercel.app/api/screenshot?url=https://gohugo.io/about/what-is-hugo/)](https://gohugo.io/about/what-is-hugo/)
 
 ## 使用 Vercel 部署你自己的服务端
 
