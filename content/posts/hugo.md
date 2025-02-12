@@ -248,7 +248,7 @@ title = "网站标题"
 
 5. (可选，如果你需要卡片引入) [Deploy](https://vercel.com/import/project?template=https://github.com/Humble-Xiang/website-card-embed) 你自己的 Website Card Embed 服务端，并修改配置文件中的 `params.page.libaray.card.serverURL` 和 `websiteCardEmbedJavaScript` 为你自己的服务地址。
 
-{{< card "https://blog.dramacat.top/website-card-embed" >}}
+{{< card "https://orionpax.vercel.app/website-card-embed" >}}
 
 6. (可选，如果你需要带文章标题的分享图) [Deploy](https://vercel.com/import/project?template=https://github.com/Humble-Xiang/og-image) 你自己的 og-image 服务端，并修改 `params.page.share.ogimage` 中的配置。
 

@@ -35,7 +35,7 @@ _使用 IDEA 自带的热部署或者去使用 JRebel，总是你更好的选择
 Java annotation library which helps to reduce boilerplate code.  
 Java 注释库，有助于减少样板代码。
 
-{{< card "https://blog.dramacat.top/lombok/" >}}
+{{< card "https://orionpax.vercel.app/lombok/" >}}
 
 ### Spring Configuration Processor
 
@@ -239,7 +239,7 @@ Persistence framework with support for custom SQL, stored procedures and advance
 使用 MyBatis 的持久化支持。
 
 {{< card "https://mybatis.org/mybatis-3/zh/index.html" >}}
-{{< card "https://blog.dramacat.top/mybatis/" >}}
+{{< card "https://orionpax.vercel.app/mybatis/" >}}
 
 ### Liquibase Migration
 
@@ -308,7 +308,7 @@ MySQL JDBC and R2DBC driver.
 MySQL JDBC 和 R2DBC 驱动程序
 
 {{< card "https://dev.mysql.com/doc/mysql-getting-started/en/" >}}
-{{< card "https://blog.dramacat.top/mysql/" >}}
+{{< card "https://orionpax.vercel.app/mysql/" >}}
 
 ### Oracle Driver
 
@@ -316,7 +316,7 @@ A JDBC driver that provides access to Oracle.
 提供对 Oracle 的访问的 JDBC 驱动程序。
 
 {{< card "https://juejin.cn/post/6844903822913978381" >}}
-{{< card "https://blog.dramacat.top/oracle/" >}}
+{{< card "https://orionpax.vercel.app/oracle/" >}}
 
 ### PostgreSQL Driver
 

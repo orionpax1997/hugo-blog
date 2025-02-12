@@ -28,7 +28,7 @@ SpaceVim 是一个社区驱动的 Vim 和 Neovim 发行版。它的灵感来自 
 #=============================================================================
 # Copyright (c) 2019-2023 Humble.Xiang
 # Author: Humble.Xiang < humble.xiang@gmail.com >
-# URL: https://blog.dramacat.top/
+# URL: https://orionpax.vercel.app/
 # License: GPLv3
 #=============================================================================
 
