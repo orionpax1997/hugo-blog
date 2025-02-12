@@ -218,7 +218,7 @@ title = "网站标题"
     [params.page.share]
       [params.page.share.ogimage]
         # og-image 服务地址
-        serverURL = "https://og-image-demo.dramacat.top/"
+        serverURL = "https://og-image-demo.vercel.app/"
         # 文章分享时的默认图片，文章存在 featuredImage 时优先使用 featuredImage
         defaultImage = "https://assets.vercel.com/image/upload/front/assets/design/vercel-triangle-black.svg"
       # ......
@@ -231,11 +231,11 @@ title = "网站标题"
       # 卡片引用配置
       [params.page.library.js]
         # 额外引入第三方 JS 地址
-        websiteCardEmbedJavaScript = "https://website-card-embed-demo.dramacat.top/website-card-embed-loveit.js"
+        websiteCardEmbedJavaScript = "https://website-card-embed-demo.vercel.app/website-card-embed-loveit.js"
       # see https://github.com/Humble-Xiang/website-card-embed
       [params.page.library.card]
         # website-card-embed 服务地址
-        serverURL = 'https://website-card-embed-demo.dramacat.top/'
+        serverURL = 'https://website-card-embed-demo.vercel.app/'
 # ......
 # 作者配置
 [author]
