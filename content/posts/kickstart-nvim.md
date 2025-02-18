@@ -1,5 +1,5 @@
 ---
-title: "Kickstart Nvim"
+title: "从 kickstart 开始配置你的 Neovim"
 date: 2025-02-13T14:04:17+08:00
 categories: ["Geek"]
 tags: ["Tool"]
