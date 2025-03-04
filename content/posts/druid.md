@@ -86,4 +86,4 @@ logging:
 
 [Druid Wiki](https://github.com/alibaba/druid/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98) 非常清晰，Druid 的应用场景可以参考其解决。包含监控、SQL 注入、数据库迁移、慢 SQL 记录、数据库密码加密、测试连接池是否有效等。
 
-{{< card "https://github.com/alibaba/druid/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" >}}
+{{< card title="Druid Wiki" description="Druid是Java语言中最好的数据库连接池。Druid能够提供强大的监控和扩展功能。" url="https://github.com/alibaba/druid/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" >}}

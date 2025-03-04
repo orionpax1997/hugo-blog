@@ -7,7 +7,7 @@ series: ["生命不息 折腾不止"]
 
 ## 前言
 
-本文已过时。现在个人的解决方案为 Windows Terminal + [fishshell](https://fishshell.com/) + [Oh My Fish](https://github.com/oh-my-fish/oh-my-fish)， 从 zsh 转到 fish 的原因就是因为 zsh 太慢了。
+本文已过时。现在个人的解决方案为 [wezterm](https://wezterm.org/index.html) + [starship](https://starship.rs/guide/)。
 
 ~~WIN10 命令行工具最终选择了 WSL + Ubuntu + Terinus + Oh My Zsh。在 Hyper 和 Terminus 之前选择了 Terminus，只是因为 Terminus 模糊透明真的好看，一位伟人曾经说过好看就是第一生产力。~~
 

@@ -1,5 +1,5 @@
 ---
-title: "Yazi"
+title: "命令行下的文件管理器 Yazi"
 date: 2025-02-24T16:39:20+08:00
 tags: ["Command-line Tool"]
 series: ["生命不息 折腾不止"]

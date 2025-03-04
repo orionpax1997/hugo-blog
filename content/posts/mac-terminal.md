@@ -7,7 +7,7 @@ series: ["生命不息 折腾不止"]
 
 ## 前言
 
-本文已过时。现在个人的解决方案为 [Kitty](https://sw.kovidgoyal.net/kitty/) + [fishshell](https://fishshell.com/) + [Oh My Fish](https://github.com/oh-my-fish/oh-my-fish)。
+本文已过时。现在个人的解决方案为 [Iterm2](https://iterm2.com/) + [starship](https://starship.rs/guide/)。
 ~~MacOS 下个人的解决方案为 [Alacritty](https://github.com/alacritty/alacritty) + [fishshell](https://fishshell.com/) + [Oh My Fish](https://github.com/oh-my-fish/oh-my-fish)， 从 zsh 转到 fish 的原因就是因为 zsh 太慢了。Alacritty 是一个跨平台、GPU 增强的终端模拟器，目前还在实验阶段有不少问题，选择它的原因是因为它足够的简单以及出乎意料的快。~~
 
 {{< card "https://www.reddit.com/r/archlinux/comments/n9noje/alacritty_vs_kitty/" >}}

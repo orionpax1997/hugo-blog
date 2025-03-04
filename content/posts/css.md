@@ -9,8 +9,6 @@ tags: ["Language"]
 > 定义：层叠样式表(英文全称：Cascading Style Sheets)是一种用来表现 HTML（标准通用标记语言的一个应用）或 XML（标准通用标记语言的一个子集）等文件样式的计算机语言。  
 > 产生原因：单用 HTML 写出的页面显示的难看。
 
-{{< card "http://css.doyoe.com/" >}}
-
 ## 常用样式
 
 ### 字体

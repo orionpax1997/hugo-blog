@@ -5,6 +5,10 @@ tags: ["Command-line Tool"]
 series: ["生命不息 折腾不止"]
 ---
 
+## 前言
+
+本文已过时，现在有更好的选择 [Yazi](https://yazi-rs.github.io/)。
+
 ## 简介
 
 [Ranger](https://github.com/ranger/ranger) 是一个类似 Vim 键位的命令行文件管理器。

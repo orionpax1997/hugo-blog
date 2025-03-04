@@ -9,7 +9,7 @@ featuredImage: "https://raw.githubusercontent.com/orionpax1997/picx-images-hosti
 
 Element，一套为开发者、设计师和产品经理准备的基于 Vue 3.0 的桌面端组件库
 
-{{< card "https://element-plus.gitee.io/zh-CN/" >}}
+{{< card "https://element-plus.org/zh-CN/" >}}
 
 ## 问题
 
