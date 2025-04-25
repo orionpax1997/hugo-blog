@@ -231,11 +231,11 @@ title = "网站标题"
       # 卡片引用配置
       [params.page.library.js]
         # 额外引入第三方 JS 地址
-        websiteCardEmbedJavaScript = "https://website-card-embed-demo.vercel.app/website-card-embed-loveit.js"
+        websiteCardEmbedJavaScript = "https://website-card-embed-demo.qingtian.me/website-card-embed-loveit.js"
       # see https://github.com/Humble-Xiang/website-card-embed
       [params.page.library.card]
         # website-card-embed 服务地址
-        serverURL = 'https://website-card-embed-demo.vercel.app/'
+        serverURL = 'https://website-card-embed-demo.qingtian.me/'
 # ......
 # 作者配置
 [author]

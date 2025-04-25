@@ -15,11 +15,11 @@ series: ["生命不息 折腾不止"]
 
 ## 快速上手
 
-直接访问 [Website Card Embed Demo](https://website-card-embed-demo.vercel.app/?url=https://gohugo.io/about/what-is-hugo/) 或者复制以下代码
+直接访问 [Website Card Embed Demo](https://website-card-embed-demo.qingtian.me/?url=https://gohugo.io/about/what-is-hugo/) 或者复制以下代码
 
 ```md
 <iframe 
-  src="https://website-card-embed-demo.vercel.app/?url=https://gohugo.io/about/what-is-hugo/" 
+  src="https://website-card-embed-demo.qingtian.me/?url=https://gohugo.io/about/what-is-hugo/" 
   style="width:100%;height:124px" frameborder="no">
 </iframe>
 ```
@@ -34,9 +34,9 @@ series: ["生命不息 折腾不止"]
 
 {{< card "https://github.github.com/gfm/#disallowed-raw-html-extension-" >}}
 
-Website Card Embed 提供了降级方案 `[![what-is-hugo](https://website-card-embed-demo.vercel.app/api/screenshot?url=https://gohugo.io/about/what-is-hugo/)](https://gohugo.io/about/what-is-hugo/)`，可以使用基础的 Markdown 语法渲染一张带链接的图片在 Github 中使用。
+Website Card Embed 提供了降级方案 `[![what-is-hugo](https://website-card-embed-demo.qingtian.me/api/screenshot?url=https://gohugo.io/about/what-is-hugo/)](https://gohugo.io/about/what-is-hugo/)`，可以使用基础的 Markdown 语法渲染一张带链接的图片在 Github 中使用。
 
-[![what-is-hugo](https://website-card-embed.vercel.app/api/screenshot?url=https://gohugo.io/about/what-is-hugo/)](https://gohugo.io/about/what-is-hugo/)
+[![what-is-hugo](https://website-card-embed.qingtian.me/api/screenshot?url=https://gohugo.io/about/what-is-hugo/)](https://gohugo.io/about/what-is-hugo/)
 
 ## 使用 Vercel 部署你自己的服务端
 
@@ -95,14 +95,14 @@ image="https://gohugo.io/opengraph/gohugoio-card-base-1_huf001e7df4fd9c00c4355ab
 {{- if .IsNamedParams -}}
 <iframe
   class="website-card-embed"
-  data-src="https://website-card-embed-demo.vercel.app/?url={{ .Get `url` }}&title={{ .Get `title` }}&description={{ .Get `description` }}&image={{ .Get `image` }}&favicon={{ .Get `favicon` }}"
+  data-src="https://website-card-embed-demo.qingtian.me/?url={{ .Get `url` }}&title={{ .Get `title` }}&description={{ .Get `description` }}&image={{ .Get `image` }}&favicon={{ .Get `favicon` }}"
   style="width: 100%; height: 124px"
   frameborder="no"
 ></iframe>
 {{- else -}}
 <iframe
   class="website-card-embed"
-  data-src="https://website-card-embed-demo.vercel.app/?url={{ .Get 0 }}"
+  data-src="https://website-card-embed-demo.qingtian.me/?url={{ .Get 0 }}"
   style="width: 100%; height: 124px"
   frameborder="no"
 ></iframe>

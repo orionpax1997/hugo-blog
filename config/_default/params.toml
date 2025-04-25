@@ -485,7 +485,7 @@ srcsetLargeResizeMethod = "2000x webp Lanczos q75"
       # Or 或者
       # someCSS = "https://cdn.example.com/some.css"
     [page.library.js]
-      websiteCardEmbedJavaScript = "https://website-card-embed.vercel.app/website-card-embed-loveit.js"
+      websiteCardEmbedJavaScript = "https://website-card-embed.qingtian.me/website-card-embed-loveit.js"
       # someJavaScript = "some.js"
       # [page.library.js.someOtherJavaScript]
       #   src = "someOther.js"
@@ -496,7 +496,7 @@ srcsetLargeResizeMethod = "2000x webp Lanczos q75"
       # Or 或者
       # someJavascript = "https://cdn.example.com/some.js"
     [page.library.card]
-      serverURL = 'https://website-card-embed.vercel.app/'
+      serverURL = 'https://website-card-embed.qingtian.me/'
   # Page SEO config
   # 页面 SEO 配置
   [page.seo]
