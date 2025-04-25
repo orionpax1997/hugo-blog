@@ -13,21 +13,10 @@ series: ["生命不息 折腾不止"]
 
 ## 安装
 
-### 前置条件
-
-- Windows 版本不低于 Windows 7
-- Windows 中的 PowerShell 版本不低于 PowerShell 3
-- 能访问 GitHub
-- 你的 Windows 用户名为英文
-
-### 安装步骤
-
 ```bash
-# 安装
+# Open a PowerShell terminal (version 5.1 or later) and from the PS C:\> prompt, run:
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
-# 检查是否安装成功
-scoop help
 ```
 
 ## 使用
@@ -40,7 +29,7 @@ scoop help
 scoop help
 
 # 查找软件
-# 如果软件搜索不到不妨到社区的 Bucket 库里看下
+# 或者直接在线搜一下 https://scoop.sh/
 scoop search <软件名>
 
 # 安装软件
@@ -62,9 +51,12 @@ scoop update
 scoop status
 # 更新相应软件
 scoop update [软件包]
+
+# 固定住版本，不进行更新
+scoop hold [软件包]
 ```
 
-### ~Scoop Bucket~
+### ~~Scoop Bucket~~
 
 之前提到过, Scoop 是根据 Json 文件进行软件的下载安装的, Bucket 就是存放这些 Json 文件的地方。官方维护了一个名称叫 main 的 Bucket (收录条件十分苛刻, 举两个例子：必须是主流的开发者工具, 不可以有 GUI), 也不是说没被官方 Bucket 收录的软件就不可以用 Scoop 进行管理了。只是需要我们将别人维护的 Bucket 使用`scoop bucket add <Bucket Name>`命令添加一下，就可以 install 其中的软件了。总之就是如果使用`scoop search`搜索不到就上 [Scoop Directory](https://rasa.github.io/scoop-directory/by-bucket) 看下。当然你也可以维护你自己的 Bucket。
 
